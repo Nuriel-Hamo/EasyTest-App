@@ -87,5 +87,12 @@ namespace EasyTest_App
         {
             labelName.Text = "Hello" + name;
         }
+
+        private void ExtraTimeBTN_Click(object sender, EventArgs e)
+        {
+            Login log = new Login();
+            log.Show();
+            Hide();
+        }
     }
 }

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SQLite;
+
 
 namespace EasyTest_App
 {
@@ -26,6 +26,7 @@ namespace EasyTest_App
 
         private void InsertStudentBTN_Click(object sender, EventArgs e)
         {
+            /*
             SetValue = StudentID_textbox.Text;
             if (StudentID_textbox.Text.Trim() == "")
             {
@@ -66,6 +67,7 @@ namespace EasyTest_App
                     MessageBox.Show("הסטודנט אינו רשאי להבחן", "הודעה");
                 }
             }
+            */
         }
 
         private void addBackBTN_Click(object sender, EventArgs e)

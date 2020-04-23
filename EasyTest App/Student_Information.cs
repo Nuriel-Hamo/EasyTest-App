@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SQLite;
+
 
 namespace EasyTest_App
 {
@@ -26,6 +26,7 @@ namespace EasyTest_App
 
         private void Student_Information_Load(object sender, EventArgs e)
         {
+            /*
             IdAnsLABEL.Text = Add_Student.SetValue;
             IdAnsLABEL.Visible = true;
 
@@ -48,6 +49,7 @@ namespace EasyTest_App
             FirstNameAnsLABEL.Text = InfoList[0].fullName.ToString();
             FirstNameAnsLABEL.Visible = true;
             conn.Close();
+            */
 
 
 
