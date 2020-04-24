@@ -20,8 +20,14 @@ namespace EasyTest_App
             InitializeComponent();
         }
         public static Boolean startProgram = false;
+        public static Boolean ClickTextBox1 = false; 
+        public static Boolean ClickTextBox2 = false;
+
+
         private void LoginBTN_Click(object sender, EventArgs e)
         {
+           
+
             if (!startProgram) 
             {
 
@@ -106,10 +112,15 @@ namespace EasyTest_App
                 else
                 {
                     MessageBox.Show("שם משתמש או סיסמה שגויים", "הודעה");
+
                 }
             }
             else MessageBox.Show("שם משתמש או סיסמה שגויים", "הודעה");
-
+            
+            ClickTextBox1 = false; 
+            ClickTextBox2 = false;
+            UserID_textbox.Text = "הכנס ת.ז";
+            Pass_textbox.Text = "הכנס סיסמה";
         }
 
         private void LoginBTN_MouseHover(object sender, EventArgs e)
@@ -119,7 +130,7 @@ namespace EasyTest_App
 
         private void UserID_textbox_TextChanged(object sender, EventArgs e)
         {
-            
+           
         }
 
         private void Pass_textbox_TextChanged(object sender, EventArgs e)
@@ -138,6 +149,26 @@ namespace EasyTest_App
             Main_Screen ms = new Main_Screen();
             ms.Show();
             Hide();
+        }
+
+        private void UserID_textbox_MouseClick(object sender, MouseEventArgs e)
+        {
+
+            if (!ClickTextBox1)
+            {
+                UserID_textbox.Text = "";
+                ClickTextBox1 = true;
+            }
+            
+        }
+
+        private void Pass_textbox_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!ClickTextBox2)
+            {
+                Pass_textbox.Text = "";
+                ClickTextBox2 = true;
+            }
         }
     }
 }

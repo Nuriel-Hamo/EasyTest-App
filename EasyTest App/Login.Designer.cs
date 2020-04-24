@@ -53,6 +53,7 @@
             this.UserID_textbox.TabIndex = 0;
             this.UserID_textbox.Text = "הכנס ת.ז";
             this.UserID_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.UserID_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.UserID_textbox_MouseClick);
             this.UserID_textbox.TextChanged += new System.EventHandler(this.UserID_textbox_TextChanged);
             // 
             // Pass_textbox
@@ -66,6 +67,7 @@
             this.Pass_textbox.TabIndex = 1;
             this.Pass_textbox.Text = "הכנס סיסמה";
             this.Pass_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Pass_textbox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pass_textbox_MouseClick);
             this.Pass_textbox.TextChanged += new System.EventHandler(this.Pass_textbox_TextChanged);
             // 
             // LoginBTN
