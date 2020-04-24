@@ -55,6 +55,7 @@ namespace EasyTest_App
 
         private void Main_Screen_Load(object sender, EventArgs e)
         {
+            
             /*
             if (coutEnters!=0)
             {
@@ -70,7 +71,7 @@ namespace EasyTest_App
 
             }
             */
-            
+
 
         }
 
@@ -86,6 +87,13 @@ namespace EasyTest_App
         public void setName(string name)
         {
             labelName.Text = "Hello" + name;
+        }
+
+        private void ExtraTimeBTN_Click(object sender, EventArgs e)
+        {
+            Login log = new Login();
+            log.Show();
+            Hide();
         }
     }
 }

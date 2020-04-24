@@ -12,6 +12,7 @@ namespace EasyTest_App
 {
     public partial class Map_Screen : Form
     {
+        public static string saveColor;
         public static Button btn1;
         public static Button btn2;
         public static Button btn3;
@@ -36,6 +37,7 @@ namespace EasyTest_App
         {
             TURNOFF();
             button1.BackColor = Color.Green;
+            saveColor = button1.Name;
             //btn1.BackColor = Color.Green;
         }
 

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+
 
 namespace EasyTest_App
 {
@@ -18,8 +18,10 @@ namespace EasyTest_App
         {
             InitializeComponent();
         }
+        public static string notebookNum;
         private void notebookBTN_Click(object sender, EventArgs e)
         {
+            notebookNum = notebook_TEXTBOX.Text;
             Map_Screen map = new Map_Screen();
             map.Show();
             Hide();
