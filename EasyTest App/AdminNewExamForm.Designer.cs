@@ -33,17 +33,18 @@
             this.textBoxCourseCode = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox_proctorID = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_lecturerID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox_exam_date = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox_start_hour = new System.Windows.Forms.TextBox();
+            this.textBox_end_hour = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button_confirm = new System.Windows.Forms.Button();
+            this.button_reset = new System.Windows.Forms.Button();
+            this.button_back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -61,6 +62,7 @@
             this.textBoxCourseCode.Name = "textBoxCourseCode";
             this.textBoxCourseCode.Size = new System.Drawing.Size(105, 20);
             this.textBoxCourseCode.TabIndex = 1;
+            this.textBoxCourseCode.TextChanged += new System.EventHandler(this.TextBoxCourseCode_TextChanged);
             // 
             // label2
             // 
@@ -80,13 +82,13 @@
             this.label3.TabIndex = 3;
             this.label3.Text = ":מספר משגיח";
             // 
-            // textBox2
+            // textBox_proctorID
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(311, 88);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(105, 20);
-            this.textBox2.TabIndex = 4;
+            this.textBox_proctorID.Enabled = false;
+            this.textBox_proctorID.Location = new System.Drawing.Point(311, 88);
+            this.textBox_proctorID.Name = "textBox_proctorID";
+            this.textBox_proctorID.Size = new System.Drawing.Size(105, 20);
+            this.textBox_proctorID.TabIndex = 4;
             // 
             // label4
             // 
@@ -97,13 +99,13 @@
             this.label4.TabIndex = 5;
             this.label4.Text = ":מספר מרצה";
             // 
-            // textBox1
+            // textBox_lecturerID
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(311, 118);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(105, 20);
-            this.textBox1.TabIndex = 6;
+            this.textBox_lecturerID.Enabled = false;
+            this.textBox_lecturerID.Location = new System.Drawing.Point(311, 118);
+            this.textBox_lecturerID.Name = "textBox_lecturerID";
+            this.textBox_lecturerID.Size = new System.Drawing.Size(105, 20);
+            this.textBox_lecturerID.TabIndex = 6;
             // 
             // label5
             // 
@@ -114,13 +116,13 @@
             this.label5.TabIndex = 7;
             this.label5.Text = ":תאריך בחינה";
             // 
-            // textBox3
+            // textBox_exam_date
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(311, 152);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(105, 20);
-            this.textBox3.TabIndex = 8;
+            this.textBox_exam_date.Enabled = false;
+            this.textBox_exam_date.Location = new System.Drawing.Point(311, 152);
+            this.textBox_exam_date.Name = "textBox_exam_date";
+            this.textBox_exam_date.Size = new System.Drawing.Size(105, 20);
+            this.textBox_exam_date.TabIndex = 8;
             // 
             // label6
             // 
@@ -131,21 +133,21 @@
             this.label6.TabIndex = 9;
             this.label6.Text = ":שעת התחלה";
             // 
-            // textBox4
+            // textBox_start_hour
             // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(311, 183);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(105, 20);
-            this.textBox4.TabIndex = 10;
+            this.textBox_start_hour.Enabled = false;
+            this.textBox_start_hour.Location = new System.Drawing.Point(311, 183);
+            this.textBox_start_hour.Name = "textBox_start_hour";
+            this.textBox_start_hour.Size = new System.Drawing.Size(105, 20);
+            this.textBox_start_hour.TabIndex = 10;
             // 
-            // textBox5
+            // textBox_end_hour
             // 
-            this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(311, 219);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(105, 20);
-            this.textBox5.TabIndex = 11;
+            this.textBox_end_hour.Enabled = false;
+            this.textBox_end_hour.Location = new System.Drawing.Point(311, 219);
+            this.textBox_end_hour.Name = "textBox_end_hour";
+            this.textBox_end_hour.Size = new System.Drawing.Size(105, 20);
+            this.textBox_end_hour.TabIndex = 11;
             // 
             // label7
             // 
@@ -156,23 +158,33 @@
             this.label7.TabIndex = 12;
             this.label7.Text = ":שעת סיום";
             // 
-            // button1
+            // button_confirm
             // 
-            this.button1.Location = new System.Drawing.Point(145, 246);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 33);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "אשר";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_confirm.Location = new System.Drawing.Point(444, 255);
+            this.button_confirm.Name = "button_confirm";
+            this.button_confirm.Size = new System.Drawing.Size(94, 33);
+            this.button_confirm.TabIndex = 13;
+            this.button_confirm.Text = "אשר";
+            this.button_confirm.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // button_reset
             // 
-            this.button2.Location = new System.Drawing.Point(29, 246);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 33);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "אפס";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button_reset.Enabled = false;
+            this.button_reset.Location = new System.Drawing.Point(220, 255);
+            this.button_reset.Name = "button_reset";
+            this.button_reset.Size = new System.Drawing.Size(94, 33);
+            this.button_reset.TabIndex = 14;
+            this.button_reset.Text = "אפס";
+            this.button_reset.UseVisualStyleBackColor = true;
+            // 
+            // button_back
+            // 
+            this.button_back.Location = new System.Drawing.Point(29, 255);
+            this.button_back.Name = "button_back";
+            this.button_back.Size = new System.Drawing.Size(94, 33);
+            this.button_back.TabIndex = 15;
+            this.button_back.Text = "חזור";
+            this.button_back.UseVisualStyleBackColor = true;
             // 
             // AdminNewExamForm
             // 
@@ -181,17 +193,18 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(569, 300);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_back);
+            this.Controls.Add(this.button_reset);
+            this.Controls.Add(this.button_confirm);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox_end_hour);
+            this.Controls.Add(this.textBox_start_hour);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox_exam_date);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_lecturerID);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox_proctorID);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxCourseCode);
@@ -209,16 +222,17 @@
         private System.Windows.Forms.TextBox textBoxCourseCode;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox_proctorID;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_lecturerID;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox_exam_date;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox_start_hour;
+        private System.Windows.Forms.TextBox textBox_end_hour;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button_confirm;
+        private System.Windows.Forms.Button button_reset;
+        private System.Windows.Forms.Button button_back;
     }
 }

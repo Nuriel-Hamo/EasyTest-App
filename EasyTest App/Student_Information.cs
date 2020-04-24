@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SQLite;
+using MySql.Data.MySqlClient;
 
 namespace EasyTest_App
 {
@@ -29,15 +29,15 @@ namespace EasyTest_App
             IdAnsLABEL.Text = Add_Student.SetValue;
             IdAnsLABEL.Visible = true;
 
-            SQLiteConnection conn = new SQLiteConnection("Data Source=DB_OF_PROJECT.db;version=3;");
+            MySqlConnection conn = new MySqlConnection("Data Source=DB_OF_PROJECT.db;version=3;");
             conn.Open();
 
             string query = "SELECT full_name FROM examinee WHERE student_id = @IdAnsLABEL";
 
-            SQLiteCommand cmd = new SQLiteCommand(query, conn);
+            MySqlCommand cmd = new MySqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@IdAnsLABEL", IdAnsLABEL.Text);
 
-            SQLiteDataReader rdr = cmd.ExecuteReader();
+            MySqlDataReader rdr = cmd.ExecuteReader();
 
             List<student_info> InfoList = new List<student_info>();
             while(rdr.Read())

@@ -13,14 +13,14 @@ namespace EasyTest_App
 {
     public partial class Login : Form
     {
-       // bool changed = false;
+       
      
         public Login()
         {
             InitializeComponent();
         }
 
-        private void LoginBTN_Click(object sender, EventArgs e)
+        private void LoginBTN_Click(object sender, EventArgs e) 
         {
             if(UserID_textbox.Text.Trim() == "" && Pass_textbox.Text.Trim() == "")
             {
@@ -29,7 +29,7 @@ namespace EasyTest_App
             else
             {
                
-                string Query = "SELECT * FROM users WHERE ID = @UserID_textbox AND Password = @Pass_textbox";
+                string Query = "SELECT * FROM proctor WHERE proctor_id = @UserID_textbox AND proctor_pass = @Pass_textbox";
                 MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
                 conn.Open();
                 MySqlCommand cmd = new MySqlCommand(Query, conn);

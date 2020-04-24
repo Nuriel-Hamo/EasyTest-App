@@ -16,7 +16,7 @@ namespace EasyTest_App
         {
             InitializeComponent();
         }
-
+         
         private void button1_Click(object sender, EventArgs e)
         {
             AdminNewExamForm admN = new AdminNewExamForm();
