@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
 
 namespace EasyTest_App
 {
     public partial class Add_Student : Form
     {
-        public static string SetValue = "";
+        public static string StudentID = "";
+
 
         public Add_Student()
         {
@@ -21,65 +23,79 @@ namespace EasyTest_App
 
         }
         public static Boolean ClickTextBox = false;
-        public static string idForInfo;
-        public static string nameForInfo;
-        public static string emailForInfo;
-        public static string phoneForInfo;
+        public static  DataTable student_table = new DataTable();
 
 
         private void InsertStudentBTN_Click(object sender, EventArgs e)
         {
 
-
-            if (StudentID_textbox.Text.Trim() == "")
+            Regex IdReg = new Regex("[0-9]{9}");
+            if (!IdReg.IsMatch(StudentID_textbox.Text))
             {
-                MessageBox.Show("יש להזין תוכן", "הודעה");
+                MessageBox.Show("!יש להזין ת.ז כולל ספרת ביקורת", "הודעה");
             }
             else
             {
 
-                string Query = "SELECT * FROM student WHERE student_id = @UserID_textbox AND " +
-                    "allowed = 1";
+                string Query = "SELECT * FROM examination_log WHERE student_id = @student_id AND exam_id = @exam_id";
                 MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
                 conn.Open();
 
                 MySqlCommand cmd = new MySqlCommand(Query, conn);
-                cmd.Parameters.AddWithValue("@UserID_textbox", StudentID_textbox.Text);
+                cmd.Parameters.AddWithValue("@student_id", StudentID_textbox.Text);
+                cmd.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
-                MySqlDataReader rdr = cmd.ExecuteReader();
-                rdr.Read();
-
 
                 if (dt.Rows.Count > 0)
                 {
-                    nameForInfo = rdr.GetString(1) + " " + rdr.GetString(2);
-                    idForInfo = rdr.GetString(0);
-                    emailForInfo = rdr.GetString(3);
-                    phoneForInfo = rdr.GetString(4);
-
-                    conn.Close();
-                    Student_Information si = new Student_Information();
-                    si.Show();
-                    Hide();
-
-
+                    MessageBox.Show("הסטודנט כבר קיים במבחן", "הודעה");
                 }
                 else
                 {
-                    MessageBox.Show(" הסטודנט אינו רשאי להבחן", "הודעה");
+                    string Query1 = "SELECT * FROM student WHERE student_id = @UserID_textbox AND " +
+                     "allowed = 1";
+                    
+
+                    MySqlCommand cmd1 = new MySqlCommand(Query1, conn);
+                    cmd1.Parameters.AddWithValue("@UserID_textbox", StudentID_textbox.Text);
+                    MySqlDataAdapter da1 = new MySqlDataAdapter(cmd1);
+
+                    da1.Fill(student_table);
+
+                   // MySqlDataReader rdr = cmd.ExecuteReader();
+                   // rdr.Read();
+
+
+                    if (student_table.Rows.Count > 0)
+                    {
+                        StudentID = StudentID_textbox.Text;
+                        conn.Close();
+                        Student_Information si = new Student_Information();
+                        si.Show();
+                        Hide();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show(" הסטודנט אינו רשאי להבחן", "הודעה");
+                    }
+                    ClickTextBox = false;
+                    StudentID_textbox.Text = "הכנס ת.ז";
+
                 }
-                ClickTextBox = false;
-                StudentID_textbox.Text = "הכנס ת.ז";
+
+                ////////////////////////////////////
+
 
             }
         }
             private void addBackBTN_Click(object sender, EventArgs e)
             {
-                Main_Screen msc = new Main_Screen();
-                msc.Show();
+                
+                Login.main_screen.Show();
                 Hide();
             }
 

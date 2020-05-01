@@ -41,6 +41,7 @@
             resources.ApplyResources(this.notebook_TEXTBOX, "notebook_TEXTBOX");
             this.notebook_TEXTBOX.ForeColor = System.Drawing.Color.DimGray;
             this.notebook_TEXTBOX.Name = "notebook_TEXTBOX";
+            this.notebook_TEXTBOX.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notebook_TEXTBOX_MouseClick);
             this.notebook_TEXTBOX.TextChanged += new System.EventHandler(this.notebook_TEXTBOX_TextChanged);
             // 
             // notebookBTN

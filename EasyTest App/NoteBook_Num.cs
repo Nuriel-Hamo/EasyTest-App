@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 
 namespace EasyTest_App
@@ -19,12 +20,28 @@ namespace EasyTest_App
             InitializeComponent();
         }
         public static string notebookNum;
+        private static bool firstTime = true;
         private void notebookBTN_Click(object sender, EventArgs e)
         {
-            notebookNum = notebook_TEXTBOX.Text;
-            Map_Screen map = new Map_Screen();
-            map.Show();
-            Hide();
+            Regex obj = new Regex("[0-9]");
+            if (!obj.IsMatch(notebook_TEXTBOX.Text))
+            {
+                MessageBox.Show("נא להזין מספר מחברת", "הודעה");
+                
+            }
+            else
+            {
+                notebookNum = notebook_TEXTBOX.Text;
+                Map_Screen map = new Map_Screen();
+                map.Show();
+                Hide();
+            }
+           
+            
+            notebook_TEXTBOX.Text = "מס' מחברת";
+            firstTime = true;
+
+
 
 
 
@@ -81,6 +98,7 @@ namespace EasyTest_App
 
         private void notebookBTN_back_Click(object sender, EventArgs e)
         {
+            firstTime = true;
             Student_Information st = new Student_Information();
             st.Show();
             Hide();
@@ -90,6 +108,17 @@ namespace EasyTest_App
         {
            
           
+        }
+
+        private void notebook_TEXTBOX_MouseClick(object sender, MouseEventArgs e)
+        {
+            if(firstTime)
+            {
+                notebook_TEXTBOX.Text = "";
+                firstTime = false;
+            }
+          
+            
         }
     }
 }

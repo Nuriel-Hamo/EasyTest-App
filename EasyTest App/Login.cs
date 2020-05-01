@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
 
 namespace EasyTest_App
 {
@@ -23,17 +24,27 @@ namespace EasyTest_App
         public static Boolean ClickTextBox1 = false; 
         public static Boolean ClickTextBox2 = false;
 
+        public static DataTable exam_table = new DataTable();
+        public static Main_Screen main_screen = new Main_Screen();
+
 
         private void LoginBTN_Click(object sender, EventArgs e)
         {
-           
 
+            Regex IdReg = new Regex("[0-9]{9}");
+            Regex PassReg = new Regex("[0-9]{5}");
             if (!startProgram) 
             {
 
-                if (UserID_textbox.Text.Trim() == "" && Pass_textbox.Text.Trim() == "")
+                if (!IdReg.IsMatch(UserID_textbox.Text))
                 {
-                    MessageBox.Show("יש להזין תוכן", "הודעה");
+                    MessageBox.Show("יש להזין ת.ז כולל ספרת ביקורת", "הודעה");
+                    if (!PassReg.IsMatch(Pass_textbox.Text)) { MessageBox.Show("יש להזין סיסמה עם 5 ספרות", "הודעה"); }
+                }
+                else if(!PassReg.IsMatch(Pass_textbox.Text))
+                {
+                    MessageBox.Show("יש להזין סיסמה עם 5 ספרות", "הודעה");
+                   
                 }
                 else
                 {
@@ -50,21 +61,31 @@ namespace EasyTest_App
                     DataTable dt = new DataTable();
                     da.Fill(dt);
 
-                    MySqlDataReader rdr = cmd.ExecuteReader();
-                    rdr.Read();
+                    //MessageBox.Show(dt.Rows[0].ItemArray[1].ToString());
+
+                    //MySqlDataReader rdr = cmd.ExecuteReader();
+                    //rdr.Read();
 
 
                     if (dt.Rows.Count > 0)
                     {
                         startProgram = true;
-                        if (rdr.GetString(5) == "0")
+                        if (dt.Rows[0].ItemArray[5].ToString().Equals("0"))
                         {
-                            Main_Screen main_screen = new Main_Screen();
+                            //create an copy table of exam (local table)
+
+                            MySqlCommand cmdExam = new MySqlCommand("SELECT * FROM exam WHERE proctor_id = @UserID_textbox", conn);
+                            cmdExam.Parameters.AddWithValue("@UserID_textbox", UserID_textbox.Text);
+                            MySqlDataAdapter dataAD = new MySqlDataAdapter(cmdExam);
+                            dataAD.Fill(exam_table);
+                            
+
+                            //Main_Screen main_screen = new Main_Screen();
                             main_screen.Show();
                             Hide();
                           
                         }
-                        if (rdr.GetString(5) == "1")
+                        if (dt.Rows[0].ItemArray[5].ToString().Equals("1"))
                         {
 
                             AdminForm admin = new AdminForm();
@@ -72,6 +93,10 @@ namespace EasyTest_App
                             Hide();
                           
                         }
+
+                        //create an copy table of exam (local table)
+
+                       
 
                         conn.Close();
 
@@ -97,8 +122,8 @@ namespace EasyTest_App
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
-                MySqlDataReader rdr = cmd.ExecuteReader();
-                rdr.Read();
+                //MySqlDataReader rdr = cmd.ExecuteReader();
+                //rdr.Read();
 
                 if (dt.Rows.Count > 0)
                 {
