@@ -22,6 +22,7 @@ namespace EasyTest_App
         public static Boolean startProgram = false;
         public static Boolean ClickTextBox1 = false; 
         public static Boolean ClickTextBox2 = false;
+        public static AdminForm adminF = new AdminForm();
 
 
         private void LoginBTN_Click(object sender, EventArgs e)
@@ -57,18 +58,17 @@ namespace EasyTest_App
                     if (dt.Rows.Count > 0)
                     {
                         startProgram = true;
-                        if (rdr.GetString(5) == "0")
+                        if (rdr.GetString(5).Equals("proctor"))
                         {
                             Main_Screen main_screen = new Main_Screen();
                             main_screen.Show();
                             Hide();
                           
                         }
-                        if (rdr.GetString(5) == "1")
+                        if (rdr.GetString(5).Equals("admin"))
                         {
 
-                            AdminForm admin = new AdminForm();
-                            admin.Show();
+                            adminF.Show();
                             Hide();
                           
                         }

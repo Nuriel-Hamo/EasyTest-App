@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonSearchExam = new System.Windows.Forms.Button();
+            this.buttonAddProctor = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -54,23 +54,25 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // buttonSearchExam
             // 
-            this.button2.Location = new System.Drawing.Point(419, 168);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(131, 45);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "חיפוש בחינה";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonSearchExam.Location = new System.Drawing.Point(419, 168);
+            this.buttonSearchExam.Name = "buttonSearchExam";
+            this.buttonSearchExam.Size = new System.Drawing.Size(131, 45);
+            this.buttonSearchExam.TabIndex = 2;
+            this.buttonSearchExam.Text = "חיפוש בחינה";
+            this.buttonSearchExam.UseVisualStyleBackColor = true;
+            this.buttonSearchExam.Click += new System.EventHandler(this.ButtonSearchExam_Click);
             // 
-            // button3
+            // buttonAddProctor
             // 
-            this.button3.Location = new System.Drawing.Point(419, 234);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(131, 48);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "הוספת משגיח חדש";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonAddProctor.Location = new System.Drawing.Point(419, 234);
+            this.buttonAddProctor.Name = "buttonAddProctor";
+            this.buttonAddProctor.Size = new System.Drawing.Size(131, 48);
+            this.buttonAddProctor.TabIndex = 3;
+            this.buttonAddProctor.Text = "הוספת משגיח חדש";
+            this.buttonAddProctor.UseVisualStyleBackColor = true;
+            this.buttonAddProctor.Click += new System.EventHandler(this.ButtonAddProctor_Click);
             // 
             // AdminForm
             // 
@@ -79,12 +81,13 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(562, 313);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonAddProctor);
+            this.Controls.Add(this.buttonSearchExam);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Name = "AdminForm";
             this.Text = "AdminForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminForm_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -94,7 +97,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonSearchExam;
+        private System.Windows.Forms.Button buttonAddProctor;
     }
 }

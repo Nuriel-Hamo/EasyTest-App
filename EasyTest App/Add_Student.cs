@@ -38,12 +38,12 @@ namespace EasyTest_App
             }
             else
             {
-                string AllowedQuery = "SELECT * FROM examinee WHERE student_id = @StudentID_textbox AND allowed = 1";
-                SQLiteConnection conn = new SQLiteConnection("Data Source=DB_OF_PROJECT.db;version=3;");
+                string AllowedQuery = "SELECT * FROM student WHERE student_id = @StudentID_textbox AND allowed = 1";
+                MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
                 conn.Open();
-                SQLiteCommand cmd = new SQLiteCommand(AllowedQuery, conn);
+                MySqlCommand cmd = new MySqlCommand(AllowedQuery, conn);
                 cmd.Parameters.AddWithValue("@StudentID_textbox", StudentID_textbox.Text);
-                SQLiteDataAdapter da = new SQLiteDataAdapter(cmd);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
