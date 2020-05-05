@@ -114,11 +114,21 @@ namespace EasyTest_App
                             Text = id.ToString(),
                             
                         };
+                        //flowLayoutPanel1.Controls.Add(mainMap[j, i]);
+                        
                         Controls.Add(mainMap[j, i]);
                         mainMap[j, i].Click += Button_Click;
                         mainMap[j, i].Enabled = false;
+                        
+
+
+
+
 
                     }
+                    flowLayoutPanel1.AutoSize = true;
+                    flowLayoutPanel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                   
                 }
                 firstTime = false;
 
@@ -173,6 +183,11 @@ namespace EasyTest_App
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

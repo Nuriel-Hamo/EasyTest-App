@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.IO;
 
 namespace EasyTest_App
 {
@@ -47,7 +48,29 @@ namespace EasyTest_App
             MySqlDataAdapter da2 = new MySqlDataAdapter(cmd2);
             DataTable dt2 = new DataTable();
             da2.Fill(dt2);
+            //conn.Close();
+            String selectQuery = "SELECT image FROM student WHERE student_id = '" + dt2.Rows[0].ItemArray[0].ToString() + "'";
+
+            MySqlCommand command;
+            MySqlDataAdapter da3;
+
+            command = new MySqlCommand(selectQuery, conn);
+
+            da3 = new MySqlDataAdapter(command);
+
+            DataTable table = new DataTable();
+
+            da3.Fill(table);
+
+            byte[] img = (byte[])table.Rows[0][0];
+
+            MemoryStream ms = new MemoryStream(img);
+
+            pictureBox1.Image = Image.FromStream(ms);
+
+            da3.Dispose();
             conn.Close();
+
 
             nameLBL.Text = dt2.Rows[0].ItemArray[1].ToString() + " " + dt2.Rows[0].ItemArray[2].ToString();
             idLBL.Text = dt2.Rows[0].ItemArray[0].ToString();
