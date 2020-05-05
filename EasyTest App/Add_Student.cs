@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
+
 namespace EasyTest_App
 {
     public partial class Add_Student : Form
@@ -37,15 +38,12 @@ namespace EasyTest_App
             }
             else
             {
-
-                string Query = "SELECT * FROM student WHERE student_id = @UserID_textbox AND " +
-                    "allowed = 1";
-                MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
+                string AllowedQuery = "SELECT * FROM examinee WHERE student_id = @StudentID_textbox AND allowed = 1";
+                SQLiteConnection conn = new SQLiteConnection("Data Source=DB_OF_PROJECT.db;version=3;");
                 conn.Open();
-
-                MySqlCommand cmd = new MySqlCommand(Query, conn);
-                cmd.Parameters.AddWithValue("@UserID_textbox", StudentID_textbox.Text);
-                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                SQLiteCommand cmd = new SQLiteCommand(AllowedQuery, conn);
+                cmd.Parameters.AddWithValue("@StudentID_textbox", StudentID_textbox.Text);
+                SQLiteDataAdapter da = new SQLiteDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
