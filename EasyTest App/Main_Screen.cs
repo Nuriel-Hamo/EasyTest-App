@@ -72,7 +72,7 @@ namespace EasyTest_App
         private void Main_Screen_Load(object sender, EventArgs e)
         {
 
-            string Query = "SELECT * FROM maping WHERE class_num = @class_num";
+            string Query = "SELECT * FROM mapping WHERE class_num = @class_num";
             MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
             conn.Open();
 
