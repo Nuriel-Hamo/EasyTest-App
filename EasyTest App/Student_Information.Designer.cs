@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Student_Information));
             this.FirstNameLABEL = new System.Windows.Forms.Label();
             this.IdLABEL = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.FirstNameAnsLABEL = new System.Windows.Forms.Label();
             this.IdAnsLABEL = new System.Windows.Forms.Label();
             this.nootbookBTN = new System.Windows.Forms.Button();
@@ -40,7 +40,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.mailANS = new System.Windows.Forms.Label();
             this.phoneANS = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.scLABEL2 = new System.Windows.Forms.Label();
+            this.scLABEL = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // FirstNameLABEL
@@ -67,16 +69,15 @@
             this.IdLABEL.TabIndex = 3;
             this.IdLABEL.Text = ":תעודת זהות";
             // 
-            // pictureBox1
+            // pictureBox
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(236, 233);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox.Location = new System.Drawing.Point(12, 22);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(236, 233);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox.TabIndex = 4;
+            this.pictureBox.TabStop = false;
             // 
             // FirstNameAnsLABEL
             // 
@@ -135,7 +136,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(680, 137);
+            this.label1.Location = new System.Drawing.Point(680, 176);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 29);
             this.label1.TabIndex = 9;
@@ -147,7 +148,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(707, 179);
+            this.label2.Location = new System.Drawing.Point(707, 218);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 29);
             this.label2.TabIndex = 10;
@@ -159,7 +160,7 @@
             this.mailANS.BackColor = System.Drawing.Color.Transparent;
             this.mailANS.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mailANS.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.mailANS.Location = new System.Drawing.Point(416, 181);
+            this.mailANS.Location = new System.Drawing.Point(416, 220);
             this.mailANS.Name = "mailANS";
             this.mailANS.Size = new System.Drawing.Size(285, 27);
             this.mailANS.TabIndex = 11;
@@ -172,12 +173,37 @@
             this.phoneANS.BackColor = System.Drawing.Color.Transparent;
             this.phoneANS.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phoneANS.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.phoneANS.Location = new System.Drawing.Point(533, 139);
+            this.phoneANS.Location = new System.Drawing.Point(533, 178);
             this.phoneANS.Name = "phoneANS";
             this.phoneANS.Size = new System.Drawing.Size(142, 27);
             this.phoneANS.TabIndex = 12;
             this.phoneANS.Text = "0000000000";
             this.phoneANS.Visible = false;
+            // 
+            // scLABEL2
+            // 
+            this.scLABEL2.AutoSize = true;
+            this.scLABEL2.BackColor = System.Drawing.Color.Transparent;
+            this.scLABEL2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scLABEL2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.scLABEL2.Location = new System.Drawing.Point(517, 140);
+            this.scLABEL2.Name = "scLABEL2";
+            this.scLABEL2.Size = new System.Drawing.Size(129, 27);
+            this.scLABEL2.TabIndex = 14;
+            this.scLABEL2.Text = "000000000";
+            this.scLABEL2.Visible = false;
+            // 
+            // scLABEL
+            // 
+            this.scLABEL.AutoSize = true;
+            this.scLABEL.BackColor = System.Drawing.Color.Transparent;
+            this.scLABEL.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scLABEL.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.scLABEL.Location = new System.Drawing.Point(684, 138);
+            this.scLABEL.Name = "scLABEL";
+            this.scLABEL.Size = new System.Drawing.Size(84, 29);
+            this.scLABEL.TabIndex = 13;
+            this.scLABEL.Text = ":הקלות";
             // 
             // Student_Information
             // 
@@ -186,6 +212,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(780, 471);
+            this.Controls.Add(this.scLABEL2);
+            this.Controls.Add(this.scLABEL);
             this.Controls.Add(this.phoneANS);
             this.Controls.Add(this.mailANS);
             this.Controls.Add(this.label2);
@@ -194,7 +222,7 @@
             this.Controls.Add(this.nootbookBTN);
             this.Controls.Add(this.IdAnsLABEL);
             this.Controls.Add(this.FirstNameAnsLABEL);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.IdLABEL);
             this.Controls.Add(this.FirstNameLABEL);
             this.DoubleBuffered = true;
@@ -203,7 +231,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Student_Information_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,7 +241,7 @@
 
         private System.Windows.Forms.Label FirstNameLABEL;
         private System.Windows.Forms.Label IdLABEL;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Label FirstNameAnsLABEL;
         private System.Windows.Forms.Label IdAnsLABEL;
         private System.Windows.Forms.Button nootbookBTN;
@@ -222,5 +250,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label mailANS;
         private System.Windows.Forms.Label phoneANS;
+        private System.Windows.Forms.Label scLABEL2;
+        private System.Windows.Forms.Label scLABEL;
     }
 }
