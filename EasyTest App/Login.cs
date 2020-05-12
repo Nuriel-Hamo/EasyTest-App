@@ -31,6 +31,7 @@ namespace EasyTest_App
 
         private void LoginBTN_Click(object sender, EventArgs e)
         {
+            
 
             Regex IdReg = new Regex("[0-9]{9}");
             Regex PassReg = new Regex("[0-9]{5}");

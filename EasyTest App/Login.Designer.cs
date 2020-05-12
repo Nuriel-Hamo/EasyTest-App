@@ -63,6 +63,7 @@
             this.Pass_textbox.ForeColor = System.Drawing.Color.DimGray;
             this.Pass_textbox.Location = new System.Drawing.Point(405, 262);
             this.Pass_textbox.Name = "Pass_textbox";
+            this.Pass_textbox.PasswordChar = '*';
             this.Pass_textbox.Size = new System.Drawing.Size(270, 35);
             this.Pass_textbox.TabIndex = 1;
             this.Pass_textbox.Text = "הכנס סיסמה";

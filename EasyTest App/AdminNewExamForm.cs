@@ -16,7 +16,7 @@ namespace EasyTest_App
         
         MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=easytest");
         Regex rx = new Regex("^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$");
-        int examID = 1;
+        
         
         public AdminNewExamForm()
         {

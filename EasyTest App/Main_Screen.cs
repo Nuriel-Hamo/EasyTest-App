@@ -114,9 +114,9 @@ namespace EasyTest_App
                             Text = id.ToString(),
                             
                         };
-                        //flowLayoutPanel1.Controls.Add(mainMap[j, i]);
+                        groupBox1.Controls.Add(mainMap[j, i]);
                         
-                        Controls.Add(mainMap[j, i]);
+                        //Controls.Add(mainMap[j, i]);
                         mainMap[j, i].Click += Button_Click;
                         mainMap[j, i].Enabled = false;
                         
@@ -126,8 +126,8 @@ namespace EasyTest_App
 
 
                     }
-                    flowLayoutPanel1.AutoSize = true;
-                    flowLayoutPanel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                    groupBox1.AutoSize = true;
+                    groupBox1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
                    
                 }
                 firstTime = false;

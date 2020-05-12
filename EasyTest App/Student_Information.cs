@@ -25,7 +25,7 @@ namespace EasyTest_App
         private void Student_Information_Load(object sender, EventArgs e)
         {
           
-            FirstNameAnsLABEL.Text = Add_Student.student_table.Rows[0].ItemArray[1].ToString() +
+            FirstNameAnsLABEL.Text = Add_Student.student_table.Rows[0].ItemArray[1].ToString() + " " +
                Add_Student.student_table.Rows[0].ItemArray[2].ToString();
             IdAnsLABEL.Text = Add_Student.student_table.Rows[0].ItemArray[0].ToString();
             phoneANS.Text = "0" + Add_Student.student_table.Rows[0].ItemArray[4].ToString();

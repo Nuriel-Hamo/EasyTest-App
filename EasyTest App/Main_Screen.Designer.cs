@@ -38,7 +38,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.SuspendLayout();
             // 
             // AddStudentBTN
@@ -138,12 +138,14 @@
             this.labelName.Size = new System.Drawing.Size(0, 20);
             this.labelName.TabIndex = 8;
             // 
-            // flowLayoutPanel1
+            // groupBox1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 9);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(254, 186);
-            this.flowLayoutPanel1.TabIndex = 10;
+            this.groupBox1.Location = new System.Drawing.Point(52, 51);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 100);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
             // 
             // Main_Screen
             // 
@@ -153,7 +155,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(780, 471);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BeginExamBTN);
@@ -182,6 +184,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelName;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
