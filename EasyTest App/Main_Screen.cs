@@ -29,6 +29,7 @@ namespace EasyTest_App
         public static DataTable maping_table = new DataTable();
         public static string map_row = "";
         public static string map_collumn = "";
+        public static Boolean StudentInToilet = false;
 
 
 

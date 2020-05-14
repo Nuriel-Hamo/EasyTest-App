@@ -98,6 +98,7 @@
             this.button2.TabIndex = 11;
             this.button2.Text = "חזור";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label7
             // 
@@ -258,9 +259,9 @@
             this.ReturnBTN.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ReturnBTN.Location = new System.Drawing.Point(769, 280);
             this.ReturnBTN.Name = "ReturnBTN";
-            this.ReturnBTN.Size = new System.Drawing.Size(71, 27);
+            this.ReturnBTN.Size = new System.Drawing.Size(55, 27);
             this.ReturnBTN.TabIndex = 34;
-            this.ReturnBTN.Text = "00:00";
+            this.ReturnBTN.Text = "**:**";
             this.ReturnBTN.Visible = false;
             // 
             // ExitTimeLBL
@@ -271,9 +272,9 @@
             this.ExitTimeLBL.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ExitTimeLBL.Location = new System.Drawing.Point(767, 225);
             this.ExitTimeLBL.Name = "ExitTimeLBL";
-            this.ExitTimeLBL.Size = new System.Drawing.Size(71, 27);
+            this.ExitTimeLBL.Size = new System.Drawing.Size(55, 27);
             this.ExitTimeLBL.TabIndex = 33;
-            this.ExitTimeLBL.Text = "00:00";
+            this.ExitTimeLBL.Text = "**:**";
             this.ExitTimeLBL.Visible = false;
             // 
             // ReturnBTN2

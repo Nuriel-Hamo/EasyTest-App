@@ -15,11 +15,18 @@ namespace EasyTest_App
 {
     public partial class ReportForm : Form
     {
+
+        
+        Boolean TimerClick = false;
+        int ClickCount = 0;
+        DataTable report_dt = new DataTable();
+        string EndTimeQuery = "";
+
+
         public ReportForm()
         {
             InitializeComponent();
         }
-        Boolean TimerClick = false;
         private void ReportForm_Load(object sender, EventArgs e)
         {
             string query = "SELECT student_id FROM examination_log WHERE table_num = @table_num";
@@ -84,6 +91,41 @@ namespace EasyTest_App
                 ReturnBTN2.Visible = true;
                 ExitTimeLBL2.Visible = true;
 
+
+
+                string query = "SELECT report_id, start FROM report WHERE exam_id = @exam_id AND student_id = @student_id AND type = 'toilet' AND end = ''";
+
+                MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
+                conn.Open();
+
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
+                cmd.Parameters.AddWithValue("@student_id", IDAnsLABEL.Text);
+                //cmd.Parameters.AddWithValue("@start_time", ExitTimeLBL.Text);
+
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                
+                da.Fill(report_dt);
+
+                if (report_dt.Rows.Count > 0)
+                {
+                    ExitTimeLBL.Text = report_dt.Rows[0].ItemArray[1].ToString();
+                    ExitTimeLBL.Visible = true;
+                    TimerBTN.Text = "סיים טיימר";
+                    TimerClick = true; ClickCount++;
+                    Main_Screen.StudentInToilet = true;
+
+                }
+                conn.Close();
+
+
+
+
+
+
+
+
             }
         }
 
@@ -137,88 +179,153 @@ namespace EasyTest_App
 
         private void TimerBTN_Click(object sender, EventArgs e)
         {
-            note.Visible = false;
-            DateTime now = DateTime.Now;
-            if (!TimerClick)
+            if(ClickCount<2)
             {
-                if (now.Minute < 10)
+                note.Visible = false;
+                DateTime now = DateTime.Now;
+                if (!TimerClick)
                 {
-                    ExitTimeLBL.Text = now.Hour.ToString() + ":0" + now.Minute.ToString();
-                }
-                else if(now.Hour<10)
-                {
-                    ExitTimeLBL.Text = "0" + now.Hour.ToString() + ":" + now.Minute.ToString();
-                }
-                else if(now.Hour<10 && now.Minute < 10)
-                {
-                    ExitTimeLBL.Text = "0" + now.Hour.ToString() + ":0" + now.Minute.ToString();
-                }
-                else if(now.Minute == 0)
-                {
-                    ExitTimeLBL.Text = now.Hour.ToString() + ":00";
-                }
-                else if (now.Minute == 0)
-                {
-                    ExitTimeLBL.Text = now.Hour.ToString() + ":00";
-                }
-                else if(now.Hour == 0)
-                {
-                    ExitTimeLBL.Text = "00" + now.Hour.ToString() + ":" + now.Minute.ToString();
-                }
-                else if(now.Hour==0 && now.Minute == 0)
-                {
-                    ExitTimeLBL.Text = "00" + now.Hour.ToString() + ":00" + now.Minute.ToString();
+                    if (now.Minute < 10)
+                    {
+                        ExitTimeLBL.Text = now.Hour.ToString() + ":0" + now.Minute.ToString();
+                    }
+                    else if (now.Hour < 10)
+                    {
+                        ExitTimeLBL.Text = "0" + now.Hour.ToString() + ":" + now.Minute.ToString();
+                    }
+                    else if (now.Hour < 10 && now.Minute < 10)
+                    {
+                        ExitTimeLBL.Text = "0" + now.Hour.ToString() + ":0" + now.Minute.ToString();
+                    }
+                    else if (now.Minute == 0)
+                    {
+                        ExitTimeLBL.Text = now.Hour.ToString() + ":00";
+                    }
+                    else if (now.Minute == 0)
+                    {
+                        ExitTimeLBL.Text = now.Hour.ToString() + ":00";
+                    }
+                    else if (now.Hour == 0)
+                    {
+                        ExitTimeLBL.Text = "00" + now.Hour.ToString() + ":" + now.Minute.ToString();
+                    }
+                    else if (now.Hour == 0 && now.Minute == 0)
+                    {
+                        ExitTimeLBL.Text = "00" + now.Hour.ToString() + ":00" + now.Minute.ToString();
+
+                    }
+                    else
+                    {
+                        ExitTimeLBL.Text = now.Hour.ToString() + ":" + now.Minute.ToString();
+
+                    }
+                    ExitTimeLBL.Visible = true;
+                    TimerBTN.Text = "סיים טיימר";
+                    ClickCount++;
+                    //Main_Screen.StudentInToilet = true;
+
+                    string query = "INSERT INTO `report` (`report_id`, `exam_id`, `student_id`, `type`, `start`, `end`, `comment`) VALUES (NULL, @exam_id, @student_id, 'toilet', @start_time, '', '')";
+
+                    MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
+                    conn.Open();
+
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                    cmd.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
+                    cmd.Parameters.AddWithValue("@student_id", IDAnsLABEL.Text);
+                    cmd.Parameters.AddWithValue("@start_time", ExitTimeLBL.Text);
+
+                    cmd.ExecuteNonQuery();
+
+                    conn.Close();
+
 
                 }
-                else
-                {
-                    ExitTimeLBL.Text = now.Hour.ToString() + ":" + now.Minute.ToString();
 
-                }
-                ExitTimeLBL.Visible = true;
-                TimerBTN.Text = "סיים טיימר";
-            }           
-            if(TimerClick)
-            {
-                if (now.Minute < 10)
+                if (TimerClick)
                 {
-                    ReturnBTN.Text = now.Hour.ToString() + ":0" + now.Minute.ToString();
-                }
-                else if (now.Hour < 10)
-                {
-                    ReturnBTN.Text = "0" + now.Hour.ToString() + ":" + now.Minute.ToString();
-                }
-                else if (now.Hour < 10 && now.Minute < 10)
-                {
-                    ReturnBTN.Text = "0" + now.Hour.ToString() + ":0" + now.Minute.ToString();
-                }
-                else if (now.Minute == 0)
-                {
-                    ReturnBTN.Text = now.Hour.ToString() + ":00";
-                }
-                else if (now.Minute == 0)
-                {
-                    ReturnBTN.Text = now.Hour.ToString() + ":00";
-                }
-                else if (now.Hour == 0)
-                {
-                    ReturnBTN.Text = "00" + now.Hour.ToString() + ":" + now.Minute.ToString();
-                }
-                else if (now.Hour == 0 && now.Minute == 0)
-                {
-                    ReturnBTN.Text = "00" + now.Hour.ToString() + ":00" + now.Minute.ToString();
+                    if (now.Minute < 10)
+                    {
+                        ReturnBTN.Text = now.Hour.ToString() + ":0" + now.Minute.ToString();
+                    }
+                    else if (now.Hour < 10)
+                    {
+                        ReturnBTN.Text = "0" + now.Hour.ToString() + ":" + now.Minute.ToString();
+                    }
+                    else if (now.Hour < 10 && now.Minute < 10)
+                    {
+                        ReturnBTN.Text = "0" + now.Hour.ToString() + ":0" + now.Minute.ToString();
+                    }
+                    else if (now.Minute == 0)
+                    {
+                        ReturnBTN.Text = now.Hour.ToString() + ":00";
+                    }
+                    else if (now.Minute == 0)
+                    {
+                        ReturnBTN.Text = now.Hour.ToString() + ":00";
+                    }
+                    else if (now.Hour == 0)
+                    {
+                        ReturnBTN.Text = "00" + now.Hour.ToString() + ":" + now.Minute.ToString();
+                    }
+                    else if (now.Hour == 0 && now.Minute == 0)
+                    {
+                        ReturnBTN.Text = "00" + now.Hour.ToString() + ":00" + now.Minute.ToString();
 
-                }
-                else
-                {
-                    ReturnBTN.Text = now.Hour.ToString() + ":" + now.Minute.ToString();
+                    }
+                    else
+                    {
+                        ReturnBTN.Text = now.Hour.ToString() + ":" + now.Minute.ToString();
 
+                    }
+
+                    ReturnBTN.Visible = true;
+                    TimerBTN.Text = "התחל טיימר";
+                    ClickCount++;
+
+                    if(Main_Screen.StudentInToilet)
+                    {
+                        EndTimeQuery = "UPDATE `report` SET `end` = @end_time WHERE `report`.`report_id` = @report_id";
+
+                    }
+                    else
+                    {
+                        EndTimeQuery = "UPDATE `report` SET `end` = @end_time WHERE `report`.`exam_id` = @exam_id AND `report`.`student_id` = @student_id AND `report`.`end` = ''";
+
+                    }
+                    MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
+                        conn.Open();
+
+                        MySqlCommand cmd = new MySqlCommand(EndTimeQuery, conn);
+
+                        cmd.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
+                        cmd.Parameters.AddWithValue("@student_id", IDAnsLABEL.Text);
+                    
+                        cmd.Parameters.AddWithValue("@end_time", ReturnBTN.Text);
+                         if (Main_Screen.StudentInToilet) { cmd.Parameters.AddWithValue("@report_id", report_dt.Rows[0][0].ToString()); }
+                        //cmd.Parameters.AddWithValue("@start_time", ExitTimeLBL.Text);
+
+                        cmd.ExecuteNonQuery();
+
+                        conn.Close();
+
+                        Main_Screen.StudentInToilet = false;
+                    
+               
+
+
+                    //Main_Screen.StudentInToilet = false;
                 }
-                ReturnBTN.Visible = true;
-                TimerBTN.Text = "התחל טיימר";
+                TimerClick = true;
             }
-            TimerClick = true;
+            
+            
         }
-        
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Login.main_screen.Show();
+            Hide();
+        }
     }
 }
