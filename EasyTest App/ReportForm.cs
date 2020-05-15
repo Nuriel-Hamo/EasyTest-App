@@ -113,6 +113,7 @@ namespace EasyTest_App
                         TimerBTN.Visible = true;
                         ReturnBTN2.Visible = true;
                         ExitTimeLBL2.Visible = true;
+                        button1.Visible = false;
 
                         ExitTimeLBL.Text = dt2.Rows[0].ItemArray[4].ToString();
                         ExitTimeLBL.Visible = true;
@@ -157,6 +158,7 @@ namespace EasyTest_App
                     TimerBTN.Visible = true;
                     ReturnBTN2.Visible = true;
                     ExitTimeLBL2.Visible = true;
+                    button1.Visible = false;
                 }
 
             
@@ -179,47 +181,53 @@ namespace EasyTest_App
         {
             if (note.Checked == true)
             {
+
+                button1.Visible = true;
                 TimerBTN.Visible = false;
                 ReturnBTN2.Visible = false;
                 ExitTimeLBL2.Visible = false;
                 ContentNote.Visible = true;
                 comboBox.Visible = true;
+
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string query = "";
 
-            /*if (note.Checked)
+            if (comboBox.Text.Equals("התחצפות")) 
             {
-                string query = "INSERT INTO `examination_log` (`exam_id`, `student_id`," +
-                " `lecturer_id`, `proctor_id`, `report_id`, `course_id`, `class_num`," +
-                " `notebook_num`, `table_num`, `start_time`, `end_time`," +
-                " `extra_time`) VALUES (@exam_id, @student_id, @lecturer_id, @proctor_id, ''," +
-                " @course_id, @class_num, @notebook_num, @table_num, '', '', '')";
-
-                MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
-                conn.Open();
-
-                MySqlCommand cmd = new MySqlCommand(query, conn);
-
-                cmd.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
-                cmd.Parameters.AddWithValue("@student_id", Add_Student.StudentID);
-                cmd.Parameters.AddWithValue("@lecturer_id", Login.exam_table.Rows[0].ItemArray[2].ToString());
-                cmd.Parameters.AddWithValue("@proctor_id", Login.exam_table.Rows[0].ItemArray[1].ToString());
-                cmd.Parameters.AddWithValue("@course_id", Login.exam_table.Rows[0].ItemArray[3].ToString());
-                cmd.Parameters.AddWithValue("@class_num", Login.exam_table.Rows[0].ItemArray[4].ToString());
-                cmd.Parameters.AddWithValue("@notebook_num", NoteBook_Num.notebookNum);
-                cmd.Parameters.AddWithValue("@table_num", lastBTN);
-
-                cmd.ExecuteNonQuery();
-
-                conn.Close();
+                 query = "INSERT INTO `report` (`report_id`, `exam_id`, `student_id`, `type`, `start`, `end`, `comment`) VALUES (NULL, @exam_id, @student_id, 'brutality', '', '', @comment)";
             }
-            if(toilet.Checked)
+            if (comboBox.Text.Equals("חשד להעתקה"))
             {
+                 query = "INSERT INTO `report` (`report_id`, `exam_id`, `student_id`, `type`, `start`, `end`, `comment`) VALUES (NULL, @exam_id, @student_id, 'suspicion', '', '', @comment)";
+            }
 
-            }*/
+            if (!query.Equals("")) 
+            {
+                if(MessageBox.Show("הקש אישור לביצוע הדיווח", "הודעה", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
+                    conn.Open();
+
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                    cmd.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
+                    cmd.Parameters.AddWithValue("@student_id", IDAnsLABEL.Text);
+                    cmd.Parameters.AddWithValue("@comment", ContentNote.Text);
+
+                    cmd.ExecuteNonQuery();
+
+                    conn.Close();
+                }
+               
+            }
+           
+
+
+
 
         }
 
@@ -371,8 +379,11 @@ namespace EasyTest_App
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Login.main_screen.Show();
-            Hide();
+            
+                Login.main_screen.Show();
+                Hide();
+            
+            
         }
     }
 }

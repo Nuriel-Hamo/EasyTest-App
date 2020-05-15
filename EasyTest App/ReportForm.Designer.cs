@@ -80,18 +80,19 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(839, 395);
+            this.button1.Location = new System.Drawing.Point(610, 409);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 52);
             this.button1.TabIndex = 10;
             this.button1.Text = "אישור";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(610, 395);
+            this.button2.Location = new System.Drawing.Point(842, 409);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(126, 52);

@@ -73,6 +73,7 @@ namespace EasyTest_App
         private void Main_Screen_Load(object sender, EventArgs e)
         {
 
+            ////////////////////////////////////////////////////////////////////
             string Query = "SELECT * FROM mapping WHERE class_num = @class_num";
             MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
             conn.Open();
@@ -80,13 +81,14 @@ namespace EasyTest_App
             MySqlCommand cmd = new MySqlCommand(Query, conn);
             cmd.Parameters.AddWithValue("@class_num", Login.exam_table.Rows[0].ItemArray[4].ToString());
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-            
+
             da.Fill(maping_table);
 
             map_row = maping_table.Rows[0].ItemArray[1].ToString();
             map_collumn = maping_table.Rows[0].ItemArray[2].ToString();
 
             mainMap = new Button[Int32.Parse(map_collumn), Int32.Parse(map_row)];
+            conn.Close();
 
 
 
@@ -100,9 +102,9 @@ namespace EasyTest_App
                 {
                     for (int j = 0; j < Int32.Parse(map_collumn); j++)
                     {
-                        
+
                         id++;
-                        
+
                         mainMap[j, i] = new Button
                         {
                             Name = "card" + j + i,
@@ -113,31 +115,78 @@ namespace EasyTest_App
                             ForeColor = FORGROUND_COLOR,
                             BackColor = BACKGROUND_COLOR_main,
                             Text = id.ToString(),
-                            
+
                         };
                         //groupBox1.Controls.Add(mainMap[j, i]);
                         Controls.Add(mainMap[j, i]);
                         //Controls.Add(mainMap[j, i]);
                         mainMap[j, i].Click += Button_Click;
                         mainMap[j, i].Enabled = false;
-                        
+
 
 
 
 
 
                     }
-                   // groupBox1.AutoSize = true;
+                    // groupBox1.AutoSize = true;
                     //groupBox1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-                   // Controls.AutoSize = true;
-                   // Controls.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                    // Controls.AutoSize = true;
+                    // Controls.AutoSizeMode = AutoSizeMode.GrowAndShrink;
 
                 }
                 firstTime = false;
 
             }
+            ///////////////////////////////////////////////////////
+
+
+
+
+            string Query1 = "SELECT * FROM examination_log WHERE exam_id = @exam_id";
+            MySqlConnection conn1 = new MySqlConnection("server=localhost;user id=root;database=easytest");
+            conn1.Open();
+
+            MySqlCommand cmd1 = new MySqlCommand(Query1, conn1);
+            cmd1.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
+            MySqlDataAdapter da1 = new MySqlDataAdapter(cmd1);
+            DataTable log_table = new DataTable();
+            da1.Fill(log_table);
+            conn1.Close();
+            if (log_table.Rows.Count > 0)
+            {
+                //int count = 0;
+                for (int i = 0; i < Int32.Parse(Main_Screen.map_row); i++)
+                {
+                    for (int j = 0; j < Int32.Parse(Main_Screen.map_collumn); j++)
+                    {
+                        for (int t = 0; t < log_table.Rows.Count; t++)
+                        {
+                            if (Main_Screen.mainMap[j, i].Text == log_table.Rows[t][8].ToString())
+                            {
+                                Main_Screen.mainMap[j, i].BackColor = Color.Red;
+                                Main_Screen.mainMap[j, i].Enabled = true;
+                            }
+
+                        }
+
+                        /*if (Main_Screen.mainMap[j, i].Text == log_table.Rows[count][8].ToString())
+                        {
+                            Main_Screen.mainMap[j, i].BackColor = Color.Red;
+                            Main_Screen.mainMap[j, i].Enabled = true;
+                        }*/
+
+                    }
+                }
+            }
+            
             
 
+
+
+
+
+            
 
 
         }
