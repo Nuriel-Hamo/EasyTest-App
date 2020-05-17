@@ -39,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // AddStudentBTN
@@ -140,13 +141,21 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Location = new System.Drawing.Point(52, 51);
+            this.groupBox1.Location = new System.Drawing.Point(434, 280);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(295, 206);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             this.groupBox1.Visible = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(42, 40);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(210, 178);
+            this.panel1.TabIndex = 10;
             // 
             // Main_Screen
             // 
@@ -156,6 +165,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(780, 471);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.label1);
@@ -186,5 +196,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

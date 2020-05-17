@@ -97,7 +97,7 @@ namespace EasyTest_App
             if (firstTime)
             {
                 int id = 0;
-
+                
                 for (int i = 0; i < Int32.Parse(map_row); i++)
                 {
                     for (int j = 0; j < Int32.Parse(map_collumn); j++)
@@ -109,7 +109,7 @@ namespace EasyTest_App
                         {
                             Name = "card" + j + i,
                             Size = new Size(CARD_SIZE, CARD_SIZE),
-                            Location = new Point(50 * GAP + j * (CARD_SIZE + GAP), 50 * GAP + i * (CARD_SIZE + GAP)),
+                            Location = new Point(GAP + j * (CARD_SIZE + GAP),GAP + i * (CARD_SIZE + GAP)),
                             TextAlign = ContentAlignment.MiddleCenter,
                             Font = new Font("david", 20),
                             ForeColor = FORGROUND_COLOR,
@@ -117,8 +117,13 @@ namespace EasyTest_App
                             Text = id.ToString(),
 
                         };
-                        //groupBox1.Controls.Add(mainMap[j, i]);
-                        Controls.Add(mainMap[j, i]);
+                        //mainMap[j, i].Location = new Point(1, 1);
+                        panel1.Controls.Add(mainMap[j, i]);
+                        panel1.AutoSize = true;
+                        panel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                        //panel1.Location = new Point(12, 17);
+                        //panel1.Size = new Size(400, 200);
+                        //Controls.Add(mainMap[j, i]);
                         //Controls.Add(mainMap[j, i]);
                         mainMap[j, i].Click += Button_Click;
                         mainMap[j, i].Enabled = false;
@@ -135,6 +140,44 @@ namespace EasyTest_App
                     // Controls.AutoSizeMode = AutoSizeMode.GrowAndShrink;
 
                 }
+                string Query1 = "SELECT * FROM examination_log WHERE exam_id = @exam_id";
+                MySqlConnection conn1 = new MySqlConnection("server=localhost;user id=root;database=easytest");
+                conn1.Open();
+
+                MySqlCommand cmd1 = new MySqlCommand(Query1, conn1);
+                cmd1.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
+                MySqlDataAdapter da1 = new MySqlDataAdapter(cmd1);
+                DataTable log_table = new DataTable();
+                da1.Fill(log_table);
+                conn1.Close();
+                if (log_table.Rows.Count > 0)
+                {
+                    //int count = 0;
+                    for (int i = 0; i < Int32.Parse(Main_Screen.map_row); i++)
+                    {
+                        for (int j = 0; j < Int32.Parse(Main_Screen.map_collumn); j++)
+                        {
+                            for (int t = 0; t < log_table.Rows.Count; t++)
+                            {
+                                if (Main_Screen.mainMap[j, i].Text == log_table.Rows[t][8].ToString())
+                                {
+                                    Main_Screen.mainMap[j, i].BackColor = Color.Red;
+                                    Main_Screen.mainMap[j, i].Enabled = true;
+                                }
+
+                            }
+
+                            /*if (Main_Screen.mainMap[j, i].Text == log_table.Rows[count][8].ToString())
+                            {
+                                Main_Screen.mainMap[j, i].BackColor = Color.Red;
+                                Main_Screen.mainMap[j, i].Enabled = true;
+                            }*/
+
+                        }
+                    }
+                }
+
+
                 firstTime = false;
 
             }
@@ -143,43 +186,6 @@ namespace EasyTest_App
 
 
 
-            string Query1 = "SELECT * FROM examination_log WHERE exam_id = @exam_id";
-            MySqlConnection conn1 = new MySqlConnection("server=localhost;user id=root;database=easytest");
-            conn1.Open();
-
-            MySqlCommand cmd1 = new MySqlCommand(Query1, conn1);
-            cmd1.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
-            MySqlDataAdapter da1 = new MySqlDataAdapter(cmd1);
-            DataTable log_table = new DataTable();
-            da1.Fill(log_table);
-            conn1.Close();
-            if (log_table.Rows.Count > 0)
-            {
-                //int count = 0;
-                for (int i = 0; i < Int32.Parse(Main_Screen.map_row); i++)
-                {
-                    for (int j = 0; j < Int32.Parse(Main_Screen.map_collumn); j++)
-                    {
-                        for (int t = 0; t < log_table.Rows.Count; t++)
-                        {
-                            if (Main_Screen.mainMap[j, i].Text == log_table.Rows[t][8].ToString())
-                            {
-                                Main_Screen.mainMap[j, i].BackColor = Color.Red;
-                                Main_Screen.mainMap[j, i].Enabled = true;
-                            }
-
-                        }
-
-                        /*if (Main_Screen.mainMap[j, i].Text == log_table.Rows[count][8].ToString())
-                        {
-                            Main_Screen.mainMap[j, i].BackColor = Color.Red;
-                            Main_Screen.mainMap[j, i].Enabled = true;
-                        }*/
-
-                    }
-                }
-            }
-            
             
 
 

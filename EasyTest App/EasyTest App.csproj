@@ -104,6 +104,12 @@
     <Compile Include="ExtraTimeForm.Designer.cs">
       <DependentUpon>ExtraTimeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MadorReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MadorReport.Designer.cs">
+      <DependentUpon>MadorReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Map_Screen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExtraTimeForm.resx">
       <DependentUpon>ExtraTimeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MadorReport.resx">
+      <DependentUpon>MadorReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Map_Screen.resx">
       <DependentUpon>Map_Screen.cs</DependentUpon>

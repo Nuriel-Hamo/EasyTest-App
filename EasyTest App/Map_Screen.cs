@@ -74,7 +74,7 @@ namespace EasyTest_App
                     {
                         Name = "card" + j + i,
                         Size = new Size(CARD_SIZE, CARD_SIZE),
-                        Location = new Point(200 * GAP + j * (CARD_SIZE + GAP), 100 * GAP + i * (CARD_SIZE + GAP)),
+                        Location = new Point(GAP + j * (CARD_SIZE + GAP), GAP + i * (CARD_SIZE + GAP)),
                         TextAlign = ContentAlignment.MiddleCenter,
                         Font = new Font("david", 20),
                         ForeColor = FORGROUND_COLOR,
@@ -84,7 +84,10 @@ namespace EasyTest_App
 
                         
                     };
-                    Controls.Add(cards[j, i]);
+                    panel1.Controls.Add(cards[j, i]);
+                    panel1.AutoSize = true;
+                    panel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                    //Controls.Add(cards[j, i]);
                     cards[j, i].Click += Button_Click;
                    
                 }               

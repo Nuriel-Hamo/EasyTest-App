@@ -172,8 +172,8 @@ namespace EasyTest_App
 
         private void login_backBTN_Click(object sender, EventArgs e)
         {
-            Main_Screen ms = new Main_Screen();
-            ms.Show();
+            
+            main_screen.Show();
             Hide();
         }
 
