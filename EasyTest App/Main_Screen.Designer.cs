@@ -38,7 +38,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
@@ -139,16 +138,6 @@
             this.labelName.Size = new System.Drawing.Size(0, 20);
             this.labelName.TabIndex = 8;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Location = new System.Drawing.Point(434, 280);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(295, 206);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            this.groupBox1.Visible = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
@@ -166,7 +155,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(780, 471);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BeginExamBTN);
@@ -179,6 +167,7 @@
             this.Name = "Main_Screen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main_Screen";
+            this.Activated += new System.EventHandler(this.Main_Screen_Activated);
             this.Load += new System.EventHandler(this.Main_Screen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -191,11 +180,10 @@
         private System.Windows.Forms.Button ReportBTN;
         private System.Windows.Forms.Button ExtraTimeBTN;
         private System.Windows.Forms.Button EndExamBTN;
-        private System.Windows.Forms.Button BeginExamBTN;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelName;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button BeginExamBTN;
     }
 }

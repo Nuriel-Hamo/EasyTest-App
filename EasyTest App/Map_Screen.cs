@@ -13,6 +13,9 @@ namespace EasyTest_App
 {
     public partial class Map_Screen : Form
     {
+        //public delegate void ClickButton();
+        //public event ClickButton ButtonWasClicked;
+
         public static string saveColor;
         //private static readonly int collumn = 5;
         //private static readonly int row = 3;
@@ -23,12 +26,16 @@ namespace EasyTest_App
         public static Color BACKGROUND_COLOR_map = Color.LightGray;
         public static Button[,] cards = new Button[Int32.Parse(Main_Screen.map_collumn), Int32.Parse(Main_Screen.map_row)];
         private static string lastBTN = "";
-        
+
+
         public Map_Screen()
         {
             InitializeComponent();
             
+            
         }
+       
+       
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
@@ -145,12 +152,34 @@ namespace EasyTest_App
 
         private void button10_Click(object sender, EventArgs e)
         {
+            
+            string query = "";
+            if (Main_Screen.EmptyClass && !Main_Screen.TestBegin)
+            {
+                Main_Screen.EmptyClass = false;
+                Main_Screen.BeginBTN = true;
+                Main_Screen.first = false;
+                MessageBox.Show("can click on button start exam");
+                /////////////////////////////////////////////////////              
+            }
+            if (Main_Screen.TestBegin)
+            {
+                query = "INSERT INTO `examination_log` (`exam_id`, `student_id`," +
+               " `lecturer_id`, `proctor_id`, `report_id`, `course_id`, `class_num`," +
+               " `notebook_num`, `table_num`, `start_time`, `end_time`," +
+               " `extra_time`, `class_start_time`) VALUES (@exam_id, @student_id, @lecturer_id, @proctor_id, ''," +
+               " @course_id, @class_num, @notebook_num, @table_num, @startTime, '', '',@class_start_time)";
+            }
+            else
+            {
+                query = "INSERT INTO `examination_log` (`exam_id`, `student_id`," +
+               " `lecturer_id`, `proctor_id`, `report_id`, `course_id`, `class_num`," +
+               " `notebook_num`, `table_num`, `start_time`, `end_time`," +
+               " `extra_time`, `class_start_time`) VALUES (@exam_id, @student_id, @lecturer_id, @proctor_id, ''," +
+               " @course_id, @class_num, @notebook_num, @table_num, '', '', '','')";
+            }
 
-             string query = "INSERT INTO `examination_log` (`exam_id`, `student_id`," +
-                " `lecturer_id`, `proctor_id`, `report_id`, `course_id`, `class_num`," +
-                " `notebook_num`, `table_num`, `start_time`, `end_time`," +
-                " `extra_time`) VALUES (@exam_id, @student_id, @lecturer_id, @proctor_id, ''," +
-                " @course_id, @class_num, @notebook_num, @table_num, '', '', '')";
+           
 
             MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
             conn.Open();
@@ -165,6 +194,9 @@ namespace EasyTest_App
             cmd.Parameters.AddWithValue("@class_num", Login.exam_table.Rows[0].ItemArray[4].ToString());
             cmd.Parameters.AddWithValue("@notebook_num", NoteBook_Num.notebookNum);
             cmd.Parameters.AddWithValue("@table_num", lastBTN);
+            cmd.Parameters.AddWithValue("@startTime",Main_Screen.getTime());
+            cmd.Parameters.AddWithValue("@class_start_time", Main_Screen.class_start_time);
+
 
             cmd.ExecuteNonQuery();
      
@@ -182,14 +214,19 @@ namespace EasyTest_App
                     {
                         Main_Screen.mainMap[j, i].BackColor = Color.Red;
                         Main_Screen.mainMap[j, i].Enabled = true;
+                       
                     }
                 
                 }
             }
             
+            
+
+
             Add_Student.student_table.Clear();
             Login.main_screen.Show();
             Hide();
+            
            
         }
 

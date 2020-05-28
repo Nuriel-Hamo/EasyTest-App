@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel1.BackColor = System.Drawing.Color.Honeydew;
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
@@ -51,41 +51,17 @@
             this.panel1.Size = new System.Drawing.Size(288, 609);
             this.panel1.TabIndex = 0;
             // 
-            // button1
+            // button5
             // 
-            this.button1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(288, 109);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "תקלה במזגן";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(0, 109);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(288, 109);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "חוסר בציוד";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
-            this.button3.Location = new System.Drawing.Point(0, 218);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(288, 109);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = false;
+            this.button5.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
+            this.button5.Location = new System.Drawing.Point(0, 436);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(288, 109);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
@@ -99,17 +75,41 @@
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // button3
             // 
-            this.button5.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
-            this.button5.Location = new System.Drawing.Point(0, 436);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(288, 109);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = false;
+            this.button3.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
+            this.button3.Location = new System.Drawing.Point(0, 218);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(288, 109);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
+            this.button2.Location = new System.Drawing.Point(0, 109);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(288, 109);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "חוסר בציוד";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(288, 109);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "תקלה במזגן";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // MadorReport
             // 
