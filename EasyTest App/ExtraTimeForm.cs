@@ -18,42 +18,105 @@ namespace EasyTest_App
         {
             InitializeComponent();
         }
+        private int count = 0;
 
         private void button1_Click(object sender, EventArgs e)
         {
-           /* 
+           
             string T = "0";
             if (Radio1.Checked)
             {
-                T = "15";
+                if(count == 1)
+                {
+                    T = "00:30:00";
+                }
+                else
+                {
+                    T = "00:15:00";
+                }
+                
             }
             if (Radio2.Checked)
             {
-                T = "30";
+                T = "00:30:00";
             }
-            */
+            
 
-            /*string query = "UPDATE `examination_log` SET `start_time` = @startTime WHERE exam_id = @exam_id";
+            string query = "UPDATE `examination_log` SET `extra_time` = @extra_time WHERE exam_id = @exam_id";
 
             MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
             conn.Open();
 
             MySqlCommand cmd = new MySqlCommand(query, conn);
 
-            cmd.Parameters.AddWithValue("@startTime", getTime());
+            cmd.Parameters.AddWithValue("@extra_time", T);
             cmd.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
             int flg = cmd.ExecuteNonQuery();
             //MySqlDataReader dr = cmd.ExecuteReader();
 
             if (flg > 0)
             {
-                timer1.Enabled = true;
-                timer1.Start();
-                BeginExamBTN.Enabled = false;
-            }
-            else { MessageBox.Show("לא קיימים סטודנטים בבחינה", "הודעה", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                if (T.Equals("00:30:00"))
+                {
+                    Radio1.Enabled = false;
+                    Radio2.Enabled = false;
+                    button1.Enabled = false;
+                }
+                if (T.Equals("00:15:00"))
+                {
+  
+                    Radio2.Enabled = false;
+                    count++;
+                    if (count == 2)
+                    {
+                        Radio1.Enabled = false;
+                        button1.Enabled = false;
+                    }
 
-            conn.Close();*/
+                }
+                MessageBox.Show("הארכת זמן בוצעה בהצלחה","הודעה",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+
+            conn.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Login.main_screen.Show();
+            Hide();
+        }
+
+        private void ExtraTimeForm_Load(object sender, EventArgs e)
+        {
+            string Query = "SELECT extra_time FROM examination_log WHERE exam_id = @exam_id";
+            MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
+            conn.Open();
+
+            MySqlCommand cmd = new MySqlCommand(Query, conn);
+
+            cmd.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            if (dt.Rows[0][0].ToString().Equals("00:30:00"))
+            {
+                Radio1.Enabled = false;
+                Radio2.Enabled = false;
+                button1.Enabled = false;
+            }
+            if (dt.Rows[0][0].ToString().Equals("00:15:00"))
+            {
+                Radio2.Enabled = false;
+                count++;
+
+            }
+
+
+
+
+
+
+            conn.Close();
         }
     }
 }

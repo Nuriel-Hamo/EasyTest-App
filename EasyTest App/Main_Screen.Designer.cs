@@ -73,6 +73,7 @@
             // 
             this.ExtraTimeBTN.BackColor = System.Drawing.Color.DodgerBlue;
             this.ExtraTimeBTN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ExtraTimeBTN.Enabled = false;
             this.ExtraTimeBTN.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExtraTimeBTN.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ExtraTimeBTN.Location = new System.Drawing.Point(567, 214);
@@ -123,7 +124,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(622, 9);
+            this.label1.Location = new System.Drawing.Point(553, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 56);
             this.label1.TabIndex = 7;
@@ -132,7 +133,7 @@
             // 
             this.labelName.AutoSize = true;
             this.labelName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelName.Location = new System.Drawing.Point(729, 40);
+            this.labelName.Location = new System.Drawing.Point(660, 40);
             this.labelName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(0, 20);

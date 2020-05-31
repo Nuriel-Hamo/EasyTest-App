@@ -57,6 +57,7 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "חזור";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // FirstNameLABEL
             // 
@@ -128,6 +129,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ExtraTimeForm";
             this.Text = "ExtraTimeForm";
+            this.Load += new System.EventHandler(this.ExtraTimeForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

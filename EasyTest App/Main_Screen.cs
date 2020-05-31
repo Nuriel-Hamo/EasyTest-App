@@ -17,8 +17,10 @@ namespace EasyTest_App
 {
     public partial class Main_Screen : Form
     {
-        int minutes = 0;
-        int seconds = 0;
+        int seconds = 60;
+        int minutes = 1;
+        int hours = 0;
+        Boolean firstTimer = true;
       
         //private static readonly int collumn = 5;
         //private static readonly int row = 3;
@@ -89,6 +91,8 @@ namespace EasyTest_App
                     timer1.Enabled = true;
                     timer1.Start();
                     BeginExamBTN.Enabled = false;
+                    ExtraTimeBTN.Enabled = true;
+
                 }
                 else { MessageBox.Show("שגיאה", "הודעה", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
 
@@ -109,20 +113,147 @@ namespace EasyTest_App
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if(seconds == 60)
+            if(hours==0 && minutes == 0 && seconds == 0)
             {
-                minutes++;
-                seconds = 0;
+                timer1.Stop();
+                MessageBox.Show("המבחן הסתיים");
             }
-            if (minutes < 10 && seconds < 10)
+            else
+            {
+                if (firstTimer)
+                {
+                    //label1.Text = "0" + hours + ":00:00";
+                    if (minutes < 10)
+                    {
+                        label1.Text = "0" + hours + ":0" + minutes + ":00";
+                    }
+                    else
+                    {
+                        label1.Text = "0" + hours + ":" + minutes + ":00";
+                    }
+                    if (minutes != 0) { minutes--; }
+                    else
+                    {
+                        if (hours != 0) { hours--; minutes = 59; }
+                    }
+                }
+                else
+                {
+                    if (seconds == 0)
+                    {
+                        if(hours!=0 && minutes == 0)
+                        {
+                            minutes = 59;
+                            hours--;
+                        }
+                        else
+                        {
+                            minutes--;
+                        }
+                       
+                        seconds = 60;
+
+                    }
+                    if (minutes == 0)
+                    {
+                        if (hours == 0)
+                        {
+                            minutes = 0;
+                        }
+                        else if (hours!=0 && seconds!=0)
+                        {
+                            minutes = 0;
+                        }
+                        else
+                        {
+                            hours--;
+                            minutes = 59;
+                        }
+                      
+                    }
+                    seconds--;
+
+                    if (hours < 10 && minutes < 10 && seconds < 10)
+                    {
+                        label1.Text = "0" + hours + ":0" + minutes + ":0" + seconds;
+                    }
+                    else if (hours < 10 && minutes < 10 && seconds >= 10)
+                    {
+                        label1.Text = "0" + hours + ":0" + minutes + ":" + seconds;
+                    }
+                    else if (hours < 10 && minutes >= 10 && seconds >= 10)
+                    {
+                        label1.Text = "0" + hours + ":" + minutes + ":" + seconds;
+                    }
+                    else if (hours < 10 && minutes >= 10 && seconds < 10)
+                    {
+                        label1.Text = "0" + hours + ":" + minutes + ":0" + seconds;
+                    }
+
+
+                }
+                firstTimer = false;
+
+            }
+
+
+            /*if (hours != 0)
+            {
+                if (firstTimer)
+                {
+                    label1.Text = "0" + hours + ":00:00";
+                }
+                else
+                {
+                    if (seconds == 0)
+                    {
+                        minutes--;
+                        seconds = 60;
+
+                    }
+                    if (minutes == 0)
+                    {
+                        hours--;
+                        minutes = 59;
+                    }
+                    seconds--;
+
+                    if (hours < 10 && minutes < 10 && seconds < 10)
+                    {
+                        label1.Text = "0" + hours + ":0" + minutes + ":0" + seconds;
+                    }
+                    else if (hours < 10 && minutes < 10 && seconds >= 10)
+                    {
+                        label1.Text = "0" + hours + ":0" + minutes + ":" + seconds;
+                    }
+                    else if (hours < 10 && minutes >= 10 && seconds >= 10)
+                    {
+                        label1.Text = "0" + hours + ":" + minutes + ":" + seconds;
+                    }
+                    else if (hours < 10 && minutes >= 10 && seconds < 10)
+                    {
+                        label1.Text = "0" + hours + ":" + minutes + ":0" + seconds;
+                    }
+
+
+                }
+                firstTimer = false;
+            }
+            else
+            {
+                timer1.Stop();
+            }*/
+
+
+            /*if (minutes < 10 && seconds < 10)
             {
                 label1.Text = "0" + minutes + ":0" + seconds;
             }
             else if (minutes < 10 && seconds > 10)
                 label1.Text = "0" + minutes + ":" + seconds;
             else
-                label1.Text = minutes + ":" + seconds;
-            seconds++;
+                label1.Text = minutes + ":" + seconds;*/
+
 
         }
 
@@ -217,6 +348,7 @@ namespace EasyTest_App
                         TestBegin = true;
                         EmptyClass = false;
                         class_start_time = log_table.Rows[0][12].ToString();
+                        ExtraTimeBTN.Enabled = true;
                     }
                     else
                     {
@@ -377,7 +509,11 @@ namespace EasyTest_App
         private void Main_Screen_Activated(object sender, EventArgs e)
         {
             if (!first)
-                BeginExamBTN.Enabled = true ;
+            {
+                BeginExamBTN.Enabled = true;
+                first = true;
+            }
+                
         }
     }
 }
