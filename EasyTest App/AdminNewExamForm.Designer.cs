@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminNewExamForm));
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxCourseCode = new System.Windows.Forms.TextBox();
@@ -49,6 +50,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.calendar = new System.Windows.Forms.MonthCalendar();
+            this.label9 = new System.Windows.Forms.Label();
+            this.comboBoxMoed = new System.Windows.Forms.ComboBox();
+            this.errorProviderExam = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderExam)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -72,7 +77,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(430, 42);
+            this.label2.Location = new System.Drawing.Point(430, 43);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 13);
             this.label2.TabIndex = 2;
@@ -89,7 +94,7 @@
             // 
             // textBox_proctorID
             // 
-            this.textBox_proctorID.Location = new System.Drawing.Point(311, 73);
+            this.textBox_proctorID.Location = new System.Drawing.Point(311, 72);
             this.textBox_proctorID.Name = "textBox_proctorID";
             this.textBox_proctorID.Size = new System.Drawing.Size(105, 20);
             this.textBox_proctorID.TabIndex = 4;
@@ -99,7 +104,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(430, 110);
+            this.label4.Location = new System.Drawing.Point(430, 107);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 13);
             this.label4.TabIndex = 5;
@@ -117,7 +122,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(430, 171);
+            this.label5.Location = new System.Drawing.Point(430, 168);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 13);
             this.label5.TabIndex = 7;
@@ -136,7 +141,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(430, 202);
+            this.label6.Location = new System.Drawing.Point(430, 199);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 13);
             this.label6.TabIndex = 9;
@@ -163,7 +168,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(430, 234);
+            this.label7.Location = new System.Drawing.Point(430, 235);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 13);
             this.label7.TabIndex = 12;
@@ -172,7 +177,7 @@
             // button_confirm
             // 
             this.button_confirm.Enabled = false;
-            this.button_confirm.Location = new System.Drawing.Point(444, 255);
+            this.button_confirm.Location = new System.Drawing.Point(502, 306);
             this.button_confirm.Name = "button_confirm";
             this.button_confirm.Size = new System.Drawing.Size(94, 33);
             this.button_confirm.TabIndex = 13;
@@ -182,8 +187,7 @@
             // 
             // button_reset
             // 
-            this.button_reset.Enabled = false;
-            this.button_reset.Location = new System.Drawing.Point(220, 255);
+            this.button_reset.Location = new System.Drawing.Point(278, 306);
             this.button_reset.Name = "button_reset";
             this.button_reset.Size = new System.Drawing.Size(94, 33);
             this.button_reset.TabIndex = 14;
@@ -193,7 +197,7 @@
             // 
             // button_back
             // 
-            this.button_back.Location = new System.Drawing.Point(29, 255);
+            this.button_back.Location = new System.Drawing.Point(87, 306);
             this.button_back.Name = "button_back";
             this.button_back.Size = new System.Drawing.Size(94, 33);
             this.button_back.TabIndex = 15;
@@ -213,7 +217,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(430, 141);
+            this.label8.Location = new System.Drawing.Point(430, 142);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(66, 13);
             this.label8.TabIndex = 17;
@@ -238,13 +242,43 @@
             this.calendar.Visible = false;
             this.calendar.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.Calendar_DateSelected);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(430, 266);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(98, 13);
+            this.label9.TabIndex = 20;
+            this.label9.Text = ":סוג מועד הבחינה";
+            // 
+            // comboBoxMoed
+            // 
+            this.comboBoxMoed.FormattingEnabled = true;
+            this.comboBoxMoed.Items.AddRange(new object[] {
+            "מועד א",
+            "מועד ב",
+            "מועד מיוחד"});
+            this.comboBoxMoed.Location = new System.Drawing.Point(311, 261);
+            this.comboBoxMoed.Name = "comboBoxMoed";
+            this.comboBoxMoed.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.comboBoxMoed.Size = new System.Drawing.Size(105, 21);
+            this.comboBoxMoed.TabIndex = 21;
+            this.comboBoxMoed.SelectedIndexChanged += new System.EventHandler(this.comboBoxMoed_Leave);
+            this.comboBoxMoed.Leave += new System.EventHandler(this.comboBoxMoed_Leave);
+            // 
+            // errorProviderExam
+            // 
+            this.errorProviderExam.ContainerControl = this;
+            // 
             // AdminNewExamForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(569, 300);
+            this.ClientSize = new System.Drawing.Size(612, 351);
+            this.Controls.Add(this.comboBoxMoed);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.calendar);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label8);
@@ -268,6 +302,8 @@
             this.Name = "AdminNewExamForm";
             this.Text = "AdminNewExamForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminNewExamForm_FormClosing);
+            this.Load += new System.EventHandler(this.AdminNewExamForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderExam)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,5 +331,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.MonthCalendar calendar;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox comboBoxMoed;
+        private System.Windows.Forms.ErrorProvider errorProviderExam;
     }
 }

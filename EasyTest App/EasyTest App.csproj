@@ -86,17 +86,35 @@
     <Compile Include="AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminFormExamDeletion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminFormExamDeletion.Designer.cs">
+      <DependentUpon>AdminFormExamDeletion.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminNewExamForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminNewExamForm.Designer.cs">
       <DependentUpon>AdminNewExamForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminSearchDetailsInformatio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSearchDetailsInformatio.Designer.cs">
+      <DependentUpon>AdminSearchDetailsInformatio.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminSearchForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminSearchForm.Designer.cs">
       <DependentUpon>AdminSearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUpdateForm.Designer.cs">
+      <DependentUpon>AdminUpdateForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ExtraTimeForm.cs">
       <SubType>Form</SubType>
@@ -148,6 +166,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SummaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SummaryForm.Designer.cs">
+      <DependentUpon>SummaryForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddProctorForm.resx">
       <DependentUpon>AddProctorForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,11 +181,20 @@
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminFormExamDeletion.resx">
+      <DependentUpon>AdminFormExamDeletion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminNewExamForm.resx">
       <DependentUpon>AdminNewExamForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminSearchDetailsInformatio.resx">
+      <DependentUpon>AdminSearchDetailsInformatio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminSearchForm.resx">
       <DependentUpon>AdminSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUpdateForm.resx">
+      <DependentUpon>AdminUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtraTimeForm.resx">
       <DependentUpon>ExtraTimeForm.cs</DependentUpon>
@@ -197,6 +230,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SummaryForm.resx">
+      <DependentUpon>SummaryForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DB_OF_PROJECT.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

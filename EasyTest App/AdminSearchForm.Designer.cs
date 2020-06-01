@@ -52,7 +52,7 @@
             // 
             // buttonSearch
             // 
-            this.buttonSearch.Location = new System.Drawing.Point(404, 116);
+            this.buttonSearch.Location = new System.Drawing.Point(399, 264);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(137, 22);
             this.buttonSearch.TabIndex = 1;
@@ -79,6 +79,7 @@
             this.radioButtonCourse.TabStop = true;
             this.radioButtonCourse.Text = "מספר קורס";
             this.radioButtonCourse.UseVisualStyleBackColor = true;
+            this.radioButtonCourse.CheckedChanged += new System.EventHandler(this.RadioButtonCourse_CheckedChanged);
             // 
             // radioButtonExam
             // 
@@ -90,6 +91,7 @@
             this.radioButtonExam.TabIndex = 4;
             this.radioButtonExam.Text = "מספר מבחן";
             this.radioButtonExam.UseVisualStyleBackColor = true;
+            this.radioButtonExam.CheckedChanged += new System.EventHandler(this.RadioButtonExam_CheckedChanged);
             // 
             // textBoxExam
             // 
@@ -117,19 +119,21 @@
             this.radioButtonBookID.TabIndex = 6;
             this.radioButtonBookID.Text = "מספר מחברת";
             this.radioButtonBookID.UseVisualStyleBackColor = true;
+            this.radioButtonBookID.CheckedChanged += new System.EventHandler(this.RadioButtonBookID_CheckedChanged);
             // 
             // listBoxResult
             // 
-            this.listBoxResult.Enabled = false;
             this.listBoxResult.FormattingEnabled = true;
-            this.listBoxResult.Location = new System.Drawing.Point(94, 157);
+            this.listBoxResult.Location = new System.Drawing.Point(94, 102);
             this.listBoxResult.Name = "listBoxResult";
+            this.listBoxResult.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.listBoxResult.Size = new System.Drawing.Size(447, 134);
             this.listBoxResult.TabIndex = 8;
+            this.listBoxResult.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ListBoxResult_MouseDoubleClick);
             // 
             // buttonBack
             // 
-            this.buttonBack.Location = new System.Drawing.Point(109, 116);
+            this.buttonBack.Location = new System.Drawing.Point(104, 264);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(137, 22);
             this.buttonBack.TabIndex = 9;

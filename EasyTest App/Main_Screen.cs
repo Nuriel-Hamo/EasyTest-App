@@ -52,7 +52,7 @@ namespace EasyTest_App
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if(seconds == 60)
+            if (seconds == 60)
             {
                 minutes++;
                 seconds = 0;
@@ -72,14 +72,14 @@ namespace EasyTest_App
         private void Main_Screen_Load(object sender, EventArgs e)
         {
 
-            string Query = "SELECT * FROM maping WHERE class_num = @class_num";
+            string Query = "SELECT * FROM mapping WHERE class_num = @class_num";
             MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
             conn.Open();
 
             MySqlCommand cmd = new MySqlCommand(Query, conn);
             cmd.Parameters.AddWithValue("@class_num", Login.exam_table.Rows[0].ItemArray[4].ToString());
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-            
+
             da.Fill(maping_table);
 
             map_row = maping_table.Rows[0].ItemArray[1].ToString();
@@ -99,9 +99,9 @@ namespace EasyTest_App
                 {
                     for (int j = 0; j < Int32.Parse(map_collumn); j++)
                     {
-                        
+
                         id++;
-                        
+
                         mainMap[j, i] = new Button
                         {
                             Name = "card" + j + i,
@@ -112,14 +112,14 @@ namespace EasyTest_App
                             ForeColor = FORGROUND_COLOR,
                             BackColor = BACKGROUND_COLOR_main,
                             Text = id.ToString(),
-                            
+
                         };
                         //flowLayoutPanel1.Controls.Add(mainMap[j, i]);
-                        
+
                         Controls.Add(mainMap[j, i]);
                         mainMap[j, i].Click += Button_Click;
                         mainMap[j, i].Enabled = false;
-                        
+
 
 
 
@@ -128,12 +128,12 @@ namespace EasyTest_App
                     }
                     flowLayoutPanel1.AutoSize = true;
                     flowLayoutPanel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-                   
+
                 }
                 firstTime = false;
 
             }
-            
+
 
 
 
@@ -158,7 +158,7 @@ namespace EasyTest_App
                     }
                 }
             }*/
-        }   
+        }
 
 
         private void EndExamBTN_Click(object sender, EventArgs e)
@@ -177,9 +177,11 @@ namespace EasyTest_App
 
         private void ExtraTimeBTN_Click(object sender, EventArgs e)
         {
+            
             Login log = new Login();
             log.Show();
             Hide();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -191,5 +193,10 @@ namespace EasyTest_App
         {
 
         }
+        
+
     }
+
 }
+
+

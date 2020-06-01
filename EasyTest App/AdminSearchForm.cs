@@ -13,7 +13,10 @@ namespace EasyTest_App
 {
     public partial class AdminSearchForm : Form
     {
+        public static string send,result,tbox;
+        
         MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=easytest");
+        
         public AdminSearchForm()
         {
             InitializeComponent();
@@ -21,46 +24,178 @@ namespace EasyTest_App
 
         private void ButtonSearch_Click(object sender, EventArgs e)
         {
-            if(CanSearch())
+            listBoxResult.Items.Clear();
+            if (CanSearch())
             {
-                con.Open();
-                MySqlCommand cmd = con.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = $"SELECT * FROM course";
-                DataTable dt = new DataTable();
-                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
-                adapter.Fill(dt);
-                foreach (DataRow dr in dt.Rows)
+                if (radioButtonCourse.Checked)
                 {
-                    listBoxResult.Items.Add(dr["course_id"].ToString() + " " + dr["course_name"].ToString());
+                    tbox = textBoxCourse.Text;
+                    Course();
                 }
-                con.Close();
+                else if (radioButtonExam.Checked)
+                {
+                    tbox = textBoxExam.Text;
+                    Exam();
+                }
+                else if (radioButtonBookID.Checked)
+                {
+                    tbox = textBoxBookID.Text;
+                    BookID();
+                }
+
+
             }
 
         }
 
         private void ButtonBack_Click(object sender, EventArgs e)
         {
-            AdminForm admin = new AdminForm();
             Hide();
-            admin.Show();
+            Login.adminF.Show();
         }
         private Boolean CanSearch()
         {
+
             if (textBoxCourse.Enabled == true && textBoxCourse.Text == "")
-                MessageBox.Show("אנא הזן ערך בכדי להמשיך או לחצי חזור לתפריט הראשי");
-            else if (textBoxExam.Enabled == true && textBoxExam.Text == "")
-                MessageBox.Show("אנא הזן ערך בכדי להמשיך או לחצי חזור לתפריט הראשי");
-            else if (textBoxBookID.Enabled == true && textBoxBookID.Text == "")
-                MessageBox.Show("אנא הזן ערך בכדי להמשיך או לחצי חזור לתפריט הראשי");
-            else 
+            {
+                MessageBox.Show("אנא הזן ערך בכדי להמשיך או לחץ חזור לתפריט הראשי");
                 return false;
-            return true;
+            }
+            else if (textBoxExam.Enabled == true && textBoxExam.Text == "")
+            {
+                MessageBox.Show("אנא הזן ערך בכדי להמשיך או לחץ חזור לתפריט הראשי");
+                return false;
+            }
+            else if (textBoxBookID.Enabled == true && textBoxBookID.Text == "")
+            {
+                MessageBox.Show("אנא הזן ערך בכדי להמשיך או לחץ חזור לתפריט הראשי");
+                return false;
+            }
+
+                return true;
         }
 
         private void AdminSearchForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             System.Windows.Forms.Application.Exit();
+        }
+
+        private void RadioButtonExam_CheckedChanged(object sender, EventArgs e)
+        {
+            ResetTBoxs();
+            listBoxResult.Items.Clear();
+            textBoxBookID.Enabled = false;
+            textBoxCourse.Enabled = false;
+            textBoxExam.Enabled = true;
+        }
+
+        private void RadioButtonCourse_CheckedChanged(object sender, EventArgs e)
+        {
+            ResetTBoxs();
+            listBoxResult.Items.Clear();
+            textBoxBookID.Enabled = false;
+            textBoxCourse.Enabled = true;
+            textBoxExam.Enabled = false;
+        }
+
+        private void RadioButtonBookID_CheckedChanged(object sender, EventArgs e)
+        {
+            ResetTBoxs();
+            listBoxResult.Items.Clear();
+            textBoxBookID.Enabled = true;
+            textBoxCourse.Enabled = false;
+            textBoxExam.Enabled = false;
+        }
+
+        private void Course()
+        {
+            send = "course";
+            con.Open();
+            string Query = "SELECT * FROM examination_log WHERE course_id = @textBoxCourse";
+            MySqlCommand cmd = new MySqlCommand(Query, con);
+            cmd.Parameters.AddWithValue("@textBoxCourse", textBoxCourse.Text);
+            DataTable dt = new DataTable();
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+
+            da.Fill(dt);
+            if (dt.Rows.Count == 0)
+                MessageBox.Show("קורס מספר " + textBoxCourse.Text + "אינו קיים ", "שגיאה");
+            else
+            {
+                foreach (DataRow dr in dt.Rows)
+                {
+                    listBoxResult.Items.Add("ת.ז סטודנט: " + dr["student_id"].ToString() + " מספר מחברת:" + dr["notebook_num"].ToString() + " מספר שולחן: " + dr["table_num"].ToString());
+                }
+            }
+
+            con.Close();
+        }
+        private void Exam()
+        {
+            send = "exam";
+            con.Open();
+            string Query = "SELECT * FROM examination_log WHERE exam_id = @textBoxExam";
+            MySqlCommand cmd = new MySqlCommand(Query, con);
+
+            cmd.Parameters.AddWithValue("@textBoxExam", textBoxExam.Text);
+            DataTable dt = new DataTable();
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+
+            da.Fill(dt);
+            if (dt.Rows.Count == 0)
+                MessageBox.Show("מבחן מספר " + textBoxExam.Text + "אינו קיים ", "שגיאה");
+            else
+            {
+                foreach (DataRow dr in dt.Rows)
+                {
+                    listBoxResult.Items.Add("ת.ז סטודנט: " + dr["student_id"].ToString() + " מספר מחברת:" + dr["notebook_num"].ToString() + " מספר שולחן: " + dr["table_num"].ToString());
+                }
+            }
+
+            con.Close();
+        }
+        private void BookID()
+        {
+            send = "book_id";
+            con.Open();
+            string Query = "SELECT * FROM examination_log WHERE notebook_num = @textBoxBookID";
+            MySqlCommand cmd = new MySqlCommand(Query, con);
+
+            cmd.Parameters.AddWithValue("@textBoxBookID", textBoxBookID.Text);
+            DataTable dt = new DataTable();
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+
+            da.Fill(dt);
+            if (dt.Rows.Count == 0)
+                MessageBox.Show("מחברת מספר " + textBoxBookID.Text + "אינה קיימת ", "שגיאה");
+            else
+            {
+                foreach (DataRow dr in dt.Rows)
+                {
+                    listBoxResult.Items.Add("ת.ז סטודנט: " + dr["student_id"].ToString() + " מספר מחברת:" + dr["notebook_num"].ToString() + " מספר שולחן: " + dr["table_num"].ToString());
+                }
+            }
+
+            con.Close();
+        }
+        private void ResetTBoxs()
+        {
+            textBoxBookID.Text = "";
+            textBoxCourse.Text = "";
+            textBoxExam.Text = "";
+        }
+
+        private void ListBoxResult_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (listBoxResult.GetItemText(listBoxResult.SelectedItem)!=null)
+            {
+                result = listBoxResult.GetItemText(listBoxResult.SelectedItem);
+                AdminSearchDetailsInformatio info = new AdminSearchDetailsInformatio();
+                Hide();
+                info.Show();
+            }
+            else
+                ;
         }
     }
 }

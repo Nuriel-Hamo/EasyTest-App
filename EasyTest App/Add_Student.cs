@@ -38,13 +38,14 @@ namespace EasyTest_App
             else
             {
 
-                string Query = "SELECT * FROM student WHERE student_id = @UserID_textbox AND " +
-                    "allowed = 1";
+                string Query = "SELECT * FROM examination_log WHERE student_id = @UserID_textbox AND " +
+                     "exam_id = @exam_id";
                 MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
                 conn.Open();
 
                 MySqlCommand cmd = new MySqlCommand(Query, conn);
                 cmd.Parameters.AddWithValue("@UserID_textbox", StudentID_textbox.Text);
+                cmd.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0][0].ToString());
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);

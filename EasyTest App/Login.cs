@@ -14,8 +14,10 @@ namespace EasyTest_App
 {
     public partial class Login : Form
     {
-       // bool changed = false;
-     
+        // bool changed = false
+        public static string admin_id;
+
+
         public Login()
         {
             InitializeComponent();
@@ -71,7 +73,7 @@ namespace EasyTest_App
                     if (dt.Rows.Count > 0)
                     {
                         startProgram = true;
-                        if (rdr.GetString(5) == "0")
+                        if (dt.Rows[0][5].ToString() == "0")
                         {
                             //create an copy table of exam (local table)
 
@@ -86,9 +88,9 @@ namespace EasyTest_App
                             Hide();
                           
                         }
-                        if (rdr.GetString(5) == "1")
+                        if (dt.Rows[0][5].ToString() == "1")
                         {
-
+                            admin_id = dt.Rows[0][0].ToString();
                             adminF.Show();
                             Hide();
                           
