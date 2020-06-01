@@ -29,85 +29,118 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExtraTimeForm));
-            this.label1 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.FirstNameLABEL = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Radio1 = new System.Windows.Forms.RadioButton();
+            this.Radio2 = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(307, 246);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(157, 84);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "עדכן";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(539, 246);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(148, 84);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "חזור";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // FirstNameLABEL
+            // 
+            this.FirstNameLABEL.AutoSize = true;
+            this.FirstNameLABEL.BackColor = System.Drawing.Color.Transparent;
+            this.FirstNameLABEL.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstNameLABEL.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.FirstNameLABEL.Location = new System.Drawing.Point(453, 23);
+            this.FirstNameLABEL.Name = "FirstNameLABEL";
+            this.FirstNameLABEL.Size = new System.Drawing.Size(283, 29);
+            this.FirstNameLABEL.TabIndex = 6;
+            this.FirstNameLABEL.Text = ":אנא בחר הארכת זמן רצויה";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(300, 34);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(616, 112);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = ":אנא בחר הארכת זמן רצויה";
+            this.label1.Size = new System.Drawing.Size(110, 29);
+            this.label1.TabIndex = 7;
+            this.label1.Text = ":זמן נבחר";
             // 
-            // listBox1
+            // Radio1
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Items.AddRange(new object[] {
-            "15דקות   ",
-            "30דקות"});
-            this.listBox1.Location = new System.Drawing.Point(227, 76);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(115, 17);
-            this.listBox1.TabIndex = 2;
+            this.Radio1.AutoSize = true;
+            this.Radio1.BackColor = System.Drawing.Color.Transparent;
+            this.Radio1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Radio1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.Radio1.ForeColor = System.Drawing.Color.Transparent;
+            this.Radio1.Location = new System.Drawing.Point(487, 117);
+            this.Radio1.Name = "Radio1";
+            this.Radio1.Size = new System.Drawing.Size(103, 24);
+            this.Radio1.TabIndex = 22;
+            this.Radio1.TabStop = true;
+            this.Radio1.Text = "רבע שעה";
+            this.Radio1.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // Radio2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(385, 80);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = ":זמן נבחר";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(317, 144);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(71, 33);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "עדכן";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(171, 144);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(71, 33);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "חזור";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Radio2.AutoSize = true;
+            this.Radio2.BackColor = System.Drawing.Color.Transparent;
+            this.Radio2.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Radio2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.Radio2.ForeColor = System.Drawing.Color.Transparent;
+            this.Radio2.Location = new System.Drawing.Point(353, 117);
+            this.Radio2.Name = "Radio2";
+            this.Radio2.Size = new System.Drawing.Size(99, 24);
+            this.Radio2.TabIndex = 23;
+            this.Radio2.TabStop = true;
+            this.Radio2.Text = "חצי שעה";
+            this.Radio2.UseVisualStyleBackColor = false;
             // 
             // ExtraTimeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(492, 256);
+            this.ClientSize = new System.Drawing.Size(738, 394);
+            this.Controls.Add(this.Radio2);
+            this.Controls.Add(this.Radio1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.FirstNameLABEL);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ExtraTimeForm";
             this.Text = "ExtraTimeForm";
+            this.Load += new System.EventHandler(this.ExtraTimeForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label FirstNameLABEL;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton Radio1;
+        private System.Windows.Forms.RadioButton Radio2;
     }
 }

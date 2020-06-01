@@ -39,7 +39,7 @@ namespace EasyTest_App
             {
 
                 string Query = "SELECT * FROM examination_log WHERE student_id = @UserID_textbox AND " +
-                     "exam_id = @exam_id";
+                    "exam_id = @exam_id";
                 MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
                 conn.Open();
 
@@ -54,42 +54,63 @@ namespace EasyTest_App
                 if (dt.Rows.Count > 0)
                 {
                     MessageBox.Show("הסטודנט כבר קיים במבחן", "הודעה");
+                    conn.Close();
                 }
                 else
                 {
-                    string Query1 = "SELECT * FROM student WHERE student_id = @UserID_textbox AND " +
-                     "allowed = 1";
+
+                    string Q = "SELECT * FROM student_courses WHERE student_id = @UserID_textbox AND " +
+                    "course_id = @course_id";
                     
 
-                    MySqlCommand cmd1 = new MySqlCommand(Query1, conn);
-                    cmd1.Parameters.AddWithValue("@UserID_textbox", StudentID_textbox.Text);
-                    MySqlDataAdapter da1 = new MySqlDataAdapter(cmd1);
+                    MySqlCommand cmd3 = new MySqlCommand(Q, conn);
+                    cmd3.Parameters.AddWithValue("@UserID_textbox", StudentID_textbox.Text);
+                    cmd3.Parameters.AddWithValue("@course_id", Login.exam_table.Rows[0][3].ToString());
+                    MySqlDataAdapter dap = new MySqlDataAdapter(cmd3);
+                    DataTable dta = new DataTable();
+                    dap.Fill(dta);
 
-                    da1.Fill(student_table);
-
-                   // MySqlDataReader rdr = cmd.ExecuteReader();
-                   // rdr.Read();
-
-
-                    if (student_table.Rows.Count > 0)
+                    if(dta.Rows.Count >0)
                     {
-                        StudentID = StudentID_textbox.Text;
-                        conn.Close();
-                        Student_Information si = new Student_Information();
-                        si.Show();
-                        Hide();
+                        string Query1 = "SELECT * FROM student WHERE student_id = @UserID_textbox AND " +
+                     "allowed = 1";
 
+
+                        MySqlCommand cmd1 = new MySqlCommand(Query1, conn);
+                        cmd1.Parameters.AddWithValue("@UserID_textbox", StudentID_textbox.Text);
+                        MySqlDataAdapter da1 = new MySqlDataAdapter(cmd1);
+
+                        da1.Fill(student_table);
+
+                        // MySqlDataReader rdr = cmd.ExecuteReader();
+                        // rdr.Read();
+
+
+                        if (student_table.Rows.Count > 0)
+                        {
+                            StudentID = StudentID_textbox.Text;
+                            conn.Close();
+                            Student_Information si = new Student_Information();
+                            si.Show();
+                            Hide();
+
+                        }
+                        else
+                        {
+                            MessageBox.Show(" הסטודנט אינו רשאי להבחן", "הודעה");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show(" הסטודנט אינו רשאי להבחן", "הודעה");
+                        MessageBox.Show("הסטודנט אינו רשום לקורס זה", "הודעה");
                     }
-                    ClickTextBox = false;
-                    StudentID_textbox.Text = "הכנס ת.ז";
+
+                   
+                    
 
                 }
-
-                ////////////////////////////////////
+                ClickTextBox = false;
+                StudentID_textbox.Text = "הכנס ת.ז";
 
 
             }

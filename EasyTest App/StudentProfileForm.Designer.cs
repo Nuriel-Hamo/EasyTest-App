@@ -40,14 +40,14 @@
             this.idLBL = new System.Windows.Forms.Label();
             this.nameLBL = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.FullNameLBL = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 17);
+            this.pictureBox1.Location = new System.Drawing.Point(31, 25);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(236, 233);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -58,7 +58,7 @@
             // 
             this.tableBTN.BackColor = System.Drawing.Color.DodgerBlue;
             this.tableBTN.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableBTN.Location = new System.Drawing.Point(16, 269);
+            this.tableBTN.Location = new System.Drawing.Point(31, 280);
             this.tableBTN.Name = "tableBTN";
             this.tableBTN.Size = new System.Drawing.Size(63, 45);
             this.tableBTN.TabIndex = 14;
@@ -75,6 +75,7 @@
             this.nootbookBTN.TabIndex = 13;
             this.nootbookBTN.Text = "הוספת דיווח";
             this.nootbookBTN.UseVisualStyleBackColor = false;
+            this.nootbookBTN.Click += new System.EventHandler(this.nootbookBTN_Click);
             // 
             // label1
             // 
@@ -82,7 +83,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(110, 276);
+            this.label1.Location = new System.Drawing.Point(125, 287);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(142, 29);
             this.label1.TabIndex = 15;
@@ -98,6 +99,7 @@
             this.button1.TabIndex = 16;
             this.button1.Text = "הגש בחינה";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -129,7 +131,7 @@
             this.scLABEL.BackColor = System.Drawing.Color.Transparent;
             this.scLABEL.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scLABEL.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.scLABEL.Location = new System.Drawing.Point(751, 128);
+            this.scLABEL.Location = new System.Drawing.Point(756, 128);
             this.scLABEL.Name = "scLABEL";
             this.scLABEL.Size = new System.Drawing.Size(84, 29);
             this.scLABEL.TabIndex = 26;
@@ -171,17 +173,17 @@
             this.label6.TabIndex = 19;
             this.label6.Text = ":תעודת זהות";
             // 
-            // label7
+            // FullNameLBL
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(735, 35);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 29);
-            this.label7.TabIndex = 18;
-            this.label7.Text = ":שם מלא";
+            this.FullNameLBL.AutoSize = true;
+            this.FullNameLBL.BackColor = System.Drawing.Color.Transparent;
+            this.FullNameLBL.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FullNameLBL.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.FullNameLBL.Location = new System.Drawing.Point(735, 35);
+            this.FullNameLBL.Name = "FullNameLBL";
+            this.FullNameLBL.Size = new System.Drawing.Size(100, 29);
+            this.FullNameLBL.TabIndex = 18;
+            this.FullNameLBL.Text = ":שם מלא";
             // 
             // StudentProfileForm
             // 
@@ -195,7 +197,7 @@
             this.Controls.Add(this.idLBL);
             this.Controls.Add(this.nameLBL);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.FullNameLBL);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -225,6 +227,6 @@
         private System.Windows.Forms.Label idLBL;
         private System.Windows.Forms.Label nameLBL;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label FullNameLBL;
     }
 }

@@ -80,5 +80,19 @@ namespace EasyTest_App
 
 
         }
+
+        private void nootbookBTN_Click(object sender, EventArgs e)
+        {
+
+            ReportForm RF = new ReportForm();
+            RF.Show();
+            Hide();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

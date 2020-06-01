@@ -33,6 +33,7 @@ namespace EasyTest_App
 
         private void LoginBTN_Click(object sender, EventArgs e)
         {
+            
 
             Regex IdReg = new Regex("[0-9]{9}");
             Regex PassReg = new Regex("[0-9]{5}");
@@ -152,7 +153,7 @@ namespace EasyTest_App
 
         private void LoginBTN_MouseHover(object sender, EventArgs e)
         {
-           
+            //LoginBTN.BackColor = Color.Red; 
         }
 
         private void UserID_textbox_TextChanged(object sender, EventArgs e)
@@ -169,12 +170,13 @@ namespace EasyTest_App
         private void Login_Load(object sender, EventArgs e)
         {
             if (startProgram) { login_backBTN.Visible = true; }
+            panel3.BackColor = Color.FromArgb(100, 0, 0, 0);
         }
 
         private void login_backBTN_Click(object sender, EventArgs e)
         {
-            Main_Screen ms = new Main_Screen();
-            ms.Show();
+            
+            main_screen.Show();
             Hide();
         }
 
