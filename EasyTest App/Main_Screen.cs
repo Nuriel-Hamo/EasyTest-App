@@ -18,7 +18,7 @@ namespace EasyTest_App
     public partial class Main_Screen : Form
     {
         int seconds = 60;
-        int minutes = 1;
+        int minutes = 0;
         int hours = 0;
         Boolean firstTimer = true;
       
@@ -32,6 +32,7 @@ namespace EasyTest_App
         public static Boolean firstTime = true;
         public static string send2profile;
         public static DataTable maping_table = new DataTable();
+        public static DataTable log_table = new DataTable();
         public static string map_row = "";
         public static string map_collumn = "";
         public static Boolean StudentInToilet = false;
@@ -88,6 +89,9 @@ namespace EasyTest_App
 
                 if (flg>0)
                 {
+                    minutes = GetMinutes(Login.exam_table.Rows[0][6].ToString(), Login.exam_table.Rows[0][7].ToString());
+                    hours = GetHoures(Login.exam_table.Rows[0][6].ToString(), Login.exam_table.Rows[0][7].ToString());
+
                     timer1.Enabled = true;
                     timer1.Start();
                     BeginExamBTN.Enabled = false;
@@ -259,10 +263,14 @@ namespace EasyTest_App
 
         private void Main_Screen_Load(object sender, EventArgs e)
         {
+
+            //MessageBox.Show(GetHoures(Login.exam_table.Rows[0][6].ToString(), Login.exam_table.Rows[0][7].ToString()).ToString());
+            //MessageBox.Show(GetMinutes(Login.exam_table.Rows[0][6].ToString(), Login.exam_table.Rows[0][7].ToString()).ToString());
             
 
-           
+
             ////////////////////////////////////////////////////////////////////
+
             string Query = "SELECT * FROM mapping WHERE class_num = @class_num";
             MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
             conn.Open();
@@ -336,7 +344,7 @@ namespace EasyTest_App
                 MySqlCommand cmd1 = new MySqlCommand(Query1, conn1);
                 cmd1.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
                 MySqlDataAdapter da1 = new MySqlDataAdapter(cmd1);
-                DataTable log_table = new DataTable();
+                
                 da1.Fill(log_table);
                 conn1.Close();
                 if (log_table.Rows.Count > 0)
@@ -349,12 +357,25 @@ namespace EasyTest_App
                         EmptyClass = false;
                         class_start_time = log_table.Rows[0][12].ToString();
                         ExtraTimeBTN.Enabled = true;
+
+                        minutes = GetMinutes(getTime(), ChangeEndTime());
+                        hours = GetHoures(getTime(), ChangeEndTime());
+
+                        timer1.Start();
+
+
+
+
+
                     }
                     else
                     {
                         BeginExamBTN.Enabled = true;
                         TestBegin = false;
                         EmptyClass = false;
+
+                        minutes = GetMinutes(Login.exam_table.Rows[0][6].ToString(), Login.exam_table.Rows[0][7].ToString());
+                        hours = GetHoures(Login.exam_table.Rows[0][6].ToString(), Login.exam_table.Rows[0][7].ToString());
 
                     }
 
@@ -469,36 +490,36 @@ namespace EasyTest_App
 
             if (now.Minute < 10)
             {
-                time = now.Hour.ToString() + ":0" + now.Minute.ToString();
+                time = now.Hour.ToString() + ":0" + now.Minute.ToString() + ":00";
             }
             else if (now.Hour < 10)
             {
-                time = "0" + now.Hour.ToString() + ":" + now.Minute.ToString();
+                time = "0" + now.Hour.ToString() + ":" + now.Minute.ToString() + ":00";
             }
             else if (now.Hour < 10 && now.Minute < 10)
             {
-                time = "0" + now.Hour.ToString() + ":0" + now.Minute.ToString();
+                time = "0" + now.Hour.ToString() + ":0" + now.Minute.ToString() + ":00";
             }
             else if (now.Minute == 0)
             {
-                time = now.Hour.ToString() + ":00";
+                time = now.Hour.ToString() + ":00" + ":00";
             }
             else if (now.Minute == 0)
             {
-                time = now.Hour.ToString() + ":00";
+                time = now.Hour.ToString() + ":00" + ":00";
             }
             else if (now.Hour == 0)
             {
-                time = "00" + now.Hour.ToString() + ":" + now.Minute.ToString();
+                time = "00" + now.Hour.ToString() + ":" + now.Minute.ToString() + ":00";
             }
             else if (now.Hour == 0 && now.Minute == 0)
             {
-                time = "00" + now.Hour.ToString() + ":00" + now.Minute.ToString();
+                time = "00" + now.Hour.ToString() + ":00" + now.Minute.ToString() + ":00";
 
             }
             else
             {
-                time = now.Hour.ToString() + ":" + now.Minute.ToString();
+                time = now.Hour.ToString() + ":" + now.Minute.ToString() + ":00";
 
             }
             return time;
@@ -513,7 +534,102 @@ namespace EasyTest_App
                 BeginExamBTN.Enabled = true;
                 first = true;
             }
-                
+
         }
+        private int GetHoures(string start, string end)
+        {
+            int hoursInMin = 0;
+            int minutes = 0;
+            int result = 0;
+
+            int startHour = Int32.Parse(start.Substring(0, 2));
+            int endMinutes = Int32.Parse(end.Substring(3, 2));
+            int endHour = Int32.Parse(end.Substring(0, 2));
+            int startMinutes = Int32.Parse(start.Substring(3, 2));
+            
+            hoursInMin = (endHour - startHour)*60;
+
+            if (endMinutes > startMinutes)
+            {
+                minutes = endMinutes - startMinutes;
+                result = (hoursInMin + minutes) / 60;
+                return result;
+            }
+            else if (startMinutes > endMinutes)
+            {
+                minutes = startMinutes - endMinutes;    
+                ///
+            }
+            else
+            {
+                minutes = startMinutes - endMinutes;
+                //
+            }
+
+            result = (hoursInMin - minutes)/60;
+
+            return result;
+        }
+        private int GetMinutes(string start, string end)
+        {
+            int minutes = 0;
+            int result = 0;
+
+            int endMinutes = Int32.Parse(end.Substring(3, 2));
+            int startMinutes = Int32.Parse(start.Substring(3, 2));
+
+            minutes = 60 - startMinutes;
+
+            if (endMinutes > startMinutes)
+            {
+                result = endMinutes - startMinutes;
+            }
+            else if (startMinutes > endMinutes)
+            {
+                result = minutes + endMinutes;
+            }
+            else
+            {
+                result = 0;
+            }
+            return result;
+
+
+        }
+        private string ChangeEndTime()
+        {
+            string result = "";
+            string endTimeExam = Login.exam_table.Rows[0][7].ToString();
+            string startOrg = Login.exam_table.Rows[0][6].ToString();
+            string startReal = log_table.Rows[0][12].ToString();
+            int startOrgHour = Int32.Parse(startOrg.Substring(0, 2));
+            int startOrgMinutes = Int32.Parse(startOrg.Substring(3, 2));
+            int startRealHour = Int32.Parse(startOrg.Substring(0, 2));
+            int startRealMinutes = Int32.Parse(startOrg.Substring(3, 2));
+
+            if (startOrgHour == startRealHour)
+            {
+                int x = startRealMinutes - startOrgMinutes;
+                int finalMinutes = x + Int32.Parse(endTimeExam.Substring(3, 2));
+                if (finalMinutes < 10)
+                {
+                    result = endTimeExam.Substring(0, 2) + ":0" + finalMinutes.ToString() + ":00";
+                }
+                else if (finalMinutes >= 10)
+                {
+                    result = endTimeExam.Substring(0, 2) + ":" + finalMinutes.ToString() + ":00";
+
+                }
+            }
+            /*if (startRealHour > startOrgHour)
+            {
+
+            }*/
+            return result;
+
+
+
+        }
+
     }
 }
