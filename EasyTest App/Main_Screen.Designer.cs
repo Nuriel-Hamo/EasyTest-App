@@ -44,23 +44,26 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.finishError = new System.Windows.Forms.ErrorProvider(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.labelExTime1 = new System.Windows.Forms.Label();
+            this.timerExtra1 = new System.Windows.Forms.Timer(this.components);
+            this.timerExtra2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.toiletError)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.finishError)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // AddStudentBTN
@@ -147,7 +150,7 @@
             this.TimerLBL.BackColor = System.Drawing.Color.Transparent;
             this.TimerLBL.Font = new System.Drawing.Font("Yu Gothic UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimerLBL.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TimerLBL.Location = new System.Drawing.Point(615, 780);
+            this.TimerLBL.Location = new System.Drawing.Point(612, 794);
             this.TimerLBL.Name = "TimerLBL";
             this.TimerLBL.Size = new System.Drawing.Size(314, 96);
             this.TimerLBL.TabIndex = 7;
@@ -231,6 +234,16 @@
             this.panel4.Size = new System.Drawing.Size(50, 50);
             this.panel4.TabIndex = 19;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(21, 17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 33);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -249,6 +262,16 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(50, 50);
             this.panel5.TabIndex = 21;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(20, 18);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(30, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 25;
+            this.pictureBox2.TabStop = false;
             // 
             // panel6
             // 
@@ -295,26 +318,6 @@
             this.finishError.ContainerControl = this;
             this.finishError.Icon = ((System.Drawing.Icon)(resources.GetObject("finishError.Icon")));
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(21, 17);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(28, 33);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 25;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(20, 18);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 32);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 25;
-            this.pictureBox2.TabStop = false;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -325,6 +328,27 @@
             this.label5.TabIndex = 23;
             this.label5.Text = ":מקרא";
             // 
+            // labelExTime1
+            // 
+            this.labelExTime1.AutoSize = true;
+            this.labelExTime1.Font = new System.Drawing.Font("Yu Gothic UI", 20F, System.Drawing.FontStyle.Bold);
+            this.labelExTime1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.labelExTime1.Location = new System.Drawing.Point(920, 828);
+            this.labelExTime1.Name = "labelExTime1";
+            this.labelExTime1.Size = new System.Drawing.Size(175, 54);
+            this.labelExTime1.TabIndex = 25;
+            this.labelExTime1.Text = "00:00:00";
+            // 
+            // timerExtra1
+            // 
+            this.timerExtra1.Interval = 1000;
+            this.timerExtra1.Tick += new System.EventHandler(this.timerExtra1_Tick);
+            // 
+            // timerExtra2
+            // 
+            this.timerExtra2.Interval = 1000;
+            this.timerExtra2.Tick += new System.EventHandler(this.timerExtra2_Tick);
+            // 
             // Main_Screen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -332,6 +356,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.labelExTime1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dateLBL);
@@ -349,14 +374,14 @@
             this.Load += new System.EventHandler(this.Main_Screen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.toiletError)).EndInit();
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.finishError)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -387,5 +412,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label labelExTime1;
+        private System.Windows.Forms.Timer timerExtra1;
+        private System.Windows.Forms.Timer timerExtra2;
     }
 }

@@ -14,6 +14,9 @@ namespace EasyTest_App
 {
     public partial class ExtraTimeForm : Form
     {
+
+        public static string extraTime1 = "";
+        public static string extraTime2 = "";
         public ExtraTimeForm()
         {
             InitializeComponent();
@@ -56,8 +59,11 @@ namespace EasyTest_App
 
             if (flg > 0)
             {
+                
+
                 if (T.Equals("00:30:00"))
                 {
+                    extraTime1 = T;
                     Radio1.Enabled = false;
                     Radio2.Enabled = false;
                     button1.Enabled = false;
@@ -65,12 +71,17 @@ namespace EasyTest_App
                 if (T.Equals("00:15:00"))
                 {
   
-                    Radio2.Enabled = false;
                     count++;
                     if (count == 2)
                     {
+                        extraTime2 = "00:15:00";
                         Radio1.Enabled = false;
                         button1.Enabled = false;
+                    }
+                    else if(count==1)
+                    {
+                        extraTime1 = T;
+                        Radio2.Enabled = false;
                     }
 
                 }
