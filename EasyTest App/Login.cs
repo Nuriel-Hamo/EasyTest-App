@@ -29,6 +29,7 @@ namespace EasyTest_App
 
         public static DataTable exam_table = new DataTable();
         public static Main_Screen main_screen = new Main_Screen();
+        public static DataTable proctor_table = new DataTable();
 
 
         private void LoginBTN_Click(object sender, EventArgs e)
@@ -62,8 +63,8 @@ namespace EasyTest_App
                     cmd.Parameters.AddWithValue("@UserID_textbox", UserID_textbox.Text);
                     cmd.Parameters.AddWithValue("@Pass_textbox", Pass_textbox.Text);
                     MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
+                    //DataTable proctor_table = new DataTable();
+                    da.Fill(proctor_table);
 
                     //MessageBox.Show(dt.Rows[0].ItemArray[1].ToString());
 
@@ -71,10 +72,10 @@ namespace EasyTest_App
                     //rdr.Read();
 
 
-                    if (dt.Rows.Count > 0)
+                    if (proctor_table.Rows.Count > 0)
                     {
                         startProgram = true;
-                        if (dt.Rows[0][5].ToString() == "0")
+                        if (proctor_table.Rows[0][5].ToString() == "0")
                         {
                             //create an copy table of exam (local table)
 
@@ -89,9 +90,9 @@ namespace EasyTest_App
                             Hide();
                           
                         }
-                        if (dt.Rows[0][5].ToString() == "1")
+                        if (proctor_table.Rows[0][5].ToString() == "1")
                         {
-                            admin_id = dt.Rows[0][0].ToString();
+                            admin_id = proctor_table.Rows[0][0].ToString();
                             adminF.Show();
                             Hide();
                           
@@ -153,7 +154,7 @@ namespace EasyTest_App
 
         private void LoginBTN_MouseHover(object sender, EventArgs e)
         {
-            //LoginBTN.BackColor = Color.Red; 
+            LoginBTN.BackColor = Color.CornflowerBlue; 
         }
 
         private void UserID_textbox_TextChanged(object sender, EventArgs e)
@@ -170,7 +171,8 @@ namespace EasyTest_App
         private void Login_Load(object sender, EventArgs e)
         {
             if (startProgram) { login_backBTN.Visible = true; }
-            panel3.BackColor = Color.FromArgb(100, 0, 0, 0);
+            panel3.BackColor = Color.FromArgb(150, 0, 0, 0);
+           
         }
 
         private void login_backBTN_Click(object sender, EventArgs e)
@@ -182,11 +184,12 @@ namespace EasyTest_App
 
         private void UserID_textbox_MouseClick(object sender, MouseEventArgs e)
         {
-
+            
             if (!ClickTextBox1)
             {
                 UserID_textbox.Text = "";
                 ClickTextBox1 = true;
+              
             }
             
         }
@@ -198,6 +201,11 @@ namespace EasyTest_App
                 Pass_textbox.Text = "";
                 ClickTextBox2 = true;
             }
+        }
+
+        private void LoginBTN_MouseLeave(object sender, EventArgs e)
+        {
+            LoginBTN.BackColor = Color.RoyalBlue;
         }
     }
 }

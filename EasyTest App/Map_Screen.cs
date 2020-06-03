@@ -67,7 +67,7 @@ namespace EasyTest_App
                 for (int j = 0; j < Int32.Parse(Main_Screen.map_collumn); j++)
                 {
                     id++;
-                    if(Main_Screen.mainMap[j,i].BackColor == Color.Red)
+                    if(Main_Screen.mainMap[j,i].BackColor == Color.Green)
                     {
                         BACKGROUND_COLOR_map = Color.Red;
                         BoolEnabled = false;
@@ -160,7 +160,10 @@ namespace EasyTest_App
                     Main_Screen.EmptyClass = false;
                     Main_Screen.BeginBTN = true;
                     Main_Screen.first = false;
-                    /////////////////////////////////////////////////////              
+                    /////////////////////////////////////////////////////      
+                    
+                  
+
                 }
                 if (Main_Screen.TestBegin)
                 {
@@ -201,6 +204,19 @@ namespace EasyTest_App
                 cmd.ExecuteNonQuery();
 
                 conn.Close();
+                //////////////////////////////////////////////////////////////
+                ///בודק כל הזמן המעדכן אם הכיתה התחילה בחינה - עבור הציאה לשירותים
+                string Query1 = "SELECT * FROM examination_log WHERE exam_id = @exam_id";
+                MySqlConnection conn1 = new MySqlConnection("server=localhost;user id=root;database=easytest");
+                conn1.Open();
+
+                MySqlCommand cmd1 = new MySqlCommand(Query1, conn1);
+                cmd1.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
+                MySqlDataAdapter da1 = new MySqlDataAdapter(cmd1);
+
+                da1.Fill(Main_Screen.log_table);
+                conn1.Close();
+
 
 
 
@@ -212,7 +228,7 @@ namespace EasyTest_App
                     {
                         if (cards[j, i].BackColor == Color.Green)
                         {
-                            Main_Screen.mainMap[j, i].BackColor = Color.Red;
+                            Main_Screen.mainMap[j, i].BackColor = Color.Green;
                             Main_Screen.mainMap[j, i].Enabled = true;
 
                         }
