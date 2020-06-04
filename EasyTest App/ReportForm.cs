@@ -32,6 +32,8 @@ namespace EasyTest_App
         }
         private void ReportForm_Load(object sender, EventArgs e)
         {
+            comboBox.Text = "חשד להעתקה";
+
             string query = "SELECT student_id FROM examination_log WHERE table_num = @table_num";
 
             MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
@@ -123,7 +125,7 @@ namespace EasyTest_App
                                     {
                                         ContentNote.Visible = false;
                                         comboBox.Visible = false;
-                                        TimerBTN.Visible = true;
+                                        TimerBTN.Enabled = true;
                                         ReturnBTN2.Visible = true;
                                         ExitTimeLBL2.Visible = true;
                                         button1.Visible = false;
@@ -168,7 +170,7 @@ namespace EasyTest_App
                                 {
                                     ContentNote.Visible = false;
                                     comboBox.Visible = false;
-                                    TimerBTN.Visible = true;
+                                    TimerBTN.Enabled = true;
                                     ReturnBTN2.Visible = true;
                                     ExitTimeLBL2.Visible = true;
                                     button1.Visible = false;
@@ -229,7 +231,7 @@ namespace EasyTest_App
             {
 
                 button1.Visible = true;
-                TimerBTN.Visible = false;
+                TimerBTN.Enabled = false;
                 ReturnBTN2.Visible = false;
                 ExitTimeLBL2.Visible = false;
                 ContentNote.Visible = true;
@@ -240,37 +242,46 @@ namespace EasyTest_App
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string query = "";
+            if (!ContentNote.Text.Equals(""))
+            {
+                string query = "";
 
-            if (comboBox.Text.Equals("התחצפות")) 
-            {
-                 query = "INSERT INTO `report` (`report_id`, `exam_id`, `student_id`, `type`, `start`, `end`, `comment`) VALUES (NULL, @exam_id, @student_id, 'brutality', '', '', @comment)";
-            }
-            if (comboBox.Text.Equals("חשד להעתקה"))
-            {
-                 query = "INSERT INTO `report` (`report_id`, `exam_id`, `student_id`, `type`, `start`, `end`, `comment`) VALUES (NULL, @exam_id, @student_id, 'suspicion', '', '', @comment)";
-            }
-
-            if (!query.Equals("")) 
-            {
-                if(MessageBox.Show("הקש אישור לביצוע הדיווח", "הודעה", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (comboBox.Text.Equals("התחצפות"))
                 {
-                    MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
-                    conn.Open();
-
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-
-                    cmd.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
-                    cmd.Parameters.AddWithValue("@student_id", IDAnsLABEL.Text);
-                    cmd.Parameters.AddWithValue("@comment", ContentNote.Text);
-
-                    cmd.ExecuteNonQuery();
-
-                    conn.Close();
+                    query = "INSERT INTO `report` (`report_id`, `exam_id`, `student_id`, `type`, `start`, `end`, `comment`) VALUES (NULL, @exam_id, @student_id, 'brutality', '', '', @comment)";
                 }
-               
+                if (comboBox.Text.Equals("חשד להעתקה"))
+                {
+                    query = "INSERT INTO `report` (`report_id`, `exam_id`, `student_id`, `type`, `start`, `end`, `comment`) VALUES (NULL, @exam_id, @student_id, 'suspicion', '', '', @comment)";
+                }
+
+                if (!query.Equals(""))
+                {
+                    if (MessageBox.Show("הקש אישור לביצוע הדיווח", "הודעה", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
+                        conn.Open();
+
+                        MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                        cmd.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
+                        cmd.Parameters.AddWithValue("@student_id", IDAnsLABEL.Text);
+                        cmd.Parameters.AddWithValue("@comment", ContentNote.Text);
+
+                        cmd.ExecuteNonQuery();
+
+                        conn.Close();
+                    }
+
+                }
+
+
+
             }
-           
+            else
+            {
+                MessageBox.Show("נא להזין תוכן דיווח", "הערה", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
 
 
@@ -435,6 +446,12 @@ namespace EasyTest_App
                 Hide();
             
             
+        }
+
+        private void HomeBackBTN_Click(object sender, EventArgs e)
+        {
+            Login.main_screen.Show();
+            Hide();
         }
     }
 }

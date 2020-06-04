@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentProfileForm));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableBTN = new System.Windows.Forms.Button();
             this.nootbookBTN = new System.Windows.Forms.Button();
@@ -57,7 +58,7 @@
             // tableBTN
             // 
             this.tableBTN.BackColor = System.Drawing.Color.Transparent;
-            this.tableBTN.FlatAppearance.BorderSize = 5;
+            this.tableBTN.FlatAppearance.BorderSize = 4;
             this.tableBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tableBTN.Font = new System.Drawing.Font("Yu Gothic UI", 24F);
             this.tableBTN.ForeColor = System.Drawing.Color.DimGray;
@@ -75,11 +76,14 @@
             this.nootbookBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.nootbookBTN.Font = new System.Drawing.Font("Yu Gothic UI", 20F);
             this.nootbookBTN.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.nootbookBTN.Image = ((System.Drawing.Image)(resources.GetObject("nootbookBTN.Image")));
             this.nootbookBTN.Location = new System.Drawing.Point(0, 190);
             this.nootbookBTN.Name = "nootbookBTN";
             this.nootbookBTN.Size = new System.Drawing.Size(379, 202);
             this.nootbookBTN.TabIndex = 13;
             this.nootbookBTN.Text = "הוספת דיווח";
+            this.nootbookBTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.nootbookBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.nootbookBTN.UseVisualStyleBackColor = false;
             this.nootbookBTN.Click += new System.EventHandler(this.nootbookBTN_Click);
             // 
@@ -102,11 +106,14 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Yu Gothic UI", 20F);
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(0, 396);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(379, 202);
             this.button1.TabIndex = 16;
             this.button1.Text = "הגש בחינה";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -117,11 +124,14 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Yu Gothic UI", 20F);
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.Location = new System.Drawing.Point(1, 591);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(379, 202);
             this.button2.TabIndex = 17;
-            this.button2.Text = "חזור";
+            this.button2.Text = "מסך ראשי";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -230,6 +240,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "StudentProfileForm";
             this.Text = "StudentProfileForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.StudentProfileForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel6.ResumeLayout(false);
