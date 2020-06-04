@@ -100,6 +100,7 @@ namespace EasyTest_App
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             if (!Main_Screen.log_table.Rows[0][12].ToString().Equals("00:00:00"))
             {
                 int startHour = Main_Screen.GetHoures(Main_Screen.log_table.Rows[0][12].ToString(), Main_Screen.getTime());

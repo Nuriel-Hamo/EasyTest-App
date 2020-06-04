@@ -55,7 +55,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.labelExTime1 = new System.Windows.Forms.Label();
             this.timerExtra1 = new System.Windows.Forms.Timer(this.components);
-            this.timerExtra2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.toiletError)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -159,7 +158,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(395, 124);
+            this.panel1.Location = new System.Drawing.Point(399, 124);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(210, 178);
             this.panel1.TabIndex = 10;
@@ -332,7 +331,7 @@
             // 
             this.labelExTime1.AutoSize = true;
             this.labelExTime1.Font = new System.Drawing.Font("Yu Gothic UI", 20F, System.Drawing.FontStyle.Bold);
-            this.labelExTime1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.labelExTime1.ForeColor = System.Drawing.Color.Black;
             this.labelExTime1.Location = new System.Drawing.Point(920, 828);
             this.labelExTime1.Name = "labelExTime1";
             this.labelExTime1.Size = new System.Drawing.Size(175, 54);
@@ -343,11 +342,6 @@
             // 
             this.timerExtra1.Interval = 1000;
             this.timerExtra1.Tick += new System.EventHandler(this.timerExtra1_Tick);
-            // 
-            // timerExtra2
-            // 
-            this.timerExtra2.Interval = 1000;
-            this.timerExtra2.Tick += new System.EventHandler(this.timerExtra2_Tick);
             // 
             // Main_Screen
             // 
@@ -414,6 +408,5 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label labelExTime1;
         private System.Windows.Forms.Timer timerExtra1;
-        private System.Windows.Forms.Timer timerExtra2;
     }
 }

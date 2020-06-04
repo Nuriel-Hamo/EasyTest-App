@@ -19,7 +19,7 @@ namespace EasyTest_App
         public static string saveColor;
         //private static readonly int collumn = 5;
         //private static readonly int row = 3;
-        private static readonly int CARD_SIZE = 45;
+        private static readonly int CARD_SIZE = 80;
         private static readonly int GAP = 1;
         public static  Boolean BoolEnabled = true;
         private readonly Color FORGROUND_COLOR = Color.Black;
