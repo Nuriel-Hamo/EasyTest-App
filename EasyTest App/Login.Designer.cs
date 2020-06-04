@@ -114,7 +114,7 @@
             this.LoginBTN.Name = "LoginBTN";
             this.LoginBTN.Size = new System.Drawing.Size(740, 135);
             this.LoginBTN.TabIndex = 2;
-            this.LoginBTN.Text = "כניסה ";
+            this.LoginBTN.Text = "כניסה";
             this.LoginBTN.UseVisualStyleBackColor = false;
             this.LoginBTN.Click += new System.EventHandler(this.LoginBTN_Click);
             this.LoginBTN.MouseLeave += new System.EventHandler(this.LoginBTN_MouseLeave);

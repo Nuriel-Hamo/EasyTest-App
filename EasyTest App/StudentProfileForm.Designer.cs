@@ -62,11 +62,11 @@
             this.tableBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tableBTN.Font = new System.Drawing.Font("Yu Gothic UI", 24F);
             this.tableBTN.ForeColor = System.Drawing.Color.DimGray;
-            this.tableBTN.Location = new System.Drawing.Point(213, 594);
+            this.tableBTN.Location = new System.Drawing.Point(195, 591);
             this.tableBTN.Name = "tableBTN";
-            this.tableBTN.Size = new System.Drawing.Size(90, 90);
+            this.tableBTN.Size = new System.Drawing.Size(108, 108);
             this.tableBTN.TabIndex = 14;
-            this.tableBTN.Text = "1";
+            this.tableBTN.Text = "0";
             this.tableBTN.UseVisualStyleBackColor = false;
             // 
             // nootbookBTN

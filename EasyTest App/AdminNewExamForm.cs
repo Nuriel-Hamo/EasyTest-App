@@ -522,7 +522,23 @@ namespace EasyTest_App
 
         private void AdminNewExamForm_Load(object sender, EventArgs e)
         {
-            if(AdminUpdateForm.needUpd)
+            label1.BackColor = Color.FromArgb(100, 0, 0, 0);
+            label2.BackColor = Color.FromArgb(100, 0, 0, 0);
+            label3.BackColor = Color.FromArgb(100, 0, 0, 0);
+            label4.BackColor = Color.FromArgb(100, 0, 0, 0);
+            label5.BackColor = Color.FromArgb(100, 0, 0, 0);
+            label6.BackColor = Color.FromArgb(100, 0, 0, 0);
+            label7.BackColor = Color.FromArgb(100, 0, 0, 0);
+            label8.BackColor = Color.FromArgb(100, 0, 0, 0);
+            label9.BackColor = Color.FromArgb(100, 0, 0, 0);
+            button_back.BackColor = Color.FromArgb(100, 0, 0, 0);
+            button_confirm.BackColor = Color.FromArgb(100, 0, 0, 0);
+            button_reset.BackColor = Color.FromArgb(100, 0, 0, 0);
+            panel1.BackColor = Color.FromArgb(100, 0, 0, 0);
+
+
+
+            if (AdminUpdateForm.needUpd)
             {
                 label1.Text = "עדכון בחינה";
                 button_confirm.Text = "עדכן";
@@ -572,6 +588,8 @@ namespace EasyTest_App
                 return false;
             return true;
         }
+
+       
     }
 }
 

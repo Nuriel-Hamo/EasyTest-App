@@ -106,6 +106,9 @@ namespace EasyTest_App
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
+           
+            panel1.BackColor = Color.FromArgb(100, 0, 0, 0);
+            menuStrip1.BackColor = Color.FromArgb(100, 0, 0, 0);
             string a = Login.admin_id.ToString();
             con.Open();
             string Query = "SELECT `first_name` FROM `proctor` WHERE `proctor`.`proctor_id`=@admin";

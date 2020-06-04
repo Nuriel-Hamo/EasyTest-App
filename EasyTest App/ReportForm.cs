@@ -130,7 +130,7 @@ namespace EasyTest_App
                                         ExitTimeLBL2.Visible = true;
                                         button1.Visible = false;
 
-                                        ExitTimeLBL.Text = dt2.Rows[0].ItemArray[4].ToString();
+                                        ExitTimeLBL.Text = dt2.Rows[0].ItemArray[4].ToString().Substring(0,5);
                                         ExitTimeLBL.Visible = true;
                                         TimerBTN.Text = "סיים טיימר";
                                         TimerClick = true; ClickCount++;
@@ -453,5 +453,7 @@ namespace EasyTest_App
             Login.main_screen.Show();
             Hide();
         }
+
+      
     }
 }

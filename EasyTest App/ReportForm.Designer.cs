@@ -246,7 +246,7 @@
             this.tableBTN.ForeColor = System.Drawing.Color.DimGray;
             this.tableBTN.Location = new System.Drawing.Point(177, 755);
             this.tableBTN.Name = "tableBTN";
-            this.tableBTN.Size = new System.Drawing.Size(90, 90);
+            this.tableBTN.Size = new System.Drawing.Size(108, 108);
             this.tableBTN.TabIndex = 28;
             this.tableBTN.Text = "1";
             this.tableBTN.UseVisualStyleBackColor = false;
@@ -277,11 +277,11 @@
             this.ReturnBTN.BackColor = System.Drawing.Color.Transparent;
             this.ReturnBTN.Font = new System.Drawing.Font("Yu Gothic UI", 24F);
             this.ReturnBTN.ForeColor = System.Drawing.Color.DimGray;
-            this.ReturnBTN.Location = new System.Drawing.Point(1085, 467);
+            this.ReturnBTN.Location = new System.Drawing.Point(1071, 469);
             this.ReturnBTN.Name = "ReturnBTN";
-            this.ReturnBTN.Size = new System.Drawing.Size(118, 65);
+            this.ReturnBTN.Size = new System.Drawing.Size(142, 65);
             this.ReturnBTN.TabIndex = 34;
-            this.ReturnBTN.Text = "**:**";
+            this.ReturnBTN.Text = "00:00";
             this.ReturnBTN.Visible = false;
             // 
             // ExitTimeLBL
@@ -290,11 +290,11 @@
             this.ExitTimeLBL.BackColor = System.Drawing.Color.Transparent;
             this.ExitTimeLBL.Font = new System.Drawing.Font("Yu Gothic UI", 24F);
             this.ExitTimeLBL.ForeColor = System.Drawing.Color.DimGray;
-            this.ExitTimeLBL.Location = new System.Drawing.Point(1085, 402);
+            this.ExitTimeLBL.Location = new System.Drawing.Point(1071, 401);
             this.ExitTimeLBL.Name = "ExitTimeLBL";
-            this.ExitTimeLBL.Size = new System.Drawing.Size(118, 65);
+            this.ExitTimeLBL.Size = new System.Drawing.Size(142, 65);
             this.ExitTimeLBL.TabIndex = 33;
-            this.ExitTimeLBL.Text = "**:**";
+            this.ExitTimeLBL.Text = "00:00";
             this.ExitTimeLBL.Visible = false;
             // 
             // ReturnBTN2

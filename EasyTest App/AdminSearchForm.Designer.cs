@@ -39,42 +39,59 @@
             this.radioButtonBookID = new System.Windows.Forms.RadioButton();
             this.listBoxResult = new System.Windows.Forms.ListBox();
             this.buttonBack = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(347, 31);
+            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 24F);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(481, 82);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(229, 13);
+            this.label1.Size = new System.Drawing.Size(924, 65);
             this.label1.TabIndex = 0;
             this.label1.Text = ":אנא בחר אחת מן אפשרויות החיפוש הבאות";
             // 
             // buttonSearch
             // 
-            this.buttonSearch.Location = new System.Drawing.Point(399, 264);
+            this.buttonSearch.BackColor = System.Drawing.Color.Transparent;
+            this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSearch.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
+            this.buttonSearch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonSearch.Location = new System.Drawing.Point(508, 807);
+            this.buttonSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(137, 22);
+            this.buttonSearch.Size = new System.Drawing.Size(425, 126);
             this.buttonSearch.TabIndex = 1;
             this.buttonSearch.Text = "חפש";
-            this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.UseVisualStyleBackColor = false;
             this.buttonSearch.Click += new System.EventHandler(this.ButtonSearch_Click);
             // 
             // textBoxCourse
             // 
-            this.textBoxCourse.Location = new System.Drawing.Point(430, 76);
+            this.textBoxCourse.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxCourse.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
+            this.textBoxCourse.ForeColor = System.Drawing.Color.DimGray;
+            this.textBoxCourse.Location = new System.Drawing.Point(1158, 278);
+            this.textBoxCourse.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxCourse.Name = "textBoxCourse";
-            this.textBoxCourse.Size = new System.Drawing.Size(111, 20);
+            this.textBoxCourse.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textBoxCourse.Size = new System.Drawing.Size(224, 38);
             this.textBoxCourse.TabIndex = 2;
             // 
             // radioButtonCourse
             // 
             this.radioButtonCourse.AutoSize = true;
             this.radioButtonCourse.Checked = true;
-            this.radioButtonCourse.Location = new System.Drawing.Point(456, 53);
+            this.radioButtonCourse.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
+            this.radioButtonCourse.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.radioButtonCourse.Location = new System.Drawing.Point(1158, 216);
+            this.radioButtonCourse.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radioButtonCourse.Name = "radioButtonCourse";
             this.radioButtonCourse.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radioButtonCourse.Size = new System.Drawing.Size(80, 17);
+            this.radioButtonCourse.Size = new System.Drawing.Size(224, 52);
             this.radioButtonCourse.TabIndex = 3;
             this.radioButtonCourse.TabStop = true;
             this.radioButtonCourse.Text = "מספר קורס";
@@ -84,10 +101,13 @@
             // radioButtonExam
             // 
             this.radioButtonExam.AutoSize = true;
-            this.radioButtonExam.Location = new System.Drawing.Point(317, 53);
+            this.radioButtonExam.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
+            this.radioButtonExam.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.radioButtonExam.Location = new System.Drawing.Point(834, 216);
+            this.radioButtonExam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radioButtonExam.Name = "radioButtonExam";
             this.radioButtonExam.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radioButtonExam.Size = new System.Drawing.Size(81, 17);
+            this.radioButtonExam.Size = new System.Drawing.Size(225, 52);
             this.radioButtonExam.TabIndex = 4;
             this.radioButtonExam.Text = "מספר מבחן";
             this.radioButtonExam.UseVisualStyleBackColor = true;
@@ -95,27 +115,40 @@
             // 
             // textBoxExam
             // 
+            this.textBoxExam.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxExam.Enabled = false;
-            this.textBoxExam.Location = new System.Drawing.Point(287, 76);
+            this.textBoxExam.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
+            this.textBoxExam.ForeColor = System.Drawing.Color.DimGray;
+            this.textBoxExam.Location = new System.Drawing.Point(835, 278);
+            this.textBoxExam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxExam.Name = "textBoxExam";
-            this.textBoxExam.Size = new System.Drawing.Size(111, 20);
+            this.textBoxExam.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textBoxExam.Size = new System.Drawing.Size(224, 38);
             this.textBoxExam.TabIndex = 5;
             // 
             // textBoxBookID
             // 
+            this.textBoxBookID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxBookID.Enabled = false;
-            this.textBoxBookID.Location = new System.Drawing.Point(135, 76);
+            this.textBoxBookID.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
+            this.textBoxBookID.ForeColor = System.Drawing.Color.DimGray;
+            this.textBoxBookID.Location = new System.Drawing.Point(508, 278);
+            this.textBoxBookID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxBookID.Name = "textBoxBookID";
-            this.textBoxBookID.Size = new System.Drawing.Size(111, 20);
+            this.textBoxBookID.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textBoxBookID.Size = new System.Drawing.Size(224, 38);
             this.textBoxBookID.TabIndex = 7;
             // 
             // radioButtonBookID
             // 
             this.radioButtonBookID.AutoSize = true;
-            this.radioButtonBookID.Location = new System.Drawing.Point(157, 53);
+            this.radioButtonBookID.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
+            this.radioButtonBookID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.radioButtonBookID.Location = new System.Drawing.Point(508, 216);
+            this.radioButtonBookID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radioButtonBookID.Name = "radioButtonBookID";
             this.radioButtonBookID.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radioButtonBookID.Size = new System.Drawing.Size(89, 17);
+            this.radioButtonBookID.Size = new System.Drawing.Size(261, 52);
             this.radioButtonBookID.TabIndex = 6;
             this.radioButtonBookID.Text = "מספר מחברת";
             this.radioButtonBookID.UseVisualStyleBackColor = true;
@@ -123,31 +156,50 @@
             // 
             // listBoxResult
             // 
+            this.listBoxResult.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBoxResult.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
+            this.listBoxResult.ForeColor = System.Drawing.Color.DimGray;
             this.listBoxResult.FormattingEnabled = true;
-            this.listBoxResult.Location = new System.Drawing.Point(94, 102);
+            this.listBoxResult.ItemHeight = 38;
+            this.listBoxResult.Location = new System.Drawing.Point(508, 333);
+            this.listBoxResult.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listBoxResult.Name = "listBoxResult";
             this.listBoxResult.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.listBoxResult.Size = new System.Drawing.Size(447, 134);
+            this.listBoxResult.Size = new System.Drawing.Size(874, 456);
             this.listBoxResult.TabIndex = 8;
             this.listBoxResult.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ListBoxResult_MouseDoubleClick);
             // 
             // buttonBack
             // 
-            this.buttonBack.Location = new System.Drawing.Point(104, 264);
+            this.buttonBack.BackColor = System.Drawing.Color.Transparent;
+            this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBack.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
+            this.buttonBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonBack.Location = new System.Drawing.Point(957, 807);
+            this.buttonBack.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(137, 22);
+            this.buttonBack.Size = new System.Drawing.Size(425, 126);
             this.buttonBack.TabIndex = 9;
             this.buttonBack.Text = "חזור";
-            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.UseVisualStyleBackColor = false;
             this.buttonBack.Click += new System.EventHandler(this.ButtonBack_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1898, 1024);
+            this.panel1.TabIndex = 10;
             // 
             // AdminSearchForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(588, 313);
+            this.ClientSize = new System.Drawing.Size(1898, 1024);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.listBoxResult);
             this.Controls.Add(this.textBoxBookID);
@@ -158,9 +210,13 @@
             this.Controls.Add(this.textBoxCourse);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AdminSearchForm";
             this.Text = "AdminSearchForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminSearchForm_FormClosing);
+            this.Load += new System.EventHandler(this.AdminSearchForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,5 +234,6 @@
         private System.Windows.Forms.RadioButton radioButtonBookID;
         private System.Windows.Forms.ListBox listBoxResult;
         private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.Panel panel1;
     }
 }

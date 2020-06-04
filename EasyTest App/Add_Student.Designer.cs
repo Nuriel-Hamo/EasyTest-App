@@ -46,9 +46,9 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1235, 655);
+            this.pictureBox2.Location = new System.Drawing.Point(1220, 644);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(77, 77);
+            this.pictureBox2.Size = new System.Drawing.Size(104, 90);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
@@ -112,9 +112,9 @@
             this.addBackBTN.FlatAppearance.BorderSize = 0;
             this.addBackBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addBackBTN.Font = new System.Drawing.Font("Yu Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addBackBTN.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.addBackBTN.ForeColor = System.Drawing.Color.DimGray;
             this.addBackBTN.Image = ((System.Drawing.Image)(resources.GetObject("addBackBTN.Image")));
-            this.addBackBTN.Location = new System.Drawing.Point(1719, 939);
+            this.addBackBTN.Location = new System.Drawing.Point(1663, 926);
             this.addBackBTN.Name = "addBackBTN";
             this.addBackBTN.Size = new System.Drawing.Size(257, 157);
             this.addBackBTN.TabIndex = 12;
