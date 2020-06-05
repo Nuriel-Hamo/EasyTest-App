@@ -27,7 +27,23 @@ namespace EasyTest_App
 
         private void AdminSearchDetailsInformatio_Load(object sender, EventArgs e)
         {
-            
+            label1.BackColor = Color.FromArgb(0, 0, 0, 0);
+            label2.BackColor = Color.FromArgb(0, 0, 0, 0);
+            label3.BackColor = Color.FromArgb(0, 0, 0, 0);
+            label4.BackColor = Color.FromArgb(0, 0, 0, 0);
+            label5.BackColor = Color.FromArgb(0, 0, 0, 0);
+            label6.BackColor = Color.FromArgb(0, 0, 0, 0);
+            label7.BackColor = Color.FromArgb(0, 0, 0, 0);
+            label_additionalD.BackColor = Color.FromArgb(100, 0, 0, 0);
+            label_course.BackColor = Color.FromArgb(100, 0, 0, 0);
+            label_end.BackColor = Color.FromArgb(100, 0, 0, 0);
+            label_exam_id.BackColor = Color.FromArgb(100, 0, 0, 0);
+            label_lecturer_name.BackColor = Color.FromArgb(100, 0, 0, 0);
+            label_proctor_name.BackColor = Color.FromArgb(100, 0, 0, 0);
+            label_start.BackColor = Color.FromArgb(100, 0, 0, 0); 
+            buttonBack.BackColor = Color.FromArgb(100, 0, 0, 0);
+            panel1.BackColor = Color.FromArgb(100, 0, 0, 0);
+
             con.Open();
            
             string Query = "SELECT * FROM examination_log WHERE student_id = @value";

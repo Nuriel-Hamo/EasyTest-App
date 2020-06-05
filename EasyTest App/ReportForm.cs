@@ -21,6 +21,9 @@ namespace EasyTest_App
         int ClickCount = 0;
         DataTable report_dt = new DataTable();
         string EndTimeQuery = "";
+        public static Boolean studentInToilet = false;
+        public static string studentInToiletTable = "";
+        public static Boolean backFromToilet = false;
 
 
         public ReportForm()
@@ -29,6 +32,8 @@ namespace EasyTest_App
         }
         private void ReportForm_Load(object sender, EventArgs e)
         {
+            comboBox.Text = "חשד להעתקה";
+
             string query = "SELECT student_id FROM examination_log WHERE table_num = @table_num";
 
             MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
@@ -83,91 +88,134 @@ namespace EasyTest_App
 
         private void toilet_CheckedChanged(object sender, EventArgs e)
         {
+            
             if (toilet.Checked == true)
             {
-
-
-
-                string query2 = "SELECT * FROM report WHERE exam_id = @exam_id AND type = 'toilet' AND end = ''";
-
-                MySqlConnection conn2 = new MySqlConnection("server=localhost;user id=root;database=easytest");
-                conn2.Open();
-
-                MySqlCommand cmd2 = new MySqlCommand(query2, conn2);
-
-                cmd2.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
-                cmd2.Parameters.AddWithValue("@student_id", IDAnsLABEL.Text);
-                //cmd.Parameters.AddWithValue("@start_time", ExitTimeLBL.Text);
-
-                MySqlDataAdapter da2 = new MySqlDataAdapter(cmd2);
-                DataTable dt2 = new DataTable();
-
-                da2.Fill(dt2);
-
-                if (dt2.Rows.Count > 0)
+                if (!Main_Screen.log_table.Rows[0][12].ToString().Equals("00:00:00"))
                 {
-                    if (dt2.Rows[0][2].ToString().Equals(IDAnsLABEL.Text))
+                    int startHour = Main_Screen.GetHoures(Main_Screen.log_table.Rows[0][12].ToString(), Main_Screen.getTime());
+                    int startMinutes = Main_Screen.GetMinutes(Main_Screen.log_table.Rows[0][12].ToString(), Main_Screen.getTime());
+                    int endtHour = Main_Screen.GetHoures(Main_Screen.getTime(), Main_Screen.ChangeEndTime());
+                    int endMinutes = Main_Screen.GetMinutes(Main_Screen.getTime(), Main_Screen.ChangeEndTime());
+                    if(startHour !=0 && startMinutes != 0 || endtHour != 0 && endMinutes !=0 )
                     {
-                        ContentNote.Visible = false;
-                        comboBox.Visible = false;
-                        TimerBTN.Visible = true;
-                        ReturnBTN2.Visible = true;
-                        ExitTimeLBL2.Visible = true;
-                        button1.Visible = false;
+                        if (startHour >= 1 || startMinutes >= 30)
+                        {
+                            if (endtHour >= 1 || endMinutes >= 30)
+                            {
+                                string query2 = "SELECT * FROM report WHERE exam_id = @exam_id AND type = 'toilet' AND end = ''";
 
-                        ExitTimeLBL.Text = dt2.Rows[0].ItemArray[4].ToString();
-                        ExitTimeLBL.Visible = true;
-                        TimerBTN.Text = "סיים טיימר";
-                        TimerClick = true; ClickCount++;
-                        //Main_Screen.StudentInToilet = true;
+                                MySqlConnection conn2 = new MySqlConnection("server=localhost;user id=root;database=easytest");
+                                conn2.Open();
 
-                        /*string query = "SELECT report_id, start FROM report WHERE exam_id = @exam_id AND student_id = @student_id AND type = 'toilet' AND end = ''";
+                                MySqlCommand cmd2 = new MySqlCommand(query2, conn2);
 
-                        MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
-                        conn.Open();
+                                cmd2.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
+                                cmd2.Parameters.AddWithValue("@student_id", IDAnsLABEL.Text);
+                                //cmd.Parameters.AddWithValue("@start_time", ExitTimeLBL.Text);
 
-                        MySqlCommand cmd = new MySqlCommand(query, conn);
+                                MySqlDataAdapter da2 = new MySqlDataAdapter(cmd2);
+                                DataTable dt2 = new DataTable();
 
-                        cmd.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
-                        cmd.Parameters.AddWithValue("@student_id", IDAnsLABEL.Text);
-                        //cmd.Parameters.AddWithValue("@start_time", ExitTimeLBL.Text);
+                                da2.Fill(dt2);
 
-                        MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                                if (dt2.Rows.Count > 0)
+                                {
+                                    if (dt2.Rows[0][2].ToString().Equals(IDAnsLABEL.Text))
+                                    {
+                                        ContentNote.Visible = false;
+                                        comboBox.Visible = false;
+                                        TimerBTN.Enabled = true;
+                                        ReturnBTN2.Visible = true;
+                                        ExitTimeLBL2.Visible = true;
+                                        button1.Visible = false;
 
-                        da.Fill(report_dt);
+                                        ExitTimeLBL.Text = dt2.Rows[0].ItemArray[4].ToString().Substring(0,5);
+                                        ExitTimeLBL.Visible = true;
+                                        TimerBTN.Text = "סיים טיימר";
+                                        TimerClick = true; ClickCount++;
+                                        //Main_Screen.StudentInToilet = true;
 
-                        if (report_dt.Rows.Count > 0)
-                        {*/
+                                        /*string query = "SELECT report_id, start FROM report WHERE exam_id = @exam_id AND student_id = @student_id AND type = 'toilet' AND end = ''";
+
+                                        MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
+                                        conn.Open();
+
+                                        MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                                        cmd.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
+                                        cmd.Parameters.AddWithValue("@student_id", IDAnsLABEL.Text);
+                                        //cmd.Parameters.AddWithValue("@start_time", ExitTimeLBL.Text);
+
+                                        MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+
+                                        da.Fill(report_dt);
+
+                                        if (report_dt.Rows.Count > 0)
+                                        {*/
 
 
-                        //}
-                        //conn.Close();
+                                        //}
+                                        //conn.Close();
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("קיים סטודנט בשירותים", "הודעה");
+                                    }
+                                    conn2.Close();
+
+
+                                }
+                                else
+                                {
+                                    ContentNote.Visible = false;
+                                    comboBox.Visible = false;
+                                    TimerBTN.Enabled = true;
+                                    ReturnBTN2.Visible = true;
+                                    ExitTimeLBL2.Visible = true;
+                                    button1.Visible = false;
+                                }
+
+                            }
+                            else
+                            {
+                                MessageBox.Show("!היציאה לשירותים אסורה", "הודעה", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+
+
+
+
+
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("!היציאה לשירותים אסורה", "הודעה", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+
+
+
                     }
                     else
                     {
-                        MessageBox.Show("קיים סטודנט בשירותים", "הודעה");
+                        MessageBox.Show("!היציאה לשירותים אסורה", "הודעה", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-                    conn2.Close();
-
 
                 }
                 else
                 {
-                    ContentNote.Visible = false;
-                    comboBox.Visible = false;
-                    TimerBTN.Visible = true;
-                    ReturnBTN2.Visible = true;
-                    ExitTimeLBL2.Visible = true;
-                    button1.Visible = false;
+                    MessageBox.Show("!היציאה לשירותים אסורה", "הודעה", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
-            
-            
-        
-        
 
 
-        }
+
+
+
+
+
+
+            }
 
     }
 
@@ -183,7 +231,7 @@ namespace EasyTest_App
             {
 
                 button1.Visible = true;
-                TimerBTN.Visible = false;
+                TimerBTN.Enabled = false;
                 ReturnBTN2.Visible = false;
                 ExitTimeLBL2.Visible = false;
                 ContentNote.Visible = true;
@@ -194,37 +242,46 @@ namespace EasyTest_App
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string query = "";
+            if (!ContentNote.Text.Equals(""))
+            {
+                string query = "";
 
-            if (comboBox.Text.Equals("התחצפות")) 
-            {
-                 query = "INSERT INTO `report` (`report_id`, `exam_id`, `student_id`, `type`, `start`, `end`, `comment`) VALUES (NULL, @exam_id, @student_id, 'brutality', '', '', @comment)";
-            }
-            if (comboBox.Text.Equals("חשד להעתקה"))
-            {
-                 query = "INSERT INTO `report` (`report_id`, `exam_id`, `student_id`, `type`, `start`, `end`, `comment`) VALUES (NULL, @exam_id, @student_id, 'suspicion', '', '', @comment)";
-            }
-
-            if (!query.Equals("")) 
-            {
-                if(MessageBox.Show("הקש אישור לביצוע הדיווח", "הודעה", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (comboBox.Text.Equals("התחצפות"))
                 {
-                    MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
-                    conn.Open();
-
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-
-                    cmd.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
-                    cmd.Parameters.AddWithValue("@student_id", IDAnsLABEL.Text);
-                    cmd.Parameters.AddWithValue("@comment", ContentNote.Text);
-
-                    cmd.ExecuteNonQuery();
-
-                    conn.Close();
+                    query = "INSERT INTO `report` (`report_id`, `exam_id`, `student_id`, `type`, `start`, `end`, `comment`) VALUES (NULL, @exam_id, @student_id, 'brutality', '', '', @comment)";
                 }
-               
+                if (comboBox.Text.Equals("חשד להעתקה"))
+                {
+                    query = "INSERT INTO `report` (`report_id`, `exam_id`, `student_id`, `type`, `start`, `end`, `comment`) VALUES (NULL, @exam_id, @student_id, 'suspicion', '', '', @comment)";
+                }
+
+                if (!query.Equals(""))
+                {
+                    if (MessageBox.Show("הקש אישור לביצוע הדיווח", "הודעה", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
+                        conn.Open();
+
+                        MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                        cmd.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
+                        cmd.Parameters.AddWithValue("@student_id", IDAnsLABEL.Text);
+                        cmd.Parameters.AddWithValue("@comment", ContentNote.Text);
+
+                        cmd.ExecuteNonQuery();
+
+                        conn.Close();
+                    }
+
+                }
+
+
+
             }
-           
+            else
+            {
+                MessageBox.Show("נא להזין תוכן דיווח", "הערה", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
 
 
@@ -276,6 +333,9 @@ namespace EasyTest_App
                     ExitTimeLBL.Visible = true;
                     TimerBTN.Text = "סיים טיימר";
                     ClickCount++;
+                    studentInToilet = true;
+                    studentInToiletTable = tableBTN.Text;
+
                     //Main_Screen.StudentInToilet = true;
 
                     string query = "INSERT INTO `report` (`report_id`, `exam_id`, `student_id`, `type`, `start`, `end`, `comment`) VALUES (NULL, @exam_id, @student_id, 'toilet', @start_time, '', '')";
@@ -336,6 +396,8 @@ namespace EasyTest_App
                     ReturnBTN.Visible = true;
                     TimerBTN.Text = "התחל טיימר";
                     ClickCount++;
+                    studentInToilet = false;
+                    backFromToilet = true;
 
                     /*if(Main_Screen.StudentInToilet)
                     {
@@ -385,5 +447,13 @@ namespace EasyTest_App
             
             
         }
+
+        private void HomeBackBTN_Click(object sender, EventArgs e)
+        {
+            Login.main_screen.Show();
+            Hide();
+        }
+
+      
     }
 }

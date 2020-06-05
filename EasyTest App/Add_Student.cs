@@ -136,7 +136,11 @@ namespace EasyTest_App
                     ClickTextBox = true;
                 }
             }
-        
+
+        private void Add_Student_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

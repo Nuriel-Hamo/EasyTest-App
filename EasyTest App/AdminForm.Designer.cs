@@ -37,120 +37,155 @@
             this.ToolStripMenuItemExamManage = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemProctorManage = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemSearch = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(327, 21);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Yu Gothic", 50F);
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Location = new System.Drawing.Point(563, 103);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.Size = new System.Drawing.Size(516, 128);
             this.label1.TabIndex = 0;
+            this.label1.Text = "שלום עליזה";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(157, 70);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 45);
+            this.button1.Size = new System.Drawing.Size(379, 202);
             this.button1.TabIndex = 1;
             this.button1.Text = "הוספת בחינה חדשה";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonSearchExam
             // 
-            this.buttonSearchExam.Location = new System.Drawing.Point(157, 229);
+            this.buttonSearchExam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSearchExam.BackColor = System.Drawing.Color.Transparent;
+            this.buttonSearchExam.FlatAppearance.BorderSize = 0;
+            this.buttonSearchExam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSearchExam.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
+            this.buttonSearchExam.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonSearchExam.Location = new System.Drawing.Point(-1, 403);
+            this.buttonSearchExam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonSearchExam.Name = "buttonSearchExam";
-            this.buttonSearchExam.Size = new System.Drawing.Size(131, 45);
+            this.buttonSearchExam.Size = new System.Drawing.Size(379, 202);
             this.buttonSearchExam.TabIndex = 2;
             this.buttonSearchExam.Text = "מחק בחינה";
-            this.buttonSearchExam.UseVisualStyleBackColor = true;
+            this.buttonSearchExam.UseVisualStyleBackColor = false;
             this.buttonSearchExam.Click += new System.EventHandler(this.ButtonSearchExam_Click);
             // 
             // buttonAddProctor
             // 
-            this.buttonAddProctor.Location = new System.Drawing.Point(157, 152);
+            this.buttonAddProctor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAddProctor.BackColor = System.Drawing.Color.Transparent;
+            this.buttonAddProctor.FlatAppearance.BorderSize = 0;
+            this.buttonAddProctor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAddProctor.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
+            this.buttonAddProctor.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonAddProctor.Location = new System.Drawing.Point(0, 202);
+            this.buttonAddProctor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonAddProctor.Name = "buttonAddProctor";
-            this.buttonAddProctor.Size = new System.Drawing.Size(131, 48);
+            this.buttonAddProctor.Size = new System.Drawing.Size(379, 202);
             this.buttonAddProctor.TabIndex = 3;
             this.buttonAddProctor.Text = "עדכן בחינה קיימת";
-            this.buttonAddProctor.UseVisualStyleBackColor = true;
+            this.buttonAddProctor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonAddProctor.UseVisualStyleBackColor = false;
             this.buttonAddProctor.Click += new System.EventHandler(this.ButtonAddProctor_Click);
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripMenuItemExamManage,
             this.ToolStripMenuItemProctorManage,
             this.ToolStripMenuItemSearch});
-            this.menuStrip1.Location = new System.Drawing.Point(435, 0);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(127, 313);
+            this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.menuStrip1.Size = new System.Drawing.Size(1898, 61);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // ToolStripMenuItemExamManage
             // 
-            this.ToolStripMenuItemExamManage.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.ToolStripMenuItemExamManage.Font = new System.Drawing.Font("Yu Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToolStripMenuItemExamManage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ToolStripMenuItemExamManage.Name = "ToolStripMenuItemExamManage";
-            this.ToolStripMenuItemExamManage.Size = new System.Drawing.Size(114, 25);
+            this.ToolStripMenuItemExamManage.Size = new System.Drawing.Size(236, 55);
             this.ToolStripMenuItemExamManage.Text = "ניהול בחינות";
             this.ToolStripMenuItemExamManage.Click += new System.EventHandler(this.ToolStripMenuItemExamManage_Click);
             // 
             // ToolStripMenuItemProctorManage
             // 
-            this.ToolStripMenuItemProctorManage.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.ToolStripMenuItemProctorManage.Font = new System.Drawing.Font("Yu Gothic", 20F);
+            this.ToolStripMenuItemProctorManage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ToolStripMenuItemProctorManage.Name = "ToolStripMenuItemProctorManage";
-            this.ToolStripMenuItemProctorManage.Size = new System.Drawing.Size(114, 25);
+            this.ToolStripMenuItemProctorManage.Size = new System.Drawing.Size(268, 55);
             this.ToolStripMenuItemProctorManage.Text = "ניהול משגיחים";
             this.ToolStripMenuItemProctorManage.Click += new System.EventHandler(this.ToolStripMenuItemProctorManage_Click);
             // 
             // ToolStripMenuItemSearch
             // 
-            this.ToolStripMenuItemSearch.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.ToolStripMenuItemSearch.Font = new System.Drawing.Font("Yu Gothic", 20F);
+            this.ToolStripMenuItemSearch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ToolStripMenuItemSearch.Name = "ToolStripMenuItemSearch";
-            this.ToolStripMenuItemSearch.Size = new System.Drawing.Size(114, 25);
+            this.ToolStripMenuItemSearch.Size = new System.Drawing.Size(135, 55);
             this.ToolStripMenuItemSearch.Text = "חיפוש";
             this.ToolStripMenuItemSearch.Click += new System.EventHandler(this.ToolStripMenuItemSearch_Click);
             // 
-            // pictureBox1
+            // panel1
             // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(499, 263);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(51, 38);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.buttonAddProctor);
+            this.panel1.Controls.Add(this.buttonSearchExam);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(1519, 61);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(379, 963);
+            this.panel1.TabIndex = 5;
             // 
             // AdminForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(562, 313);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.buttonAddProctor);
-            this.Controls.Add(this.buttonSearchExam);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1898, 1024);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AdminForm";
             this.Text = "AdminForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminForm_FormClosing);
             this.Load += new System.EventHandler(this.AdminForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,6 +201,6 @@
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemExamManage;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemProctorManage;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemSearch;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
