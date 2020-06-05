@@ -72,6 +72,12 @@ namespace EasyTest_App
                         BACKGROUND_COLOR_map = Color.Red;
                         BoolEnabled = false;
                     }
+                    else if (Main_Screen.mainMap[j, i].BackColor == Color.DimGray)
+                    {
+                        BACKGROUND_COLOR_map = Color.DimGray;
+                        BoolEnabled = false;
+
+                    }
                     else
                     {
                         BACKGROUND_COLOR_map = Color.LightGray;
@@ -320,5 +326,7 @@ namespace EasyTest_App
             btn9.BackColor = Color.Gray;
             */
         }
+
+      
     }
 }

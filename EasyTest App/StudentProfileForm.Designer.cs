@@ -141,7 +141,7 @@
             this.scLBL.BackColor = System.Drawing.Color.Transparent;
             this.scLBL.Font = new System.Drawing.Font("Yu Gothic UI", 24F);
             this.scLBL.ForeColor = System.Drawing.Color.DimGray;
-            this.scLBL.Location = new System.Drawing.Point(987, 168);
+            this.scLBL.Location = new System.Drawing.Point(938, 168);
             this.scLBL.Name = "scLBL";
             this.scLBL.Size = new System.Drawing.Size(262, 65);
             this.scLBL.TabIndex = 27;

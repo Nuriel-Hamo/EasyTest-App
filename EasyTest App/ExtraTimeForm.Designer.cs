@@ -80,7 +80,7 @@
             this.FirstNameLABEL.BackColor = System.Drawing.Color.Transparent;
             this.FirstNameLABEL.Font = new System.Drawing.Font("Yu Gothic UI", 24F);
             this.FirstNameLABEL.ForeColor = System.Drawing.Color.DimGray;
-            this.FirstNameLABEL.Location = new System.Drawing.Point(612, 411);
+            this.FirstNameLABEL.Location = new System.Drawing.Point(628, 411);
             this.FirstNameLABEL.Name = "FirstNameLABEL";
             this.FirstNameLABEL.Size = new System.Drawing.Size(584, 65);
             this.FirstNameLABEL.TabIndex = 6;
@@ -156,6 +156,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ExtraTimeForm";
             this.Text = "ExtraTimeForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ExtraTimeForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -71,13 +71,18 @@
             // login_backBTN
             // 
             this.login_backBTN.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.login_backBTN.BackColor = System.Drawing.Color.DodgerBlue;
-            this.login_backBTN.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.login_backBTN.Location = new System.Drawing.Point(1627, 991);
+            this.login_backBTN.BackColor = System.Drawing.Color.Transparent;
+            this.login_backBTN.FlatAppearance.BorderSize = 0;
+            this.login_backBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.login_backBTN.Font = new System.Drawing.Font("Yu Gothic UI", 16F);
+            this.login_backBTN.Image = ((System.Drawing.Image)(resources.GetObject("login_backBTN.Image")));
+            this.login_backBTN.Location = new System.Drawing.Point(1705, 909);
             this.login_backBTN.Name = "login_backBTN";
-            this.login_backBTN.Size = new System.Drawing.Size(194, 77);
+            this.login_backBTN.Size = new System.Drawing.Size(203, 159);
             this.login_backBTN.TabIndex = 9;
-            this.login_backBTN.Text = "חזור";
+            this.login_backBTN.Text = "מסך ראשי";
+            this.login_backBTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.login_backBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.login_backBTN.UseVisualStyleBackColor = false;
             this.login_backBTN.Visible = false;
             this.login_backBTN.Click += new System.EventHandler(this.login_backBTN_Click);
