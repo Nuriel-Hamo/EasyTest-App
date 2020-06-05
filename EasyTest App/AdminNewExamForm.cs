@@ -347,42 +347,29 @@ namespace EasyTest_App
         {
             if (!rx.IsMatch(textBox_start_hour.Text))
             {
-                textBox_start_hour.Focus();
-                MessageBox.Show("HH:MM אנא להזין שעת התחלה בפורמט");
+                errorProviderExam.SetError(textBox_start_hour, " HH:MM אנא להזין שעת התחלה בפורמט");
             }
+            else
+                errorProviderExam.Clear();
             if (notEmpty())
                 button_confirm.Enabled = true;
-            
-
-           // if (textBox_start_hour.Text == "")
-             //   ;
-            
-                
-            
         }
 
         private void TextBox_end_hour_Leave(object sender, EventArgs e)
         {
 
             if (!rx.IsMatch(textBox_end_hour.Text))
-            {
-                textBox_end_hour.Focus();
-                MessageBox.Show(" HH:MM אנא להזין שעת התחלה בפורמט");
+            { 
+                errorProviderExam.SetError(textBox_end_hour," HH:MM אנא להזין שעת התחלה בפורמט");
 
             }
             else
             {
+                errorProviderExam.Clear();
                 bool isOK = HourValidiation();
                 if (notEmpty() && isOK)
                     button_confirm.Enabled = true;
             }
-            //if (textBox_end_hour.Text == "")
-            // ;
-
-
-
-
-
         }
         private string dateChaging(string date)
         {
@@ -426,19 +413,17 @@ namespace EasyTest_App
 
             if (start >= end)
             {
-                MessageBox.Show("שעת סיום לא יכולה להיות קטנה/שווה לשעת ההתחלה", "שגיאת הקלדה");
-                textBox_end_hour.Focus();
+                errorProviderExam.SetError(textBox_end_hour,"שעת סיום לא יכולה להיות קטנה/שווה לשעת ההתחלה");
                 return false;
             }
             else if (end - start < 2)
             {
-                MessageBox.Show("זמן מינימלי למבחן הוא שעתיים ומעלה", "שגיאת הקלדה");
-                textBox_end_hour.Focus();
+                errorProviderExam.SetError(textBox_end_hour,"זמן מינימלי למבחן הוא שעתיים ומעלה");
                 return false;
             }
             else if (end - start > 3)
             {
-                MessageBox.Show("זמן המבחן שהוקלד גבוה מדי אנא הזן שנית", "שגיאת הקלדה");
+                errorProviderExam.SetError(textBox_end_hour,"זמן המבחן שהוקלד גבוה מדי אנא הזן שנית");
                 return false;
             }
             return true;
@@ -455,7 +440,7 @@ namespace EasyTest_App
             con.Open();
             MySqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = $"SELECT proctor_id,course_id,class_num,test_date,exam_period FROM exam";
+            cmd.CommandText = $"SELECT proctor_id,course_id,class_num,test_date,exam_period,start_time,end_time FROM exam";
             DataTable dt = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
             adapter.Fill(dt);
@@ -477,6 +462,9 @@ namespace EasyTest_App
             
             foreach (DataRow dr in dt.Rows)
             {
+                int startH = Convert.ToInt32(dr["start_time"].ToString().Substring(0,1));
+                int endH = Convert.ToInt32(dr["end_time"].ToString().Substring(0, 1));
+
                 //check if have exam in that date for the choosen course
                 if (dr["test_date"].ToString().Substring(0, 10).Equals(textBox_exam_date.Text) && dr["course_id"].ToString().Equals(textBoxCourseCode.Text)&& !textBoxCourseCode.Text.Equals(data[2]))
                 {
@@ -486,13 +474,25 @@ namespace EasyTest_App
                 }
                 //check if for proctor have exam in that day
 
-                if (dr["proctor_id"].ToString().Equals(textBox_proctorID.Text) && dr["test_date"].ToString().Substring(0, 10).Equals(textBox_exam_date.Text) && !textBox_proctorID.Text.Equals(data[0]))
+                if (dr["proctor_id"].ToString().Equals(textBox_proctorID.Text) && !textBox_proctorID.Text.Equals(data[0]))
                 
                 {
-                   
-                    errorProviderExam.SetError(textBox_proctorID, "למשגיח זה קיימת בחינה באותו יום אנא בחר משגיח/ה אחר/ת");
-                    con.Close();
-                    return false;
+                    if (dr["test_date"].ToString().Substring(0, 10).Equals(textBox_exam_date.Text))
+                    {
+                        int currentH = Convert.ToInt32(textBox_end_hour.Text.Substring(0,1));
+                        if (endH - currentH <= 1)
+                        {
+                            errorProviderExam.SetError(textBox_start_hour, "למשגיח זה קיימת חפיפה בשעות עם בחינה אחרת אנא בחר שעה אחרת");
+                            con.Close();
+                            return false;
+                        }
+                        else
+                        {
+                            errorProviderExam.SetError(textBox_proctorID, "למשגיח זה קיימת בחינה באותו יום אנא בחר משגיח/ה אחר/ת");
+                            con.Close();
+                            return false;
+                        }
+                    }
                 }
 
                 //check the course & period
@@ -511,6 +511,8 @@ namespace EasyTest_App
                     con.Close();
                     return false;
                 }
+                
+                
             }
 
             con.Close();

@@ -119,5 +119,13 @@ namespace EasyTest_App
               label1.Text = "שלום "+dr["first_name"].ToString();
             con.Close();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Login login = new Login();
+            Login.startProgram = false;
+            login.Show();
+        }
     }
 }

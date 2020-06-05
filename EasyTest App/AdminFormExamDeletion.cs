@@ -80,7 +80,9 @@ namespace EasyTest_App
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            if (AdminForm.send == "exam")
+            if (listBoxExams.SelectedItem == null)
+                MessageBox.Show("אנא בחר מבחן שברצונך למחוק", "שגיאה");
+            else if (AdminForm.send == "exam")
             {
                 if (MessageBox.Show("האם אתה בטוח שברצונך למחוק מבחן?", "אזהרה", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
@@ -99,7 +101,7 @@ namespace EasyTest_App
                     adm.Show();
                 }
             }
-            if (AdminForm.send == "proctor")
+            else if (AdminForm.send == "proctor")
             {
                 if (MessageBox.Show("האם אתה בטוח שברצונך למחוק משגיח?", "אזהרה", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {

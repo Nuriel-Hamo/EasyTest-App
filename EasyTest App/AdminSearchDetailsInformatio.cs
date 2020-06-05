@@ -44,6 +44,7 @@ namespace EasyTest_App
                 label5.Text = getCourse(dr["course_id"].ToString());
                 label6.Text = dr["start_time"].ToString().Substring(0,5);
                 label7.Text = dr["end_time"].ToString().Substring(0, 5);
+                label8.Text = getStudent(dr["student_id"].ToString());
             }
             con.Close();
             
@@ -102,6 +103,25 @@ namespace EasyTest_App
                 if (dr["course_id"].ToString() == s)
                     con.Close();
                 return dr["course_name"].ToString();
+            }
+            con.Close();
+            return "";
+        }
+        private string getStudent(string s)
+        {
+            MySqlConnection con2 = new MySqlConnection("server=localhost;user id=root;database=easytest");
+            con2.Open();
+            string Query = "SELECT * FROM student WHERE student_id = @value";
+            MySqlCommand cmd = new MySqlCommand(Query, con2);
+            cmd.Parameters.AddWithValue("@value", s);
+            DataTable dt = new DataTable();
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                if (dr["student_id"].ToString() == s)
+                    con.Close();
+                return dr["first_name"].ToString() + " " + dr["last_name"].ToString();
             }
             con.Close();
             return "";

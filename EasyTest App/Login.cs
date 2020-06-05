@@ -130,12 +130,22 @@ namespace EasyTest_App
 
                 if (dt.Rows.Count > 0)
                 {
-
+                    if (SummaryForm.send == "summary")
+                    {
+                        SummaryForm.collect = true;
+                        SummaryForm.send = "lecturer";
+                        conn.Close();
+                        Main_Screen.s.Show();
+                        Hide();
+                        
+                    }
+                    else 
+                    {
                     conn.Close();
                     ExtraTimeForm ex = new ExtraTimeForm();
                     ex.Show();
                     Hide();
-
+                    }
                 }
                 else
                 {
@@ -175,9 +185,16 @@ namespace EasyTest_App
 
         private void login_backBTN_Click(object sender, EventArgs e)
         {
-            
-            main_screen.Show();
-            Hide();
+            if (SummaryForm.send == "summary")
+            {
+                Main_Screen.s.Show();
+                Hide();
+            }
+            else
+            {
+                main_screen.Show();
+                Hide();
+            }
         }
 
         private void UserID_textbox_MouseClick(object sender, MouseEventArgs e)
@@ -198,6 +215,11 @@ namespace EasyTest_App
                 Pass_textbox.Text = "";
                 ClickTextBox2 = true;
             }
+        }
+
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
         }
     }
 }

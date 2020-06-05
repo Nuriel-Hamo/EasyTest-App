@@ -21,7 +21,7 @@ namespace EasyTest_App
         int minutes = 0;
         int hours = 0;
         Boolean firstTimer = true;
-      
+        public static SummaryForm s;
         //private static readonly int collumn = 5;
         //private static readonly int row = 3;
         private static readonly int CARD_SIZE = 45;
@@ -454,12 +454,14 @@ namespace EasyTest_App
 
         private void EndExamBTN_Click(object sender, EventArgs e)
         {
-            Close();
+            s = new SummaryForm();
+            Hide();
+            s.Show();
         }
 
         private void ReportBTN_Click(object sender, EventArgs e)
         {
-
+            
         }
         public void setName(string name)
         {
@@ -631,5 +633,15 @@ namespace EasyTest_App
 
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (BeginExamBTN.Enabled)
+            {
+                Hide();
+                Login login = new Login();
+                Login.startProgram = false;
+                login.Show();
+            }
+        }
     }
 }
