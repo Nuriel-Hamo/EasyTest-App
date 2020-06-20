@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminSearchForm));
             this.label1 = new System.Windows.Forms.Label();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.textBoxCourse = new System.Windows.Forms.TextBox();
@@ -39,15 +38,14 @@
             this.radioButtonBookID = new System.Windows.Forms.RadioButton();
             this.listBoxResult = new System.Windows.Forms.ListBox();
             this.buttonBack = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 24F);
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(481, 82);
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(482, 84);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(924, 65);
@@ -59,8 +57,8 @@
             this.buttonSearch.BackColor = System.Drawing.Color.Transparent;
             this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSearch.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.buttonSearch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonSearch.Location = new System.Drawing.Point(508, 807);
+            this.buttonSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonSearch.Location = new System.Drawing.Point(509, 809);
             this.buttonSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(425, 126);
@@ -74,7 +72,7 @@
             this.textBoxCourse.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxCourse.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
             this.textBoxCourse.ForeColor = System.Drawing.Color.DimGray;
-            this.textBoxCourse.Location = new System.Drawing.Point(1158, 278);
+            this.textBoxCourse.Location = new System.Drawing.Point(1159, 280);
             this.textBoxCourse.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxCourse.Name = "textBoxCourse";
             this.textBoxCourse.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -86,8 +84,8 @@
             this.radioButtonCourse.AutoSize = true;
             this.radioButtonCourse.Checked = true;
             this.radioButtonCourse.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.radioButtonCourse.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.radioButtonCourse.Location = new System.Drawing.Point(1158, 216);
+            this.radioButtonCourse.ForeColor = System.Drawing.Color.DimGray;
+            this.radioButtonCourse.Location = new System.Drawing.Point(1159, 218);
             this.radioButtonCourse.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radioButtonCourse.Name = "radioButtonCourse";
             this.radioButtonCourse.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -102,8 +100,8 @@
             // 
             this.radioButtonExam.AutoSize = true;
             this.radioButtonExam.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.radioButtonExam.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.radioButtonExam.Location = new System.Drawing.Point(834, 216);
+            this.radioButtonExam.ForeColor = System.Drawing.Color.DimGray;
+            this.radioButtonExam.Location = new System.Drawing.Point(835, 218);
             this.radioButtonExam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radioButtonExam.Name = "radioButtonExam";
             this.radioButtonExam.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -119,7 +117,7 @@
             this.textBoxExam.Enabled = false;
             this.textBoxExam.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
             this.textBoxExam.ForeColor = System.Drawing.Color.DimGray;
-            this.textBoxExam.Location = new System.Drawing.Point(835, 278);
+            this.textBoxExam.Location = new System.Drawing.Point(836, 280);
             this.textBoxExam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxExam.Name = "textBoxExam";
             this.textBoxExam.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -132,7 +130,7 @@
             this.textBoxBookID.Enabled = false;
             this.textBoxBookID.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
             this.textBoxBookID.ForeColor = System.Drawing.Color.DimGray;
-            this.textBoxBookID.Location = new System.Drawing.Point(508, 278);
+            this.textBoxBookID.Location = new System.Drawing.Point(509, 280);
             this.textBoxBookID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxBookID.Name = "textBoxBookID";
             this.textBoxBookID.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -143,8 +141,8 @@
             // 
             this.radioButtonBookID.AutoSize = true;
             this.radioButtonBookID.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.radioButtonBookID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.radioButtonBookID.Location = new System.Drawing.Point(508, 216);
+            this.radioButtonBookID.ForeColor = System.Drawing.Color.DimGray;
+            this.radioButtonBookID.Location = new System.Drawing.Point(509, 218);
             this.radioButtonBookID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radioButtonBookID.Name = "radioButtonBookID";
             this.radioButtonBookID.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -161,7 +159,7 @@
             this.listBoxResult.ForeColor = System.Drawing.Color.DimGray;
             this.listBoxResult.FormattingEnabled = true;
             this.listBoxResult.ItemHeight = 38;
-            this.listBoxResult.Location = new System.Drawing.Point(508, 333);
+            this.listBoxResult.Location = new System.Drawing.Point(509, 335);
             this.listBoxResult.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listBoxResult.Name = "listBoxResult";
             this.listBoxResult.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -174,8 +172,8 @@
             this.buttonBack.BackColor = System.Drawing.Color.Transparent;
             this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBack.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.buttonBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonBack.Location = new System.Drawing.Point(957, 807);
+            this.buttonBack.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonBack.Location = new System.Drawing.Point(958, 809);
             this.buttonBack.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(425, 126);
@@ -184,33 +182,23 @@
             this.buttonBack.UseVisualStyleBackColor = false;
             this.buttonBack.Click += new System.EventHandler(this.ButtonBack_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1898, 1024);
-            this.panel1.TabIndex = 10;
-            // 
             // AdminSearchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.listBoxResult);
-            this.Controls.Add(this.textBoxBookID);
-            this.Controls.Add(this.radioButtonBookID);
-            this.Controls.Add(this.textBoxExam);
-            this.Controls.Add(this.radioButtonExam);
-            this.Controls.Add(this.radioButtonCourse);
-            this.Controls.Add(this.textBoxCourse);
-            this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.radioButtonExam);
+            this.Controls.Add(this.textBoxBookID);
+            this.Controls.Add(this.radioButtonCourse);
+            this.Controls.Add(this.buttonSearch);
+            this.Controls.Add(this.textBoxExam);
+            this.Controls.Add(this.radioButtonBookID);
+            this.Controls.Add(this.textBoxCourse);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AdminSearchForm";
             this.Text = "AdminSearchForm";
@@ -234,6 +222,5 @@
         private System.Windows.Forms.RadioButton radioButtonBookID;
         private System.Windows.Forms.ListBox listBoxResult;
         private System.Windows.Forms.Button buttonBack;
-        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -29,7 +29,7 @@ namespace EasyTest_App
 
         private void AdminFormExamDeletion_Load(object sender, EventArgs e)
         {
-            panel1.BackColor = Color.FromArgb(100, 0, 0, 0);
+            //panel1.BackColor = Color.FromArgb(100, 0, 0, 0);
 
             dataE();
             con.Open();
@@ -166,6 +166,6 @@ namespace EasyTest_App
 
         }
 
-        
+      
     }
 }

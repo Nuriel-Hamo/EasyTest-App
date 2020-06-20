@@ -184,14 +184,14 @@ namespace EasyTest_App
 
         private void AddProctorForm_Load(object sender, EventArgs e)
         {
-            label1.BackColor = Color.FromArgb(0, 0, 0, 0);
+            /*label1.BackColor = Color.FromArgb(0, 0, 0, 0);
             label2.BackColor = Color.FromArgb(0, 0, 0, 0);
             label3.BackColor = Color.FromArgb(0, 0, 0, 0);
             label4.BackColor = Color.FromArgb(0, 0, 0, 0);
             label5.BackColor = Color.FromArgb(0, 0, 0, 0);
             label6.BackColor = Color.FromArgb(0, 0, 0, 0);
             label7.BackColor = Color.FromArgb(0, 0, 0, 0);
-            panel1.BackColor = Color.FromArgb(100, 0, 0, 0);
+            panel1.BackColor = Color.FromArgb(100, 0, 0, 0);*/
             if (AdminUpdateForm.needUpd)
             {
                 label1.Text = "עדכון משגיח בחינה";

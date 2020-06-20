@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminNewExamForm));
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxCourseCode = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,29 +52,28 @@
             this.label9 = new System.Windows.Forms.Label();
             this.comboBoxMoed = new System.Windows.Forms.ComboBox();
             this.errorProviderExam = new System.Windows.Forms.ErrorProvider(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderExam)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(1640, 9);
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(1640, 21);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(218, 48);
             this.label1.TabIndex = 0;
             this.label1.Text = ":יצירת בחינה";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBoxCourseCode
             // 
             this.textBoxCourseCode.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
             this.textBoxCourseCode.ForeColor = System.Drawing.Color.DimGray;
-            this.textBoxCourseCode.Location = new System.Drawing.Point(1483, 131);
+            this.textBoxCourseCode.Location = new System.Drawing.Point(1483, 143);
             this.textBoxCourseCode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxCourseCode.Multiline = true;
             this.textBoxCourseCode.Name = "textBoxCourseCode";
@@ -88,34 +86,36 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(1691, 120);
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(1691, 132);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(167, 48);
             this.label2.TabIndex = 2;
             this.label2.Text = ":קוד קורס";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(1628, 197);
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(1628, 209);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(230, 48);
             this.label3.TabIndex = 3;
             this.label3.Text = ":מספר משגיח";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // textBox_proctorID
             // 
             this.textBox_proctorID.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
             this.textBox_proctorID.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox_proctorID.Location = new System.Drawing.Point(1420, 208);
+            this.textBox_proctorID.Location = new System.Drawing.Point(1420, 220);
             this.textBox_proctorID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_proctorID.Multiline = true;
             this.textBox_proctorID.Name = "textBox_proctorID";
@@ -128,21 +128,22 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(1640, 274);
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(1640, 286);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(218, 48);
             this.label4.TabIndex = 5;
             this.label4.Text = ":מספר מרצה";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // textBox_lecturerID
             // 
             this.textBox_lecturerID.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
             this.textBox_lecturerID.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox_lecturerID.Location = new System.Drawing.Point(1432, 285);
+            this.textBox_lecturerID.Location = new System.Drawing.Point(1432, 297);
             this.textBox_lecturerID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_lecturerID.Multiline = true;
             this.textBox_lecturerID.Name = "textBox_lecturerID";
@@ -155,21 +156,22 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(1628, 428);
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.Location = new System.Drawing.Point(1628, 440);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(230, 48);
             this.label5.TabIndex = 7;
             this.label5.Text = ":תאריך בחינה";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // textBox_exam_date
             // 
             this.textBox_exam_date.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
             this.textBox_exam_date.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox_exam_date.Location = new System.Drawing.Point(1420, 439);
+            this.textBox_exam_date.Location = new System.Drawing.Point(1420, 451);
             this.textBox_exam_date.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_exam_date.Multiline = true;
             this.textBox_exam_date.Name = "textBox_exam_date";
@@ -183,21 +185,22 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(1627, 505);
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.Location = new System.Drawing.Point(1627, 517);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(231, 48);
             this.label6.TabIndex = 9;
             this.label6.Text = ":שעת התחלה";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // textBox_start_hour
             // 
             this.textBox_start_hour.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
             this.textBox_start_hour.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox_start_hour.Location = new System.Drawing.Point(1419, 516);
+            this.textBox_start_hour.Location = new System.Drawing.Point(1419, 528);
             this.textBox_start_hour.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_start_hour.Multiline = true;
             this.textBox_start_hour.Name = "textBox_start_hour";
@@ -211,7 +214,7 @@
             // 
             this.textBox_end_hour.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
             this.textBox_end_hour.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox_end_hour.Location = new System.Drawing.Point(1467, 593);
+            this.textBox_end_hour.Location = new System.Drawing.Point(1467, 605);
             this.textBox_end_hour.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_end_hour.Multiline = true;
             this.textBox_end_hour.Name = "textBox_end_hour";
@@ -224,15 +227,16 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(1675, 582);
+            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label7.Location = new System.Drawing.Point(1675, 594);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(183, 48);
             this.label7.TabIndex = 12;
             this.label7.Text = ":שעת סיום";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // button_confirm
             // 
@@ -240,8 +244,8 @@
             this.button_confirm.Enabled = false;
             this.button_confirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_confirm.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.button_confirm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button_confirm.Location = new System.Drawing.Point(1406, 738);
+            this.button_confirm.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button_confirm.Location = new System.Drawing.Point(1406, 750);
             this.button_confirm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_confirm.Name = "button_confirm";
             this.button_confirm.Size = new System.Drawing.Size(452, 141);
@@ -255,8 +259,8 @@
             this.button_reset.BackColor = System.Drawing.Color.Transparent;
             this.button_reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_reset.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.button_reset.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button_reset.Location = new System.Drawing.Point(1213, 738);
+            this.button_reset.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button_reset.Location = new System.Drawing.Point(1213, 750);
             this.button_reset.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_reset.Name = "button_reset";
             this.button_reset.Size = new System.Drawing.Size(170, 141);
@@ -270,8 +274,8 @@
             this.button_back.BackColor = System.Drawing.Color.Transparent;
             this.button_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_back.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.button_back.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button_back.Location = new System.Drawing.Point(1690, 938);
+            this.button_back.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button_back.Location = new System.Drawing.Point(1690, 950);
             this.button_back.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_back.Name = "button_back";
             this.button_back.Size = new System.Drawing.Size(168, 72);
@@ -284,7 +288,7 @@
             // 
             this.textBox_class_number.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
             this.textBox_class_number.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox_class_number.Location = new System.Drawing.Point(1441, 362);
+            this.textBox_class_number.Location = new System.Drawing.Point(1441, 374);
             this.textBox_class_number.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_class_number.Multiline = true;
             this.textBox_class_number.Name = "textBox_class_number";
@@ -297,21 +301,22 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(1649, 351);
+            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label8.Location = new System.Drawing.Point(1649, 363);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(209, 48);
             this.label8.TabIndex = 17;
             this.label8.Text = ":מספר כיתה";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(933, 131);
+            this.listBox1.Location = new System.Drawing.Point(1035, 142);
             this.listBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listBox1.Name = "listBox1";
             this.listBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -322,26 +327,28 @@
             // 
             // calendar
             // 
-            this.calendar.Location = new System.Drawing.Point(1053, 439);
+            this.calendar.Location = new System.Drawing.Point(1053, 451);
             this.calendar.Margin = new System.Windows.Forms.Padding(14);
             this.calendar.MaxSelectionCount = 1;
             this.calendar.Name = "calendar";
             this.calendar.TabIndex = 19;
             this.calendar.Visible = false;
+            this.calendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.calendar_DateChanged);
             this.calendar.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.Calendar_DateSelected);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(1570, 659);
+            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label9.Location = new System.Drawing.Point(1570, 671);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(288, 48);
             this.label9.TabIndex = 20;
             this.label9.Text = ":סוג מועד הבחינה";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // comboBoxMoed
             // 
@@ -352,7 +359,7 @@
             "מועד א",
             "מועד ב",
             "מועד מיוחד"});
-            this.comboBoxMoed.Location = new System.Drawing.Point(1406, 667);
+            this.comboBoxMoed.Location = new System.Drawing.Point(1406, 679);
             this.comboBoxMoed.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxMoed.Name = "comboBoxMoed";
             this.comboBoxMoed.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -365,44 +372,35 @@
             // 
             this.errorProviderExam.ContainerControl = this;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.listBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1898, 1024);
-            this.panel1.TabIndex = 22;
-            // 
             // AdminNewExamForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
             this.Controls.Add(this.comboBoxMoed);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.calendar);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox_class_number);
-            this.Controls.Add(this.button_back);
-            this.Controls.Add(this.button_reset);
-            this.Controls.Add(this.button_confirm);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox_end_hour);
-            this.Controls.Add(this.textBox_start_hour);
             this.Controls.Add(this.label6);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox_start_hour);
+            this.Controls.Add(this.calendar);
             this.Controls.Add(this.textBox_exam_date);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox_end_hour);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.textBoxCourseCode);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.textBox_class_number);
             this.Controls.Add(this.textBox_lecturerID);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.button_confirm);
+            this.Controls.Add(this.button_back);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox_proctorID);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBoxCourseCode);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.button_reset);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AdminNewExamForm";
             this.Text = "AdminNewExamForm";
@@ -410,7 +408,6 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminNewExamForm_FormClosing);
             this.Load += new System.EventHandler(this.AdminNewExamForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderExam)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -441,6 +438,5 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox comboBoxMoed;
         private System.Windows.Forms.ErrorProvider errorProviderExam;
-        private System.Windows.Forms.Panel panel1;
     }
 }

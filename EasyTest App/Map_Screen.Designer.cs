@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Map_Screen));
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -41,79 +41,87 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.homeBTN = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.TablePic = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TablePic)).BeginInit();
             this.SuspendLayout();
             // 
             // button10
             // 
-            this.button10.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(75)))), ((int)(((byte)(174)))));
             this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Yu Gothic", 20F);
+            this.button10.Font = new System.Drawing.Font("Yu Gothic UI", 20F);
             this.button10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button10.Location = new System.Drawing.Point(593, 902);
+            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
+            this.button10.Location = new System.Drawing.Point(0, 182);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(740, 135);
+            this.button10.Size = new System.Drawing.Size(379, 202);
             this.button10.TabIndex = 1;
             this.button10.Text = "המשך";
+            this.button10.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button11
             // 
-            this.button11.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button11.BackColor = System.Drawing.Color.Transparent;
             this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Yu Gothic", 20F);
+            this.button11.Font = new System.Drawing.Font("Yu Gothic UI", 20F);
             this.button11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button11.Location = new System.Drawing.Point(1672, 977);
+            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
+            this.button11.Location = new System.Drawing.Point(0, 384);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(236, 91);
+            this.button11.Size = new System.Drawing.Size(379, 202);
             this.button11.TabIndex = 2;
             this.button11.Text = "חזור";
+            this.button11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(593, 189);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 100);
-            this.panel1.TabIndex = 4;
-            // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label2.AutoSize = true;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 16F);
             this.label2.ForeColor = System.Drawing.Color.Gray;
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(823, 109);
+            this.label2.Location = new System.Drawing.Point(0, 77);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(280, 45);
+            this.label2.Size = new System.Drawing.Size(1541, 73);
             this.label2.TabIndex = 20;
             this.label2.Text = "תהליך אימות וזיהוי";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label3.AutoSize = true;
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial Black", 26F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.DimGray;
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(729, 11);
+            this.label3.Location = new System.Drawing.Point(0, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(468, 73);
+            this.label3.Size = new System.Drawing.Size(1541, 73);
             this.label3.TabIndex = 19;
             this.label3.Text = "בחר מושב סטודנט";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Yu Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(396, 189);
+            this.label5.Location = new System.Drawing.Point(348, 150);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 36);
             this.label5.TabIndex = 25;
@@ -128,7 +136,7 @@
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(170, 228);
+            this.panel2.Location = new System.Drawing.Point(122, 189);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(320, 231);
             this.panel2.TabIndex = 26;
@@ -189,6 +197,61 @@
             this.label4.TabIndex = 20;
             this.label4.Text = "שולחן נבחר";
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel6.Controls.Add(this.homeBTN);
+            this.panel6.Controls.Add(this.button10);
+            this.panel6.Controls.Add(this.button11);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel6.Location = new System.Drawing.Point(1541, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(379, 1080);
+            this.panel6.TabIndex = 31;
+            // 
+            // homeBTN
+            // 
+            this.homeBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.homeBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(75)))), ((int)(((byte)(174)))));
+            this.homeBTN.FlatAppearance.BorderSize = 0;
+            this.homeBTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
+            this.homeBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.homeBTN.Font = new System.Drawing.Font("Yu Gothic UI", 20F);
+            this.homeBTN.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.homeBTN.Image = ((System.Drawing.Image)(resources.GetObject("homeBTN.Image")));
+            this.homeBTN.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.homeBTN.Location = new System.Drawing.Point(0, 591);
+            this.homeBTN.Name = "homeBTN";
+            this.homeBTN.Size = new System.Drawing.Size(379, 202);
+            this.homeBTN.TabIndex = 17;
+            this.homeBTN.Text = "מסך ראשי";
+            this.homeBTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.homeBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.homeBTN.UseVisualStyleBackColor = false;
+            this.homeBTN.Click += new System.EventHandler(this.homeBTN_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.TablePic);
+            this.panel1.Location = new System.Drawing.Point(533, 189);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(355, 268);
+            this.panel1.TabIndex = 32;
+            // 
+            // TablePic
+            // 
+            this.TablePic.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TablePic.BackColor = System.Drawing.Color.Transparent;
+            this.TablePic.Image = ((System.Drawing.Image)(resources.GetObject("TablePic.Image")));
+            this.TablePic.Location = new System.Drawing.Point(32, 142);
+            this.TablePic.Name = "TablePic";
+            this.TablePic.Size = new System.Drawing.Size(292, 123);
+            this.TablePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.TablePic.TabIndex = 26;
+            this.TablePic.TabStop = false;
+            // 
             // Map_Screen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -196,13 +259,12 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button10);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Map_Screen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -212,6 +274,9 @@
             this.Click += new System.EventHandler(this.Button_Click);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TablePic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,7 +285,6 @@
         #endregion
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
@@ -231,5 +295,9 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button homeBTN;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox TablePic;
     }
 }

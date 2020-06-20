@@ -181,15 +181,15 @@ namespace EasyTest_App
 
         private void AdminSearchForm_Load(object sender, EventArgs e)
         {
-            label1.BackColor = Color.FromArgb(100, 0, 0, 0);
+            /*label1.BackColor = Color.FromArgb(100, 0, 0, 0);
             radioButtonBookID.BackColor = Color.FromArgb(100, 0, 0, 0);
             radioButtonCourse.BackColor = Color.FromArgb(100, 0, 0, 0);
             radioButtonExam.BackColor = Color.FromArgb(100, 0, 0, 0);
             buttonBack.BackColor = Color.FromArgb(100, 0, 0, 0);
             buttonSearch.BackColor = Color.FromArgb(100, 0, 0, 0);
-            panel1.BackColor = Color.FromArgb(100, 0, 0, 0);
-
+            panel1.BackColor = Color.FromArgb(100, 0, 0, 0);*/
         }
+   
 
         private void ResetTBoxs()
         {

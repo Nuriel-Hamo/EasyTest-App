@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonSearchExam = new System.Windows.Forms.Button();
@@ -37,7 +36,9 @@
             this.ToolStripMenuItemExamManage = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemProctorManage = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemSearch = new System.Windows.Forms.ToolStripMenuItem();
+            this.EventM = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.reportAlertLBL = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -47,7 +48,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Yu Gothic", 50F);
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(563, 103);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -116,7 +117,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripMenuItemExamManage,
             this.ToolStripMenuItemProctorManage,
-            this.ToolStripMenuItemSearch});
+            this.ToolStripMenuItemSearch,
+            this.EventM});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -151,6 +153,15 @@
             this.ToolStripMenuItemSearch.Text = "חיפוש";
             this.ToolStripMenuItemSearch.Click += new System.EventHandler(this.ToolStripMenuItemSearch_Click);
             // 
+            // EventM
+            // 
+            this.EventM.Font = new System.Drawing.Font("Yu Gothic", 20F);
+            this.EventM.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.EventM.Name = "EventM";
+            this.EventM.Size = new System.Drawing.Size(251, 55);
+            this.EventM.Text = "ניהול אירועים";
+            this.EventM.Click += new System.EventHandler(this.EventM_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
@@ -163,14 +174,31 @@
             this.panel1.Size = new System.Drawing.Size(379, 963);
             this.panel1.TabIndex = 5;
             // 
+            // reportAlertLBL
+            // 
+            this.reportAlertLBL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.reportAlertLBL.BackColor = System.Drawing.Color.Transparent;
+            this.reportAlertLBL.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.reportAlertLBL.Font = new System.Drawing.Font("Yu Gothic", 20F);
+            this.reportAlertLBL.ForeColor = System.Drawing.Color.Red;
+            this.reportAlertLBL.Location = new System.Drawing.Point(3, 231);
+            this.reportAlertLBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.reportAlertLBL.Name = "reportAlertLBL";
+            this.reportAlertLBL.Size = new System.Drawing.Size(1040, 63);
+            this.reportAlertLBL.TabIndex = 6;
+            this.reportAlertLBL.Text = "מערכת התראות";
+            this.reportAlertLBL.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.reportAlertLBL.Visible = false;
+            this.reportAlertLBL.Click += new System.EventHandler(this.reportAlertLBL_Click);
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.PeachPuff;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.Controls.Add(this.reportAlertLBL);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
@@ -182,6 +210,7 @@
             this.Text = "AdminForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminForm_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminForm_FormClosed);
             this.Load += new System.EventHandler(this.AdminForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -202,5 +231,7 @@
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemProctorManage;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemSearch;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label reportAlertLBL;
+        private System.Windows.Forms.ToolStripMenuItem EventM;
     }
 }

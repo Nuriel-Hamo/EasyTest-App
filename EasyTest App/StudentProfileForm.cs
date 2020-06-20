@@ -84,6 +84,8 @@ namespace EasyTest_App
             idLBL.Text = student_table.Rows[0].ItemArray[0].ToString();
             scLBL.Text = student_table.Rows[0].ItemArray[5].ToString();
             tableBTN.Text = Main_Screen.send2profile;
+            label4.Text = examination_log_table.Rows[0][7].ToString();
+
 
 
 
@@ -100,12 +102,13 @@ namespace EasyTest_App
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            
             if (!Main_Screen.log_table.Rows[0][12].ToString().Equals("00:00:00"))
             {
                 int startHour = Main_Screen.GetHoures(Main_Screen.log_table.Rows[0][12].ToString(), Main_Screen.getTime());
                 int startMinutes = Main_Screen.GetMinutes(Main_Screen.log_table.Rows[0][12].ToString(), Main_Screen.getTime());
-                if (startHour >= 1 || startMinutes >= 30)
+                //if (startHour >= 1 || startMinutes >= 30)
+                if (startHour >= 0 || startMinutes >= 1)
                 {
                     string query = "UPDATE `examination_log` SET `end_time` = @endTime WHERE exam_id = @exam_id AND student_id = @student_id";
 
@@ -185,5 +188,7 @@ namespace EasyTest_App
 
 
         }
+
+     
     }
 }

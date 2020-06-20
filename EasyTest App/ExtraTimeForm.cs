@@ -87,6 +87,8 @@ namespace EasyTest_App
 
                     }
                     MessageBox.Show("הארכת זמן בוצעה בהצלחה", "הודעה", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Login.main_screen.Show();
+                    Hide();
                 }
 
                 conn.Close();

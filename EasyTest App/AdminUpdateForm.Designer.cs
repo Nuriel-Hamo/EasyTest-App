@@ -28,12 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminUpdateForm));
             this.buttonConfirm = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
             this.labelTxt = new System.Windows.Forms.Label();
             this.textBoxExamID = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // buttonConfirm
@@ -41,7 +39,7 @@
             this.buttonConfirm.BackColor = System.Drawing.Color.Transparent;
             this.buttonConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConfirm.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.buttonConfirm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonConfirm.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonConfirm.Location = new System.Drawing.Point(529, 633);
             this.buttonConfirm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonConfirm.Name = "buttonConfirm";
@@ -56,7 +54,7 @@
             this.buttonBack.BackColor = System.Drawing.Color.Transparent;
             this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBack.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.buttonBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonBack.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonBack.Location = new System.Drawing.Point(984, 633);
             this.buttonBack.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonBack.Name = "buttonBack";
@@ -69,9 +67,9 @@
             // labelTxt
             // 
             this.labelTxt.AutoSize = true;
-            this.labelTxt.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelTxt.BackColor = System.Drawing.Color.Transparent;
             this.labelTxt.Font = new System.Drawing.Font("Yu Gothic UI", 24F);
-            this.labelTxt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelTxt.ForeColor = System.Drawing.Color.DimGray;
             this.labelTxt.Location = new System.Drawing.Point(409, 237);
             this.labelTxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTxt.Name = "labelTxt";
@@ -91,26 +89,17 @@
             this.textBoxExamID.Size = new System.Drawing.Size(484, 54);
             this.textBoxExamID.TabIndex = 3;
             // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1898, 1024);
-            this.panel1.TabIndex = 4;
-            // 
             // AdminUpdateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
             this.Controls.Add(this.textBoxExamID);
             this.Controls.Add(this.labelTxt);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonConfirm);
-            this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AdminUpdateForm";
             this.Text = "AdminUpdateForm";
@@ -128,6 +117,5 @@
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Label labelTxt;
         private System.Windows.Forms.TextBox textBoxExamID;
-        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -14,22 +14,21 @@ namespace EasyTest_App
 {
     public partial class Login : Form
     {
-        // bool changed = false
         public static string admin_id;
+        public static Boolean startProgram = false;
+        public static Boolean ClickTextBox1 = false;
+        public static Boolean ClickTextBox2 = false;
+        public static AdminForm adminF = new AdminForm();
+        public static DataTable exam_table = new DataTable();
+        public static Main_Screen main_screen = new Main_Screen();
+        public static DataTable proctor_table = new DataTable();
+
 
 
         public Login()
         {
             InitializeComponent();
         }
-        public static Boolean startProgram = false;
-        public static Boolean ClickTextBox1 = false; 
-        public static Boolean ClickTextBox2 = false;
-        public static AdminForm adminF = new AdminForm();
-
-        public static DataTable exam_table = new DataTable();
-        public static Main_Screen main_screen = new Main_Screen();
-        public static DataTable proctor_table = new DataTable();
 
 
         private void LoginBTN_Click(object sender, EventArgs e)
@@ -63,18 +62,12 @@ namespace EasyTest_App
                     cmd.Parameters.AddWithValue("@UserID_textbox", UserID_textbox.Text);
                     cmd.Parameters.AddWithValue("@Pass_textbox", Pass_textbox.Text);
                     MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-                    //DataTable proctor_table = new DataTable();
                     da.Fill(proctor_table);
-
-                    //MessageBox.Show(dt.Rows[0].ItemArray[1].ToString());
-
-                    //MySqlDataReader rdr = cmd.ExecuteReader();
-                    //rdr.Read();
 
 
                     if (proctor_table.Rows.Count > 0)
                     {
-                        startProgram = true;
+                        //startProgram = true;////  לשנות
                         if (proctor_table.Rows[0][5].ToString() == "0")
                         {
                             //create an copy table of exam (local table)
@@ -83,36 +76,35 @@ namespace EasyTest_App
                             cmdExam.Parameters.AddWithValue("@UserID_textbox", UserID_textbox.Text);
                             MySqlDataAdapter dataAD = new MySqlDataAdapter(cmdExam);
                             dataAD.Fill(exam_table);
-                            
+                            if (exam_table.Rows.Count > 0)
+                            {
+                                //Main_Screen main_screen = new Main_Screen();
+                                main_screen.Show();
+                                //Hide();
 
-                            //Main_Screen main_screen = new Main_Screen();
-                            main_screen.Show();
-                            Hide();
-                          
+                            }
+                            else { MessageBox.Show("משגיח אינו משובץ לבחינה", "הערה", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+
+
+
                         }
-                        if (proctor_table.Rows[0][5].ToString() == "1")
+                        else if (proctor_table.Rows[0][5].ToString() == "1")
                         {
                             admin_id = proctor_table.Rows[0][0].ToString();
                             adminF.Show();
-                            Hide();
+                            proctor_table.Clear();
+                            //Hide();//// לשנות
                           
                         }
-
-                        //create an copy table of exam (local table)
-
-                       
 
                         conn.Close();
 
                     }
-                    else
-                    {
-                        MessageBox.Show("שם משתמש או סיסמה שגויים", "הודעה");
-                    }
+                    else{MessageBox.Show("שם משתמש או סיסמה שגויים", "הודעה");}
                 }
 
             }
-            else if(startProgram)
+            else if(startProgram)// Login for lecturer
             {
                 string Query = "SELECT * FROM lecturer WHERE lecturer_id = @UserID_textbox AND " +
                        "lecturer_pass = @Pass_textbox";
@@ -126,16 +118,23 @@ namespace EasyTest_App
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
-                //MySqlDataReader rdr = cmd.ExecuteReader();
-                //rdr.Read();
 
                 if (dt.Rows.Count > 0)
                 {
-
-                    conn.Close();
-                    ExtraTimeForm ex = new ExtraTimeForm();
-                    ex.Show();
-                    Hide();
+                    if (SummaryForm.send == "summary")
+                    {
+                        SummaryForm.send = "lecturer";
+                        Main_Screen.s.Show();
+                        Hide();
+                        
+                    }
+                    else
+                    {
+                        conn.Close();
+                        ExtraTimeForm ex = new ExtraTimeForm();
+                        ex.Show();
+                        Hide();
+                    }
 
                 }
                 else
@@ -157,19 +156,12 @@ namespace EasyTest_App
             LoginBTN.BackColor = Color.CornflowerBlue; 
         }
 
-        private void UserID_textbox_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void Pass_textbox_TextChanged(object sender, EventArgs e)
-        {
-          
-
-        }
+     
 
         private void Login_Load(object sender, EventArgs e)
         {
+            
+
             if (startProgram) { login_backBTN.Visible = true; }
             panel3.BackColor = Color.FromArgb(150, 0, 0, 0);
            
@@ -177,7 +169,6 @@ namespace EasyTest_App
 
         private void login_backBTN_Click(object sender, EventArgs e)
         {
-            
             main_screen.Show();
             Hide();
         }

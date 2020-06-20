@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddProctorForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,7 +37,6 @@
             this.textBoxFName = new System.Windows.Forms.TextBox();
             this.textBoxPass = new System.Windows.Forms.TextBox();
             this.buttonAdd = new System.Windows.Forms.Button();
-            this.buttonBack = new System.Windows.Forms.Button();
             this.textBoxLName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxPhoneNum = new System.Windows.Forms.TextBox();
@@ -51,24 +49,23 @@
             this.errorProviderLName = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderPhoneNum = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderType = new System.Windows.Forms.ErrorProvider(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderPass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderFName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderLName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderPhoneNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderType)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Black;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(1534, 36);
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(1528, 39);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(294, 48);
@@ -80,10 +77,10 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Black;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(1649, 157);
+            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.Location = new System.Drawing.Point(1645, 144);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(177, 48);
@@ -94,10 +91,10 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Black;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(1554, 303);
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(1550, 290);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(272, 48);
@@ -108,10 +105,10 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Black;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(1568, 230);
+            this.label4.ForeColor = System.Drawing.Color.DimGray;
+            this.label4.Location = new System.Drawing.Point(1564, 217);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(258, 48);
@@ -124,7 +121,7 @@
             this.textBoxID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxID.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
             this.textBoxID.ForeColor = System.Drawing.Color.DimGray;
-            this.textBoxID.Location = new System.Drawing.Point(1275, 168);
+            this.textBoxID.Location = new System.Drawing.Point(1271, 155);
             this.textBoxID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxID.Multiline = true;
             this.textBoxID.Name = "textBoxID";
@@ -139,7 +136,7 @@
             this.textBoxFName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxFName.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
             this.textBoxFName.ForeColor = System.Drawing.Color.DimGray;
-            this.textBoxFName.Location = new System.Drawing.Point(1180, 311);
+            this.textBoxFName.Location = new System.Drawing.Point(1176, 298);
             this.textBoxFName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxFName.Multiline = true;
             this.textBoxFName.Name = "textBoxFName";
@@ -153,7 +150,7 @@
             this.textBoxPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPass.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
             this.textBoxPass.ForeColor = System.Drawing.Color.DimGray;
-            this.textBoxPass.Location = new System.Drawing.Point(1194, 238);
+            this.textBoxPass.Location = new System.Drawing.Point(1190, 225);
             this.textBoxPass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxPass.Multiline = true;
             this.textBoxPass.Name = "textBoxPass";
@@ -166,7 +163,7 @@
             this.buttonAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdd.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.buttonAdd.Location = new System.Drawing.Point(1137, 654);
+            this.buttonAdd.Location = new System.Drawing.Point(1133, 641);
             this.buttonAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(691, 141);
@@ -175,27 +172,13 @@
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
-            // buttonBack
-            // 
-            this.buttonBack.BackColor = System.Drawing.Color.Transparent;
-            this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBack.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.buttonBack.Location = new System.Drawing.Point(1609, 907);
-            this.buttonBack.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(217, 92);
-            this.buttonBack.TabIndex = 8;
-            this.buttonBack.Text = "חזור";
-            this.buttonBack.UseVisualStyleBackColor = false;
-            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
-            // 
             // textBoxLName
             // 
             this.textBoxLName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxLName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxLName.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
             this.textBoxLName.ForeColor = System.Drawing.Color.DimGray;
-            this.textBoxLName.Location = new System.Drawing.Point(1135, 384);
+            this.textBoxLName.Location = new System.Drawing.Point(1131, 371);
             this.textBoxLName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxLName.Multiline = true;
             this.textBoxLName.Name = "textBoxLName";
@@ -207,10 +190,10 @@
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Black;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(1511, 376);
+            this.label5.ForeColor = System.Drawing.Color.DimGray;
+            this.label5.Location = new System.Drawing.Point(1507, 363);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(317, 48);
@@ -223,7 +206,7 @@
             this.textBoxPhoneNum.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPhoneNum.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
             this.textBoxPhoneNum.ForeColor = System.Drawing.Color.DimGray;
-            this.textBoxPhoneNum.Location = new System.Drawing.Point(1135, 457);
+            this.textBoxPhoneNum.Location = new System.Drawing.Point(1131, 444);
             this.textBoxPhoneNum.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxPhoneNum.Multiline = true;
             this.textBoxPhoneNum.Name = "textBoxPhoneNum";
@@ -236,10 +219,10 @@
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Black;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(1509, 449);
+            this.label6.ForeColor = System.Drawing.Color.DimGray;
+            this.label6.Location = new System.Drawing.Point(1505, 436);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(319, 48);
@@ -255,7 +238,7 @@
             this.comboBox1.Items.AddRange(new object[] {
             "משגיח בחינה",
             "מנהל מערכת"});
-            this.comboBox1.Location = new System.Drawing.Point(1367, 530);
+            this.comboBox1.Location = new System.Drawing.Point(1363, 517);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -266,10 +249,10 @@
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Black;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(1645, 522);
+            this.label7.ForeColor = System.Drawing.Color.DimGray;
+            this.label7.Location = new System.Drawing.Point(1641, 509);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(181, 48);
@@ -300,39 +283,43 @@
             // 
             this.errorProviderType.ContainerControl = this;
             // 
-            // panel1
+            // buttonBack
             // 
-            this.panel1.BackColor = System.Drawing.Color.DimGray;
-            this.panel1.Controls.Add(this.buttonBack);
-            this.panel1.Controls.Add(this.textBoxLName);
-            this.panel1.Controls.Add(this.textBoxFName);
-            this.panel1.Controls.Add(this.textBoxPhoneNum);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.textBoxID);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.buttonAdd);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.textBoxPass);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1898, 1024);
-            this.panel1.TabIndex = 14;
+            this.buttonBack.BackColor = System.Drawing.Color.Transparent;
+            this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBack.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
+            this.buttonBack.Location = new System.Drawing.Point(1605, 890);
+            this.buttonBack.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(217, 92);
+            this.buttonBack.TabIndex = 8;
+            this.buttonBack.Text = "חזור";
+            this.buttonBack.UseVisualStyleBackColor = false;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // AddProctorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.PeachPuff;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.buttonBack);
+            this.Controls.Add(this.textBoxLName);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBoxFName);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBoxPhoneNum);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.textBoxPass);
+            this.Controls.Add(this.textBoxID);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.buttonAdd);
+            this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AddProctorForm";
             this.Text = "AddProctorForm";
@@ -345,9 +332,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderLName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderPhoneNum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderType)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -361,7 +347,6 @@
         private System.Windows.Forms.TextBox textBoxFName;
         private System.Windows.Forms.TextBox textBoxPass;
         private System.Windows.Forms.Button buttonAdd;
-        private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.TextBox textBoxLName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxPhoneNum;
@@ -374,6 +359,6 @@
         private System.Windows.Forms.ErrorProvider errorProviderLName;
         private System.Windows.Forms.ErrorProvider errorProviderPhoneNum;
         private System.Windows.Forms.ErrorProvider errorProviderType;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button buttonBack;
     }
 }

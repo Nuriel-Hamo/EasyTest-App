@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EasyTest_App.BL;
+using EasyTest_App.OOP;
 using MySql.Data.MySqlClient;
 
 namespace EasyTest_App
@@ -60,49 +62,73 @@ namespace EasyTest_App
         public void Map_Screen_Load(object sender, EventArgs e)
         {
                                            
-            int id = 0;
+            int id = Int32.Parse(Main_Screen.map_row)* Int32.Parse(Main_Screen.map_collumn)+1;
             
-            for (int i = 0; i < Int32.Parse(Main_Screen.map_row); i++)
+            for (int i = 0; i < Int32.Parse(Main_Screen.map_row) +1; i++)
             {
                 for (int j = 0; j < Int32.Parse(Main_Screen.map_collumn); j++)
                 {
-                    id++;
-                    if(Main_Screen.mainMap[j,i].BackColor == Color.Green)
+                    if (i !=Int32.Parse(Main_Screen.map_row))
                     {
-                        BACKGROUND_COLOR_map = Color.Red;
-                        BoolEnabled = false;
-                    }
-                    else if (Main_Screen.mainMap[j, i].BackColor == Color.DimGray)
-                    {
-                        BACKGROUND_COLOR_map = Color.DimGray;
-                        BoolEnabled = false;
+                        id--;
+                        if (Main_Screen.mainMap[j, i].BackColor == Color.Green)
+                        {
+                            BACKGROUND_COLOR_map = Color.Red;
+                            BoolEnabled = false;
+                        }
+                        else if (Main_Screen.mainMap[j, i].BackColor == Color.DimGray)
+                        {
+                            BACKGROUND_COLOR_map = Color.DimGray;
+                            BoolEnabled = false;
+
+                        }
+                        else
+                        {
+                            BACKGROUND_COLOR_map = Color.LightGray;
+                            BoolEnabled = true;
+                        }
+                        cards[j, i] = new Button
+                        {
+                            Name = "card" + j + i,
+                            Size = new Size(CARD_SIZE, CARD_SIZE),
+                            Location = new Point(GAP + j * (CARD_SIZE + GAP), GAP + i * (CARD_SIZE + GAP)),
+                            TextAlign = ContentAlignment.MiddleCenter,
+                            Font = new Font("david", 20),
+                            ForeColor = FORGROUND_COLOR,
+                            BackColor = BACKGROUND_COLOR_map,
+                            Text = id.ToString(),
+                            Enabled = BoolEnabled,
+
+
+                        };
+                        panel1.Controls.Add(cards[j, i]);
+                        panel1.AutoSize = true;
+                        panel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                        //Controls.Add(cards[j, i]);
+                        cards[j, i].Click += Button_Click;
 
                     }
                     else
                     {
-                        BACKGROUND_COLOR_map = Color.LightGray;
-                        BoolEnabled = true;
-                    }
-                    cards[j, i] = new Button
-                    {
-                        Name = "card" + j + i,
-                        Size = new Size(CARD_SIZE, CARD_SIZE),
-                        Location = new Point(GAP + j * (CARD_SIZE + GAP), GAP + i * (CARD_SIZE + GAP)),
-                        TextAlign = ContentAlignment.MiddleCenter,
-                        Font = new Font("david", 20),
-                        ForeColor = FORGROUND_COLOR,
-                        BackColor = BACKGROUND_COLOR_map,
-                        Text = id.ToString(),
-                        Enabled = BoolEnabled,
+                        Button xBTN = new Button
+                        {
+                            Name = "cardImaginary" + i.ToString(),
+                            Size = new Size(CARD_SIZE, CARD_SIZE),
+                            Location = new Point(GAP + j * (CARD_SIZE + GAP), GAP + i * (CARD_SIZE + GAP)),
+                            TextAlign = ContentAlignment.MiddleCenter,
+                            Font = new Font("david", 20),
+                            ForeColor = FORGROUND_COLOR,
+                            BackColor = BACKGROUND_COLOR_map,
+                            Text = id.ToString(),
 
-                        
-                    };
-                    panel1.Controls.Add(cards[j, i]);
-                    panel1.AutoSize = true;
-                    panel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-                    //Controls.Add(cards[j, i]);
-                    cards[j, i].Click += Button_Click;
-                   
+
+                        };
+                        panel1.Controls.Add(xBTN);
+                        panel1.AutoSize = true;
+                        panel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                        xBTN.Visible = false;
+                    }
+
                 }               
             }                  
         }
@@ -242,6 +268,13 @@ namespace EasyTest_App
                     }
                 }
 
+                StudentLog student = new StudentLog
+                    (Int32.Parse(Add_Student.StudentID),
+                    Add_Student.student_table.Rows[0].ItemArray[1].ToString(),
+                    Add_Student.student_table.Rows[0].ItemArray[2].ToString(),
+                    NoteBook_Num.notebookNum, Int32.Parse(lastBTN)
+                    );
+                Service.StudentsList.Add(student);
 
 
 
@@ -327,6 +360,12 @@ namespace EasyTest_App
             */
         }
 
-      
+        private void homeBTN_Click(object sender, EventArgs e)
+        {
+            Login.main_screen.Show();
+            Hide();
+        }
+
+       
     }
 }

@@ -27,13 +27,15 @@ namespace EasyTest_App
 
         private void AdminSearchDetailsInformatio_Load(object sender, EventArgs e)
         {
-            label1.BackColor = Color.FromArgb(0, 0, 0, 0);
+            /*label1.BackColor = Color.FromArgb(0, 0, 0, 0);
             label2.BackColor = Color.FromArgb(0, 0, 0, 0);
             label3.BackColor = Color.FromArgb(0, 0, 0, 0);
             label4.BackColor = Color.FromArgb(0, 0, 0, 0);
             label5.BackColor = Color.FromArgb(0, 0, 0, 0);
             label6.BackColor = Color.FromArgb(0, 0, 0, 0);
             label7.BackColor = Color.FromArgb(0, 0, 0, 0);
+            label8.BackColor = Color.FromArgb(0, 0, 0, 0);
+            label9.BackColor = Color.FromArgb(0, 0, 0, 0);
             label_additionalD.BackColor = Color.FromArgb(100, 0, 0, 0);
             label_course.BackColor = Color.FromArgb(100, 0, 0, 0);
             label_end.BackColor = Color.FromArgb(100, 0, 0, 0);
@@ -42,7 +44,7 @@ namespace EasyTest_App
             label_proctor_name.BackColor = Color.FromArgb(100, 0, 0, 0);
             label_start.BackColor = Color.FromArgb(100, 0, 0, 0); 
             buttonBack.BackColor = Color.FromArgb(100, 0, 0, 0);
-            panel1.BackColor = Color.FromArgb(100, 0, 0, 0);
+            panel1.BackColor = Color.FromArgb(100, 0, 0, 0);*/
 
             con.Open();
            
@@ -146,5 +148,7 @@ namespace EasyTest_App
         {
             System.Windows.Forms.Application.Exit();
         }
+
+     
     }
 }

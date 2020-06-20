@@ -30,11 +30,11 @@ namespace EasyTest_App
 
         private void AdminUpdateForm_Load(object sender, EventArgs e)
         {
-            labelTxt.BackColor = Color.FromArgb(100, 0, 0, 0);
+            /*labelTxt.BackColor = Color.FromArgb(100, 0, 0, 0);
             buttonBack.BackColor = Color.FromArgb(100, 0, 0, 0);
             buttonConfirm.BackColor = Color.FromArgb(100, 0, 0, 0);
             panel1.BackColor = Color.FromArgb(100, 0, 0, 0);
-            labelTxt.Text=AdminForm.for_label;
+            labelTxt.Text=AdminForm.for_label;*/
 
             
 

@@ -91,11 +91,7 @@ namespace EasyTest_App
 
         }
 
-        private void NoteBook_Num_Load(object sender, EventArgs e)
-        {
-
-        }
-
+     
         private void notebookBTN_back_Click(object sender, EventArgs e)
         {
             firstTime = true;
@@ -119,6 +115,12 @@ namespace EasyTest_App
             }
           
             
+        }
+
+        private void homeBTN_Click(object sender, EventArgs e)
+        {
+            Login.main_screen.Show();
+            Hide();
         }
     }
 }

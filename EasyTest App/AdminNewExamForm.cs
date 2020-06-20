@@ -524,7 +524,7 @@ namespace EasyTest_App
 
         private void AdminNewExamForm_Load(object sender, EventArgs e)
         {
-            label1.BackColor = Color.FromArgb(100, 0, 0, 0);
+            /*label1.BackColor = Color.FromArgb(100, 0, 0, 0);
             label2.BackColor = Color.FromArgb(100, 0, 0, 0);
             label3.BackColor = Color.FromArgb(100, 0, 0, 0);
             label4.BackColor = Color.FromArgb(100, 0, 0, 0);
@@ -536,7 +536,7 @@ namespace EasyTest_App
             button_back.BackColor = Color.FromArgb(100, 0, 0, 0);
             button_confirm.BackColor = Color.FromArgb(100, 0, 0, 0);
             button_reset.BackColor = Color.FromArgb(100, 0, 0, 0);
-            panel1.BackColor = Color.FromArgb(100, 0, 0, 0);
+            panel1.BackColor = Color.FromArgb(100, 0, 0, 0);*/
 
 
 
@@ -592,6 +592,56 @@ namespace EasyTest_App
         }
 
        
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void calendar_DateChanged(object sender, DateRangeEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

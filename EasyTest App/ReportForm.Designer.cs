@@ -106,6 +106,7 @@
             // 
             this.BackBTN.BackColor = System.Drawing.Color.Transparent;
             this.BackBTN.FlatAppearance.BorderSize = 0;
+            this.BackBTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
             this.BackBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackBTN.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
             this.BackBTN.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -170,36 +171,38 @@
             // 
             // pictureBox
             // 
-            this.pictureBox.Location = new System.Drawing.Point(46, 32);
+            this.pictureBox.Location = new System.Drawing.Point(25, 21);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(536, 536);
+            this.pictureBox.Size = new System.Drawing.Size(424, 424);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox.TabIndex = 23;
             this.pictureBox.TabStop = false;
             // 
             // IDAnsLABEL
             // 
-            this.IDAnsLABEL.AutoSize = true;
+            this.IDAnsLABEL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.IDAnsLABEL.BackColor = System.Drawing.Color.Transparent;
             this.IDAnsLABEL.Font = new System.Drawing.Font("Yu Gothic UI", 24F);
             this.IDAnsLABEL.ForeColor = System.Drawing.Color.DimGray;
-            this.IDAnsLABEL.Location = new System.Drawing.Point(35, 675);
+            this.IDAnsLABEL.Location = new System.Drawing.Point(25, 591);
             this.IDAnsLABEL.Name = "IDAnsLABEL";
-            this.IDAnsLABEL.Size = new System.Drawing.Size(262, 65);
+            this.IDAnsLABEL.Size = new System.Drawing.Size(276, 65);
             this.IDAnsLABEL.TabIndex = 27;
-            this.IDAnsLABEL.Text = "000000000";
+            this.IDAnsLABEL.Text = "0";
+            this.IDAnsLABEL.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // FullNamAnsLABEL
             // 
-            this.FullNamAnsLABEL.AutoSize = true;
+            this.FullNamAnsLABEL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FullNamAnsLABEL.BackColor = System.Drawing.Color.Transparent;
             this.FullNamAnsLABEL.Font = new System.Drawing.Font("Yu Gothic UI", 24F);
             this.FullNamAnsLABEL.ForeColor = System.Drawing.Color.DimGray;
-            this.FullNamAnsLABEL.Location = new System.Drawing.Point(103, 591);
+            this.FullNamAnsLABEL.Location = new System.Drawing.Point(25, 512);
             this.FullNamAnsLABEL.Name = "FullNamAnsLABEL";
-            this.FullNamAnsLABEL.Size = new System.Drawing.Size(262, 65);
+            this.FullNamAnsLABEL.Size = new System.Drawing.Size(347, 65);
             this.FullNamAnsLABEL.TabIndex = 26;
-            this.FullNamAnsLABEL.Text = "000000000";
+            this.FullNamAnsLABEL.Text = "0";
+            this.FullNamAnsLABEL.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // IdLABEL
             // 
@@ -207,7 +210,7 @@
             this.IdLABEL.BackColor = System.Drawing.Color.Transparent;
             this.IdLABEL.Font = new System.Drawing.Font("Yu Gothic UI", 24F);
             this.IdLABEL.ForeColor = System.Drawing.Color.DimGray;
-            this.IdLABEL.Location = new System.Drawing.Point(303, 675);
+            this.IdLABEL.Location = new System.Drawing.Point(307, 591);
             this.IdLABEL.Name = "IdLABEL";
             this.IdLABEL.Size = new System.Drawing.Size(282, 65);
             this.IdLABEL.TabIndex = 25;
@@ -219,7 +222,7 @@
             this.FirstNameLABEL.BackColor = System.Drawing.Color.Transparent;
             this.FirstNameLABEL.Font = new System.Drawing.Font("Yu Gothic UI", 24F);
             this.FirstNameLABEL.ForeColor = System.Drawing.Color.DimGray;
-            this.FirstNameLABEL.Location = new System.Drawing.Point(371, 591);
+            this.FirstNameLABEL.Location = new System.Drawing.Point(378, 512);
             this.FirstNameLABEL.Name = "FirstNameLABEL";
             this.FirstNameLABEL.Size = new System.Drawing.Size(211, 65);
             this.FirstNameLABEL.TabIndex = 24;
@@ -231,7 +234,7 @@
             this.TableLABEL.BackColor = System.Drawing.Color.Transparent;
             this.TableLABEL.Font = new System.Drawing.Font("Yu Gothic UI", 24F);
             this.TableLABEL.ForeColor = System.Drawing.Color.DimGray;
-            this.TableLABEL.Location = new System.Drawing.Point(289, 768);
+            this.TableLABEL.Location = new System.Drawing.Point(296, 670);
             this.TableLABEL.Name = "TableLABEL";
             this.TableLABEL.Size = new System.Drawing.Size(293, 65);
             this.TableLABEL.TabIndex = 29;
@@ -244,7 +247,7 @@
             this.tableBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tableBTN.Font = new System.Drawing.Font("Yu Gothic UI", 24F);
             this.tableBTN.ForeColor = System.Drawing.Color.DimGray;
-            this.tableBTN.Location = new System.Drawing.Point(177, 755);
+            this.tableBTN.Location = new System.Drawing.Point(172, 670);
             this.tableBTN.Name = "tableBTN";
             this.tableBTN.Size = new System.Drawing.Size(108, 108);
             this.tableBTN.TabIndex = 28;
@@ -256,6 +259,7 @@
             this.TimerBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(75)))), ((int)(((byte)(174)))));
             this.TimerBTN.Enabled = false;
             this.TimerBTN.FlatAppearance.BorderSize = 0;
+            this.TimerBTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
             this.TimerBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TimerBTN.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
             this.TimerBTN.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -339,6 +343,7 @@
             // 
             this.HomeBackBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(75)))), ((int)(((byte)(174)))));
             this.HomeBackBTN.FlatAppearance.BorderSize = 0;
+            this.HomeBackBTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
             this.HomeBackBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeBackBTN.Font = new System.Drawing.Font("Yu Gothic UI", 20F);
             this.HomeBackBTN.ForeColor = System.Drawing.SystemColors.ButtonHighlight;

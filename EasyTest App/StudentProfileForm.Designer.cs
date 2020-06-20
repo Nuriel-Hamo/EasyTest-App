@@ -42,15 +42,17 @@
             this.label6 = new System.Windows.Forms.Label();
             this.FullNameLBL = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(66, 38);
+            this.pictureBox1.Location = new System.Drawing.Point(47, 41);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(536, 536);
+            this.pictureBox1.Size = new System.Drawing.Size(424, 424);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -62,7 +64,7 @@
             this.tableBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tableBTN.Font = new System.Drawing.Font("Yu Gothic UI", 24F);
             this.tableBTN.ForeColor = System.Drawing.Color.DimGray;
-            this.tableBTN.Location = new System.Drawing.Point(195, 591);
+            this.tableBTN.Location = new System.Drawing.Point(64, 500);
             this.tableBTN.Name = "tableBTN";
             this.tableBTN.Size = new System.Drawing.Size(108, 108);
             this.tableBTN.TabIndex = 14;
@@ -73,6 +75,7 @@
             // 
             this.nootbookBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(75)))), ((int)(((byte)(174)))));
             this.nootbookBTN.FlatAppearance.BorderSize = 0;
+            this.nootbookBTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
             this.nootbookBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.nootbookBTN.Font = new System.Drawing.Font("Yu Gothic UI", 20F);
             this.nootbookBTN.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -93,7 +96,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 24F);
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(309, 607);
+            this.label1.Location = new System.Drawing.Point(178, 516);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(293, 65);
             this.label1.TabIndex = 15;
@@ -103,6 +106,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Yu Gothic UI", 20F);
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -121,6 +125,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(75)))), ((int)(((byte)(174)))));
             this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Yu Gothic UI", 20F);
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -137,15 +142,16 @@
             // 
             // scLBL
             // 
-            this.scLBL.AutoSize = true;
+            this.scLBL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.scLBL.BackColor = System.Drawing.Color.Transparent;
             this.scLBL.Font = new System.Drawing.Font("Yu Gothic UI", 24F);
             this.scLBL.ForeColor = System.Drawing.Color.DimGray;
-            this.scLBL.Location = new System.Drawing.Point(938, 168);
+            this.scLBL.Location = new System.Drawing.Point(630, 242);
             this.scLBL.Name = "scLBL";
-            this.scLBL.Size = new System.Drawing.Size(262, 65);
+            this.scLBL.Size = new System.Drawing.Size(696, 65);
             this.scLBL.TabIndex = 27;
-            this.scLBL.Text = "000000000";
+            this.scLBL.Text = "0";
+            this.scLBL.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // scLABEL
             // 
@@ -153,7 +159,7 @@
             this.scLABEL.BackColor = System.Drawing.Color.Transparent;
             this.scLABEL.Font = new System.Drawing.Font("Yu Gothic UI", 24F);
             this.scLABEL.ForeColor = System.Drawing.Color.DimGray;
-            this.scLABEL.Location = new System.Drawing.Point(1290, 168);
+            this.scLABEL.Location = new System.Drawing.Point(1336, 242);
             this.scLABEL.Name = "scLABEL";
             this.scLABEL.Size = new System.Drawing.Size(177, 65);
             this.scLABEL.TabIndex = 26;
@@ -161,27 +167,29 @@
             // 
             // idLBL
             // 
-            this.idLBL.AutoSize = true;
+            this.idLBL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.idLBL.BackColor = System.Drawing.Color.Transparent;
             this.idLBL.Font = new System.Drawing.Font("Yu Gothic UI", 24F);
             this.idLBL.ForeColor = System.Drawing.Color.DimGray;
-            this.idLBL.Location = new System.Drawing.Point(917, 38);
+            this.idLBL.Location = new System.Drawing.Point(623, 106);
             this.idLBL.Name = "idLBL";
-            this.idLBL.Size = new System.Drawing.Size(262, 65);
+            this.idLBL.Size = new System.Drawing.Size(602, 65);
             this.idLBL.TabIndex = 21;
-            this.idLBL.Text = "000000000";
+            this.idLBL.Text = "0";
+            this.idLBL.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // nameLBL
             // 
-            this.nameLBL.AutoSize = true;
+            this.nameLBL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.nameLBL.BackColor = System.Drawing.Color.Transparent;
             this.nameLBL.Font = new System.Drawing.Font("Yu Gothic UI", 24F);
             this.nameLBL.ForeColor = System.Drawing.Color.DimGray;
-            this.nameLBL.Location = new System.Drawing.Point(973, 103);
+            this.nameLBL.Location = new System.Drawing.Point(619, 174);
             this.nameLBL.Name = "nameLBL";
-            this.nameLBL.Size = new System.Drawing.Size(262, 65);
+            this.nameLBL.Size = new System.Drawing.Size(673, 65);
             this.nameLBL.TabIndex = 20;
-            this.nameLBL.Text = "000000000";
+            this.nameLBL.Text = "0";
+            this.nameLBL.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label6
             // 
@@ -189,7 +197,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Yu Gothic UI", 24F);
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(1185, 38);
+            this.label6.Location = new System.Drawing.Point(1231, 106);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(282, 65);
             this.label6.TabIndex = 19;
@@ -201,7 +209,7 @@
             this.FullNameLBL.BackColor = System.Drawing.Color.Transparent;
             this.FullNameLBL.Font = new System.Drawing.Font("Yu Gothic UI", 24F);
             this.FullNameLBL.ForeColor = System.Drawing.Color.DimGray;
-            this.FullNameLBL.Location = new System.Drawing.Point(1256, 103);
+            this.FullNameLBL.Location = new System.Drawing.Point(1302, 174);
             this.FullNameLBL.Name = "FullNameLBL";
             this.FullNameLBL.Size = new System.Drawing.Size(211, 65);
             this.FullNameLBL.TabIndex = 18;
@@ -219,6 +227,31 @@
             this.panel6.Size = new System.Drawing.Size(379, 1024);
             this.panel6.TabIndex = 28;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 24F);
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(1234, 38);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(279, 65);
+            this.label3.TabIndex = 29;
+            this.label3.Text = ":מס\' מחברת";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Yu Gothic UI", 24F);
+            this.label4.ForeColor = System.Drawing.Color.DimGray;
+            this.label4.Location = new System.Drawing.Point(623, 41);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(605, 65);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "333";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // StudentProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -226,6 +259,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.scLBL);
             this.Controls.Add(this.scLABEL);
@@ -264,5 +299,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label FullNameLBL;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

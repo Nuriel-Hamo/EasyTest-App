@@ -137,9 +137,12 @@ namespace EasyTest_App
                 }
             }
 
-        private void Add_Student_Load(object sender, EventArgs e)
-        {
+       
 
+        private void homeBTN_Click(object sender, EventArgs e)
+        {
+            Login.main_screen.Show();
+            Hide();
         }
     }
 

@@ -88,20 +88,24 @@ namespace EasyTest_App
 
         private void toilet_CheckedChanged(object sender, EventArgs e)
         {
-            
+            Boolean always = true;
             if (toilet.Checked == true)
             {
-                if (!Main_Screen.log_table.Rows[0][12].ToString().Equals("00:00:00"))
+                //if (!Main_Screen.log_table.Rows[0][12].ToString().Equals("00:00:00"))
+                if (always)
                 {
-                    int startHour = Main_Screen.GetHoures(Main_Screen.log_table.Rows[0][12].ToString(), Main_Screen.getTime());
-                    int startMinutes = Main_Screen.GetMinutes(Main_Screen.log_table.Rows[0][12].ToString(), Main_Screen.getTime());
-                    int endtHour = Main_Screen.GetHoures(Main_Screen.getTime(), Main_Screen.ChangeEndTime());
-                    int endMinutes = Main_Screen.GetMinutes(Main_Screen.getTime(), Main_Screen.ChangeEndTime());
-                    if(startHour !=0 && startMinutes != 0 || endtHour != 0 && endMinutes !=0 )
+                    //int startHour = Main_Screen.GetHoures(Main_Screen.log_table.Rows[0][12].ToString(), Main_Screen.getTime());
+                    //int startMinutes = Main_Screen.GetMinutes(Main_Screen.log_table.Rows[0][12].ToString(), Main_Screen.getTime());
+                    //int endtHour = Main_Screen.GetHoures(Main_Screen.getTime(), Main_Screen.ChangeEndTime());
+                    //int endMinutes = Main_Screen.GetMinutes(Main_Screen.getTime(), Main_Screen.ChangeEndTime());
+                    //if(startHour !=0 && startMinutes != 0 || endtHour != 0 && endMinutes !=0 )
+                    if (always)
                     {
-                        if (startHour >= 1 || startMinutes >= 30)
+                        //if (startHour >= 1 || startMinutes >= 30)
+                        if(always)
                         {
-                            if (endtHour >= 1 || endMinutes >= 30)
+                            //if (endtHour >= 1 || endMinutes >= 30)
+                            if (always)
                             {
                                 string query2 = "SELECT * FROM report WHERE exam_id = @exam_id AND type = 'toilet' AND end = ''";
 
@@ -441,9 +445,11 @@ namespace EasyTest_App
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
-                Login.main_screen.Show();
-                Hide();
+
+            StudentProfileForm sp = new StudentProfileForm();
+            sp.Show();
+            Hide();
+
             
             
         }
