@@ -67,7 +67,7 @@ namespace EasyTest_App
 
                     if (proctor_table.Rows.Count > 0)
                     {
-                        //startProgram = true;////  לשנות
+                        startProgram = true;////  לשנות
                         if (proctor_table.Rows[0][5].ToString() == "0")
                         {
                             //create an copy table of exam (local table)
@@ -93,7 +93,7 @@ namespace EasyTest_App
                             admin_id = proctor_table.Rows[0][0].ToString();
                             adminF.Show();
                             proctor_table.Clear();
-                            //Hide();//// לשנות
+                            Hide();//// לשנות
                           
                         }
 

@@ -113,7 +113,7 @@ namespace EasyTest_App
                         Button xBTN = new Button
                         {
                             Name = "cardImaginary" + i.ToString(),
-                            Size = new Size(CARD_SIZE, CARD_SIZE),
+                            Size = new Size(CARD_SIZE+40, CARD_SIZE+40),
                             Location = new Point(GAP + j * (CARD_SIZE + GAP), GAP + i * (CARD_SIZE + GAP)),
                             TextAlign = ContentAlignment.MiddleCenter,
                             Font = new Font("david", 20),

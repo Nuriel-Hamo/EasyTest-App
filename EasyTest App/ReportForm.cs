@@ -91,94 +91,54 @@ namespace EasyTest_App
             Boolean always = true;
             if (toilet.Checked == true)
             {
-                //if (!Main_Screen.log_table.Rows[0][12].ToString().Equals("00:00:00"))
-                if (always)
+                string queryIfAllowed = "SELECT special_consideration FROM student WHERE student_id = @student_id";
+
+                MySqlConnection connect = new MySqlConnection("server=localhost;user id=root;database=easytest");
+                connect.Open();
+
+                MySqlCommand cmad = new MySqlCommand(queryIfAllowed, connect);
+
+                cmad.Parameters.AddWithValue("@student_id", IDAnsLABEL.Text);
+                //cmd.Parameters.AddWithValue("@start_time", ExitTimeLBL.Text);
+
+                MySqlDataAdapter DAdapter = new MySqlDataAdapter(cmad);
+                DataTable table = new DataTable();
+
+                DAdapter.Fill(table);
+                connect.Close();
+               
+                if(!table.Rows[0][0].ToString().Contains("שירותים ללא הגבלה"))
                 {
-                    //int startHour = Main_Screen.GetHoures(Main_Screen.log_table.Rows[0][12].ToString(), Main_Screen.getTime());
-                    //int startMinutes = Main_Screen.GetMinutes(Main_Screen.log_table.Rows[0][12].ToString(), Main_Screen.getTime());
-                    //int endtHour = Main_Screen.GetHoures(Main_Screen.getTime(), Main_Screen.ChangeEndTime());
-                    //int endMinutes = Main_Screen.GetMinutes(Main_Screen.getTime(), Main_Screen.ChangeEndTime());
-                    //if(startHour !=0 && startMinutes != 0 || endtHour != 0 && endMinutes !=0 )
-                    if (always)
+                    if (!Main_Screen.log_table.Rows[0][12].ToString().Equals("00:00:00"))
+                    //if (always)
                     {
-                        //if (startHour >= 1 || startMinutes >= 30)
-                        if(always)
+
+
+                        int startHour = Main_Screen.GetHoures(Main_Screen.log_table.Rows[0][12].ToString(), Main_Screen.getTime());
+                        int startMinutes = Main_Screen.GetMinutes(Main_Screen.log_table.Rows[0][12].ToString(), Main_Screen.getTime());
+                        int endtHour = Main_Screen.GetHoures(Main_Screen.getTime(), Main_Screen.ChangeEndTime());
+                        int endMinutes = Main_Screen.GetMinutes(Main_Screen.getTime(), Main_Screen.ChangeEndTime());
+                        if (startHour != 0 && startMinutes != 0 || endtHour != 0 && endMinutes != 0)
+                        //if (always)
                         {
-                            //if (endtHour >= 1 || endMinutes >= 30)
-                            if (always)
+                            if (startHour >= 1 || startMinutes >= 30)
+                            //if(always)
                             {
-                                string query2 = "SELECT * FROM report WHERE exam_id = @exam_id AND type = 'toilet' AND end = ''";
-
-                                MySqlConnection conn2 = new MySqlConnection("server=localhost;user id=root;database=easytest");
-                                conn2.Open();
-
-                                MySqlCommand cmd2 = new MySqlCommand(query2, conn2);
-
-                                cmd2.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
-                                cmd2.Parameters.AddWithValue("@student_id", IDAnsLABEL.Text);
-                                //cmd.Parameters.AddWithValue("@start_time", ExitTimeLBL.Text);
-
-                                MySqlDataAdapter da2 = new MySqlDataAdapter(cmd2);
-                                DataTable dt2 = new DataTable();
-
-                                da2.Fill(dt2);
-
-                                if (dt2.Rows.Count > 0)
+                                if (endtHour >= 1 || endMinutes >= 30)
+                                //if (always)
                                 {
-                                    if (dt2.Rows[0][2].ToString().Equals(IDAnsLABEL.Text))
-                                    {
-                                        ContentNote.Visible = false;
-                                        comboBox.Visible = false;
-                                        TimerBTN.Enabled = true;
-                                        ReturnBTN2.Visible = true;
-                                        ExitTimeLBL2.Visible = true;
-                                        button1.Visible = false;
-
-                                        ExitTimeLBL.Text = dt2.Rows[0].ItemArray[4].ToString().Substring(0,5);
-                                        ExitTimeLBL.Visible = true;
-                                        TimerBTN.Text = "סיים טיימר";
-                                        TimerClick = true; ClickCount++;
-                                        //Main_Screen.StudentInToilet = true;
-
-                                        /*string query = "SELECT report_id, start FROM report WHERE exam_id = @exam_id AND student_id = @student_id AND type = 'toilet' AND end = ''";
-
-                                        MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
-                                        conn.Open();
-
-                                        MySqlCommand cmd = new MySqlCommand(query, conn);
-
-                                        cmd.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
-                                        cmd.Parameters.AddWithValue("@student_id", IDAnsLABEL.Text);
-                                        //cmd.Parameters.AddWithValue("@start_time", ExitTimeLBL.Text);
-
-                                        MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-
-                                        da.Fill(report_dt);
-
-                                        if (report_dt.Rows.Count > 0)
-                                        {*/
-
-
-                                        //}
-                                        //conn.Close();
-                                    }
-                                    else
-                                    {
-                                        MessageBox.Show("קיים סטודנט בשירותים", "הודעה");
-                                    }
-                                    conn2.Close();
-
+                                    ToiletValidation();
 
                                 }
                                 else
                                 {
-                                    ContentNote.Visible = false;
-                                    comboBox.Visible = false;
-                                    TimerBTN.Enabled = true;
-                                    ReturnBTN2.Visible = true;
-                                    ExitTimeLBL2.Visible = true;
-                                    button1.Visible = false;
+                                    MessageBox.Show("!היציאה לשירותים אסורה", "הודעה", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 }
+
+
+
+
+
 
                             }
                             else
@@ -188,16 +148,11 @@ namespace EasyTest_App
 
 
 
-
-
-
                         }
                         else
                         {
                             MessageBox.Show("!היציאה לשירותים אסורה", "הודעה", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
-
-
 
                     }
                     else
@@ -208,9 +163,9 @@ namespace EasyTest_App
                 }
                 else
                 {
-                    MessageBox.Show("!היציאה לשירותים אסורה", "הודעה", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    ToiletValidation();
                 }
-
+                
 
 
 
@@ -227,7 +182,81 @@ namespace EasyTest_App
 
                 ///////////////////////////////////////////////////
   
+        private void ToiletValidation()
+        {
+            string query2 = "SELECT * FROM report WHERE exam_id = @exam_id AND type = 'toilet' AND end = ''";
 
+            MySqlConnection conn2 = new MySqlConnection("server=localhost;user id=root;database=easytest");
+            conn2.Open();
+
+            MySqlCommand cmd2 = new MySqlCommand(query2, conn2);
+
+            cmd2.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
+            cmd2.Parameters.AddWithValue("@student_id", IDAnsLABEL.Text);
+            //cmd.Parameters.AddWithValue("@start_time", ExitTimeLBL.Text);
+
+            MySqlDataAdapter da2 = new MySqlDataAdapter(cmd2);
+            DataTable dt2 = new DataTable();
+
+            da2.Fill(dt2);
+            conn2.Close();
+            if (dt2.Rows.Count > 0)
+            {
+                if (dt2.Rows[0][2].ToString().Equals(IDAnsLABEL.Text))
+                {
+                    ContentNote.Visible = false;
+                    comboBox.Visible = false;
+                    TimerBTN.Enabled = true;
+                    ReturnBTN2.Visible = true;
+                    ExitTimeLBL2.Visible = true;
+                    button1.Visible = false;
+
+                    ExitTimeLBL.Text = dt2.Rows[0].ItemArray[4].ToString().Substring(0, 5);
+                    ExitTimeLBL.Visible = true;
+                    TimerBTN.Text = "סיים טיימר";
+                    TimerClick = true; ClickCount++;
+                    //Main_Screen.StudentInToilet = true;
+
+                    /*string query = "SELECT report_id, start FROM report WHERE exam_id = @exam_id AND student_id = @student_id AND type = 'toilet' AND end = ''";
+
+                    MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
+                    conn.Open();
+
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                    cmd.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
+                    cmd.Parameters.AddWithValue("@student_id", IDAnsLABEL.Text);
+                    //cmd.Parameters.AddWithValue("@start_time", ExitTimeLBL.Text);
+
+                    MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+
+                    da.Fill(report_dt);
+
+                    if (report_dt.Rows.Count > 0)
+                    {*/
+
+
+                    //}
+                    //conn.Close();
+                }
+                else
+                {
+                    MessageBox.Show("קיים סטודנט בשירותים", "הודעה");
+                }
+
+
+
+            }
+            else
+            {
+                ContentNote.Visible = false;
+                comboBox.Visible = false;
+                TimerBTN.Enabled = true;
+                ReturnBTN2.Visible = true;
+                ExitTimeLBL2.Visible = true;
+                button1.Visible = false;
+            }
+        }
        
         private void note_CheckedChanged(object sender, EventArgs e)
         {

@@ -15,7 +15,9 @@ using EasyTest_App.DB;
 using EasyTest_App.OOP;
 using MySql.Data.MySqlClient;
 
-
+using System.Net;
+using System.Collections.Specialized;
+using System.IO;
 
 namespace EasyTest_App
 {
@@ -41,7 +43,7 @@ namespace EasyTest_App
         public static string map_row = "";
         public static string map_collumn = "";
         public static Boolean StudentInToilet = false;
-        public static Boolean TestBegin =false;
+        public static Boolean TestBegin = false;
         public static Boolean EmptyClass = true;
         public static Boolean BeginBTN = false;
         public static bool first = true;
@@ -53,20 +55,20 @@ namespace EasyTest_App
         public static Boolean newFinished = false;
 
 
-       
+
 
         public Main_Screen()
         {
             InitializeComponent();
         }
-        
+
         private void BeginExamBTN_Click(object sender, EventArgs e)
         {
-            
-            if(BeginExamBTN.Text.Equals("התחל בחינה"))
+
+            if (BeginExamBTN.Text.Equals("התחל בחינה"))
             {
 
-                if (Int32.Parse(getTime().Substring(0,2)) >= Int32.Parse(Login.exam_table.Rows[0][6].ToString().Substring(0,2)) && Int32.Parse(getTime().Substring(3, 2)) >= Int32.Parse(Login.exam_table.Rows[0][6].ToString().Substring(3, 2)) || Int32.Parse(getTime().Substring(0, 2)) > Int32.Parse(Login.exam_table.Rows[0][6].ToString().Substring(0, 2)))
+                if (Int32.Parse(getTime().Substring(0, 2)) >= Int32.Parse(Login.exam_table.Rows[0][6].ToString().Substring(0, 2)) && Int32.Parse(getTime().Substring(3, 2)) >= Int32.Parse(Login.exam_table.Rows[0][6].ToString().Substring(3, 2)) || Int32.Parse(getTime().Substring(0, 2)) > Int32.Parse(Login.exam_table.Rows[0][6].ToString().Substring(0, 2)))
                 {
                     TestBegin = true;
 
@@ -121,14 +123,14 @@ namespace EasyTest_App
                 }
                 else
                 {
-                    MessageBox.Show("יש להמתין לשעה " + Login.exam_table.Rows[0][6].ToString().Substring(0,5), "הערה", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("יש להמתין לשעה " + Login.exam_table.Rows[0][6].ToString().Substring(0, 5), "הערה", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-               
+
 
 
 
             }
-            else if(BeginExamBTN.Text.Equals("סיים בחינה"))
+            else if (BeginExamBTN.Text.Equals("סיים בחינה"))
             {
                 string Query1 = "SELECT * FROM examination_log WHERE exam_id = @exam_id AND end_time = '00:00:00'";
                 MySqlConnection conn1 = new MySqlConnection("server=localhost;user id=root;database=easytest");
@@ -141,7 +143,7 @@ namespace EasyTest_App
                 da1.Fill(finishTable);
                 if (finishTable.Rows.Count > 0)
                 {
-                    MessageBox.Show("יש להמתין שכלל הסטודנטים יגישו בחינה","הודעה",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    MessageBox.Show("יש להמתין שכלל הסטודנטים יגישו בחינה", "הודעה", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 }
                 else
@@ -182,12 +184,14 @@ namespace EasyTest_App
         private void timer1_Tick(object sender, EventArgs e)
         {
             timer1Tick = true;
-            if (hours == 0 && minutes <5 && !FiveMinutes)
+            if (hours == 0 && minutes < 5 && !FiveMinutes)
             {
                 TimerLBL.ForeColor = Color.Red;
                 FiveMinutes = true;
+                MessageBox.Show("יש להגיש מחברות בחינה", "תזכורת", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
-            if (hours==0 && minutes == 0 && seconds == 0)
+            if (hours == 0 && minutes == 0 && seconds == 0)
             {
 
                 timer1.Stop();
@@ -229,7 +233,7 @@ namespace EasyTest_App
                 {
                     if (seconds == 0)
                     {
-                        if(hours!=0 && minutes == 0)
+                        if (hours != 0 && minutes == 0)
                         {
                             minutes = 59;
                             hours--;
@@ -238,7 +242,7 @@ namespace EasyTest_App
                         {
                             minutes--;
                         }
-                       
+
                         seconds = 60;
 
                     }
@@ -248,7 +252,7 @@ namespace EasyTest_App
                         {
                             minutes = 0;
                         }
-                        else if (hours!=0 && seconds!=0)
+                        else if (hours != 0 && seconds != 0)
                         {
                             minutes = 0;
                         }
@@ -257,7 +261,7 @@ namespace EasyTest_App
                             hours--;
                             minutes = 59;
                         }
-                      
+
                     }
                     seconds--;
 
@@ -283,7 +287,7 @@ namespace EasyTest_App
                 firstTimer = false;
 
             }
-            
+
 
         }
 
@@ -293,10 +297,9 @@ namespace EasyTest_App
 
 
 
-
-                ////////////////////////////////////////////////////////////////////
-                labelName.Text = "." + Login.proctor_table.Rows[0][2].ToString() + " " + Login.proctor_table.Rows[0][3].ToString();
-                dateLBL.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            ////////////////////////////////////////////////////////////////////
+            labelName.Text = "." + Login.proctor_table.Rows[0][2].ToString() + " " + Login.proctor_table.Rows[0][3].ToString();
+            dateLBL.Text = DateTime.Now.ToString("dd/MM/yyyy");
 
 
             ////////////////////////////////////////////////////////////////////
@@ -322,14 +325,14 @@ namespace EasyTest_App
 
             if (firstTime)
             {
-                int id = Int32.Parse(map_row)*Int32.Parse(map_collumn)+1;
-       
-                for (int i = 0; i < Int32.Parse(map_row) +1; i++)
+                int id = Int32.Parse(map_row) * Int32.Parse(map_collumn) + 1;
+
+                for (int i = 0; i < Int32.Parse(map_row) + 1; i++)
                 {
-                    
-                   
-                        for (int j = 0; j < Int32.Parse(map_collumn); j++)
-                        {
+
+
+                    for (int j = 0; j < Int32.Parse(map_collumn); j++)
+                    {
                         if (i != Int32.Parse(map_row))
                         {
                             id--;
@@ -360,7 +363,7 @@ namespace EasyTest_App
                             Button xBTN = new Button
                             {
                                 Name = "cardImaginary" + i.ToString(),
-                                Size = new Size(CARD_SIZE , CARD_SIZE ),
+                                Size = new Size(CARD_SIZE + 40, CARD_SIZE + 40),
                                 Location = new Point(GAP + j * (CARD_SIZE + GAP), GAP + i * (CARD_SIZE + GAP)),
                                 TextAlign = ContentAlignment.MiddleCenter,
                                 Font = new Font("david", 20),
@@ -374,18 +377,18 @@ namespace EasyTest_App
                             panel1.AutoSize = true;
                             panel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
                             xBTN.Visible = false;
-                         
-                        }
-
-                       
 
                         }
 
 
-                   
-                    
+
+                    }
+
+
+
+
                 }
-               
+
                 string Query1 = "SELECT * FROM examination_log WHERE exam_id = @exam_id";
                 MySqlConnection conn1 = new MySqlConnection("server=localhost;user id=root;database=easytest");
                 conn1.Open();
@@ -393,7 +396,7 @@ namespace EasyTest_App
                 MySqlCommand cmd1 = new MySqlCommand(Query1, conn1);
                 cmd1.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
                 MySqlDataAdapter da1 = new MySqlDataAdapter(cmd1);
-                
+
                 da1.Fill(log_table);
                 conn1.Close();
 
@@ -414,8 +417,56 @@ namespace EasyTest_App
                 if (log_table.Rows.Count > 0)
                 {
 
+                    ////////////////////////////////////////////////////////////
+
+                    string query2 = "SELECT * FROM report WHERE exam_id = @exam_id AND type = 'toilet' AND end = ''";
+
+                    MySqlConnection conn2 = new MySqlConnection("server=localhost;user id=root;database=easytest");
+                    conn2.Open();
+
+                    MySqlCommand cmd2 = new MySqlCommand(query2, conn2);
+
+                    cmd2.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
+
+                    MySqlDataAdapter da2 = new MySqlDataAdapter(cmd2);
+                    DataTable dt2 = new DataTable();
+
+                    da2.Fill(dt2);
+
+                    if (dt2.Rows.Count > 0)
+                    {
+                        string query3 = "SELECT table_num FROM examination_log WHERE exam_id = @exam_id AND student_id = @student_id";
+
+
+                        MySqlCommand cmd3 = new MySqlCommand(query3, conn2);
+
+                        cmd3.Parameters.AddWithValue("@exam_id", dt2.Rows[0].ItemArray[1].ToString());
+                        cmd3.Parameters.AddWithValue("@student_id", dt2.Rows[0].ItemArray[2].ToString());
+
+                        MySqlDataAdapter da3 = new MySqlDataAdapter(cmd3);
+                        DataTable dt3 = new DataTable();
+
+                        da3.Fill(dt3);
+
+                        SetIcone(dt3.Rows[0][0].ToString(), "toilet");
+
+
+                    }
+                    conn2.Close();
+
+
+
                     if (!(log_table.Rows[0][12].ToString().Equals("00:00:00")))
                     {
+                        if (!RestoreExtraTime())
+                        {
+                            minutes = GetMinutes(getTime(), ChangeEndTime());
+                            hours = GetHoures(getTime(), ChangeEndTime());
+                            timer1.Start();
+                            labelExTime1.Text = log_table.Rows[0][11].ToString();
+
+                        }
+
                         BeginExamBTN.Text = "סיים בחינה";
                         BeginExamBTN.Image = Image.FromFile("C:\\Users\\asafb\\Desktop\\תכנות הפרוייקט\\EndExamPic.png");
                         TestBegin = true;
@@ -423,48 +474,8 @@ namespace EasyTest_App
                         class_start_time = log_table.Rows[0][12].ToString();
                         ExtraTimeBTN.Enabled = true;
 
-                        minutes = GetMinutes(getTime(), ChangeEndTime());
-                        hours = GetHoures(getTime(), ChangeEndTime());
 
-                        timer1.Start();
-
-                        /////////////////////////////////////////////////////////////
-
-                        string query2 = "SELECT * FROM report WHERE exam_id = @exam_id AND type = 'toilet' AND end = ''";
-
-                        MySqlConnection conn2 = new MySqlConnection("server=localhost;user id=root;database=easytest");
-                        conn2.Open();
-
-                        MySqlCommand cmd2 = new MySqlCommand(query2, conn2);
-
-                        cmd2.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
-
-                        MySqlDataAdapter da2 = new MySqlDataAdapter(cmd2);
-                        DataTable dt2 = new DataTable();
-
-                        da2.Fill(dt2);
-
-                        if (dt2.Rows.Count > 0)
-                        {
-                            string query3 = "SELECT table_num FROM examination_log WHERE exam_id = @exam_id AND student_id = @student_id";
-
-
-                            MySqlCommand cmd3 = new MySqlCommand(query3, conn2);
-
-                            cmd3.Parameters.AddWithValue("@exam_id", dt2.Rows[0].ItemArray[1].ToString());
-                            cmd3.Parameters.AddWithValue("@student_id", dt2.Rows[0].ItemArray[2].ToString());
-
-                            MySqlDataAdapter da3 = new MySqlDataAdapter(cmd3);
-                            DataTable dt3 = new DataTable();
-
-                            da3.Fill(dt3);
-
-                            SetIcone(dt3.Rows[0][0].ToString(),"toilet");
-
-
-                        }
-                        conn2.Close();
-
+                        
                     }
                     else
                     {
@@ -488,11 +499,11 @@ namespace EasyTest_App
                                     Main_Screen.mainMap[j, i].BackColor = Color.Green;
                                     Main_Screen.mainMap[j, i].Enabled = true;
                                 }
-                                else if(Main_Screen.mainMap[j, i].Text == log_table.Rows[t][8].ToString() && !log_table.Rows[t][10].ToString().Equals("00:00:00"))
+                                else if (Main_Screen.mainMap[j, i].Text == log_table.Rows[t][8].ToString() && !log_table.Rows[t][10].ToString().Equals("00:00:00"))
                                 {
                                     Main_Screen.mainMap[j, i].BackColor = Color.DimGray;
                                     Main_Screen.mainMap[j, i].Enabled = false;
-                                    SetIcone(log_table.Rows[t][8].ToString(),"finish");
+                                    SetIcone(log_table.Rows[t][8].ToString(), "finish");
 
                                 }
 
@@ -501,12 +512,12 @@ namespace EasyTest_App
                         }
                     }
                 }
-                else 
+                else
                 {
                     BeginExamBTN.Enabled = false;
                     EmptyClass = true;
                     TestBegin = false;
-                }   
+                }
 
 
                 firstTime = false;
@@ -519,7 +530,7 @@ namespace EasyTest_App
             string result = "";
             foreach (StudentLog student in Service.StudentsList)
             {
-                if(newBTN.Text.Equals(student.TableNum.ToString()))
+                if (newBTN.Text.Equals(student.TableNum.ToString()))
                 {
                     result = student.FirstName + " " + student.LastName;
                 }
@@ -534,7 +545,7 @@ namespace EasyTest_App
             StudentProfileForm st = new StudentProfileForm();
             st.Show();
             Hide();
-        }   
+        }
 
         private void ReportBTN_Click(object sender, EventArgs e)
         {
@@ -550,7 +561,6 @@ namespace EasyTest_App
         private void ExtraTimeBTN_Click(object sender, EventArgs e)
         {
             Login log = new Login();
-            log.Show();
             Hide();
         }
 
@@ -604,7 +614,7 @@ namespace EasyTest_App
 
             }
             return time;
-            
+
 
         }
 
@@ -617,20 +627,20 @@ namespace EasyTest_App
             }
             if (StudentInToilet)
             {
-                SetIcone(ReportForm.studentInToiletTable,"toilet");
+                SetIcone(ReportForm.studentInToiletTable, "toilet");
             }
             if (ReportForm.backFromToilet)
             {
                 toiletError.Clear();
                 ReportForm.backFromToilet = false;
             }
-            if(!tableForIcone.Equals("") && !typeForIcone.Equals("") && newFinished)
+            if (!tableForIcone.Equals("") && !typeForIcone.Equals("") && newFinished)
             {
-                SetIcone(tableForIcone,typeForIcone);
+                SetIcone(tableForIcone, typeForIcone);
                 newFinished = false;
             }
             if (!ExtraTimeForm.extraTime1.Equals("")) { labelExTime1.Text = ExtraTimeForm.extraTime1; }
-            if (!ExtraTimeForm.extraTime2.Equals("")) 
+            if (!ExtraTimeForm.extraTime2.Equals(""))
             {
                 //labelExTime1.Text = ExtraTimeForm.extraTime2; 
                 if (extraTime1Tick)
@@ -687,8 +697,8 @@ namespace EasyTest_App
             int endMinutes = Int32.Parse(end.Substring(3, 2));
             int endHour = Int32.Parse(end.Substring(0, 2));
             int startMinutes = Int32.Parse(start.Substring(3, 2));
-            
-            hoursInMin = (endHour - startHour)*60;
+
+            hoursInMin = (endHour - startHour) * 60;
 
             if (endMinutes > startMinutes)
             {
@@ -698,14 +708,14 @@ namespace EasyTest_App
             }
             else if (startMinutes > endMinutes)
             {
-                minutes = startMinutes - endMinutes;    
+                minutes = startMinutes - endMinutes;
             }
             else
             {
                 minutes = startMinutes - endMinutes;
             }
 
-            result = (hoursInMin - minutes)/60;
+            result = (hoursInMin - minutes) / 60;
 
             return result;
         }
@@ -768,7 +778,7 @@ namespace EasyTest_App
                     finalMinutes = finalMinutes - 60;
                     if (finalMinutes < 10)
                     {
-                        result = (Int32.Parse(endTimeExam.Substring(0, 2))+1).ToString()  + ":0" + finalMinutes.ToString() + ":00";
+                        result = (Int32.Parse(endTimeExam.Substring(0, 2)) + 1).ToString() + ":0" + finalMinutes.ToString() + ":00";
                     }
                     else if (finalMinutes >= 10)
                     {
@@ -780,7 +790,7 @@ namespace EasyTest_App
                 {
                     result = (Int32.Parse(endTimeExam.Substring(0, 2)) + 1).ToString() + ":00" + ":00";
                 }
-            }        
+            }
             else if (startRealHour > startOrgHour)
             {
                 int x = (60 - startOrgMinutes) + startRealMinutes;
@@ -835,6 +845,9 @@ namespace EasyTest_App
             {
                 labelExTime1.ForeColor = Color.Red;
                 FiveMinutes = true;
+                MessageBox.Show("יש להגיש מחברות בחינה","תזכורת",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+
+
             }
             if (minutes == 0 && seconds == 0)
             {
@@ -842,7 +855,7 @@ namespace EasyTest_App
                 timerExtra1.Stop();
                 MessageBox.Show("המבחן הסתיים");
 
-                
+
             }
             else
             {
@@ -919,6 +932,66 @@ namespace EasyTest_App
 
 
         }
+        private bool RestoreExtraTime()
+        {
 
+            int OriginalNumOfHours = Main_Screen.GetHoures(Login.exam_table.Rows[0][6].ToString(), Login.exam_table.Rows[0][7].ToString());
+            int OriginalNumOfMin = Main_Screen.GetMinutes(Login.exam_table.Rows[0][6].ToString(), Login.exam_table.Rows[0][7].ToString());
+
+            int NewNumOfHours = Main_Screen.GetHoures(Main_Screen.log_table.Rows[0][12].ToString(), getTime());
+            int NewNumOfMin = Main_Screen.GetMinutes(Main_Screen.log_table.Rows[0][12].ToString(), getTime());
+            if ((NewNumOfHours * 60 + NewNumOfMin) >= (OriginalNumOfHours * 60 + OriginalNumOfMin))
+            {
+
+
+                if (log_table.Rows[0][11].ToString().Equals("00:30:00"))
+                {
+                    int Minutes = Main_Screen.GetMinutes(Main_Screen.ChangeEndTime(), getTime());
+                    if (Minutes > 30)
+                    {
+                        TimerLBL.Enabled = false;
+                        labelExTime1.Enabled = false;
+
+
+
+                    }
+                    else
+                    {
+                        minutes = 30 - Minutes;
+                        timerExtra1.Start();
+
+                    }
+                }
+                else if (log_table.Rows[0][11].ToString().Equals("00:15:00"))
+                {
+                    int Minutes = Main_Screen.GetMinutes(Main_Screen.ChangeEndTime(), getTime());
+                    if (Minutes > 15)
+                    {
+                        TimerLBL.Enabled = false;
+                        labelExTime1.Enabled = false;
+
+
+                    }
+                    else
+                    {
+
+                        minutes = 15 - Minutes;
+                        timerExtra1.Start();
+
+
+                    }
+                }
+                return true;
+            }
+            else return false;
+
+
+
+
+
+        }
+
+            
+    
     }
 }

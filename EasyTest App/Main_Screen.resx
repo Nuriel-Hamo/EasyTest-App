@@ -117,293 +117,42 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label3.IconPadding1" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label3.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;TablePic.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="ReportBTN.Size" type="System.Drawing.Size, System.Drawing">
-    <value>379, 202</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="labelName.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;timer1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="pictureBox1.Error1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="panel3.IconAlignment1" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="label1.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="panel5.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="ReportBTN.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="TimerLBL.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="panel6.IconAlignment1" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="labelName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Yu Gothic UI, 18pt</value>
-  </data>
-  <data name="panel3.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="&gt;&gt;finishError.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="TimerLBL.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="pictureBox2.IconPadding1" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="pictureBox2.Error1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="panel6.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="BeginExamBTN.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="panel4.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="panel4.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="AddStudentBTN.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 40</value>
-  </data>
-  <data name="TimerLBL.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>102, 100</value>
-  </data>
-  <data name="pictureBox1.IconPadding1" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 177</value>
-  </data>
-  <data name="panel1.Error1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="pictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelName.Name" xml:space="preserve">
-    <value>labelName</value>
-  </data>
-  <data name="labelName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 48</value>
-  </data>
-  <data name="&gt;&gt;dateLBL.Name" xml:space="preserve">
-    <value>dateLBL</value>
-  </data>
-  <data name="&gt;&gt;labelName.Parent" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="labelName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>357, 48</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="labelName.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="panel7.Error1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>124, 19</value>
-  </data>
-  <data name="&gt;&gt;BeginExamBTN.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;TablePic.Name" xml:space="preserve">
-    <value>TablePic</value>
-  </data>
-  <data name="&gt;&gt;TimerLBL.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
-    <value>panel5</value>
-  </data>
-  <data name="ExtraTimeBTN.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>BottomCenter</value>
-  </data>
-  <data name="ExtraTimeBTN.IconAlignment1" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="label5.IconAlignment1" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;labelExTime1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="AddStudentBTN.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;labelName.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="panel2.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="labelExTime1.Error1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>panel4</value>
-  </data>
-  <data name="&gt;&gt;BeginExamBTN.Name" xml:space="preserve">
-    <value>BeginExamBTN</value>
-  </data>
-  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="AddStudentBTN.IconAlignment1" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ExtraTimeBTN.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageAboveText</value>
-  </data>
-  <data name="pictureBox1.IconAlignment1" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;dateLBL.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;AddStudentBTN.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel7.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 31</value>
-  </data>
-  <data name="labelExTime1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 54</value>
-  </data>
-  <data name="&gt;&gt;TablePic.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="AddStudentBTN.IconPadding1" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Yu Gothic, 12pt</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="label5.Error1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="labelExTime1.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="label1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>9, 20</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 31</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="AddStudentBTN.Text" xml:space="preserve">
-    <value>הוספת סטודנט</value>
-  </data>
-  <data name="AddStudentBTN.Size" type="System.Drawing.Size, System.Drawing">
-    <value>379, 202</value>
-  </data>
-  <data name="&gt;&gt;panel6.Name" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="BeginExamBTN.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 253</value>
-  </data>
-  <data name="AddStudentBTN.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Yu Gothic, 20pt</value>
+  <data name="AddStudentBTN.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
   </data>
   <data name="ReportBTN.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -451,155 +200,52 @@
         w8QDoMdTswfaxPUZmAMMcDWzEGHNf0ITmtD4keP8FwHTIWjgVDr0AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="labelExTime1.IconAlignment1" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;TimerLBL.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 48</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ReportBTN.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Yu Gothic UI, 18pt</value>
-  </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;ReportBTN.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="BeginExamBTN.IconPadding1" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="BeginExamBTN.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="panel1.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TablePic.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 142</value>
-  </data>
-  <data name="pictureBox1.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="TimerLBL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 96</value>
-  </data>
-  <data name="&gt;&gt;timerExtra1.Name" xml:space="preserve">
-    <value>timerExtra1</value>
-  </data>
-  <data name="dateLBL.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="ExtraTimeBTN.IconPadding1" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="TimerLBL.Error1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="panel6.Error1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="labelExTime1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>931, 44</value>
-  </data>
-  <data name="panel1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>!שלום</value>
-  </data>
-  <data name="&gt;&gt;labelName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ReportBTN.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;labelExTime1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="labelExTime1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="label2.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="BeginExamBTN.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="pictureBox1.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;TablePic.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="panel6.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="dateLBL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 9</value>
-  </data>
-  <data name="panel5.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="TablePic.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 31</value>
-  </data>
-  <data name="ReportBTN.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Yu Gothic, 20pt</value>
-  </data>
-  <data name="label6.IconAlignment1" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;dateLBL.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="panel3.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="dateLBL.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="TablePic.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="&gt;&gt;panel5.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="ExtraTimeBTN.Error1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="panel5.Error1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="labelName.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="pictureBox2.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ExtraTimeBTN.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="AddStudentBTN.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="ExtraTimeBTN.Size" type="System.Drawing.Size, System.Drawing">
-    <value>379, 202</value>
+  <data name="ExtraTimeBTN.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
   </data>
   <data name="BeginExamBTN.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -652,474 +298,9 @@
         dK8J5E1cZl4TyO8yDmNLhtgrl+v/rW4+kGp0MrwAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>245, 232</value>
-  </data>
-  <data name="dateLBL.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label3.IconAlignment1" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="label2.IconAlignment1" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>245, 79</value>
-  </data>
-  <data name="labelExTime1.Text" xml:space="preserve">
-    <value>00:00:00</value>
-  </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label4.IconPadding1" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>סטודנט נבחן</value>
-  </data>
-  <data name="label4.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="panel4.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="labelName.IconPadding1" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;ExtraTimeBTN.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label2.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 31</value>
-  </data>
-  <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1541, 0</value>
-  </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="labelName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-</value>
-  </data>
-  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>320, 307</value>
-  </data>
-  <data name="TablePic.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;panel6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label1.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="ReportBTN.IconAlignment1" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>:מקרא</value>
-  </data>
-  <data name="&gt;&gt;TimerLBL.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="panel7.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="&gt;&gt;AddStudentBTN.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="dateLBL.IconAlignment1" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="TablePic.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>245, 155</value>
-  </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>256, 84</value>
-  </data>
-  <data name="AddStudentBTN.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 201</value>
-  </data>
-  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Yu Gothic, 12pt</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="TimerLBL.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="label4.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="BeginExamBTN.Error1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="panel7.IconAlignment1" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="ExtraTimeBTN.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="ExtraTimeBTN.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="AddStudentBTN.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>BottomCenter</value>
-  </data>
-  <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 70</value>
-  </data>
-  <data name="labelExTime1.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="panel5.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;labelExTime1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="panel7.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="labelExTime1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Yu Gothic UI, 20pt, style=Bold</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>סטודנט הגיש</value>
-  </data>
-  <data name="ReportBTN.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="panel3.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="BeginExamBTN.Size" type="System.Drawing.Size, System.Drawing">
-    <value>379, 202</value>
-  </data>
-  <data name="AddStudentBTN.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="ReportBTN.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 612</value>
-  </data>
-  <data name="TablePic.IconAlignment1" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="ReportBTN.IconPadding1" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="labelName.IconAlignment1" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="panel5.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="label4.IconAlignment1" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="&gt;&gt;dateLBL.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;BeginExamBTN.Parent" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="ExtraTimeBTN.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 404</value>
-  </data>
-  <data name="ExtraTimeBTN.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-</value>
-  </data>
-  <data name="panel4.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 123</value>
-  </data>
-  <data name="dateLBL.Error1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="panel6.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="panel1.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="dateLBL.IconPadding1" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ReportBTN.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageAboveText</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
-    <value>pictureBox2</value>
-  </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 36</value>
-  </data>
-  <data name="label3.Error1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Yu Gothic, 14pt, style=Bold</value>
-  </data>
-  <data name="panel5.IconAlignment1" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>355, 268</value>
-  </data>
-  <data name="TimerLBL.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Yu Gothic UI, 36pt, style=Bold</value>
-  </data>
-  <data name="panel2.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;finishError.Name" xml:space="preserve">
-    <value>finishError</value>
-  </data>
-  <data name="panel5.IconPadding1" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label1.IconAlignment1" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="panel4.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="panel2.IconAlignment1" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="dateLBL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 54</value>
-  </data>
-  <data name="AddStudentBTN.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="panel1.IconPadding1" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="panel7.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ReportBTN.Text" xml:space="preserve">
-    <value>דיווח למדור בחינות</value>
-  </data>
-  <data name="&gt;&gt;panel7.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="label5.IconPadding1" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="label5.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label6.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="label2.IconPadding1" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Main_Screen</value>
-  </data>
-  <data name="labelName.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="panel2.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="ReportBTN.Error1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Yu Gothic, 12pt</value>
-  </data>
-  <data name="panel6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>379, 1050</value>
-  </data>
-  <data name="label5.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="panel7.IconPadding1" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="TablePic.Size" type="System.Drawing.Size, System.Drawing">
-    <value>292, 123</value>
-  </data>
-  <data name="BeginExamBTN.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;panel7.Name" xml:space="preserve">
-    <value>panel7</value>
-  </data>
-  <data name="panel3.IconPadding1" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="pictureBox2.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;TimerLBL.Name" xml:space="preserve">
-    <value>TimerLBL</value>
-  </data>
-  <data name="TablePic.Error1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="panel4.IconAlignment1" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="label4.Error1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="label3.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ExtraTimeBTN.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Yu Gothic, 20pt</value>
-  </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="TimerLBL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>623, 10</value>
-  </data>
-  <data name="pictureBox2.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 70</value>
-  </data>
-  <data name="panel1.IconAlignment1" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="label6.IconPadding1" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="pictureBox2.IconAlignment1" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="labelExTime1.IconPadding1" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="TablePic.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -1417,264 +598,62 @@
         K32lr/SVvtJX+kpf6St9pa/0lb7SV/pKX+krfaWv9JX/6+W66/4f0kmLSJZiklAAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="panel6.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="&gt;&gt;panel5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toiletError.Name" xml:space="preserve">
-    <value>toiletError</value>
-  </data>
-  <data name="&gt;&gt;timer1.Name" xml:space="preserve">
-    <value>timer1</value>
-  </data>
-  <data name="panel6.IconPadding1" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>שולחן ריק</value>
-  </data>
-  <data name="&gt;&gt;ExtraTimeBTN.Name" xml:space="preserve">
-    <value>ExtraTimeBTN</value>
-  </data>
-  <data name="labelName.Error1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="dateLBL.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Yu Gothic UI, 20pt</value>
-  </data>
-  <data name="panel7.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="BeginExamBTN.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageAboveText</value>
-  </data>
-  <data name="BeginExamBTN.IconAlignment1" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="panel3.Error1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="label1.IconPadding1" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="panel7.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 27</value>
-  </data>
-  <data name="panel4.IconPadding1" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="BeginExamBTN.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>BottomCenter</value>
-  </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AddStudentBTN.Parent" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="label2.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>סטודנט בשירותים</value>
-  </data>
-  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;toiletError.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label2.Error1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="BeginExamBTN.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Yu Gothic, 20pt</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label5.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;ExtraTimeBTN.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ReportBTN.Parent" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="dateLBL.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="finishError.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <metadata name="toiletError.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>132, 18</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>60</value>
+  </metadata>
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAgBAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA
-        AAcAAAAPAAAAFzEpIB8xKSAfAAAAFwAAAA8AAAAHAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABCof
-        FRi+iE9j359cqe6rYdj2r2P1+LBj/viwY/72r2P17qth2N+fXKm+i09jKh8VGAAAAAQAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUIs
-        IRfQl1iF9K5i6fiuX//4qFP/+KRK//ihRP/4n0H/+J9B//ihRP/4pEr/+KhT//iuX//0rmLp0pdYhT8q
-        HxgAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAStf0pI8Kti3fitXf/4pEr/+J4+//iePv/4nj7/+J4+//iePv/4nj7/+J4+//iePv/4nj7/+J4+//ik
-        Sv/4rV3/8ati3a1/SkgAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAEypJUavevY/j4p1H/+J4+//iePv/4nj7/+J4+//iePv/4nj7/+J4+//iePv/4nj7/+J4+//ie
-        Pv/4nj7/+J4+//iePv/4p1H/969j+MiRVWsAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAsyUVWn4sGL8+KNJ//iePv/4nj7/+J4+//iePv/4nj7/+J4+//iePv/4nj7/+J4+//ie
-        Pv/4nj7/+J4+//iePv/4nj7/+J4+//iePv/4o0n/+LBi/MyUV2kAAAACAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAC6iU9D969i+PijSf/4nj7/+J4+//iePv/4nj7/+J4+//ieP//5tm7/+82c//zY
-        s//82LP/+82c//m2bv/4nj//+J4+//iePv/4nj7/+J4+//iePv/4o0n/969j+LqJT0MAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAXz8vEPKtYtv4p1H/+J4+//iePv/4nj7/+J4+//iePv/6wIH//vLl////
-        //////////////////////////////7y5f/6wIL/+J4+//iePv/4nj7/+J4+//iePv/4p1H/8qxi3F8/
-        LxAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgolx8+K1d//iePv/4nj7/+J4+//iePv/4n0H//Nu4////
-        //////////////7+/v/////////////////////////////////827j/+J9B//iePv/4nj7/+J4+//ie
-        Pv/4rV3/4KFdfQAAAAAAAAAAAAAAAAAAAAAAAAAAVT8qDPWuYuj4pEr/+J4+//iePv/4nj7/+J4+//zb
-        uP/////////////////+9e3/+rx7//79+//////////////////////////////////827j/+J4+//ie
-        Pv/4nj7/+J4+//ikSv/1rmLoVT8qDAAAAAAAAAAAAAAAAAAAAADbn11V+K5f//iePv/4nj7/+J4+//ie
-        Pv/6v4H//////////////////vfw//muX//4nj7/+9Op////////////////////////////////////
-        ///6wIL/+J4+//iePv/4nj7/+J4+//iuX//eol1VAAAAAAAAAAAAAAAAAAAAAOuqYZ/4qFT/+J4+//ie
-        Pv/4nj7/+J4///7y5f////////////769f/5smb/+J4+//iePv/4okf//vTq////////////////////
-        //////////////7y5f/4nj//+J4+//iePv/4nj7/+KhT/+2qYZ8AAAAAAAAAAAAAAAAAAAAC9K5j0/ik
-        Sv/4nj7/+J4+//iePv/5tm7////////////+/Pr/+bdx//iePv/4qVX/+KFF//iePv/6vHr//v7+////
-        //////////////////////////////m2bv/4nj7/+J4+//iePv/4pEr/8q5j1AAAAAIAAAAAAAAAAAAA
-        AAT3sGT0+KFE//iePv/4nj7/+J4+//vNnP///////v7+//rBhf/4nj7/+bJn//727v/837//+J4///ie
-        Pv/83bz/////////////////////////////////+82c//iePv/4nj7/+J4+//ihRP/3sGT0AAAABAAA
-        AAAAAAAAi3NcC/iwY/74oEL/+J4+//iePv/4nj7//Niy////////////+8+h//q8e//++/f/////////
-        ///706j/+J4+//ilTP/+9ev////////////////////////////82LP/+J4+//iePv/4nj7/+J9B//iw
-        Y/6Lc1wLAAAAAAAAAACZf2YK+LBj/vigQv/4nj7/+J4+//iePv/82LL//////////////////v7+////
-        ///////////////////7y5j/+J4+//m3b//+/fz///////////////////////zYs//4nj7/+J4+//ie
-        Pv/4n0H/+LBj/pl/ZgoAAAAAAAAAAAAAAAL3sGT0+KFF//iePv/4nj7/+J4+//vNnP//////////////
-        //////////////////////////////7+/v/7yJL/+J4+//vLmf//////////////////////+82c//ie
-        Pv/4nj7/+J4+//ihRP/3sGT0AAAAAgAAAAAAAAAAAAAAAPavZNH4pEr/+J4+//iePv/4nj7/+bZu////
-        //////////////////////////////////////////////7+/v/7y5j/+J4+//zatv//////////////
-        ///5tm7/+J4+//iePv/4nj7/+KRK//awZdEAAAAAAAAAAAAAAAAAAAAA9bBlmfipVP/4nj7/+J4+//ie
-        Pv/4nj///vLl///////////////////////////////////////////////////////81q7/+KFD//zd
-        u////////vLl//ieP//4nj7/+J4+//iePv/4qFP/9a9lmgAAAAAAAAAAAAAAAAAAAADxr2ZN+K5f//ie
-        Pv/4nj7/+J4+//iePv/6v4H/////////////////////////////////////////////////////////
-        ///96NL//Nm1///////6wIH/+J4+//iePv/4nj7/+J4+//iuX//1r2ZNAAAAAAAAAAAAAAAAAAAAAMyZ
-        ZgX4sWTl+KRK//iePv/4nj7/+J4+//iePv/827f/////////////////////////////////////////
-        /////////////////////////Nu4//iePv/4nj7/+J4+//iePv/4pEr/+LFk5cyZZgUAAAAAAAAAAAAA
-        AAAAAAAAAAAAAPWyZXH4rV3/+J4+//iePv/4nj7/+J4+//ifQf/827f/////////////////////////
-        //////////////////////////////zbuP/4n0H/+J4+//iePv/4nj7/+J4+//itXf/1smdxAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAA/6p/BvexZdb4p1H/+J4+//iePv/4nj7/+J4+//iePv/6v4H//vLl////
-        //////////////////////////////7y5f/6v4H/+J4+//iePv/4nj7/+J4+//iePv/4p1H/97Fl1v+q
-        fwYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8K9pM/iwY/f4o0n/+J4+//iePv/4nj7/+J4+//ie
-        Pv/4nj//+bZu//vNnP/82LL//Niy//vNnP/5tm7/+J4///iePv/4nj7/+J4+//iePv/4nj7/+KNJ//iw
-        ZPf1tGkzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9rRnVviwYvz4o0n/+J4+//ie
-        Pv/4nj7/+J4+//iePv/4nj7/+J4+//iePv/4nj7/+J4+//iePv/4nj7/+J4+//iePv/4nj7/+J4+//ij
-        Sf/4sGL89rJmVwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9rRnVviw
-        Y/f4p1H/+J4+//iePv/4nj7/+J4+//iePv/4nj7/+J4+//iePv/4nj7/+J4+//iePv/4nj7/+J4+//ie
-        Pv/4p1H/+LBj9/ayZlcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAA9LJrMvexZdb4rV3/+KRK//iePv/4nj7/+J4+//iePv/4nj7/+J4+//iePv/4nj7/+J4+//ie
-        Pv/4pEr/+K1d//exZdb1tGkzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAA/6p/BvizZnD5sWTk+K5f//ipVP/4pEr/+KFF//igQv/4oEL/+KFE//ik
-        Sv/4qVT/+K5f//mxZOT1smVx/6p/BgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMyZZgX0sWhM+LNnl/ixZc/4sWTz+LBj/viw
-        Y/74sWTz+LFlz/axZpj0sWhMzJlmBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAD/1KoG/9SqBgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAA///////gB///gAH//gAAf/wAAD/4AAAf8AAAD/AAAA/gAAAH4AAAB8AA
-        AAPAAAADwAAAA4AAAAGAAAABgAAAAYAAAAGAAAABwAAAA8AAAAPAAAADwAAAA+AAAAfgAAAH8AAAD/gA
-        AB/8AAA//gAAf/8AAP//wAP///5///////8=
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAW
+        JQAAFiUBSVIk8AAAA+tJREFUWEfVV11IFFEU3mQrqKBewt6sxySI8j1Ji35IJHLLB0XddddMqKS3fpAC
+        ofApCdSITCtqDXfd1SxKtN4kC/EHsczsoaAfrLSd2XF3ndv99t5px3FmdjYt6IMD473nfN+dc885s9r+
+        a7SNklUw/uffhafp5crjgdChik6pwR0ID7oC4Z8uf1iOG33GmicgNsIHvjxs6ahpI6s8ndJpV8fchxKf
+        RAq8Ejl4RyJ7WySSc4vZHvqMNezBB77uoFCNWE7zZ6gKhna6A+JYcTsT2HXTmsEXMYit7BKyOF1qqOgS
+        j9L0hg/f0xexYogFhycoHuO01gBxZ0c4duC2PnEqBg5wWT5Epf9HFk5tJJ5N7WT3HLnxKkqC47G44Rlr
+        2NOLAVc55Ux6HSga3JtR2i/2RcjHWZkYAXvw0YsFJ7hNCxOVi+LRBu9ulsijiRiXSY7H1BcxWh5wV1AN
+        LrcQ6N3ygPRRr9pTEVeAQ2h5wA0N3Tnh8c/koYe1QUhpKhj+NE8evmYHvvhs8XVAw+MX8rhsAu6OUBMG
+        idoZRWV251r4xmIklw6lp5PsAIjVFuaR+7QW/MJ1LptAuU8c0qYflW0FsiyTxoFoPKb7zcLrAoeaExpu
+        vzjEZX8jrdwvhjBe1c5or2SAeH0/E2+ih9ACHGpOjG1oQZNJU3hqmtbgo4K5rnZGj6sBMS2UNz/1aI7E
+        5hfvd1IONSe6A1rQ5PI2W9GZurXJDtAyGCXneiIkHE2I3B9h4ofuSuSroF8rRgeAJpePw460ID1qZ+UK
+        8Oa1z1lFVwTnyDdRJn1Tsd8F1sOLTg8mV2Bn0gxpLl9oxKwIIzGZVNM0Y91Bu0Wpl7M0K3pXo0CvCJ2+
+        mVFoMmmOUu/X5gLaImpnbRsKEZl4aAaU/X2tEvkSMhY3asNS73Qzl02guHnCYWUQ/QjLdJiwQ3hpDZjh
+        ksEgKm595+CyCWRmO9aVtQuftNcAw1hVY5oWHAoyqlP1CoxGMTSgxWUXoqj1/Xmjj5H2EGb3bvYxKm55
+        f4HLLcb27JINZe2zE4afY5pSs9GMPb20w8DpfDD7FhpcTh/5V57klvlEycoPEvQ4DM9Y0xacYvFfRZQT
+        3FzGFGkF1wYql/sn2THKCW4mkRz2gvoXJ3Bqo+uwYvG0Uw7H1f4qcDJq67AfrGnf72z7Poni0esOI4Mv
+        YpxtM5PgABejTB0rtmzLSS9sGKx1+kKf0cMYJBDASEWlw5R/TLAHH/gWNgzXZmRmbwIHo1oa7BszMjfl
+        X+51Fd2c8pY++Dbu9AkCPiowPGMNe/l1vS74IoaFLi/wNqupraeWvnnrjgwYnvka9pbljf8RbLZfepks
+        0sgaqdkAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="&gt;&gt;panel7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="panel2.IconPadding1" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="TimerLBL.Text" xml:space="preserve">
-    <value>00:00:00</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 70</value>
-  </data>
-  <data name="label6.Error1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="AddStudentBTN.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageAboveText</value>
-  </data>
-  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="ReportBTN.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>BottomCenter</value>
-  </data>
-  <data name="&gt;&gt;panel4.Name" xml:space="preserve">
-    <value>panel4</value>
-  </data>
-  <data name="TablePic.IconPadding1" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label3.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="&gt;&gt;ExtraTimeBTN.Parent" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="ReportBTN.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;panel5.Name" xml:space="preserve">
-    <value>panel5</value>
-  </data>
-  <data name="label4.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="panel6.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="label1.Error1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="labelName.Error" xml:space="preserve">
-    <value />
+  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
   </data>
   <data name="toiletError.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1752,240 +731,86 @@
         QAn//6AL//9ACf//QAX//yAJ//9Lpf//IAs=
 </value>
   </data>
-  <data name="&gt;&gt;AddStudentBTN.Name" xml:space="preserve">
-    <value>AddStudentBTN</value>
-  </data>
-  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="panel4.Error1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ExtraTimeBTN.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="BeginExamBTN.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 815</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1920, 1050</value>
-  </data>
-  <data name="ExtraTimeBTN.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="BeginExamBTN.Text" xml:space="preserve">
-    <value>התחל בחינה</value>
-  </data>
-  <data name="AddStudentBTN.Error1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TablePic.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 30</value>
-  </data>
-  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="labelName.Text" xml:space="preserve">
-    <value>.שמחה כהן</value>
-  </data>
-  <data name="ExtraTimeBTN.Text" xml:space="preserve">
-    <value>הזן הארכת זמן</value>
-  </data>
-  <data name="TimerLBL.IconPadding1" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Main_Screen</value>
-  </data>
-  <data name="&gt;&gt;panel6.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="pictureBox1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
-  </data>
-  <data name="TimerLBL.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="labelName.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;timerExtra1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ReportBTN.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 40</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="dateLBL.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="TimerLBL.IconAlignment1" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="label6.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>253, 0</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>435, 123</value>
-  </data>
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAW
-        JQAAFiUBSVIk8AAAA+tJREFUWEfVV11IFFEU3mQrqKBewt6sxySI8j1Ji35IJHLLB0XddddMqKS3fpAC
-        ofApCdSITCtqDXfd1SxKtN4kC/EHsczsoaAfrLSd2XF3ndv99t5px3FmdjYt6IMD473nfN+dc885s9r+
-        a7SNklUw/uffhafp5crjgdChik6pwR0ID7oC4Z8uf1iOG33GmicgNsIHvjxs6ahpI6s8ndJpV8fchxKf
-        RAq8Ejl4RyJ7WySSc4vZHvqMNezBB77uoFCNWE7zZ6gKhna6A+JYcTsT2HXTmsEXMYit7BKyOF1qqOgS
-        j9L0hg/f0xexYogFhycoHuO01gBxZ0c4duC2PnEqBg5wWT5Epf9HFk5tJJ5N7WT3HLnxKkqC47G44Rlr
-        2NOLAVc55Ux6HSga3JtR2i/2RcjHWZkYAXvw0YsFJ7hNCxOVi+LRBu9ulsijiRiXSY7H1BcxWh5wV1AN
-        LrcQ6N3ygPRRr9pTEVeAQ2h5wA0N3Tnh8c/koYe1QUhpKhj+NE8evmYHvvhs8XVAw+MX8rhsAu6OUBMG
-        idoZRWV251r4xmIklw6lp5PsAIjVFuaR+7QW/MJ1LptAuU8c0qYflW0FsiyTxoFoPKb7zcLrAoeaExpu
-        vzjEZX8jrdwvhjBe1c5or2SAeH0/E2+ih9ACHGpOjG1oQZNJU3hqmtbgo4K5rnZGj6sBMS2UNz/1aI7E
-        5hfvd1IONSe6A1rQ5PI2W9GZurXJDtAyGCXneiIkHE2I3B9h4ofuSuSroF8rRgeAJpePw460ID1qZ+UK
-        8Oa1z1lFVwTnyDdRJn1Tsd8F1sOLTg8mV2Bn0gxpLl9oxKwIIzGZVNM0Y91Bu0Wpl7M0K3pXo0CvCJ2+
-        mVFoMmmOUu/X5gLaImpnbRsKEZl4aAaU/X2tEvkSMhY3asNS73Qzl02guHnCYWUQ/QjLdJiwQ3hpDZjh
-        ksEgKm595+CyCWRmO9aVtQuftNcAw1hVY5oWHAoyqlP1CoxGMTSgxWUXoqj1/Xmjj5H2EGb3bvYxKm55
-        f4HLLcb27JINZe2zE4afY5pSs9GMPb20w8DpfDD7FhpcTh/5V57klvlEycoPEvQ4DM9Y0xacYvFfRZQT
-        3FzGFGkF1wYql/sn2THKCW4mkRz2gvoXJ3Bqo+uwYvG0Uw7H1f4qcDJq67AfrGnf72z7Poni0esOI4Mv
-        YpxtM5PgABejTB0rtmzLSS9sGKx1+kKf0cMYJBDASEWlw5R/TLAHH/gWNgzXZmRmbwIHo1oa7BszMjfl
-        X+51Fd2c8pY++Dbu9AkCPiowPGMNe/l1vS74IoaFLi/wNqupraeWvnnrjgwYnvka9pbljf8RbLZfepks
-        0sgaqdkAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="panel7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 70</value>
-  </data>
-  <data name="labelExTime1.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Yu Gothic, 12pt</value>
-  </data>
-  <data name="labelExTime1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;labelExTime1.Name" xml:space="preserve">
-    <value>labelExTime1</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="dateLBL.Text" xml:space="preserve">
-    <value>00/00/0000</value>
-  </data>
-  <data name="panel7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>245, 3</value>
-  </data>
-  <data name="AddStudentBTN.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-</value>
-  </data>
-  <data name="panel2.Error1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TablePic.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="ExtraTimeBTN.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
-  </data>
-  <data name="label6.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="label6.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="dateLBL.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;BeginExamBTN.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;ReportBTN.Name" xml:space="preserve">
-    <value>ReportBTN</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
   <metadata name="finishError.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>275, 18</value>
   </metadata>
+  <data name="finishError.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAgBAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA
+        AAcAAAAPAAAAFzEpIB8xKSAfAAAAFwAAAA8AAAAHAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABCof
+        FRi+iE9j359cqe6rYdj2r2P1+LBj/viwY/72r2P17qth2N+fXKm+i09jKh8VGAAAAAQAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUIs
+        IRfQl1iF9K5i6fiuX//4qFP/+KRK//ihRP/4n0H/+J9B//ihRP/4pEr/+KhT//iuX//0rmLp0pdYhT8q
+        HxgAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAStf0pI8Kti3fitXf/4pEr/+J4+//iePv/4nj7/+J4+//iePv/4nj7/+J4+//iePv/4nj7/+J4+//ik
+        Sv/4rV3/8ati3a1/SkgAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAEypJUavevY/j4p1H/+J4+//iePv/4nj7/+J4+//iePv/4nj7/+J4+//iePv/4nj7/+J4+//ie
+        Pv/4nj7/+J4+//iePv/4p1H/969j+MiRVWsAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAsyUVWn4sGL8+KNJ//iePv/4nj7/+J4+//iePv/4nj7/+J4+//iePv/4nj7/+J4+//ie
+        Pv/4nj7/+J4+//iePv/4nj7/+J4+//iePv/4o0n/+LBi/MyUV2kAAAACAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAC6iU9D969i+PijSf/4nj7/+J4+//iePv/4nj7/+J4+//ieP//5tm7/+82c//zY
+        s//82LP/+82c//m2bv/4nj//+J4+//iePv/4nj7/+J4+//iePv/4o0n/969j+LqJT0MAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAXz8vEPKtYtv4p1H/+J4+//iePv/4nj7/+J4+//iePv/6wIH//vLl////
+        //////////////////////////////7y5f/6wIL/+J4+//iePv/4nj7/+J4+//iePv/4p1H/8qxi3F8/
+        LxAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgolx8+K1d//iePv/4nj7/+J4+//iePv/4n0H//Nu4////
+        //////////////7+/v/////////////////////////////////827j/+J9B//iePv/4nj7/+J4+//ie
+        Pv/4rV3/4KFdfQAAAAAAAAAAAAAAAAAAAAAAAAAAVT8qDPWuYuj4pEr/+J4+//iePv/4nj7/+J4+//zb
+        uP/////////////////+9e3/+rx7//79+//////////////////////////////////827j/+J4+//ie
+        Pv/4nj7/+J4+//ikSv/1rmLoVT8qDAAAAAAAAAAAAAAAAAAAAADbn11V+K5f//iePv/4nj7/+J4+//ie
+        Pv/6v4H//////////////////vfw//muX//4nj7/+9Op////////////////////////////////////
+        ///6wIL/+J4+//iePv/4nj7/+J4+//iuX//eol1VAAAAAAAAAAAAAAAAAAAAAOuqYZ/4qFT/+J4+//ie
+        Pv/4nj7/+J4///7y5f////////////769f/5smb/+J4+//iePv/4okf//vTq////////////////////
+        //////////////7y5f/4nj//+J4+//iePv/4nj7/+KhT/+2qYZ8AAAAAAAAAAAAAAAAAAAAC9K5j0/ik
+        Sv/4nj7/+J4+//iePv/5tm7////////////+/Pr/+bdx//iePv/4qVX/+KFF//iePv/6vHr//v7+////
+        //////////////////////////////m2bv/4nj7/+J4+//iePv/4pEr/8q5j1AAAAAIAAAAAAAAAAAAA
+        AAT3sGT0+KFE//iePv/4nj7/+J4+//vNnP///////v7+//rBhf/4nj7/+bJn//727v/837//+J4///ie
+        Pv/83bz/////////////////////////////////+82c//iePv/4nj7/+J4+//ihRP/3sGT0AAAABAAA
+        AAAAAAAAi3NcC/iwY/74oEL/+J4+//iePv/4nj7//Niy////////////+8+h//q8e//++/f/////////
+        ///706j/+J4+//ilTP/+9ev////////////////////////////82LP/+J4+//iePv/4nj7/+J9B//iw
+        Y/6Lc1wLAAAAAAAAAACZf2YK+LBj/vigQv/4nj7/+J4+//iePv/82LL//////////////////v7+////
+        ///////////////////7y5j/+J4+//m3b//+/fz///////////////////////zYs//4nj7/+J4+//ie
+        Pv/4n0H/+LBj/pl/ZgoAAAAAAAAAAAAAAAL3sGT0+KFF//iePv/4nj7/+J4+//vNnP//////////////
+        //////////////////////////////7+/v/7yJL/+J4+//vLmf//////////////////////+82c//ie
+        Pv/4nj7/+J4+//ihRP/3sGT0AAAAAgAAAAAAAAAAAAAAAPavZNH4pEr/+J4+//iePv/4nj7/+bZu////
+        //////////////////////////////////////////////7+/v/7y5j/+J4+//zatv//////////////
+        ///5tm7/+J4+//iePv/4nj7/+KRK//awZdEAAAAAAAAAAAAAAAAAAAAA9bBlmfipVP/4nj7/+J4+//ie
+        Pv/4nj///vLl///////////////////////////////////////////////////////81q7/+KFD//zd
+        u////////vLl//ieP//4nj7/+J4+//iePv/4qFP/9a9lmgAAAAAAAAAAAAAAAAAAAADxr2ZN+K5f//ie
+        Pv/4nj7/+J4+//iePv/6v4H/////////////////////////////////////////////////////////
+        ///96NL//Nm1///////6wIH/+J4+//iePv/4nj7/+J4+//iuX//1r2ZNAAAAAAAAAAAAAAAAAAAAAMyZ
+        ZgX4sWTl+KRK//iePv/4nj7/+J4+//iePv/827f/////////////////////////////////////////
+        /////////////////////////Nu4//iePv/4nj7/+J4+//iePv/4pEr/+LFk5cyZZgUAAAAAAAAAAAAA
+        AAAAAAAAAAAAAPWyZXH4rV3/+J4+//iePv/4nj7/+J4+//ifQf/827f/////////////////////////
+        //////////////////////////////zbuP/4n0H/+J4+//iePv/4nj7/+J4+//itXf/1smdxAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA/6p/BvexZdb4p1H/+J4+//iePv/4nj7/+J4+//iePv/6v4H//vLl////
+        //////////////////////////////7y5f/6v4H/+J4+//iePv/4nj7/+J4+//iePv/4p1H/97Fl1v+q
+        fwYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8K9pM/iwY/f4o0n/+J4+//iePv/4nj7/+J4+//ie
+        Pv/4nj//+bZu//vNnP/82LL//Niy//vNnP/5tm7/+J4///iePv/4nj7/+J4+//iePv/4nj7/+KNJ//iw
+        ZPf1tGkzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9rRnVviwYvz4o0n/+J4+//ie
+        Pv/4nj7/+J4+//iePv/4nj7/+J4+//iePv/4nj7/+J4+//iePv/4nj7/+J4+//iePv/4nj7/+J4+//ij
+        Sf/4sGL89rJmVwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9rRnVviw
+        Y/f4p1H/+J4+//iePv/4nj7/+J4+//iePv/4nj7/+J4+//iePv/4nj7/+J4+//iePv/4nj7/+J4+//ie
+        Pv/4p1H/+LBj9/ayZlcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA9LJrMvexZdb4rV3/+KRK//iePv/4nj7/+J4+//iePv/4nj7/+J4+//iePv/4nj7/+J4+//ie
+        Pv/4pEr/+K1d//exZdb1tGkzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA/6p/BvizZnD5sWTk+K5f//ipVP/4pEr/+KFF//igQv/4oEL/+KFE//ik
+        Sv/4qVT/+K5f//mxZOT1smVx/6p/BgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMyZZgX0sWhM+LNnl/ixZc/4sWTz+LBj/viw
+        Y/74sWTz+LFlz/axZpj0sWhMzJlmBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAD/1KoG/9SqBgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA///////gB///gAH//gAAf/wAAD/4AAAf8AAAD/AAAA/gAAAH4AAAB8AA
+        AAPAAAADwAAAA4AAAAGAAAABgAAAAYAAAAGAAAABwAAAA8AAAAPAAAADwAAAA+AAAAfgAAAH8AAAD/gA
+        AB/8AAA//gAAf/8AAP//wAP///5///////8=
+</value>
+  </data>
   <metadata name="timerExtra1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>420, 18</value>
-  </metadata>
-  <metadata name="toiletError.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>132, 18</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>he</value>
   </metadata>
 </root>

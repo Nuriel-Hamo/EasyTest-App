@@ -106,10 +106,12 @@ namespace EasyTest_App
             button1.Text = "הוספת בחינה חדשה";
             buttonAddProctor.Text = "עדכן בחינה קיימת";
             buttonSearchExam.Text = "מחק בחינה";
+            ExamsBTN.Visible = true;
         }
 
         private void ToolStripMenuItemProctorManage_Click(object sender, EventArgs e)
         {
+            ExamsBTN.Visible = false;
             button1.Text = "הוספת משגיח בחינה";
             buttonAddProctor.Text = "עדכן משגיח בחינה קיים";
             buttonSearchExam.Text = "מחיקת משגיח בחינה";
@@ -117,6 +119,7 @@ namespace EasyTest_App
 
         private void ToolStripMenuItemSearch_Click(object sender, EventArgs e)
         {
+            ExamsBTN.Visible = false;
             Hide();
             admSearch.Show();
         }
@@ -178,8 +181,16 @@ namespace EasyTest_App
 
         private void EventM_Click(object sender, EventArgs e)
         {
+            ExamsBTN.Visible = false;
             ReportManagerForm rmf = new ReportManagerForm();
             rmf.Show();
+            Hide();
+        }
+
+        private void ExamsBTN_Click(object sender, EventArgs e)
+        {
+            ExamSummary es = new ExamSummary();
+            es.Show();
             Hide();
         }
     }

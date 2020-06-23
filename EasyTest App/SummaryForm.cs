@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EasyTest_App.DB;
 using MySql.Data.MySqlClient;
 
 namespace EasyTest_App
@@ -146,6 +147,13 @@ namespace EasyTest_App
                 if (pointX!=0 && pointY!=0 &&panelSignature.Visible)
                 {
                     MessageBox.Show("מבחן הוזן בהצלחה,תודה רבה");
+                    string examTime = textBoxEndTime.Text + " - " +  textBoxStartTime.Text;
+                    string subject = textBoxCourseName.Text;
+                    string lecturerName = textBoxLecturerName.Text;
+                    string proctors = textBoxProctorName.Text + ", " + textBox2ndProctor.Text;
+                    string extraTime = textBoxExtraTime.Text.Substring(0,2) + " דקות";
+                    string studentNum = listBoxStudents.Items.Count.ToString();
+                    DBManager.ExamSummary(examTime, subject, lecturerName, proctors, extraTime,studentNum);
                     Close();
                 }
                 else

@@ -56,5 +56,47 @@ namespace EasyTest_App.DB
             return  list;
 
         }
+        public static void ExamSummary(string examTime, string subject, string lecturerName, string proctors, string extraTime, string studentNum)
+        {
+            string query = "INSERT INTO `exam_summary` (`Date`, `Time`, RealTime, `Subject`, `ClassNum`, `LecturerName`, `Proctors`, `ExtraTime`, `Reports`, `StudentNum`) " +
+                "VALUES (@date, @time, @real_time, @subject, @clasNum, @lecturerName, @proctors, @extraTime, @Reports, @StudentNum)";
+            MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@date", DateTime.Now);
+            cmd.Parameters.AddWithValue("@time", Login.exam_table.Rows[0].ItemArray[7].ToString().Substring(0,5) + " - "  + Login.exam_table.Rows[0].ItemArray[6].ToString().Substring(0, 5));
+            cmd.Parameters.AddWithValue("@real_time", examTime);
+            cmd.Parameters.AddWithValue("@subject", subject);
+            cmd.Parameters.AddWithValue("@clasNum", Login.exam_table.Rows[0].ItemArray[4].ToString());
+            cmd.Parameters.AddWithValue("@lecturerName", lecturerName);
+            cmd.Parameters.AddWithValue("@proctors", proctors);
+            cmd.Parameters.AddWithValue("@extraTime", extraTime);
+            cmd.Parameters.AddWithValue("@Reports", GeneralReports());
+            cmd.Parameters.AddWithValue("@StudentNum", studentNum);
+
+
+
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+        public static string GeneralReports()
+        {
+            string query = "Select proctor_comment FROM exam_report WHERE exam_id = @exam_id";
+            MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
+            MySqlDataAdapter ad = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            ad.Fill(dt);
+            conn.Close();
+            string result = "";
+            foreach (DataRow row in dt.Rows)
+            {
+                result +=  row[0].ToString() + ", ";
+            }
+            return result;
+
+        }
     }
 }

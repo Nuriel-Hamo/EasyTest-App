@@ -39,6 +39,7 @@
             this.EventM = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.reportAlertLBL = new System.Windows.Forms.Label();
+            this.ExamsBTN = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -165,6 +166,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.ExamsBTN);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.buttonAddProctor);
             this.panel1.Controls.Add(this.buttonSearchExam);
@@ -190,6 +192,23 @@
             this.reportAlertLBL.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.reportAlertLBL.Visible = false;
             this.reportAlertLBL.Click += new System.EventHandler(this.reportAlertLBL_Click);
+            // 
+            // ExamsBTN
+            // 
+            this.ExamsBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ExamsBTN.BackColor = System.Drawing.Color.Transparent;
+            this.ExamsBTN.FlatAppearance.BorderSize = 0;
+            this.ExamsBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExamsBTN.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
+            this.ExamsBTN.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ExamsBTN.Location = new System.Drawing.Point(0, 615);
+            this.ExamsBTN.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ExamsBTN.Name = "ExamsBTN";
+            this.ExamsBTN.Size = new System.Drawing.Size(379, 202);
+            this.ExamsBTN.TabIndex = 4;
+            this.ExamsBTN.Text = "סיכום בחינות";
+            this.ExamsBTN.UseVisualStyleBackColor = false;
+            this.ExamsBTN.Click += new System.EventHandler(this.ExamsBTN_Click);
             // 
             // AdminForm
             // 
@@ -233,5 +252,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label reportAlertLBL;
         private System.Windows.Forms.ToolStripMenuItem EventM;
+        private System.Windows.Forms.Button ExamsBTN;
     }
 }

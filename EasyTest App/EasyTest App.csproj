@@ -132,6 +132,12 @@
     </Compile>
     <Compile Include="BL\Service.cs" />
     <Compile Include="DBA\DBManager.cs" />
+    <Compile Include="ExamSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExamSummary.Designer.cs">
+      <DependentUpon>ExamSummary.cs</DependentUpon>
+    </Compile>
     <Compile Include="exam_report.cs" />
     <Compile Include="ExtraTimeForm.cs">
       <SubType>Form</SubType>
@@ -231,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminUpdateForm.resx">
       <DependentUpon>AdminUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExamSummary.resx">
+      <DependentUpon>ExamSummary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtraTimeForm.resx">
       <DependentUpon>ExtraTimeForm.cs</DependentUpon>

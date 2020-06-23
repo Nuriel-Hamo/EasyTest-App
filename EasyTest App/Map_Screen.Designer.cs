@@ -121,7 +121,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Yu Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(348, 150);
+            this.label5.Location = new System.Drawing.Point(239, 150);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 36);
             this.label5.TabIndex = 25;
@@ -136,7 +136,7 @@
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(122, 189);
+            this.panel2.Location = new System.Drawing.Point(13, 189);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(320, 231);
             this.panel2.TabIndex = 26;
@@ -234,20 +234,19 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.TablePic);
-            this.panel1.Location = new System.Drawing.Point(533, 189);
+            this.panel1.Location = new System.Drawing.Point(376, 189);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(355, 268);
             this.panel1.TabIndex = 32;
             // 
             // TablePic
             // 
-            this.TablePic.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TablePic.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.TablePic.BackColor = System.Drawing.Color.Transparent;
             this.TablePic.Image = ((System.Drawing.Image)(resources.GetObject("TablePic.Image")));
-            this.TablePic.Location = new System.Drawing.Point(32, 142);
+            this.TablePic.Location = new System.Drawing.Point(3, 142);
             this.TablePic.Name = "TablePic";
-            this.TablePic.Size = new System.Drawing.Size(292, 123);
+            this.TablePic.Size = new System.Drawing.Size(349, 123);
             this.TablePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.TablePic.TabIndex = 26;
             this.TablePic.TabStop = false;

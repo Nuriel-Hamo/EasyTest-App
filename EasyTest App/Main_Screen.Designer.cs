@@ -72,73 +72,82 @@
             // 
             // AddStudentBTN
             // 
-            resources.ApplyResources(this.AddStudentBTN, "AddStudentBTN");
             this.AddStudentBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(75)))), ((int)(((byte)(174)))));
             this.AddStudentBTN.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.finishError.SetError(this.AddStudentBTN, resources.GetString("AddStudentBTN.Error"));
-            this.toiletError.SetError(this.AddStudentBTN, resources.GetString("AddStudentBTN.Error1"));
             this.AddStudentBTN.FlatAppearance.BorderSize = 0;
             this.AddStudentBTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
+            this.AddStudentBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddStudentBTN.Font = new System.Drawing.Font("Yu Gothic", 20F);
             this.AddStudentBTN.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.finishError.SetIconAlignment(this.AddStudentBTN, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("AddStudentBTN.IconAlignment"))));
-            this.toiletError.SetIconAlignment(this.AddStudentBTN, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("AddStudentBTN.IconAlignment1"))));
-            this.toiletError.SetIconPadding(this.AddStudentBTN, ((int)(resources.GetObject("AddStudentBTN.IconPadding"))));
-            this.finishError.SetIconPadding(this.AddStudentBTN, ((int)(resources.GetObject("AddStudentBTN.IconPadding1"))));
+            this.AddStudentBTN.Image = ((System.Drawing.Image)(resources.GetObject("AddStudentBTN.Image")));
+            this.AddStudentBTN.Location = new System.Drawing.Point(0, 201);
             this.AddStudentBTN.Name = "AddStudentBTN";
+            this.AddStudentBTN.Size = new System.Drawing.Size(379, 202);
+            this.AddStudentBTN.TabIndex = 0;
+            this.AddStudentBTN.Text = "הוספת סטודנט";
+            this.AddStudentBTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.AddStudentBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.AddStudentBTN.UseVisualStyleBackColor = false;
             this.AddStudentBTN.Click += new System.EventHandler(this.AddStudentBTN_Click);
             // 
             // ReportBTN
             // 
-            resources.ApplyResources(this.ReportBTN, "ReportBTN");
             this.ReportBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(75)))), ((int)(((byte)(174)))));
             this.ReportBTN.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.finishError.SetError(this.ReportBTN, resources.GetString("ReportBTN.Error"));
-            this.toiletError.SetError(this.ReportBTN, resources.GetString("ReportBTN.Error1"));
             this.ReportBTN.FlatAppearance.BorderSize = 0;
             this.ReportBTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
+            this.ReportBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ReportBTN.Font = new System.Drawing.Font("Yu Gothic", 20F);
             this.ReportBTN.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.finishError.SetIconAlignment(this.ReportBTN, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("ReportBTN.IconAlignment"))));
-            this.toiletError.SetIconAlignment(this.ReportBTN, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("ReportBTN.IconAlignment1"))));
-            this.toiletError.SetIconPadding(this.ReportBTN, ((int)(resources.GetObject("ReportBTN.IconPadding"))));
-            this.finishError.SetIconPadding(this.ReportBTN, ((int)(resources.GetObject("ReportBTN.IconPadding1"))));
+            this.ReportBTN.Image = ((System.Drawing.Image)(resources.GetObject("ReportBTN.Image")));
+            this.ReportBTN.Location = new System.Drawing.Point(0, 612);
             this.ReportBTN.Name = "ReportBTN";
+            this.ReportBTN.Size = new System.Drawing.Size(379, 202);
+            this.ReportBTN.TabIndex = 1;
+            this.ReportBTN.Text = "דיווח למדור בחינות";
+            this.ReportBTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ReportBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.ReportBTN.UseVisualStyleBackColor = false;
             this.ReportBTN.Click += new System.EventHandler(this.ReportBTN_Click);
             // 
             // ExtraTimeBTN
             // 
-            resources.ApplyResources(this.ExtraTimeBTN, "ExtraTimeBTN");
             this.ExtraTimeBTN.BackColor = System.Drawing.Color.Transparent;
             this.ExtraTimeBTN.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.finishError.SetError(this.ExtraTimeBTN, resources.GetString("ExtraTimeBTN.Error"));
-            this.toiletError.SetError(this.ExtraTimeBTN, resources.GetString("ExtraTimeBTN.Error1"));
+            this.ExtraTimeBTN.Enabled = false;
             this.ExtraTimeBTN.FlatAppearance.BorderSize = 0;
             this.ExtraTimeBTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
+            this.ExtraTimeBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExtraTimeBTN.Font = new System.Drawing.Font("Yu Gothic", 20F);
             this.ExtraTimeBTN.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.finishError.SetIconAlignment(this.ExtraTimeBTN, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("ExtraTimeBTN.IconAlignment"))));
-            this.toiletError.SetIconAlignment(this.ExtraTimeBTN, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("ExtraTimeBTN.IconAlignment1"))));
-            this.toiletError.SetIconPadding(this.ExtraTimeBTN, ((int)(resources.GetObject("ExtraTimeBTN.IconPadding"))));
-            this.finishError.SetIconPadding(this.ExtraTimeBTN, ((int)(resources.GetObject("ExtraTimeBTN.IconPadding1"))));
+            this.ExtraTimeBTN.Image = ((System.Drawing.Image)(resources.GetObject("ExtraTimeBTN.Image")));
+            this.ExtraTimeBTN.Location = new System.Drawing.Point(0, 404);
             this.ExtraTimeBTN.Name = "ExtraTimeBTN";
+            this.ExtraTimeBTN.Size = new System.Drawing.Size(379, 202);
+            this.ExtraTimeBTN.TabIndex = 2;
+            this.ExtraTimeBTN.Text = "הזן הארכת זמן";
+            this.ExtraTimeBTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ExtraTimeBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.ExtraTimeBTN.UseVisualStyleBackColor = false;
             this.ExtraTimeBTN.Click += new System.EventHandler(this.ExtraTimeBTN_Click);
             // 
             // BeginExamBTN
             // 
-            resources.ApplyResources(this.BeginExamBTN, "BeginExamBTN");
             this.BeginExamBTN.BackColor = System.Drawing.Color.Transparent;
             this.BeginExamBTN.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.finishError.SetError(this.BeginExamBTN, resources.GetString("BeginExamBTN.Error"));
-            this.toiletError.SetError(this.BeginExamBTN, resources.GetString("BeginExamBTN.Error1"));
             this.BeginExamBTN.FlatAppearance.BorderSize = 0;
             this.BeginExamBTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
+            this.BeginExamBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BeginExamBTN.Font = new System.Drawing.Font("Yu Gothic", 20F);
             this.BeginExamBTN.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.finishError.SetIconAlignment(this.BeginExamBTN, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("BeginExamBTN.IconAlignment"))));
-            this.toiletError.SetIconAlignment(this.BeginExamBTN, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("BeginExamBTN.IconAlignment1"))));
-            this.toiletError.SetIconPadding(this.BeginExamBTN, ((int)(resources.GetObject("BeginExamBTN.IconPadding"))));
-            this.finishError.SetIconPadding(this.BeginExamBTN, ((int)(resources.GetObject("BeginExamBTN.IconPadding1"))));
+            this.BeginExamBTN.Image = ((System.Drawing.Image)(resources.GetObject("BeginExamBTN.Image")));
+            this.BeginExamBTN.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BeginExamBTN.Location = new System.Drawing.Point(0, 815);
             this.BeginExamBTN.Name = "BeginExamBTN";
+            this.BeginExamBTN.Size = new System.Drawing.Size(379, 202);
+            this.BeginExamBTN.TabIndex = 5;
+            this.BeginExamBTN.Text = "התחל בחינה";
+            this.BeginExamBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.BeginExamBTN.UseVisualStyleBackColor = false;
             this.BeginExamBTN.Click += new System.EventHandler(this.BeginExamBTN_Click);
             // 
@@ -149,173 +158,149 @@
             // 
             // TimerLBL
             // 
-            resources.ApplyResources(this.TimerLBL, "TimerLBL");
+            this.TimerLBL.AutoSize = true;
             this.TimerLBL.BackColor = System.Drawing.Color.Transparent;
-            this.toiletError.SetError(this.TimerLBL, resources.GetString("TimerLBL.Error"));
-            this.finishError.SetError(this.TimerLBL, resources.GetString("TimerLBL.Error1"));
+            this.TimerLBL.Font = new System.Drawing.Font("Yu Gothic UI", 36F, System.Drawing.FontStyle.Bold);
             this.TimerLBL.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.finishError.SetIconAlignment(this.TimerLBL, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("TimerLBL.IconAlignment"))));
-            this.toiletError.SetIconAlignment(this.TimerLBL, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("TimerLBL.IconAlignment1"))));
-            this.finishError.SetIconPadding(this.TimerLBL, ((int)(resources.GetObject("TimerLBL.IconPadding"))));
-            this.toiletError.SetIconPadding(this.TimerLBL, ((int)(resources.GetObject("TimerLBL.IconPadding1"))));
+            this.TimerLBL.Location = new System.Drawing.Point(623, 10);
             this.TimerLBL.Name = "TimerLBL";
+            this.TimerLBL.Size = new System.Drawing.Size(314, 96);
+            this.TimerLBL.TabIndex = 7;
+            this.TimerLBL.Text = "00:00:00";
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.TablePic);
-            this.finishError.SetError(this.panel1, resources.GetString("panel1.Error"));
-            this.toiletError.SetError(this.panel1, resources.GetString("panel1.Error1"));
-            this.finishError.SetIconAlignment(this.panel1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("panel1.IconAlignment"))));
-            this.toiletError.SetIconAlignment(this.panel1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("panel1.IconAlignment1"))));
-            this.finishError.SetIconPadding(this.panel1, ((int)(resources.GetObject("panel1.IconPadding"))));
-            this.toiletError.SetIconPadding(this.panel1, ((int)(resources.GetObject("panel1.IconPadding1"))));
+            this.panel1.Location = new System.Drawing.Point(453, 201);
             this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(805, 516);
+            this.panel1.TabIndex = 10;
             // 
             // TablePic
             // 
-            resources.ApplyResources(this.TablePic, "TablePic");
+            this.TablePic.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.TablePic.BackColor = System.Drawing.Color.Transparent;
-            this.finishError.SetError(this.TablePic, resources.GetString("TablePic.Error"));
-            this.toiletError.SetError(this.TablePic, resources.GetString("TablePic.Error1"));
-            this.finishError.SetIconAlignment(this.TablePic, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("TablePic.IconAlignment"))));
-            this.toiletError.SetIconAlignment(this.TablePic, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("TablePic.IconAlignment1"))));
-            this.finishError.SetIconPadding(this.TablePic, ((int)(resources.GetObject("TablePic.IconPadding"))));
-            this.toiletError.SetIconPadding(this.TablePic, ((int)(resources.GetObject("TablePic.IconPadding1"))));
+            this.TablePic.Image = ((System.Drawing.Image)(resources.GetObject("TablePic.Image")));
+            this.TablePic.Location = new System.Drawing.Point(3, 386);
             this.TablePic.Name = "TablePic";
+            this.TablePic.Size = new System.Drawing.Size(799, 127);
+            this.TablePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.TablePic.TabIndex = 26;
             this.TablePic.TabStop = false;
             // 
             // dateLBL
             // 
-            resources.ApplyResources(this.dateLBL, "dateLBL");
+            this.dateLBL.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.dateLBL.AutoSize = true;
             this.dateLBL.BackColor = System.Drawing.Color.Transparent;
-            this.toiletError.SetError(this.dateLBL, resources.GetString("dateLBL.Error"));
-            this.finishError.SetError(this.dateLBL, resources.GetString("dateLBL.Error1"));
+            this.dateLBL.Font = new System.Drawing.Font("Yu Gothic UI", 20F);
             this.dateLBL.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.finishError.SetIconAlignment(this.dateLBL, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("dateLBL.IconAlignment"))));
-            this.toiletError.SetIconAlignment(this.dateLBL, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("dateLBL.IconAlignment1"))));
-            this.finishError.SetIconPadding(this.dateLBL, ((int)(resources.GetObject("dateLBL.IconPadding"))));
-            this.toiletError.SetIconPadding(this.dateLBL, ((int)(resources.GetObject("dateLBL.IconPadding1"))));
+            this.dateLBL.Location = new System.Drawing.Point(12, 24);
             this.dateLBL.Name = "dateLBL";
+            this.dateLBL.Size = new System.Drawing.Size(231, 54);
+            this.dateLBL.TabIndex = 16;
+            this.dateLBL.Text = "00/00/0000";
             // 
             // labelName
             // 
-            resources.ApplyResources(this.labelName, "labelName");
-            this.toiletError.SetError(this.labelName, resources.GetString("labelName.Error"));
-            this.finishError.SetError(this.labelName, resources.GetString("labelName.Error1"));
+            this.labelName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelName.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
             this.labelName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.finishError.SetIconAlignment(this.labelName, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("labelName.IconAlignment"))));
-            this.toiletError.SetIconAlignment(this.labelName, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("labelName.IconAlignment1"))));
-            this.finishError.SetIconPadding(this.labelName, ((int)(resources.GetObject("labelName.IconPadding"))));
-            this.toiletError.SetIconPadding(this.labelName, ((int)(resources.GetObject("labelName.IconPadding1"))));
+            this.labelName.Location = new System.Drawing.Point(17, 48);
+            this.labelName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(357, 48);
+            this.labelName.TabIndex = 8;
+            this.labelName.Text = ".שמחה כהן";
+            this.labelName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // toiletError
             // 
             this.toiletError.BlinkRate = 1000;
             this.toiletError.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.AlwaysBlink;
             this.toiletError.ContainerControl = this;
-            resources.ApplyResources(this.toiletError, "toiletError");
+            this.toiletError.Icon = ((System.Drawing.Icon)(resources.GetObject("toiletError.Icon")));
             // 
             // panel3
             // 
-            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.BackColor = System.Drawing.Color.Green;
-            this.finishError.SetError(this.panel3, resources.GetString("panel3.Error"));
-            this.toiletError.SetError(this.panel3, resources.GetString("panel3.Error1"));
-            this.finishError.SetIconAlignment(this.panel3, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("panel3.IconAlignment"))));
-            this.toiletError.SetIconAlignment(this.panel3, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("panel3.IconAlignment1"))));
-            this.finishError.SetIconPadding(this.panel3, ((int)(resources.GetObject("panel3.IconPadding"))));
-            this.toiletError.SetIconPadding(this.panel3, ((int)(resources.GetObject("panel3.IconPadding1"))));
+            this.panel3.Location = new System.Drawing.Point(245, 79);
             this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(70, 70);
+            this.panel3.TabIndex = 17;
             // 
             // label1
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.toiletError.SetError(this.label1, resources.GetString("label1.Error"));
-            this.finishError.SetError(this.label1, resources.GetString("label1.Error1"));
-            this.finishError.SetIconAlignment(this.label1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label1.IconAlignment"))));
-            this.toiletError.SetIconAlignment(this.label1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label1.IconAlignment1"))));
-            this.finishError.SetIconPadding(this.label1, ((int)(resources.GetObject("label1.IconPadding"))));
-            this.toiletError.SetIconPadding(this.label1, ((int)(resources.GetObject("label1.IconPadding1"))));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Yu Gothic", 12F);
+            this.label1.Location = new System.Drawing.Point(102, 100);
             this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(137, 31);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "סטודנט נבחן";
             // 
             // label2
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.toiletError.SetError(this.label2, resources.GetString("label2.Error"));
-            this.finishError.SetError(this.label2, resources.GetString("label2.Error1"));
-            this.finishError.SetIconAlignment(this.label2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label2.IconAlignment"))));
-            this.toiletError.SetIconAlignment(this.label2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label2.IconAlignment1"))));
-            this.finishError.SetIconPadding(this.label2, ((int)(resources.GetObject("label2.IconPadding"))));
-            this.toiletError.SetIconPadding(this.label2, ((int)(resources.GetObject("label2.IconPadding1"))));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Yu Gothic", 12F);
+            this.label2.Location = new System.Drawing.Point(96, 253);
             this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(143, 31);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "סטודנט הגיש";
             // 
             // panel4
             // 
-            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.BackColor = System.Drawing.Color.DimGray;
             this.panel4.Controls.Add(this.pictureBox1);
-            this.finishError.SetError(this.panel4, resources.GetString("panel4.Error"));
-            this.toiletError.SetError(this.panel4, resources.GetString("panel4.Error1"));
-            this.finishError.SetIconAlignment(this.panel4, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("panel4.IconAlignment"))));
-            this.toiletError.SetIconAlignment(this.panel4, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("panel4.IconAlignment1"))));
-            this.finishError.SetIconPadding(this.panel4, ((int)(resources.GetObject("panel4.IconPadding"))));
-            this.toiletError.SetIconPadding(this.panel4, ((int)(resources.GetObject("panel4.IconPadding1"))));
+            this.panel4.Enabled = false;
+            this.panel4.Location = new System.Drawing.Point(245, 232);
             this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(70, 70);
+            this.panel4.TabIndex = 19;
             // 
             // pictureBox1
             // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.finishError.SetError(this.pictureBox1, resources.GetString("pictureBox1.Error"));
-            this.toiletError.SetError(this.pictureBox1, resources.GetString("pictureBox1.Error1"));
-            this.finishError.SetIconAlignment(this.pictureBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pictureBox1.IconAlignment"))));
-            this.toiletError.SetIconAlignment(this.pictureBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pictureBox1.IconAlignment1"))));
-            this.finishError.SetIconPadding(this.pictureBox1, ((int)(resources.GetObject("pictureBox1.IconPadding"))));
-            this.toiletError.SetIconPadding(this.pictureBox1, ((int)(resources.GetObject("pictureBox1.IconPadding1"))));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(30, 30);
             this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
             // 
             // label3
             // 
-            resources.ApplyResources(this.label3, "label3");
-            this.toiletError.SetError(this.label3, resources.GetString("label3.Error"));
-            this.finishError.SetError(this.label3, resources.GetString("label3.Error1"));
-            this.finishError.SetIconAlignment(this.label3, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label3.IconAlignment"))));
-            this.toiletError.SetIconAlignment(this.label3, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label3.IconAlignment1"))));
-            this.finishError.SetIconPadding(this.label3, ((int)(resources.GetObject("label3.IconPadding"))));
-            this.toiletError.SetIconPadding(this.label3, ((int)(resources.GetObject("label3.IconPadding1"))));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Yu Gothic", 12F);
+            this.label3.Location = new System.Drawing.Point(51, 177);
             this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(188, 31);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "סטודנט בשירותים";
             // 
             // panel5
             // 
-            resources.ApplyResources(this.panel5, "panel5");
             this.panel5.BackColor = System.Drawing.Color.Green;
             this.panel5.Controls.Add(this.pictureBox2);
-            this.finishError.SetError(this.panel5, resources.GetString("panel5.Error"));
-            this.toiletError.SetError(this.panel5, resources.GetString("panel5.Error1"));
-            this.finishError.SetIconAlignment(this.panel5, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("panel5.IconAlignment"))));
-            this.toiletError.SetIconAlignment(this.panel5, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("panel5.IconAlignment1"))));
-            this.finishError.SetIconPadding(this.panel5, ((int)(resources.GetObject("panel5.IconPadding"))));
-            this.toiletError.SetIconPadding(this.panel5, ((int)(resources.GetObject("panel5.IconPadding1"))));
+            this.panel5.Location = new System.Drawing.Point(245, 155);
             this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(70, 70);
+            this.panel5.TabIndex = 21;
             // 
             // pictureBox2
             // 
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.finishError.SetError(this.pictureBox2, resources.GetString("pictureBox2.Error"));
-            this.toiletError.SetError(this.pictureBox2, resources.GetString("pictureBox2.Error1"));
-            this.finishError.SetIconAlignment(this.pictureBox2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pictureBox2.IconAlignment"))));
-            this.toiletError.SetIconAlignment(this.pictureBox2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pictureBox2.IconAlignment1"))));
-            this.finishError.SetIconPadding(this.pictureBox2, ((int)(resources.GetObject("pictureBox2.IconPadding"))));
-            this.toiletError.SetIconPadding(this.pictureBox2, ((int)(resources.GetObject("pictureBox2.IconPadding1"))));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(30, 27);
             this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 25;
             this.pictureBox2.TabStop = false;
             // 
             // panel6
             // 
-            resources.ApplyResources(this.panel6, "panel6");
             this.panel6.BackColor = System.Drawing.SystemColors.HotTrack;
             this.panel6.Controls.Add(this.label4);
             this.panel6.Controls.Add(this.labelName);
@@ -323,29 +308,26 @@
             this.panel6.Controls.Add(this.ReportBTN);
             this.panel6.Controls.Add(this.ExtraTimeBTN);
             this.panel6.Controls.Add(this.BeginExamBTN);
-            this.finishError.SetError(this.panel6, resources.GetString("panel6.Error"));
-            this.toiletError.SetError(this.panel6, resources.GetString("panel6.Error1"));
-            this.finishError.SetIconAlignment(this.panel6, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("panel6.IconAlignment"))));
-            this.toiletError.SetIconAlignment(this.panel6, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("panel6.IconAlignment1"))));
-            this.finishError.SetIconPadding(this.panel6, ((int)(resources.GetObject("panel6.IconPadding"))));
-            this.toiletError.SetIconPadding(this.panel6, ((int)(resources.GetObject("panel6.IconPadding1"))));
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel6.Location = new System.Drawing.Point(1541, 0);
             this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(379, 1080);
+            this.panel6.TabIndex = 23;
             // 
             // label4
             // 
-            resources.ApplyResources(this.label4, "label4");
-            this.toiletError.SetError(this.label4, resources.GetString("label4.Error"));
-            this.finishError.SetError(this.label4, resources.GetString("label4.Error1"));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.finishError.SetIconAlignment(this.label4, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label4.IconAlignment"))));
-            this.toiletError.SetIconAlignment(this.label4, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label4.IconAlignment1"))));
-            this.finishError.SetIconPadding(this.label4, ((int)(resources.GetObject("label4.IconPadding"))));
-            this.toiletError.SetIconPadding(this.label4, ((int)(resources.GetObject("label4.IconPadding1"))));
+            this.label4.Location = new System.Drawing.Point(253, 0);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(113, 48);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "!שלום";
             // 
             // panel2
             // 
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.panel7);
@@ -355,64 +337,55 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.label3);
-            this.finishError.SetError(this.panel2, resources.GetString("panel2.Error"));
-            this.toiletError.SetError(this.panel2, resources.GetString("panel2.Error1"));
-            this.finishError.SetIconAlignment(this.panel2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("panel2.IconAlignment"))));
-            this.toiletError.SetIconAlignment(this.panel2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("panel2.IconAlignment1"))));
-            this.finishError.SetIconPadding(this.panel2, ((int)(resources.GetObject("panel2.IconPadding"))));
-            this.toiletError.SetIconPadding(this.panel2, ((int)(resources.GetObject("panel2.IconPadding1"))));
+            this.panel2.Location = new System.Drawing.Point(12, 201);
             this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(320, 307);
+            this.panel2.TabIndex = 24;
             // 
             // label6
             // 
-            resources.ApplyResources(this.label6, "label6");
-            this.toiletError.SetError(this.label6, resources.GetString("label6.Error"));
-            this.finishError.SetError(this.label6, resources.GetString("label6.Error1"));
-            this.finishError.SetIconAlignment(this.label6, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label6.IconAlignment"))));
-            this.toiletError.SetIconAlignment(this.label6, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label6.IconAlignment1"))));
-            this.finishError.SetIconPadding(this.label6, ((int)(resources.GetObject("label6.IconPadding"))));
-            this.toiletError.SetIconPadding(this.label6, ((int)(resources.GetObject("label6.IconPadding1"))));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Yu Gothic", 12F);
+            this.label6.Location = new System.Drawing.Point(124, 19);
             this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(112, 31);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "שולחן ריק";
             // 
             // panel7
             // 
-            resources.ApplyResources(this.panel7, "panel7");
             this.panel7.BackColor = System.Drawing.Color.LightGray;
-            this.finishError.SetError(this.panel7, resources.GetString("panel7.Error"));
-            this.toiletError.SetError(this.panel7, resources.GetString("panel7.Error1"));
-            this.finishError.SetIconAlignment(this.panel7, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("panel7.IconAlignment"))));
-            this.toiletError.SetIconAlignment(this.panel7, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("panel7.IconAlignment1"))));
-            this.finishError.SetIconPadding(this.panel7, ((int)(resources.GetObject("panel7.IconPadding"))));
-            this.toiletError.SetIconPadding(this.panel7, ((int)(resources.GetObject("panel7.IconPadding1"))));
+            this.panel7.Enabled = false;
+            this.panel7.Location = new System.Drawing.Point(245, 3);
             this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(70, 70);
+            this.panel7.TabIndex = 26;
             // 
             // label5
             // 
-            resources.ApplyResources(this.label5, "label5");
-            this.toiletError.SetError(this.label5, resources.GetString("label5.Error"));
-            this.finishError.SetError(this.label5, resources.GetString("label5.Error1"));
-            this.finishError.SetIconAlignment(this.label5, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label5.IconAlignment"))));
-            this.toiletError.SetIconAlignment(this.label5, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label5.IconAlignment1"))));
-            this.finishError.SetIconPadding(this.label5, ((int)(resources.GetObject("label5.IconPadding"))));
-            this.toiletError.SetIconPadding(this.label5, ((int)(resources.GetObject("label5.IconPadding1"))));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Yu Gothic", 14F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(238, 162);
             this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(94, 36);
+            this.label5.TabIndex = 23;
+            this.label5.Text = ":מקרא";
             // 
             // labelExTime1
             // 
-            resources.ApplyResources(this.labelExTime1, "labelExTime1");
-            this.toiletError.SetError(this.labelExTime1, resources.GetString("labelExTime1.Error"));
-            this.finishError.SetError(this.labelExTime1, resources.GetString("labelExTime1.Error1"));
+            this.labelExTime1.AutoSize = true;
+            this.labelExTime1.Font = new System.Drawing.Font("Yu Gothic UI", 20F, System.Drawing.FontStyle.Bold);
             this.labelExTime1.ForeColor = System.Drawing.Color.Black;
-            this.finishError.SetIconAlignment(this.labelExTime1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("labelExTime1.IconAlignment"))));
-            this.toiletError.SetIconAlignment(this.labelExTime1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("labelExTime1.IconAlignment1"))));
-            this.finishError.SetIconPadding(this.labelExTime1, ((int)(resources.GetObject("labelExTime1.IconPadding"))));
-            this.toiletError.SetIconPadding(this.labelExTime1, ((int)(resources.GetObject("labelExTime1.IconPadding1"))));
+            this.labelExTime1.Location = new System.Drawing.Point(931, 44);
             this.labelExTime1.Name = "labelExTime1";
+            this.labelExTime1.Size = new System.Drawing.Size(175, 54);
+            this.labelExTime1.TabIndex = 25;
+            this.labelExTime1.Text = "00:00:00";
             // 
             // finishError
             // 
             this.finishError.ContainerControl = this;
-            resources.ApplyResources(this.finishError, "finishError");
+            this.finishError.Icon = ((System.Drawing.Icon)(resources.GetObject("finishError.Icon")));
             // 
             // timerExtra1
             // 
@@ -421,9 +394,11 @@
             // 
             // Main_Screen
             // 
-            resources.ApplyResources(this, "$this");
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.labelExTime1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel2);
@@ -434,6 +409,8 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Main_Screen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Main_Screen";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Activated += new System.EventHandler(this.Main_Screen_Activated);
             this.Load += new System.EventHandler(this.Main_Screen_Load);

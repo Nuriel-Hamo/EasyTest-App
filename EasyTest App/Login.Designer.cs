@@ -133,6 +133,7 @@
             this.Pass_textbox.Font = new System.Drawing.Font("Arial", 18F);
             this.Pass_textbox.ForeColor = System.Drawing.Color.DimGray;
             this.Pass_textbox.Location = new System.Drawing.Point(949, 709);
+            this.Pass_textbox.MaxLength = 5;
             this.Pass_textbox.Multiline = true;
             this.Pass_textbox.Name = "Pass_textbox";
             this.Pass_textbox.PasswordChar = '*';
@@ -161,6 +162,7 @@
             this.UserID_textbox.Font = new System.Drawing.Font("Arial", 18F);
             this.UserID_textbox.ForeColor = System.Drawing.Color.DimGray;
             this.UserID_textbox.Location = new System.Drawing.Point(949, 600);
+            this.UserID_textbox.MaxLength = 9;
             this.UserID_textbox.Multiline = true;
             this.UserID_textbox.Name = "UserID_textbox";
             this.UserID_textbox.Size = new System.Drawing.Size(659, 54);
