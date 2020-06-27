@@ -58,6 +58,7 @@
             // 
             this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox1.Font = new System.Drawing.Font("Yu Gothic UI", 12F);
+            this.listBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 32;
             this.listBox1.Location = new System.Drawing.Point(6, 75);
@@ -84,6 +85,7 @@
             // 
             this.listBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox2.Font = new System.Drawing.Font("Yu Gothic UI", 12F);
+            this.listBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 32;
             this.listBox2.Location = new System.Drawing.Point(6, 75);
@@ -109,6 +111,7 @@
             // 
             this.listBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox3.Font = new System.Drawing.Font("Yu Gothic UI", 12F);
+            this.listBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.listBox3.FormattingEnabled = true;
             this.listBox3.ItemHeight = 32;
             this.listBox3.Location = new System.Drawing.Point(18, 75);
@@ -121,17 +124,19 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial Black", 26F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label3.Location = new System.Drawing.Point(766, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(402, 73);
             this.label3.TabIndex = 17;
-            this.label3.Text = "ניהול אירועים";
+            this.label3.Text = "ניהול דיווחים";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // backBTN
             // 
+            this.backBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backBTN.Font = new System.Drawing.Font("Yu Gothic UI", 12F);
+            this.backBTN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.backBTN.Location = new System.Drawing.Point(1666, 933);
             this.backBTN.Name = "backBTN";
             this.backBTN.Size = new System.Drawing.Size(198, 69);
@@ -144,6 +149,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
             this.Controls.Add(this.backBTN);
             this.Controls.Add(this.groupBox1);

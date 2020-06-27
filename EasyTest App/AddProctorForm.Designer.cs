@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddProctorForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,12 +51,14 @@
             this.errorProviderPhoneNum = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderType = new System.Windows.Forms.ErrorProvider(this.components);
             this.buttonBack = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderPass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderFName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderLName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderPhoneNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -64,7 +67,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label1.Location = new System.Drawing.Point(1528, 39);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -79,7 +82,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label2.Location = new System.Drawing.Point(1645, 144);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -93,7 +96,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label3.Location = new System.Drawing.Point(1550, 290);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
@@ -107,7 +110,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label4.ForeColor = System.Drawing.Color.DimGray;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label4.Location = new System.Drawing.Point(1564, 217);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
@@ -118,9 +121,8 @@
             // textBoxID
             // 
             this.textBoxID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxID.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
-            this.textBoxID.ForeColor = System.Drawing.Color.DimGray;
+            this.textBoxID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.textBoxID.Location = new System.Drawing.Point(1271, 155);
             this.textBoxID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxID.Multiline = true;
@@ -133,9 +135,8 @@
             // textBoxFName
             // 
             this.textBoxFName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxFName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxFName.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
-            this.textBoxFName.ForeColor = System.Drawing.Color.DimGray;
+            this.textBoxFName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.textBoxFName.Location = new System.Drawing.Point(1176, 298);
             this.textBoxFName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxFName.Multiline = true;
@@ -147,9 +148,8 @@
             // textBoxPass
             // 
             this.textBoxPass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPass.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
-            this.textBoxPass.ForeColor = System.Drawing.Color.DimGray;
+            this.textBoxPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.textBoxPass.Location = new System.Drawing.Point(1190, 225);
             this.textBoxPass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxPass.Multiline = true;
@@ -163,6 +163,7 @@
             this.buttonAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdd.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
+            this.buttonAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.buttonAdd.Location = new System.Drawing.Point(1133, 641);
             this.buttonAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonAdd.Name = "buttonAdd";
@@ -175,9 +176,8 @@
             // textBoxLName
             // 
             this.textBoxLName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxLName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxLName.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
-            this.textBoxLName.ForeColor = System.Drawing.Color.DimGray;
+            this.textBoxLName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.textBoxLName.Location = new System.Drawing.Point(1131, 371);
             this.textBoxLName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxLName.Multiline = true;
@@ -192,7 +192,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label5.ForeColor = System.Drawing.Color.DimGray;
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label5.Location = new System.Drawing.Point(1507, 363);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
@@ -203,9 +203,8 @@
             // textBoxPhoneNum
             // 
             this.textBoxPhoneNum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxPhoneNum.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPhoneNum.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
-            this.textBoxPhoneNum.ForeColor = System.Drawing.Color.DimGray;
+            this.textBoxPhoneNum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.textBoxPhoneNum.Location = new System.Drawing.Point(1131, 444);
             this.textBoxPhoneNum.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxPhoneNum.Multiline = true;
@@ -221,7 +220,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label6.ForeColor = System.Drawing.Color.DimGray;
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label6.Location = new System.Drawing.Point(1505, 436);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
@@ -233,7 +232,7 @@
             // 
             this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox1.Font = new System.Drawing.Font("Yu Gothic UI", 12F);
-            this.comboBox1.ForeColor = System.Drawing.Color.DimGray;
+            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "משגיח בחינה",
@@ -251,7 +250,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label7.ForeColor = System.Drawing.Color.DimGray;
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label7.Location = new System.Drawing.Point(1641, 509);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
@@ -288,6 +287,7 @@
             this.buttonBack.BackColor = System.Drawing.Color.Transparent;
             this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBack.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
+            this.buttonBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.buttonBack.Location = new System.Drawing.Point(1605, 890);
             this.buttonBack.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonBack.Name = "buttonBack";
@@ -297,13 +297,24 @@
             this.buttonBack.UseVisualStyleBackColor = false;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(-628, -81);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1557, 1110);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 15;
+            this.pictureBox2.TabStop = false;
+            // 
             // AddProctorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PeachPuff;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.textBoxLName);
             this.Controls.Add(this.label2);
@@ -332,6 +343,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderLName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderPhoneNum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -360,5 +372,6 @@
         private System.Windows.Forms.ErrorProvider errorProviderPhoneNum;
         private System.Windows.Forms.ErrorProvider errorProviderType;
         private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

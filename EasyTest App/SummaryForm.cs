@@ -41,13 +41,13 @@ namespace EasyTest_App
             da.Fill(dt);
             foreach (DataRow dr in dt.Rows)
             {
-                textBoxExamID.Text = dr["exam_id"].ToString();
-                textBoxCourseName.Text = getCourse(dr["course_id"].ToString());
-                textBoxLecturerName.Text = getLecturer(dr["lecturer_id"].ToString());
-                textBoxProctorName.Text = getProctor(dr["proctor_id"].ToString());
-                textBoxStartTime.Text = dr["start_time"].ToString().Substring(0, 5);
-                textBoxEndTime.Text = dr["end_time"].ToString().Substring(0, 5);
-                textBoxExtraTime.Text = dr["extra_time"].ToString().Substring(3) + " דקות";
+                LBLExamID.Text = dr["exam_id"].ToString();
+                LBLCourseName.Text = getCourse(dr["course_id"].ToString());
+                LBLLecturerName.Text = getLecturer(dr["lecturer_id"].ToString());
+                LBLProctorName.Text = getProctor(dr["proctor_id"].ToString());
+                LBLStartTime.Text = dr["start_time"].ToString().Substring(0, 5);
+                LBLEndTime.Text = dr["end_time"].ToString().Substring(0, 5);
+                LBLExtraTime.Text = dr["extra_time"].ToString().Substring(3) + " דקות";
                 listBoxStudents.Items.Add(getStudent(dr["student_id"].ToString()));
             }
             
@@ -119,6 +119,7 @@ namespace EasyTest_App
             LastX = pointX;
             LastY = pointY;
             
+            
         }
 
         private void panelSignature_MouseDown(object sender, MouseEventArgs e)
@@ -147,11 +148,13 @@ namespace EasyTest_App
                 if (pointX!=0 && pointY!=0 &&panelSignature.Visible)
                 {
                     MessageBox.Show("מבחן הוזן בהצלחה,תודה רבה");
-                    string examTime = textBoxEndTime.Text + " - " +  textBoxStartTime.Text;
-                    string subject = textBoxCourseName.Text;
-                    string lecturerName = textBoxLecturerName.Text;
-                    string proctors = textBoxProctorName.Text + ", " + textBox2ndProctor.Text;
-                    string extraTime = textBoxExtraTime.Text.Substring(0,2) + " דקות";
+                    string examTime = LBLEndTime.Text + " - " +  LBLStartTime.Text;
+                    string subject = LBLCourseName.Text;
+                    string lecturerName = LBLLecturerName.Text;
+                    string proctors = LBLProctorName.Text + ", " + textBox2ndProctor.Text;
+                    string extraTime = "";
+                    if(LBLExtraTime.Text.Substring(0, 2).Equals("00")) { extraTime = "ללא"; }
+                    else { extraTime = LBLExtraTime.Text.Substring(0, 2) + " דקות"; }                 
                     string studentNum = listBoxStudents.Items.Count.ToString();
                     DBManager.ExamSummary(examTime, subject, lecturerName, proctors, extraTime,studentNum);
                     Close();
@@ -163,6 +166,8 @@ namespace EasyTest_App
                 errorProviderSummary.SetError(textBox2ndProctor, "אנא הזן שם משגיח בחינה ");
 
         }
+
+      
 
         private string getLecturer(string s)
         {

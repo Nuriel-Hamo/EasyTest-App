@@ -49,7 +49,7 @@ namespace EasyTest_App
         public static bool first = true;
         public static string class_start_time;
         Boolean FiveMinutes = false;
-
+        private bool ReportFirstTime = true;
         public static string tableForIcone = "";
         public static string typeForIcone = "";
         public static Boolean newFinished = false;
@@ -61,71 +61,129 @@ namespace EasyTest_App
         {
             InitializeComponent();
         }
+        private void ReportTableInsert(string reportDetails)
+        {
+            if (ReportFirstTime)
+            {
+                dataGridView.Visible = true;
+                dataGridView.Rows.Add(reportDetails, "נשלח");
+                //dataGridView.Rows[0].Cells[0].Value = reportDetails;
+                //dataGridView.Rows[0].Cells[1].Value = "נשלח";
+                dataGridView.Rows[0].DefaultCellStyle.BackColor = Color.FromArgb(255, 192, 192);
+                dataGridView.Rows[0].DefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 192, 192);
+
+                ReportFirstTime = false;
+            }
+            else
+            {
+                int Index = dataGridView.Rows.Add(reportDetails, "נשלח");
+               // dataGridView.Rows[0].DefaultCellStyle.BackColor = Color.FromArgb(255, 192, 192);
+                dataGridView.Rows[Index].DefaultCellStyle.BackColor = Color.FromArgb(255, 192, 192);
+                dataGridView.Rows[Index].DefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 192, 192);
+
+                dataGridView.Visible = true;
+            }
+           
+           
+        }
+        private void ReportTableInsert2(string status, string reportDetails)
+        {
+            foreach(DataGridViewRow row in dataGridView.Rows)
+            {
+                if (row.Cells[0].Value == null) { break; }
+                else if (row.Cells[0].Value.Equals(reportDetails))
+                {
+                    if (status.Equals("טופל"))
+                    {
+                        dataGridView.Rows.RemoveAt(row.Index);
+                    }
+                    else
+                    {
+                        row.Cells[1].Value = status;
+                        row.DefaultCellStyle.BackColor = Color.LightGreen;
+                        row.DefaultCellStyle.SelectionBackColor = Color.LightGreen;
+                    }
+                   
+
+                }
+
+            }
+
+            //dataGridView.Rows.Add(reportDetails, "נשלח");
+
+        }
 
         private void BeginExamBTN_Click(object sender, EventArgs e)
         {
 
             if (BeginExamBTN.Text.Equals("התחל בחינה"))
             {
-
-                if (Int32.Parse(getTime().Substring(0, 2)) >= Int32.Parse(Login.exam_table.Rows[0][6].ToString().Substring(0, 2)) && Int32.Parse(getTime().Substring(3, 2)) >= Int32.Parse(Login.exam_table.Rows[0][6].ToString().Substring(3, 2)) || Int32.Parse(getTime().Substring(0, 2)) > Int32.Parse(Login.exam_table.Rows[0][6].ToString().Substring(0, 2)))
+                try
                 {
-                    TestBegin = true;
-
-                    var startMessaage = MessageBox.Show("?האם להתחיל את המבחן", "הודעה", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                    if (startMessaage == DialogResult.Yes)
+                    if (Int32.Parse(getTime().Substring(0, 2)) >= Int32.Parse(Login.exam_table.Rows[0][6].ToString().Substring(0, 2)) && Int32.Parse(getTime().Substring(3, 2)) >= Int32.Parse(Login.exam_table.Rows[0][6].ToString().Substring(3, 2)) || Int32.Parse(getTime().Substring(0, 2)) > Int32.Parse(Login.exam_table.Rows[0][6].ToString().Substring(0, 2)))
                     {
-                        BeginExamBTN.Image = Image.FromFile("C:\\Users\\asafb\\Desktop\\תכנות הפרוייקט\\EndExamPic.png");
+                        TestBegin = true;
 
-                        string query = "UPDATE `examination_log` SET `start_time` = @startTime, `class_start_time` = @startTime WHERE exam_id = @exam_id";
+                        var startMessaage = MessageBox.Show("?האם להתחיל את המבחן", "הודעה", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                        MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
-                        conn.Open();
-
-                        MySqlCommand cmd = new MySqlCommand(query, conn);
-                        class_start_time = getTime();
-                        cmd.Parameters.AddWithValue("@startTime", getTime());
-                        cmd.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
-                        int flg = cmd.ExecuteNonQuery();
-
-                        if (flg > 0)
+                        if (startMessaage == DialogResult.Yes)
                         {
-                            minutes = GetMinutes(Login.exam_table.Rows[0][6].ToString(), Login.exam_table.Rows[0][7].ToString());
-                            hours = GetHoures(Login.exam_table.Rows[0][6].ToString(), Login.exam_table.Rows[0][7].ToString());
+                            BeginExamBTN.Image = Image.FromFile("C:\\Users\\asafb\\Desktop\\תכנות הפרוייקט\\EndExamPic.png");
 
-                            timer1.Enabled = true;
-                            timer1.Start();
+                            string query = "UPDATE `examination_log` SET `start_time` = @startTime, `class_start_time` = @startTime WHERE exam_id = @exam_id";
 
-                            ExtraTimeBTN.Enabled = true;
+                            MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
+                            conn.Open();
 
-                            ///בודק כל הזמן המעדכן אם הכיתה התחילה בחינה - עבור הציאה לשירותים
-                            string Query1 = "SELECT * FROM examination_log WHERE exam_id = @exam_id";
-                            MySqlConnection conn1 = new MySqlConnection("server=localhost;user id=root;database=easytest");
-                            conn1.Open();
+                            MySqlCommand cmd = new MySqlCommand(query, conn);
+                            class_start_time = getTime();
+                            cmd.Parameters.AddWithValue("@startTime", getTime());
+                            cmd.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
+                            int flg = cmd.ExecuteNonQuery();
 
-                            MySqlCommand cmd1 = new MySqlCommand(Query1, conn1);
-                            cmd1.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
-                            MySqlDataAdapter da1 = new MySqlDataAdapter(cmd1);
-                            log_table.Clear();
-                            da1.Fill(Main_Screen.log_table);
-                            conn1.Close();
+                            if (flg > 0)
+                            {
+                                minutes = GetMinutes(Login.exam_table.Rows[0][6].ToString(), Login.exam_table.Rows[0][7].ToString());
+                                hours = GetHoures(Login.exam_table.Rows[0][6].ToString(), Login.exam_table.Rows[0][7].ToString());
 
-                            BeginExamBTN.Text = "סיים בחינה";
+                                timer1.Enabled = true;
+                                timer1.Start();
 
+                                ExtraTimeBTN.Enabled = true;
+
+                                ///בודק כל הזמן המעדכן אם הכיתה התחילה בחינה - עבור הציאה לשירותים
+                                string Query1 = "SELECT * FROM examination_log WHERE exam_id = @exam_id";
+                                MySqlConnection conn1 = new MySqlConnection("server=localhost;user id=root;database=easytest");
+                                conn1.Open();
+
+                                MySqlCommand cmd1 = new MySqlCommand(Query1, conn1);
+                                cmd1.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0].ItemArray[0].ToString());
+                                MySqlDataAdapter da1 = new MySqlDataAdapter(cmd1);
+                                log_table.Clear();
+                                da1.Fill(Main_Screen.log_table);
+                                conn1.Close();
+
+                                BeginExamBTN.Text = "סיים בחינה";
+
+                            }
+                            else { MessageBox.Show("שגיאה", "הודעה", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+
+
+
+                            conn.Close();
                         }
-                        else { MessageBox.Show("שגיאה", "הודעה", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
-
-
-
-                        conn.Close();
                     }
-                }
-                else
-                {
-                    MessageBox.Show("יש להמתין לשעה " + Login.exam_table.Rows[0][6].ToString().Substring(0, 5), "הערה", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                    else
+                    {
+                        MessageBox.Show("יש להמתין לשעה " + Login.exam_table.Rows[0][6].ToString().Substring(0, 5), "הערה", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
 
+                }
+                catch
+                {
+                    MessageBox.Show("שעות הבחינה חלפו, נא לפנות למדור בחינות","הערה",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                }
+                
 
 
 
@@ -293,12 +351,12 @@ namespace EasyTest_App
 
         private void Main_Screen_Load(object sender, EventArgs e)
         {
+            ReportManagerForm.StatusEvent += ReportTableInsert2;
+            MadorReportDetailes.ReportStringEvent += ReportTableInsert;
 
 
-
-
-            ////////////////////////////////////////////////////////////////////
-            labelName.Text = "." + Login.proctor_table.Rows[0][2].ToString() + " " + Login.proctor_table.Rows[0][3].ToString();
+           ////////////////////////////////////////////////////////////////////
+           labelName.Text = "." + Login.proctor_table.Rows[0][2].ToString() + " " + Login.proctor_table.Rows[0][3].ToString();
             dateLBL.Text = DateTime.Now.ToString("dd/MM/yyyy");
 
 
@@ -689,6 +747,15 @@ namespace EasyTest_App
         }
         public static int GetHoures(string start, string end)
         {
+            /*if (end.Substring(1, 1).Equals(":"))//////////חדש 
+            {
+                end = "0" + end;
+            }
+            if (start.Substring(1, 1).Equals(":"))//////////חדש 
+            {
+                start = "0" + end;
+            }*/
+
             int hoursInMin = 0;
             int minutes = 0;
             int result = 0;
@@ -721,6 +788,12 @@ namespace EasyTest_App
         }
         public static int GetMinutes(string start, string end)
         {
+            /*if (end.Substring(1, 1).Equals(":"))//////////חדש 
+            {
+                end = "0" + end;
+            }*/
+            
+
             int minutes = 0;
             int result = 0;
 
@@ -794,6 +867,7 @@ namespace EasyTest_App
             else if (startRealHour > startOrgHour)
             {
                 int x = (60 - startOrgMinutes) + startRealMinutes;
+                //if (x > 60) { x = x - 60; }/////////////// חדש
                 int endMinutes = Int32.Parse(endTimeExam.Substring(3, 2));
                 int finalMinutes = 0;
                 if (endMinutes == 0)
@@ -831,6 +905,10 @@ namespace EasyTest_App
                 }
 
             }
+            /*if (result.Substring(1,1).Equals(":"))//////////חדש 
+            {
+                result = "0" + result;
+            }*/
             return result;
 
 
@@ -991,7 +1069,6 @@ namespace EasyTest_App
 
         }
 
-            
-    
+   
     }
 }

@@ -54,7 +54,7 @@
             this.label_exam_id.AutoSize = true;
             this.label_exam_id.BackColor = System.Drawing.Color.Transparent;
             this.label_exam_id.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label_exam_id.ForeColor = System.Drawing.Color.DimGray;
+            this.label_exam_id.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label_exam_id.Location = new System.Drawing.Point(1610, 143);
             this.label_exam_id.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_exam_id.Name = "label_exam_id";
@@ -67,7 +67,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label2.Location = new System.Drawing.Point(283, 99);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -77,6 +77,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.groupBox1.Location = new System.Drawing.Point(94, 162);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
@@ -92,7 +93,7 @@
             this.label_lecturer_name.AutoSize = true;
             this.label_lecturer_name.BackColor = System.Drawing.Color.Transparent;
             this.label_lecturer_name.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label_lecturer_name.ForeColor = System.Drawing.Color.DimGray;
+            this.label_lecturer_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label_lecturer_name.Location = new System.Drawing.Point(1627, 212);
             this.label_lecturer_name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_lecturer_name.Name = "label_lecturer_name";
@@ -105,7 +106,7 @@
             this.label_proctor_name.AutoSize = true;
             this.label_proctor_name.BackColor = System.Drawing.Color.Transparent;
             this.label_proctor_name.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label_proctor_name.ForeColor = System.Drawing.Color.DimGray;
+            this.label_proctor_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label_proctor_name.Location = new System.Drawing.Point(1615, 281);
             this.label_proctor_name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_proctor_name.Name = "label_proctor_name";
@@ -118,7 +119,7 @@
             this.label_course.AutoSize = true;
             this.label_course.BackColor = System.Drawing.Color.Transparent;
             this.label_course.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label_course.ForeColor = System.Drawing.Color.DimGray;
+            this.label_course.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label_course.Location = new System.Drawing.Point(1653, 350);
             this.label_course.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_course.Name = "label_course";
@@ -131,7 +132,7 @@
             this.label_start.AutoSize = true;
             this.label_start.BackColor = System.Drawing.Color.Transparent;
             this.label_start.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label_start.ForeColor = System.Drawing.Color.DimGray;
+            this.label_start.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label_start.Location = new System.Drawing.Point(1601, 419);
             this.label_start.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_start.Name = "label_start";
@@ -144,7 +145,7 @@
             this.buttonBack.BackColor = System.Drawing.Color.Transparent;
             this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBack.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.buttonBack.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.buttonBack.Location = new System.Drawing.Point(1512, 838);
             this.buttonBack.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonBack.Name = "buttonBack";
@@ -159,7 +160,7 @@
             this.label_end.AutoSize = true;
             this.label_end.BackColor = System.Drawing.Color.Transparent;
             this.label_end.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label_end.ForeColor = System.Drawing.Color.DimGray;
+            this.label_end.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label_end.Location = new System.Drawing.Point(1649, 488);
             this.label_end.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_end.Name = "label_end";
@@ -172,7 +173,7 @@
             this.label_additionalD.AutoSize = true;
             this.label_additionalD.BackColor = System.Drawing.Color.Transparent;
             this.label_additionalD.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label_additionalD.ForeColor = System.Drawing.Color.DimGray;
+            this.label_additionalD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label_additionalD.Location = new System.Drawing.Point(1585, 555);
             this.label_additionalD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_additionalD.Name = "label_additionalD";
@@ -184,7 +185,7 @@
             // 
             this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox1.Font = new System.Drawing.Font("Yu Gothic UI", 12F);
-            this.listBox1.ForeColor = System.Drawing.Color.DimGray;
+            this.listBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 32;
             this.listBox1.Location = new System.Drawing.Point(1146, 608);
@@ -199,7 +200,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label1.Location = new System.Drawing.Point(1082, 143);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -213,7 +214,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label3.Location = new System.Drawing.Point(974, 212);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
@@ -227,7 +228,7 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label4.ForeColor = System.Drawing.Color.DimGray;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label4.Location = new System.Drawing.Point(937, 281);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
@@ -241,7 +242,7 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label5.ForeColor = System.Drawing.Color.DimGray;
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label5.Location = new System.Drawing.Point(937, 350);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
@@ -255,7 +256,7 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label6.ForeColor = System.Drawing.Color.DimGray;
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label6.Location = new System.Drawing.Point(1029, 419);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
@@ -269,7 +270,7 @@
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label7.ForeColor = System.Drawing.Color.DimGray;
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label7.Location = new System.Drawing.Point(1077, 488);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
@@ -283,7 +284,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label8.ForeColor = System.Drawing.Color.DimGray;
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label8.Location = new System.Drawing.Point(1627, 71);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
@@ -296,7 +297,7 @@
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label9.ForeColor = System.Drawing.Color.DimGray;
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label9.Location = new System.Drawing.Point(885, 71);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
@@ -309,7 +310,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
             this.Controls.Add(this.groupBox1);

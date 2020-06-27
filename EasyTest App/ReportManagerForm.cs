@@ -12,12 +12,17 @@ using MySql.Data.MySqlClient;
 
 namespace EasyTest_App
 {
+
+    
+
     public partial class ReportManagerForm : Form
     {
         MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
         DataTable dt1 = new DataTable();
         DataTable dt2 = new DataTable();
         DataTable dt3 = new DataTable();
+        public delegate void ReportStatus(string StatusString, string Details);
+        public static event ReportStatus StatusEvent;
 
 
         public ReportManagerForm()
@@ -99,6 +104,7 @@ namespace EasyTest_App
                     {
                         ReportId = dt1.Rows[i][0].ToString();
                         dt2.Rows.Add(dt1.Rows[i].ItemArray);
+                        StatusEvent?.Invoke("בטיפול", dt1.Rows[i][6].ToString());
                         dt1.Rows.Remove(dt1.Rows[i]);
                         //dt2.NewRow(); //= dt1.Rows[i];
 
@@ -137,7 +143,8 @@ namespace EasyTest_App
                     {
                         ReportId = dt2.Rows[i][0].ToString();
                         dt3.Rows.Add(dt2.Rows[i].ItemArray);
-                        dt2.Rows.Remove(dt2.Rows[i]);
+                        StatusEvent?.Invoke("טופל", dt2.Rows[i][6].ToString());
+                        dt2.Rows.Remove(dt2.Rows[i]);                     
                         //dt2.NewRow(); //= dt1.Rows[i];
 
                     }

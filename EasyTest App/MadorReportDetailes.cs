@@ -19,19 +19,24 @@ namespace EasyTest_App
         {
             InitializeComponent();
         }
+        public delegate void ReportString(string ReportDetails);
+        public static event ReportString ReportStringEvent;
 
         private void sendReportBTN_Click(object sender, EventArgs e)
         {
             if (DBManager.SetMadorReport(MadorReport.typeOfReport, textBoxRepot.Text))
             {
                 MessageBox.Show("דיווח נשלח בהצלחה", "הודעה", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ReportStringEvent?.Invoke(textBoxRepot.Text);
+
+
             }
             else
             {
                 MessageBox.Show("תקלה בשליחת הדיווח, יש ליצור קשר טלפוני עם מדור בחינות", "שגיאה", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-
+            
         }
      
 

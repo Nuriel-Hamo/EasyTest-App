@@ -101,28 +101,11 @@ namespace EasyTest_App
             }
         }
 
-        private void ToolStripMenuItemExamManage_Click(object sender, EventArgs e)
-        {
-            button1.Text = "הוספת בחינה חדשה";
-            buttonAddProctor.Text = "עדכן בחינה קיימת";
-            buttonSearchExam.Text = "מחק בחינה";
-            ExamsBTN.Visible = true;
-        }
+       
 
-        private void ToolStripMenuItemProctorManage_Click(object sender, EventArgs e)
-        {
-            ExamsBTN.Visible = false;
-            button1.Text = "הוספת משגיח בחינה";
-            buttonAddProctor.Text = "עדכן משגיח בחינה קיים";
-            buttonSearchExam.Text = "מחיקת משגיח בחינה";
-        }
+    
 
-        private void ToolStripMenuItemSearch_Click(object sender, EventArgs e)
-        {
-            ExamsBTN.Visible = false;
-            Hide();
-            admSearch.Show();
-        }
+   
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
@@ -143,8 +126,8 @@ namespace EasyTest_App
 
 
 
-            panel1.BackColor = Color.FromArgb(100, 0, 0, 0);
-            menuStrip1.BackColor = Color.FromArgb(100, 0, 0, 0);
+            //panel1.BackColor = Color.FromArgb(100, 0, 0, 0);
+            //menuStrip1.BackColor = Color.FromArgb(100, 0, 0, 0);
             string a = Login.admin_id.ToString();
             con.Open();
             string Query = "SELECT `first_name` FROM `proctor` WHERE `proctor`.`proctor_id`=@admin";
@@ -167,10 +150,7 @@ namespace EasyTest_App
             login.Show();
         }
 
-        private void AdminForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            SqlDependency.Stop(connectionString);
-        }
+      
 
         private void reportAlertLBL_Click(object sender, EventArgs e)
         {
@@ -179,7 +159,32 @@ namespace EasyTest_App
             Hide();
         }
 
-        private void EventM_Click(object sender, EventArgs e)
+     
+
+        private void ExamsBTN_Click(object sender, EventArgs e)
+        {
+            ExamSummary es = new ExamSummary();
+            es.Show();
+            Hide();
+        }
+
+        private void BTNExamManage_Click(object sender, EventArgs e)
+        {
+            button1.Text = "הוספת בחינה חדשה";
+            buttonAddProctor.Text = "עדכן בחינה קיימת";
+            buttonSearchExam.Text = "מחק בחינה";
+            ExamsBTN.Visible = true;
+        }
+
+        private void BTNProctorManage_Click(object sender, EventArgs e)
+        {
+            ExamsBTN.Visible = false;
+            button1.Text = "הוספת משגיח בחינה";
+            buttonAddProctor.Text = "עדכן משגיח בחינה קיים";
+            buttonSearchExam.Text = "מחיקת משגיח בחינה";
+        }
+
+        private void BTNEventM_Click(object sender, EventArgs e)
         {
             ExamsBTN.Visible = false;
             ReportManagerForm rmf = new ReportManagerForm();
@@ -187,10 +192,22 @@ namespace EasyTest_App
             Hide();
         }
 
-        private void ExamsBTN_Click(object sender, EventArgs e)
+        private void BTNSearch_Click(object sender, EventArgs e)
         {
-            ExamSummary es = new ExamSummary();
-            es.Show();
+            ExamsBTN.Visible = false;
+            Hide();
+            admSearch.Show();
+        }
+
+        private void ClosePic_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
             Hide();
         }
     }

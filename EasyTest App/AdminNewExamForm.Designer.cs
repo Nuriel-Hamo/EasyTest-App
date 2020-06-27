@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminNewExamForm));
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxCourseCode = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,7 +53,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.comboBoxMoed = new System.Windows.Forms.ComboBox();
             this.errorProviderExam = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderExam)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -60,7 +63,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label1.Location = new System.Drawing.Point(1640, 21);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -72,7 +75,7 @@
             // textBoxCourseCode
             // 
             this.textBoxCourseCode.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
-            this.textBoxCourseCode.ForeColor = System.Drawing.Color.DimGray;
+            this.textBoxCourseCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.textBoxCourseCode.Location = new System.Drawing.Point(1483, 143);
             this.textBoxCourseCode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxCourseCode.Multiline = true;
@@ -88,7 +91,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label2.Location = new System.Drawing.Point(1691, 132);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -102,7 +105,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label3.Location = new System.Drawing.Point(1628, 209);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
@@ -114,7 +117,7 @@
             // textBox_proctorID
             // 
             this.textBox_proctorID.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
-            this.textBox_proctorID.ForeColor = System.Drawing.Color.DimGray;
+            this.textBox_proctorID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.textBox_proctorID.Location = new System.Drawing.Point(1420, 220);
             this.textBox_proctorID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_proctorID.Multiline = true;
@@ -130,7 +133,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label4.Location = new System.Drawing.Point(1640, 286);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
@@ -142,7 +145,7 @@
             // textBox_lecturerID
             // 
             this.textBox_lecturerID.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
-            this.textBox_lecturerID.ForeColor = System.Drawing.Color.DimGray;
+            this.textBox_lecturerID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.textBox_lecturerID.Location = new System.Drawing.Point(1432, 297);
             this.textBox_lecturerID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_lecturerID.Multiline = true;
@@ -158,7 +161,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label5.Location = new System.Drawing.Point(1628, 440);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
@@ -170,7 +173,7 @@
             // textBox_exam_date
             // 
             this.textBox_exam_date.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
-            this.textBox_exam_date.ForeColor = System.Drawing.Color.DimGray;
+            this.textBox_exam_date.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.textBox_exam_date.Location = new System.Drawing.Point(1420, 451);
             this.textBox_exam_date.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_exam_date.Multiline = true;
@@ -187,7 +190,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label6.Location = new System.Drawing.Point(1627, 517);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
@@ -199,7 +202,7 @@
             // textBox_start_hour
             // 
             this.textBox_start_hour.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
-            this.textBox_start_hour.ForeColor = System.Drawing.Color.DimGray;
+            this.textBox_start_hour.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.textBox_start_hour.Location = new System.Drawing.Point(1419, 528);
             this.textBox_start_hour.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_start_hour.Multiline = true;
@@ -213,7 +216,7 @@
             // textBox_end_hour
             // 
             this.textBox_end_hour.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
-            this.textBox_end_hour.ForeColor = System.Drawing.Color.DimGray;
+            this.textBox_end_hour.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.textBox_end_hour.Location = new System.Drawing.Point(1467, 605);
             this.textBox_end_hour.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_end_hour.Multiline = true;
@@ -229,7 +232,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label7.Location = new System.Drawing.Point(1675, 594);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
@@ -244,7 +247,7 @@
             this.button_confirm.Enabled = false;
             this.button_confirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_confirm.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.button_confirm.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button_confirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.button_confirm.Location = new System.Drawing.Point(1406, 750);
             this.button_confirm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_confirm.Name = "button_confirm";
@@ -259,7 +262,7 @@
             this.button_reset.BackColor = System.Drawing.Color.Transparent;
             this.button_reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_reset.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.button_reset.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button_reset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.button_reset.Location = new System.Drawing.Point(1213, 750);
             this.button_reset.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_reset.Name = "button_reset";
@@ -287,7 +290,7 @@
             // textBox_class_number
             // 
             this.textBox_class_number.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
-            this.textBox_class_number.ForeColor = System.Drawing.Color.DimGray;
+            this.textBox_class_number.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.textBox_class_number.Location = new System.Drawing.Point(1441, 374);
             this.textBox_class_number.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_class_number.Multiline = true;
@@ -303,7 +306,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label8.Location = new System.Drawing.Point(1649, 363);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
@@ -314,19 +317,22 @@
             // 
             // listBox1
             // 
+            this.listBox1.Font = new System.Drawing.Font("Yu Gothic UI", 12F);
+            this.listBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
+            this.listBox1.ItemHeight = 32;
             this.listBox1.Location = new System.Drawing.Point(1035, 142);
             this.listBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listBox1.Name = "listBox1";
             this.listBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.listBox1.Size = new System.Drawing.Size(324, 144);
+            this.listBox1.Size = new System.Drawing.Size(324, 132);
             this.listBox1.TabIndex = 18;
             this.listBox1.DoubleClick += new System.EventHandler(this.ListBox1_SelectedValueChanged);
             this.listBox1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ListBox1_MouseDoubleClick);
             // 
             // calendar
             // 
+            this.calendar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.calendar.Location = new System.Drawing.Point(1053, 451);
             this.calendar.Margin = new System.Windows.Forms.Padding(14);
             this.calendar.MaxSelectionCount = 1;
@@ -341,7 +347,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.label9.Location = new System.Drawing.Point(1570, 671);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
@@ -353,7 +359,7 @@
             // comboBoxMoed
             // 
             this.comboBoxMoed.Font = new System.Drawing.Font("Yu Gothic UI", 12F);
-            this.comboBoxMoed.ForeColor = System.Drawing.Color.DimGray;
+            this.comboBoxMoed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.comboBoxMoed.FormattingEnabled = true;
             this.comboBoxMoed.Items.AddRange(new object[] {
             "מועד א",
@@ -372,13 +378,24 @@
             // 
             this.errorProviderExam.ContainerControl = this;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(-686, -54);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1557, 1110);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 22;
+            this.pictureBox2.TabStop = false;
+            // 
             // AdminNewExamForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.comboBoxMoed);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label9);
@@ -408,6 +425,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminNewExamForm_FormClosing);
             this.Load += new System.EventHandler(this.AdminNewExamForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderExam)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -438,5 +456,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox comboBoxMoed;
         private System.Windows.Forms.ErrorProvider errorProviderExam;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
