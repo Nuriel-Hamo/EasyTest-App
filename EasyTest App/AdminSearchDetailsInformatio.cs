@@ -62,7 +62,7 @@ namespace EasyTest_App
                 label5.Text = getCourse(dr["course_id"].ToString());
                 label6.Text = dr["start_time"].ToString().Substring(0,5);
                 label7.Text = dr["end_time"].ToString().Substring(0, 5);
-                label8.Text = getStudent(dr["student_id"].ToString());
+                label9.Text = getStudent(dr["student_id"].ToString());
             }
             con.Close();
             

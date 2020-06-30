@@ -109,6 +109,7 @@ namespace EasyTest_App
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
+            panelLineExam.Visible = true;
             DBManager.DBEvent += ReportNotification;
 
             string Query1 = "SELECT * FROM exam_report WHERE status = '0' OR status = '1'";
@@ -170,6 +171,8 @@ namespace EasyTest_App
 
         private void BTNExamManage_Click(object sender, EventArgs e)
         {
+            panelLineExam.Visible = true;
+            panelLineProctors.Visible = false;
             button1.Text = "הוספת בחינה חדשה";
             buttonAddProctor.Text = "עדכן בחינה קיימת";
             buttonSearchExam.Text = "מחק בחינה";
@@ -178,6 +181,8 @@ namespace EasyTest_App
 
         private void BTNProctorManage_Click(object sender, EventArgs e)
         {
+            panelLineProctors.Visible = true;
+            panelLineExam.Visible = false;
             ExamsBTN.Visible = false;
             button1.Text = "הוספת משגיח בחינה";
             buttonAddProctor.Text = "עדכן משגיח בחינה קיים";
@@ -199,16 +204,14 @@ namespace EasyTest_App
             admSearch.Show();
         }
 
-        private void ClosePic_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
+        
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Login login = new Login();
             login.Show();
             Hide();
         }
+
+   
     }
 }

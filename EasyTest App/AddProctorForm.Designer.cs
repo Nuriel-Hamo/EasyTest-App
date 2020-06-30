@@ -83,12 +83,12 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
-            this.label2.Location = new System.Drawing.Point(1645, 144);
+            this.label2.Location = new System.Drawing.Point(1756, 144);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 48);
+            this.label2.Size = new System.Drawing.Size(66, 48);
             this.label2.TabIndex = 1;
-            this.label2.Text = "ת.ז משגיח";
+            this.label2.Text = "ת.ז";
             // 
             // label3
             // 
@@ -97,12 +97,12 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
-            this.label3.Location = new System.Drawing.Point(1550, 290);
+            this.label3.Location = new System.Drawing.Point(1653, 290);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(272, 48);
+            this.label3.Size = new System.Drawing.Size(169, 48);
             this.label3.TabIndex = 2;
-            this.label3.Text = "שם פרטי משגיח";
+            this.label3.Text = ":שם פרטי";
             // 
             // label4
             // 
@@ -111,24 +111,24 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
-            this.label4.Location = new System.Drawing.Point(1564, 217);
+            this.label4.Location = new System.Drawing.Point(1688, 217);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(258, 48);
+            this.label4.Size = new System.Drawing.Size(134, 48);
             this.label4.TabIndex = 3;
-            this.label4.Text = ":סיסמת מערכת";
+            this.label4.Text = ":סיסמה";
             // 
             // textBoxID
             // 
             this.textBoxID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxID.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
             this.textBoxID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
-            this.textBoxID.Location = new System.Drawing.Point(1271, 155);
+            this.textBoxID.Location = new System.Drawing.Point(1382, 149);
             this.textBoxID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxID.Multiline = true;
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBoxID.Size = new System.Drawing.Size(366, 37);
+            this.textBoxID.Size = new System.Drawing.Size(366, 49);
             this.textBoxID.TabIndex = 1;
             this.textBoxID.Leave += new System.EventHandler(this.textBoxID_Leave);
             // 
@@ -137,12 +137,12 @@
             this.textBoxFName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxFName.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
             this.textBoxFName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
-            this.textBoxFName.Location = new System.Drawing.Point(1176, 298);
+            this.textBoxFName.Location = new System.Drawing.Point(1279, 295);
             this.textBoxFName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxFName.Multiline = true;
             this.textBoxFName.Name = "textBoxFName";
             this.textBoxFName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBoxFName.Size = new System.Drawing.Size(366, 37);
+            this.textBoxFName.Size = new System.Drawing.Size(366, 49);
             this.textBoxFName.TabIndex = 3;
             // 
             // textBoxPass
@@ -150,12 +150,12 @@
             this.textBoxPass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxPass.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
             this.textBoxPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
-            this.textBoxPass.Location = new System.Drawing.Point(1190, 225);
+            this.textBoxPass.Location = new System.Drawing.Point(1314, 222);
             this.textBoxPass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxPass.Multiline = true;
             this.textBoxPass.Name = "textBoxPass";
             this.textBoxPass.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBoxPass.Size = new System.Drawing.Size(366, 37);
+            this.textBoxPass.Size = new System.Drawing.Size(366, 49);
             this.textBoxPass.TabIndex = 2;
             // 
             // buttonAdd
@@ -178,12 +178,12 @@
             this.textBoxLName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxLName.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
             this.textBoxLName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
-            this.textBoxLName.Location = new System.Drawing.Point(1131, 371);
+            this.textBoxLName.Location = new System.Drawing.Point(1234, 368);
             this.textBoxLName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxLName.Multiline = true;
             this.textBoxLName.Name = "textBoxLName";
             this.textBoxLName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBoxLName.Size = new System.Drawing.Size(366, 37);
+            this.textBoxLName.Size = new System.Drawing.Size(366, 49);
             this.textBoxLName.TabIndex = 4;
             // 
             // label5
@@ -193,24 +193,24 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
-            this.label5.Location = new System.Drawing.Point(1507, 363);
+            this.label5.Location = new System.Drawing.Point(1608, 363);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(317, 48);
+            this.label5.Size = new System.Drawing.Size(214, 48);
             this.label5.TabIndex = 9;
-            this.label5.Text = "שם משפחה משגיח";
+            this.label5.Text = ":שם משפחה";
             // 
             // textBoxPhoneNum
             // 
             this.textBoxPhoneNum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxPhoneNum.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
             this.textBoxPhoneNum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
-            this.textBoxPhoneNum.Location = new System.Drawing.Point(1131, 444);
+            this.textBoxPhoneNum.Location = new System.Drawing.Point(1311, 441);
             this.textBoxPhoneNum.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxPhoneNum.Multiline = true;
             this.textBoxPhoneNum.Name = "textBoxPhoneNum";
             this.textBoxPhoneNum.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBoxPhoneNum.Size = new System.Drawing.Size(366, 37);
+            this.textBoxPhoneNum.Size = new System.Drawing.Size(366, 49);
             this.textBoxPhoneNum.TabIndex = 5;
             this.textBoxPhoneNum.Leave += new System.EventHandler(this.textBoxPhoneNum_Leave);
             // 
@@ -221,12 +221,12 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
-            this.label6.Location = new System.Drawing.Point(1505, 436);
+            this.label6.Location = new System.Drawing.Point(1685, 436);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(319, 48);
+            this.label6.Size = new System.Drawing.Size(137, 48);
             this.label6.TabIndex = 11;
-            this.label6.Text = "מספר טלפון משגיח";
+            this.label6.Text = ":פלאפון";
             // 
             // comboBox1
             // 
@@ -261,26 +261,32 @@
             // errorProviderID
             // 
             this.errorProviderID.ContainerControl = this;
+            this.errorProviderID.RightToLeft = true;
             // 
             // errorProviderPass
             // 
             this.errorProviderPass.ContainerControl = this;
+            this.errorProviderPass.RightToLeft = true;
             // 
             // errorProviderFName
             // 
             this.errorProviderFName.ContainerControl = this;
+            this.errorProviderFName.RightToLeft = true;
             // 
             // errorProviderLName
             // 
             this.errorProviderLName.ContainerControl = this;
+            this.errorProviderLName.RightToLeft = true;
             // 
             // errorProviderPhoneNum
             // 
             this.errorProviderPhoneNum.ContainerControl = this;
+            this.errorProviderPhoneNum.RightToLeft = true;
             // 
             // errorProviderType
             // 
             this.errorProviderType.ContainerControl = this;
+            this.errorProviderType.RightToLeft = true;
             // 
             // buttonBack
             // 

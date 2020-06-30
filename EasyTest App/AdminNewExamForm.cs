@@ -39,7 +39,7 @@ namespace EasyTest_App
         }
         private Boolean notEmpty()
         {
-            if (textBox_proctorID.Text != "" && textBox_lecturerID.Text != "" && textBox_exam_date.Text != "" && textBox_start_hour.Text != "" && textBox_end_hour.Text != "" && comboBoxMoed.SelectedItem != null)
+            if (textBox_proctorID.Text != "" && textBox_lecturerID.Text != "" && textBox_exam_date.Text != "" && comboBox_start_hour.Text != "" && comboBox_end_hour.Text != "" && comboBoxMoed.SelectedItem != null)
             {
                     return true;
             }
@@ -84,23 +84,23 @@ namespace EasyTest_App
                 button_confirm.Enabled = true;
         }
 
-        private void TextBox_start_hour_TextChanged(object sender, EventArgs e)
+        /*private void TextBox_start_hour_TextChanged(object sender, EventArgs e)
         {
             if (textBox_start_hour.Text == "")
                 button_confirm.Enabled = false;
             if (notEmpty())
                 button_confirm.Enabled = true;
 
-        }
+        }*/
 
-        private void TextBox_end_hour_TextChanged(object sender, EventArgs e)
+        /*private void TextBox_end_hour_TextChanged(object sender, EventArgs e)
         {
 
             if (textBox_end_hour.Text == "")
                 button_confirm.Enabled = false;
             if (notEmpty())
                 button_confirm.Enabled = true;
-        }
+        }*/
 
         private void Button_back_Click(object sender, EventArgs e)
         {
@@ -114,8 +114,8 @@ namespace EasyTest_App
             textBox_proctorID.Text = "";
             textBox_lecturerID.Text = "";
             textBox_exam_date.Text = "";
-            textBox_start_hour.Text = "";
-            textBox_end_hour.Text = "";
+            comboBox_start_hour.Text = "";
+            comboBox_end_hour.Text = "";
             textBox_class_number.Text = "";
             comboBoxMoed.Text = "";
         }
@@ -128,7 +128,7 @@ namespace EasyTest_App
                 if (ExamValidtion())
                 {
 
-                    string addExamQuery = "INSERT INTO `exam` (`proctor_id`, `lecturer_id`, `course_id`, `class_num`, `test_date`, `start_time`, `end_time`, `exam_period`) VALUES (@textBox_proctorID, @textBox_lecturerID, @textBoxCourseCode, @textBox_class_number,@textBox_exam_date, @textBox_start_hour, @textBox_end_hour,@comboBoxMoed)";
+                    string addExamQuery = "INSERT INTO `exam` (`proctor_id`, `lecturer_id`, `course_id`, `class_num`, `test_date`, `start_time`, `end_time`, `exam_period`) VALUES (@textBox_proctorID, @textBox_lecturerID, @textBoxCourseCode, @textBox_class_number,@textBox_exam_date, @comboBox_start_hour, @comboBox_end_hour,@comboBoxMoed)";
                     MySqlConnection con2 = new MySqlConnection("server=localhost;user id=root;database=easytest");
                     con2.Open();
                     MySqlCommand cmd = new MySqlCommand(addExamQuery, con2);
@@ -140,8 +140,8 @@ namespace EasyTest_App
                     cmd.Parameters.AddWithValue("@textBoxCourseCode", textBoxCourseCode.Text);
                     cmd.Parameters.AddWithValue("@textBox_class_number", textBox_class_number.Text);
                     cmd.Parameters.AddWithValue("@textBox_exam_date", dateChaging(textBox_exam_date.Text));
-                    cmd.Parameters.AddWithValue("@textBox_start_hour", textBox_start_hour.Text);
-                    cmd.Parameters.AddWithValue("@textBox_end_hour", textBox_end_hour.Text);
+                    cmd.Parameters.AddWithValue("@comboBox_start_hour", comboBox_start_hour.Text);
+                    cmd.Parameters.AddWithValue("@comboBox_end_hour", comboBox_end_hour.Text);
                     cmd.Parameters.AddWithValue("@comboBoxMoed", WhichExamPeriodIs());
                     cmd.ExecuteNonQuery();
 
@@ -162,7 +162,7 @@ namespace EasyTest_App
                     if (ExamValidtion())
                     {
 
-                        string addExamQuery = "UPDATE `exam` SET `proctor_id` = @textBox_proctorID, `course_id` = @textBoxCourseCode, `class_num` = @textBox_class_number, `test_date` = @textBox_exam_date,`start_time` = @textBox_start_hour, `end_time` = @textBox_end_hour, `exam_period` = @comboBoxMoed WHERE `exam`.`exam_id` = @exam";
+                        string addExamQuery = "UPDATE `exam` SET `proctor_id` = @textBox_proctorID, `course_id` = @textBoxCourseCode, `class_num` = @textBox_class_number, `test_date` = @textBox_exam_date,`start_time` = @comboBox_start_hour, `end_time` = @comboBox_end_hour, `exam_period` = @comboBoxMoed WHERE `exam`.`exam_id` = @exam";
                         MySqlConnection con2 = new MySqlConnection("server=localhost;user id=root;database=easytest");
                         con2.Open();
                         MySqlCommand cmd = new MySqlCommand(addExamQuery, con2);
@@ -174,8 +174,8 @@ namespace EasyTest_App
                         cmd.Parameters.AddWithValue("@textBoxCourseCode", textBoxCourseCode.Text);
                         cmd.Parameters.AddWithValue("@textBox_class_number", textBox_class_number.Text);
                         cmd.Parameters.AddWithValue("@textBox_exam_date", dateChaging(textBox_exam_date.Text));
-                        cmd.Parameters.AddWithValue("@textBox_start_hour", textBox_start_hour.Text);
-                        cmd.Parameters.AddWithValue("@textBox_end_hour", textBox_end_hour.Text);
+                        cmd.Parameters.AddWithValue("@comboBox_start_hour", comboBox_start_hour.Text);
+                        cmd.Parameters.AddWithValue("@comboBox_end_hour", comboBox_end_hour.Text);
                         cmd.Parameters.AddWithValue("@comboBoxMoed", WhichExamPeriodIs());
                         cmd.Parameters.AddWithValue("@exam", AdminUpdateForm.exam);
                         cmd.ExecuteNonQuery();
@@ -343,7 +343,7 @@ namespace EasyTest_App
             
         }
 
-        private void TextBox_start_hour_Leave(object sender, EventArgs e)
+        /*private void TextBox_start_hour_Leave(object sender, EventArgs e)
         {
             if (!rx.IsMatch(textBox_start_hour.Text))
             {
@@ -353,9 +353,9 @@ namespace EasyTest_App
                 errorProviderExam.Clear();
             if (notEmpty())
                 button_confirm.Enabled = true;
-        }
+        }*/
 
-        private void TextBox_end_hour_Leave(object sender, EventArgs e)
+        /*private void TextBox_end_hour_Leave(object sender, EventArgs e)
         {
 
             if (!rx.IsMatch(textBox_end_hour.Text))
@@ -370,7 +370,7 @@ namespace EasyTest_App
                 if (notEmpty() && isOK)
                     button_confirm.Enabled = true;
             }
-        }
+        }*/
         private string dateChaging(string date)
         {
             
@@ -404,29 +404,39 @@ namespace EasyTest_App
         }
         private bool HourValidiation()
         {
-
-            string s = textBox_start_hour.Text.Substring(0, 2), e = textBox_end_hour.Text.Substring(0, 2);
-
-            int start = 0, end = 0;
-            start = Convert.ToInt32(s);
-            end = Convert.ToInt32(e);
-
-            if (start >= end)
+            if (!comboBox_start_hour.Text.Equals(""))
             {
-                errorProviderExam.SetError(textBox_end_hour,"שעת סיום לא יכולה להיות קטנה/שווה לשעת ההתחלה");
+                string s = comboBox_start_hour.Text.Substring(0, 2), e = comboBox_end_hour.Text.Substring(0, 2);
+
+                int start = 0, end = 0;
+                start = Convert.ToInt32(s);
+                end = Convert.ToInt32(e);
+
+                if (start >= end)
+                {
+                    errorProviderExam.SetError(comboBox_end_hour, "שעת סיום לא יכולה להיות קטנה/שווה לשעת ההתחלה");
+                    return false;
+                }
+                else if (end - start < 2)
+                {
+                    errorProviderExam.SetError(comboBox_end_hour, "זמן מינימלי למבחן הוא שעתיים ומעלה");
+                    return false;
+                }
+                else if (end - start > 3)
+                {
+                    errorProviderExam.SetError(comboBox_end_hour, "זמן המבחן שהוקלד גבוה מדי אנא הזן שנית");
+                    return false;
+                }
+                return true;
+            }
+            else
+            {
+
+                errorProviderExam.SetError(comboBox_end_hour, "יש להזין שעת התחלה");
+
                 return false;
             }
-            else if (end - start < 2)
-            {
-                errorProviderExam.SetError(textBox_end_hour,"זמן מינימלי למבחן הוא שעתיים ומעלה");
-                return false;
-            }
-            else if (end - start > 3)
-            {
-                errorProviderExam.SetError(textBox_end_hour,"זמן המבחן שהוקלד גבוה מדי אנא הזן שנית");
-                return false;
-            }
-            return true;
+           
         }
 
         private void comboBoxMoed_Leave(object sender, EventArgs e)
@@ -479,10 +489,10 @@ namespace EasyTest_App
                 {
                     if (dr["test_date"].ToString().Substring(0, 10).Equals(textBox_exam_date.Text))
                     {
-                        int currentH = Convert.ToInt32(textBox_end_hour.Text.Substring(0,1));
+                        int currentH = Convert.ToInt32(comboBox_end_hour.Text.Substring(0,1));
                         if (endH - currentH <= 1)
                         {
-                            errorProviderExam.SetError(textBox_start_hour, "למשגיח זה קיימת חפיפה בשעות עם בחינה אחרת אנא בחר שעה אחרת");
+                            errorProviderExam.SetError(comboBox_start_hour, "למשגיח זה קיימת חפיפה בשעות עם בחינה אחרת אנא בחר שעה אחרת");
                             con.Close();
                             return false;
                         }
@@ -551,8 +561,8 @@ namespace EasyTest_App
                     textBoxCourseCode.Text = dr["course_id"].ToString();
                     textBox_class_number.Text = dr["class_num"].ToString();
                     textBox_exam_date.Text = dr["test_date"].ToString().Substring(0,10);
-                    textBox_start_hour.Text = dr["start_time"].ToString().Substring(0, 5);
-                    textBox_end_hour.Text = dr["end_time"].ToString().Substring(0, 5);
+                    comboBox_start_hour.Text = dr["start_time"].ToString().Substring(0, 5);
+                    comboBox_end_hour.Text = dr["end_time"].ToString().Substring(0, 5);
                     comboBoxMoed.Text = ChangeMoed(dr["exam_period"].ToString());
                 }
                 AdminUpdateForm.needUpd = false;
@@ -586,7 +596,7 @@ namespace EasyTest_App
         }
         private bool somethingChanged()
         {
-            if (textBox_proctorID.Text.Equals(data[0]) && textBox_lecturerID.Text.Equals(data[1]) && textBoxCourseCode.Text.Equals(data[2]) && textBox_class_number.Text.Equals(data[3]) && textBox_exam_date.Text.Equals(data[4]) && textBox_start_hour.Text.Equals(data[5]) && textBox_end_hour.Text.Equals(data[6]) && comboBoxMoed.Text.Equals(data[7]))
+            if (textBox_proctorID.Text.Equals(data[0]) && textBox_lecturerID.Text.Equals(data[1]) && textBoxCourseCode.Text.Equals(data[2]) && textBox_class_number.Text.Equals(data[3]) && textBox_exam_date.Text.Equals(data[4]) && comboBox_start_hour.Text.Equals(data[5]) && comboBox_end_hour.Text.Equals(data[6]) && comboBoxMoed.Text.Equals(data[7]))
                 return false;
             return true;
         }
@@ -641,6 +651,23 @@ namespace EasyTest_App
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBox_start_hour_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox_start_hour.Text == "")
+                button_confirm.Enabled = false;
+            if (notEmpty())
+                button_confirm.Enabled = true;
+        }
+
+        private void comboBox_end_hour_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            HourValidiation();
+            if (comboBox_end_hour.Text == "")
+                button_confirm.Enabled = false;
+            if (notEmpty())
+                button_confirm.Enabled = true;
         }
     }
 }

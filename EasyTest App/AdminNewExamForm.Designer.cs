@@ -40,8 +40,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox_exam_date = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox_start_hour = new System.Windows.Forms.TextBox();
-            this.textBox_end_hour = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.button_confirm = new System.Windows.Forms.Button();
             this.button_reset = new System.Windows.Forms.Button();
@@ -54,6 +52,8 @@
             this.comboBoxMoed = new System.Windows.Forms.ComboBox();
             this.errorProviderExam = new System.Windows.Forms.ErrorProvider(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.comboBox_start_hour = new System.Windows.Forms.ComboBox();
+            this.comboBox_end_hour = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderExam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -76,12 +76,12 @@
             // 
             this.textBoxCourseCode.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
             this.textBoxCourseCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
-            this.textBoxCourseCode.Location = new System.Drawing.Point(1483, 143);
+            this.textBoxCourseCode.Location = new System.Drawing.Point(1483, 137);
             this.textBoxCourseCode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxCourseCode.Multiline = true;
             this.textBoxCourseCode.Name = "textBoxCourseCode";
             this.textBoxCourseCode.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBoxCourseCode.Size = new System.Drawing.Size(200, 37);
+            this.textBoxCourseCode.Size = new System.Drawing.Size(200, 46);
             this.textBoxCourseCode.TabIndex = 1;
             this.textBoxCourseCode.TextChanged += new System.EventHandler(this.TextBoxCourseCode_TextChanged);
             this.textBoxCourseCode.Enter += new System.EventHandler(this.TextBoxCourseCode_Enter);
@@ -118,12 +118,12 @@
             // 
             this.textBox_proctorID.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
             this.textBox_proctorID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
-            this.textBox_proctorID.Location = new System.Drawing.Point(1420, 220);
+            this.textBox_proctorID.Location = new System.Drawing.Point(1420, 214);
             this.textBox_proctorID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_proctorID.Multiline = true;
             this.textBox_proctorID.Name = "textBox_proctorID";
             this.textBox_proctorID.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox_proctorID.Size = new System.Drawing.Size(200, 37);
+            this.textBox_proctorID.Size = new System.Drawing.Size(200, 46);
             this.textBox_proctorID.TabIndex = 4;
             this.textBox_proctorID.TextChanged += new System.EventHandler(this.TextBox_proctorID_TextChanged);
             this.textBox_proctorID.Enter += new System.EventHandler(this.TextBox_proctorID_Enter);
@@ -146,12 +146,12 @@
             // 
             this.textBox_lecturerID.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
             this.textBox_lecturerID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
-            this.textBox_lecturerID.Location = new System.Drawing.Point(1432, 297);
+            this.textBox_lecturerID.Location = new System.Drawing.Point(1432, 291);
             this.textBox_lecturerID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_lecturerID.Multiline = true;
             this.textBox_lecturerID.Name = "textBox_lecturerID";
             this.textBox_lecturerID.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox_lecturerID.Size = new System.Drawing.Size(200, 37);
+            this.textBox_lecturerID.Size = new System.Drawing.Size(200, 46);
             this.textBox_lecturerID.TabIndex = 6;
             this.textBox_lecturerID.TextChanged += new System.EventHandler(this.TextBox_lecturerID_TextChanged);
             this.textBox_lecturerID.Enter += new System.EventHandler(this.TextBox_lecturerID_Enter);
@@ -174,12 +174,12 @@
             // 
             this.textBox_exam_date.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
             this.textBox_exam_date.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
-            this.textBox_exam_date.Location = new System.Drawing.Point(1420, 451);
+            this.textBox_exam_date.Location = new System.Drawing.Point(1420, 445);
             this.textBox_exam_date.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_exam_date.Multiline = true;
             this.textBox_exam_date.Name = "textBox_exam_date";
             this.textBox_exam_date.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox_exam_date.Size = new System.Drawing.Size(200, 37);
+            this.textBox_exam_date.Size = new System.Drawing.Size(200, 46);
             this.textBox_exam_date.TabIndex = 8;
             this.textBox_exam_date.TextChanged += new System.EventHandler(this.TextBox_exam_date_TextChanged);
             this.textBox_exam_date.Enter += new System.EventHandler(this.TextBox_exam_date_Enter);
@@ -198,34 +198,6 @@
             this.label6.TabIndex = 9;
             this.label6.Text = ":שעת התחלה";
             this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // textBox_start_hour
-            // 
-            this.textBox_start_hour.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
-            this.textBox_start_hour.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
-            this.textBox_start_hour.Location = new System.Drawing.Point(1419, 528);
-            this.textBox_start_hour.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox_start_hour.Multiline = true;
-            this.textBox_start_hour.Name = "textBox_start_hour";
-            this.textBox_start_hour.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox_start_hour.Size = new System.Drawing.Size(200, 37);
-            this.textBox_start_hour.TabIndex = 10;
-            this.textBox_start_hour.TextChanged += new System.EventHandler(this.TextBox_start_hour_TextChanged);
-            this.textBox_start_hour.Leave += new System.EventHandler(this.TextBox_start_hour_Leave);
-            // 
-            // textBox_end_hour
-            // 
-            this.textBox_end_hour.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
-            this.textBox_end_hour.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
-            this.textBox_end_hour.Location = new System.Drawing.Point(1467, 605);
-            this.textBox_end_hour.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox_end_hour.Multiline = true;
-            this.textBox_end_hour.Name = "textBox_end_hour";
-            this.textBox_end_hour.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox_end_hour.Size = new System.Drawing.Size(200, 37);
-            this.textBox_end_hour.TabIndex = 11;
-            this.textBox_end_hour.TextChanged += new System.EventHandler(this.TextBox_end_hour_TextChanged);
-            this.textBox_end_hour.Leave += new System.EventHandler(this.TextBox_end_hour_Leave);
             // 
             // label7
             // 
@@ -291,12 +263,12 @@
             // 
             this.textBox_class_number.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
             this.textBox_class_number.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
-            this.textBox_class_number.Location = new System.Drawing.Point(1441, 374);
+            this.textBox_class_number.Location = new System.Drawing.Point(1441, 368);
             this.textBox_class_number.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_class_number.Multiline = true;
             this.textBox_class_number.Name = "textBox_class_number";
             this.textBox_class_number.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox_class_number.Size = new System.Drawing.Size(200, 37);
+            this.textBox_class_number.Size = new System.Drawing.Size(200, 46);
             this.textBox_class_number.TabIndex = 16;
             this.textBox_class_number.TextChanged += new System.EventHandler(this.TextBox_class_number_TextChanged);
             this.textBox_class_number.Enter += new System.EventHandler(this.TextBox_class_number_Enter);
@@ -325,7 +297,7 @@
             this.listBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listBox1.Name = "listBox1";
             this.listBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.listBox1.Size = new System.Drawing.Size(324, 132);
+            this.listBox1.Size = new System.Drawing.Size(324, 292);
             this.listBox1.TabIndex = 18;
             this.listBox1.DoubleClick += new System.EventHandler(this.ListBox1_SelectedValueChanged);
             this.listBox1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ListBox1_MouseDoubleClick);
@@ -388,6 +360,63 @@
             this.pictureBox2.TabIndex = 22;
             this.pictureBox2.TabStop = false;
             // 
+            // comboBox_start_hour
+            // 
+            this.comboBox_start_hour.Font = new System.Drawing.Font("Yu Gothic UI", 12F);
+            this.comboBox_start_hour.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
+            this.comboBox_start_hour.FormattingEnabled = true;
+            this.comboBox_start_hour.Items.AddRange(new object[] {
+            "08:00",
+            "09:00",
+            "10:00",
+            "11:00",
+            "12:00",
+            "13:00",
+            "14:00",
+            "15:00",
+            "16:00",
+            "17:00",
+            "18:00",
+            "19:00",
+            ""});
+            this.comboBox_start_hour.Location = new System.Drawing.Point(1527, 527);
+            this.comboBox_start_hour.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboBox_start_hour.Name = "comboBox_start_hour";
+            this.comboBox_start_hour.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.comboBox_start_hour.Size = new System.Drawing.Size(92, 40);
+            this.comboBox_start_hour.TabIndex = 23;
+            this.comboBox_start_hour.SelectedIndexChanged += new System.EventHandler(this.comboBox_start_hour_SelectedIndexChanged);
+            // 
+            // comboBox_end_hour
+            // 
+            this.comboBox_end_hour.Font = new System.Drawing.Font("Yu Gothic UI", 12F);
+            this.comboBox_end_hour.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
+            this.comboBox_end_hour.FormattingEnabled = true;
+            this.comboBox_end_hour.Items.AddRange(new object[] {
+            "08:00",
+            "09:00",
+            "10:00",
+            "11:00",
+            "12:00",
+            "13:00",
+            "14:00",
+            "15:00",
+            "16:00",
+            "17:00",
+            "18:00",
+            "19:00",
+            "20:00",
+            "21:00",
+            "22:00",
+            ""});
+            this.comboBox_end_hour.Location = new System.Drawing.Point(1575, 604);
+            this.comboBox_end_hour.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboBox_end_hour.Name = "comboBox_end_hour";
+            this.comboBox_end_hour.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.comboBox_end_hour.Size = new System.Drawing.Size(92, 40);
+            this.comboBox_end_hour.TabIndex = 24;
+            this.comboBox_end_hour.SelectedIndexChanged += new System.EventHandler(this.comboBox_end_hour_SelectedIndexChanged);
+            // 
             // AdminNewExamForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -395,17 +424,17 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.Controls.Add(this.comboBox_end_hour);
+            this.Controls.Add(this.comboBox_start_hour);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.comboBoxMoed);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox_start_hour);
             this.Controls.Add(this.calendar);
             this.Controls.Add(this.textBox_exam_date);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox_end_hour);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBoxCourseCode);
@@ -443,8 +472,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox_exam_date;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox_start_hour;
-        private System.Windows.Forms.TextBox textBox_end_hour;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button_confirm;
         private System.Windows.Forms.Button button_reset;
@@ -457,5 +484,7 @@
         private System.Windows.Forms.ComboBox comboBoxMoed;
         private System.Windows.Forms.ErrorProvider errorProviderExam;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ComboBox comboBox_end_hour;
+        private System.Windows.Forms.ComboBox comboBox_start_hour;
     }
 }

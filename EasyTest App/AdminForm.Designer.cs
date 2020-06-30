@@ -36,19 +36,20 @@
             this.ExamsBTN = new System.Windows.Forms.Button();
             this.reportAlertLBL = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ClosePic = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.BTNSearch = new System.Windows.Forms.Button();
             this.BTNEventM = new System.Windows.Forms.Button();
             this.BTNProctorManage = new System.Windows.Forms.Button();
             this.BTNExamManage = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panelLineExam = new System.Windows.Forms.Panel();
+            this.panelLineProctors = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ClosePic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -57,7 +58,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Yu Gothic", 24F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
-            this.label1.Location = new System.Drawing.Point(1586, 155);
+            this.label1.Location = new System.Drawing.Point(1577, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(249, 62);
@@ -67,7 +68,7 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(104)))), ((int)(((byte)(166)))));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(158)))), ((int)(((byte)(165)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
@@ -120,7 +121,7 @@
             // ExamsBTN
             // 
             this.ExamsBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ExamsBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(158)))), ((int)(((byte)(165)))));
+            this.ExamsBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(104)))), ((int)(((byte)(166)))));
             this.ExamsBTN.FlatAppearance.BorderSize = 0;
             this.ExamsBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExamsBTN.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
@@ -141,7 +142,7 @@
             this.reportAlertLBL.Cursor = System.Windows.Forms.Cursors.Hand;
             this.reportAlertLBL.Font = new System.Drawing.Font("Yu Gothic", 20F);
             this.reportAlertLBL.ForeColor = System.Drawing.Color.Red;
-            this.reportAlertLBL.Location = new System.Drawing.Point(1260, 92);
+            this.reportAlertLBL.Location = new System.Drawing.Point(1357, 158);
             this.reportAlertLBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.reportAlertLBL.Name = "reportAlertLBL";
             this.reportAlertLBL.Size = new System.Drawing.Size(563, 63);
@@ -153,9 +154,10 @@
             // 
             // panel1
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.panelLineProctors);
+            this.panel1.Controls.Add(this.panelLineExam);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.ClosePic);
             this.panel1.Controls.Add(this.BTNSearch);
             this.panel1.Controls.Add(this.BTNEventM);
             this.panel1.Controls.Add(this.reportAlertLBL);
@@ -168,17 +170,26 @@
             this.panel1.Size = new System.Drawing.Size(1920, 228);
             this.panel1.TabIndex = 7;
             // 
-            // ClosePic
+            // panel2
             // 
-            this.ClosePic.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ClosePic.Image = ((System.Drawing.Image)(resources.GetObject("ClosePic.Image")));
-            this.ClosePic.Location = new System.Drawing.Point(1851, 3);
-            this.ClosePic.Name = "ClosePic";
-            this.ClosePic.Size = new System.Drawing.Size(64, 55);
-            this.ClosePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ClosePic.TabIndex = 17;
-            this.ClosePic.TabStop = false;
-            this.ClosePic.Click += new System.EventHandler(this.ClosePic_Click);
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel2.Location = new System.Drawing.Point(-12, 224);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1938, 2);
+            this.panel2.TabIndex = 17;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(1837, 14);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(61, 72);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 18;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // BTNSearch
             // 
@@ -192,7 +203,7 @@
             this.BTNSearch.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
             this.BTNSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.BTNSearch.Image = ((System.Drawing.Image)(resources.GetObject("BTNSearch.Image")));
-            this.BTNSearch.Location = new System.Drawing.Point(618, 23);
+            this.BTNSearch.Location = new System.Drawing.Point(620, 23);
             this.BTNSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BTNSearch.Name = "BTNSearch";
             this.BTNSearch.Size = new System.Drawing.Size(171, 231);
@@ -215,7 +226,7 @@
             this.BTNEventM.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
             this.BTNEventM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.BTNEventM.Image = ((System.Drawing.Image)(resources.GetObject("BTNEventM.Image")));
-            this.BTNEventM.Location = new System.Drawing.Point(789, 23);
+            this.BTNEventM.Location = new System.Drawing.Point(791, 23);
             this.BTNEventM.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BTNEventM.Name = "BTNEventM";
             this.BTNEventM.Size = new System.Drawing.Size(170, 222);
@@ -238,7 +249,7 @@
             this.BTNProctorManage.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
             this.BTNProctorManage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.BTNProctorManage.Image = ((System.Drawing.Image)(resources.GetObject("BTNProctorManage.Image")));
-            this.BTNProctorManage.Location = new System.Drawing.Point(959, 33);
+            this.BTNProctorManage.Location = new System.Drawing.Point(961, 33);
             this.BTNProctorManage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BTNProctorManage.Name = "BTNProctorManage";
             this.BTNProctorManage.Size = new System.Drawing.Size(186, 207);
@@ -261,7 +272,7 @@
             this.BTNExamManage.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
             this.BTNExamManage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
             this.BTNExamManage.Image = ((System.Drawing.Image)(resources.GetObject("BTNExamManage.Image")));
-            this.BTNExamManage.Location = new System.Drawing.Point(1145, 36);
+            this.BTNExamManage.Location = new System.Drawing.Point(1147, 36);
             this.BTNExamManage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BTNExamManage.Name = "BTNExamManage";
             this.BTNExamManage.Size = new System.Drawing.Size(167, 207);
@@ -292,17 +303,25 @@
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox2
+            // panelLineExam
             // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1846, 145);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(61, 72);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 18;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.panelLineExam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelLineExam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(104)))), ((int)(((byte)(166)))));
+            this.panelLineExam.Location = new System.Drawing.Point(1153, 221);
+            this.panelLineExam.Name = "panelLineExam";
+            this.panelLineExam.Size = new System.Drawing.Size(150, 4);
+            this.panelLineExam.TabIndex = 18;
+            this.panelLineExam.Visible = false;
+            // 
+            // panelLineProctors
+            // 
+            this.panelLineProctors.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelLineProctors.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(104)))), ((int)(((byte)(166)))));
+            this.panelLineProctors.Location = new System.Drawing.Point(977, 221);
+            this.panelLineProctors.Name = "panelLineProctors";
+            this.panelLineProctors.Size = new System.Drawing.Size(150, 4);
+            this.panelLineProctors.TabIndex = 19;
+            this.panelLineProctors.Visible = false;
             // 
             // AdminForm
             // 
@@ -310,7 +329,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1920, 1050);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ExamsBTN);
@@ -319,7 +338,7 @@
             this.Controls.Add(this.buttonSearchExam);
             this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AdminForm";
             this.Text = "AdminForm";
@@ -328,10 +347,9 @@
             this.Load += new System.EventHandler(this.AdminForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ClosePic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -351,7 +369,9 @@
         private System.Windows.Forms.Button BTNExamManage;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox ClosePic;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelLineProctors;
+        private System.Windows.Forms.Panel panelLineExam;
     }
 }

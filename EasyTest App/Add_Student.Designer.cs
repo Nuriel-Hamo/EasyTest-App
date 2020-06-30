@@ -102,6 +102,7 @@
             this.StudentID_textbox.Font = new System.Drawing.Font("Arial", 18F);
             this.StudentID_textbox.ForeColor = System.Drawing.Color.DimGray;
             this.StudentID_textbox.Location = new System.Drawing.Point(435, 712);
+            this.StudentID_textbox.MaxLength = 9;
             this.StudentID_textbox.Multiline = true;
             this.StudentID_textbox.Name = "StudentID_textbox";
             this.StudentID_textbox.Size = new System.Drawing.Size(659, 54);

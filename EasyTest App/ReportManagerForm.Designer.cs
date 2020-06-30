@@ -156,6 +156,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ReportManagerForm";
             this.Text = "ReportManagerForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
