@@ -37,6 +37,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sendReportBTN = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.homeBTN = new System.Windows.Forms.Button();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -44,6 +45,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel6.Controls.Add(this.homeBTN);
             this.panel6.Controls.Add(this.returnBTN);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel6.Location = new System.Drawing.Point(1541, 0);
@@ -159,6 +161,26 @@
             this.label1.Text = "נא להזין פירוט לדיווח";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // homeBTN
+            // 
+            this.homeBTN.BackColor = System.Drawing.Color.Transparent;
+            this.homeBTN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.homeBTN.FlatAppearance.BorderSize = 0;
+            this.homeBTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
+            this.homeBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.homeBTN.Font = new System.Drawing.Font("Yu Gothic", 20F);
+            this.homeBTN.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.homeBTN.Image = ((System.Drawing.Image)(resources.GetObject("homeBTN.Image")));
+            this.homeBTN.Location = new System.Drawing.Point(1, 404);
+            this.homeBTN.Name = "homeBTN";
+            this.homeBTN.Size = new System.Drawing.Size(379, 202);
+            this.homeBTN.TabIndex = 33;
+            this.homeBTN.Text = "מסך ראשי";
+            this.homeBTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.homeBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.homeBTN.UseVisualStyleBackColor = false;
+            this.homeBTN.Click += new System.EventHandler(this.homeBTN_Click);
+            // 
             // MadorReportDetailes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -193,5 +215,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button sendReportBTN;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button homeBTN;
     }
 }

@@ -97,7 +97,7 @@ namespace EasyTest_App
                         }
                         else
                         {
-                            MessageBox.Show(" הסטודנט אינו רשאי להבחן", "הודעה");
+                            MessageBox.Show(" קיים חוב בשכר לימוד", "הערה",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                         }
                     }
                     else
@@ -143,6 +143,11 @@ namespace EasyTest_App
         {
             Login.main_screen.Show();
             Hide();
+        }
+
+        private void Add_Student_Load(object sender, EventArgs e)
+        {
+            student_table.Clear();
         }
     }
 

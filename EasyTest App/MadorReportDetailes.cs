@@ -47,5 +47,12 @@ namespace EasyTest_App
             Hide();
 
         }
+
+        private void homeBTN_Click(object sender, EventArgs e)
+        {
+            Login.main_screen.Show();
+            Hide();
+
+        }
     }
 }

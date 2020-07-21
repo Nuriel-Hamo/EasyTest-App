@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Text.RegularExpressions;
+using EasyTest_App.BL;
 
 namespace EasyTest_App
 {
@@ -83,6 +84,7 @@ namespace EasyTest_App
                             dataAD.Fill(exam_table);
                             if (exam_table.Rows.Count > 0)
                             {
+                                exam_table = Service.CheckExamDateTime(exam_table);
                                 //Main_Screen main_screen = new Main_Screen();
                                 conn.Close();
                                 main_screen.Show();

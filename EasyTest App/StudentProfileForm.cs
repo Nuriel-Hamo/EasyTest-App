@@ -37,13 +37,15 @@ namespace EasyTest_App
 
         private void StudentProfileForm_Load(object sender, EventArgs e)
         {
-            string query = "SELECT * FROM examination_log WHERE table_num = @table_num";
+            string query = "SELECT * FROM examination_log WHERE table_num = @table_num AND exam_id = @exam_id";
 
             MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
             conn.Open();
 
             MySqlCommand cmd = new MySqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@table_num", Main_Screen.send2profile);
+            cmd.Parameters.AddWithValue("@exam_id", Login.exam_table.Rows[0][0].ToString());
+
 
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
             da.Fill(examination_log_table);

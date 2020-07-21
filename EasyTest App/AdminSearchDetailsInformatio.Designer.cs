@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminSearchDetailsInformatio));
             this.label_exam_id = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label_lecturer_name = new System.Windows.Forms.Label();
             this.label_proctor_name = new System.Windows.Forms.Label();
             this.label_course = new System.Windows.Forms.Label();
@@ -47,6 +46,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label_exam_id
@@ -61,32 +62,6 @@
             this.label_exam_id.Size = new System.Drawing.Size(222, 48);
             this.label_exam_id.TabIndex = 0;
             this.label_exam_id.Text = ":מספר בחינה";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 18F);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
-            this.label2.Location = new System.Drawing.Point(283, 99);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(226, 48);
-            this.label2.TabIndex = 1;
-            this.label2.Text = ":סידור הושבה";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(85)))), ((int)(((byte)(108)))));
-            this.groupBox1.Location = new System.Drawing.Point(94, 162);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox1.Size = new System.Drawing.Size(415, 362);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
             // 
             // label_lecturer_name
             // 
@@ -306,6 +281,16 @@
             this.label9.Text = "ישראל איצקוביץ";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(-636, -67);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1557, 1110);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 23;
+            this.pictureBox2.TabStop = false;
+            // 
             // AdminSearchDetailsInformatio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -313,7 +298,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label_additionalD);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);
@@ -322,7 +307,6 @@
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label_lecturer_name);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label_exam_id);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label_proctor_name);
@@ -338,6 +322,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminSearchDetailsInformatio_FormClosing);
             this.Load += new System.EventHandler(this.AdminSearchDetailsInformatio_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -346,8 +331,6 @@
         #endregion
 
         private System.Windows.Forms.Label label_exam_id;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label_lecturer_name;
         private System.Windows.Forms.Label label_proctor_name;
         private System.Windows.Forms.Label label_course;
@@ -364,5 +347,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
