@@ -53,7 +53,7 @@ namespace EasyTest_App.DB
             conn.Close();
             list.Add(dt.Rows[0][0].ToString());
             list.Add(dt.Rows[0][1].ToString());
-            return  list;
+            return list;
 
         }
         public static void ExamSummary(string examTime, string subject, string lecturerName, string proctors, string extraTime, string studentNum)
@@ -64,7 +64,7 @@ namespace EasyTest_App.DB
             conn.Open();
             MySqlCommand cmd = new MySqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@date", DateTime.Now);
-            cmd.Parameters.AddWithValue("@time", Login.exam_table.Rows[0].ItemArray[7].ToString().Substring(0,5) + " - "  + Login.exam_table.Rows[0].ItemArray[6].ToString().Substring(0, 5));
+            cmd.Parameters.AddWithValue("@time", Login.exam_table.Rows[0].ItemArray[7].ToString().Substring(0, 5) + " - " + Login.exam_table.Rows[0].ItemArray[6].ToString().Substring(0, 5));
             cmd.Parameters.AddWithValue("@real_time", examTime);
             cmd.Parameters.AddWithValue("@subject", subject);
             cmd.Parameters.AddWithValue("@clasNum", Login.exam_table.Rows[0].ItemArray[4].ToString());
@@ -93,10 +93,71 @@ namespace EasyTest_App.DB
             string result = "";
             foreach (DataRow row in dt.Rows)
             {
-                result +=  row[0].ToString() + ", ";
+                result += row[0].ToString() + ", ";
             }
             return result;
 
         }
+        public static string TypOfUser(string userID)
+        {
+
+            string Query = "SELECT * FROM proctor WHERE proctor_id = @UserID_textbox";
+            MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
+            conn.Open();
+
+            MySqlCommand cmd = new MySqlCommand(Query, conn);
+            cmd.Parameters.AddWithValue("@UserID_textbox", userID);
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            conn.Close();
+
+
+            if (dt.Rows.Count > 0)
+            {
+                return "proctor";
+
+            }
+
+            ///////////////////////////////////////////////////////////////////////// otherwise
+            ///
+
+            string Query2 = "SELECT * FROM lecturer WHERE lecturer_id = @UserID";
+            MySqlConnection conn2 = new MySqlConnection("server=localhost;user id=root;database=easytest");
+            conn2.Open();
+
+            MySqlCommand cmd2 = new MySqlCommand(Query2, conn2);
+            cmd2.Parameters.AddWithValue("@UserID", userID);
+            MySqlDataAdapter da2 = new MySqlDataAdapter(cmd2);
+            DataTable dt2 = new DataTable();
+            da2.Fill(dt2);
+            conn2.Close();
+
+
+            if (dt2.Rows.Count > 0)
+            {
+                return "lecturer";
+
+            }
+
+            return "null";
+        }
+
+        public static string GetCourseName(string courseID)
+        {
+
+            string Query = "SELECT course_name FROM course WHERE course_id = @courseID";
+            MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
+            conn.Open();
+
+            MySqlCommand cmd = new MySqlCommand(Query, conn);
+            cmd.Parameters.AddWithValue("@courseID", courseID);
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            conn.Close();
+            return dt.Rows[0][0].ToString();
+        }
+
     }
 }

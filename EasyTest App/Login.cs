@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Text.RegularExpressions;
 using EasyTest_App.BL;
+using EasyTest_App.DB;
 
 namespace EasyTest_App
 {
@@ -36,7 +37,8 @@ namespace EasyTest_App
         {
             Regex IdReg = new Regex("[0-9]{9}");
             Regex PassReg = new Regex("[0-9]{5}");
-            if (!startProgram)
+            string typeOfUser = DBManager.TypOfUser(UserID_textbox.Text);
+            if (typeOfUser.Equals("proctor"))
             {
 
                 if (!IdReg.IsMatch(UserID_textbox.Text))
@@ -77,21 +79,31 @@ namespace EasyTest_App
 
 
                             //////
+                            DateTime nowDate = DateTime.Now.Date;
                             conn.Open();
-                            MySqlCommand cmdExam = new MySqlCommand("SELECT * FROM exam WHERE proctor_id = @UserID_textbox", conn);
+                            MySqlCommand cmdExam = new MySqlCommand("SELECT * FROM exam WHERE proctor_id = @UserID_textbox AND test_date = @nowDate", conn);
                             cmdExam.Parameters.AddWithValue("@UserID_textbox", UserID_textbox.Text);
+                            cmdExam.Parameters.AddWithValue("@nowDate", nowDate.ToString("s"));
                             MySqlDataAdapter dataAD = new MySqlDataAdapter(cmdExam);
                             dataAD.Fill(exam_table);
+                            conn.Close();
+
                             if (exam_table.Rows.Count > 0)
                             {
                                 exam_table = Service.CheckExamDateTime(exam_table);
+                                if (exam_table.Rows.Count > 0)
+                                {
+                                  
+                                    main_screen.Show();
+                                }
+                                else { MessageBox.Show("כניסה למבחן תתאפשר רק כחצי שעה לפני שעת ההתחלה","הערה",MessageBoxButtons.OK,MessageBoxIcon.Warning); startProgram = false; }
+                                
                                 //Main_Screen main_screen = new Main_Screen();
-                                conn.Close();
-                                main_screen.Show();
+                                
                                 //Hide();
 
                             }
-                            else { MessageBox.Show("משגיח אינו משובץ לבחינה", "הערה", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                            else { MessageBox.Show("משגיח אינו משובץ לבחינות היום", "הערה", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
 
 
 
@@ -102,7 +114,7 @@ namespace EasyTest_App
                             admin_id = proctor_table.Rows[0][0].ToString();
                             adminF.Show();
                             proctor_table.Clear();
-                            ///Hide();
+                            Hide();
                             //// לשנות
 
 
@@ -115,7 +127,7 @@ namespace EasyTest_App
                 }
 
             }
-            else if (startProgram)// Login for lecturer
+            else if (typeOfUser.Equals("lecturer") && startProgram)// Login for lecturer
             {
                 string Query = "SELECT * FROM lecturer WHERE lecturer_id = @UserID_textbox AND " +
                        "lecturer_pass = @Pass_textbox";
@@ -128,7 +140,7 @@ namespace EasyTest_App
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
-
+                conn.Close();
 
                 if (dt.Rows.Count > 0)
                 {
@@ -141,10 +153,15 @@ namespace EasyTest_App
                     }
                     else
                     {
-                        conn.Close();
-                        ExtraTimeForm ex = new ExtraTimeForm();
-                        ex.Show();
-                        Hide();
+                        if (dt.Rows[0][0].ToString().Equals(Login.exam_table.Rows[0][2].ToString()))
+                        {
+                            ExtraTimeForm ex = new ExtraTimeForm();
+                            ex.Show();
+                            Hide();
+                        }
+                        //else { MessageBox.Show("","",MessageBoxButtons.OK,)}
+                       
+                       
                     }
 
                 }

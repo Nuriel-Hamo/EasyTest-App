@@ -18,6 +18,7 @@ namespace EasyTest_App
         public static Boolean collect = false;
         private Boolean signature = false;
         float pointX = 0, pointY = 0, LastX = 0, LastY = 0;
+        private int numOfStudents = 0;
         MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=easytest");
         public SummaryForm()
         {
@@ -49,6 +50,7 @@ namespace EasyTest_App
                 LBLEndTime.Text = dr["end_time"].ToString().Substring(0, 5);
                 LBLExtraTime.Text = dr["extra_time"].ToString().Substring(3) + " דקות";
                 listBoxStudents.Items.Add(getStudent(dr["student_id"].ToString()));
+                numOfStudents++;
             }
             
             con.Close();
@@ -167,7 +169,7 @@ namespace EasyTest_App
 
         }
 
-      
+        
 
         private string getLecturer(string s)
         {
@@ -190,10 +192,34 @@ namespace EasyTest_App
         }
         private void buttonCollect_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
-            send = "summary";
-            Hide();
-            login.Show();
+            try
+            {
+                if (numOfStudents != Int32.Parse(textBoxNotebookNum.Text))
+                {
+                    DialogResult result = MessageBox.Show("?מס' מחברות אינו תואם את מס' הסטודנטים האם להמשיך", "!שים לב", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
+                    {
+                        Login login = new Login();
+                        send = "summary";
+                        Hide();
+                        login.Show();
+                    }
+                }
+                else
+                {
+                    Login login = new Login();
+                    send = "summary";
+                    Hide();
+                    login.Show();
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("!יש להזין מס' מחברות", "הערה", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+            }
+           
         }
 
         private void SummaryForm_Activated(object sender, EventArgs e)

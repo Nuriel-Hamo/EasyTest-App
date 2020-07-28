@@ -58,6 +58,7 @@
             this.LBLCourseName = new System.Windows.Forms.Label();
             this.textBoxNotebookNum = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderSummary)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -276,7 +277,7 @@
             this.panelSignature.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelSignature.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelSignature.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelSignature.Location = new System.Drawing.Point(48, 157);
+            this.panelSignature.Location = new System.Drawing.Point(48, 214);
             this.panelSignature.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelSignature.Name = "panelSignature";
             this.panelSignature.Size = new System.Drawing.Size(444, 166);
@@ -289,6 +290,7 @@
             // errorProviderSummary
             // 
             this.errorProviderSummary.ContainerControl = this;
+            this.errorProviderSummary.RightToLeft = true;
             // 
             // label12
             // 
@@ -427,6 +429,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.panelSignature);
             this.groupBox1.Controls.Add(this.buttonCollect);
             this.groupBox1.Controls.Add(this.label13);
@@ -440,6 +443,20 @@
             this.groupBox1.TabIndex = 37;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "מרצה";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
+            this.label14.ForeColor = System.Drawing.Color.Red;
+            this.label14.Location = new System.Drawing.Point(182, 99);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(378, 28);
+            this.label14.TabIndex = 38;
+            this.label14.Text = "מס\' מחברות אינו תואם את מס\' הסטודנטים";
+            this.label14.Visible = false;
             // 
             // SummaryForm
             // 
@@ -517,5 +534,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBoxNotebookNum;
+        private System.Windows.Forms.Label label14;
     }
 }

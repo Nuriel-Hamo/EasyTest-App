@@ -358,6 +358,7 @@ namespace EasyTest_App
            ////////////////////////////////////////////////////////////////////
            labelName.Text = "." + Login.proctor_table.Rows[0][2].ToString() + " " + Login.proctor_table.Rows[0][3].ToString();
             dateLBL.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            courseNameLBL.Text = DBManager.GetCourseName(Login.exam_table.Rows[0][3].ToString());
 
 
             ////////////////////////////////////////////////////////////////////

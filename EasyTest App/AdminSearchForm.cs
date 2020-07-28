@@ -119,7 +119,7 @@ namespace EasyTest_App
 
             da.Fill(dt);
             if (dt.Rows.Count == 0)
-                MessageBox.Show("קורס מספר " + textBoxCourse.Text + "אינו קיים ", "שגיאה");
+                MessageBox.Show(" קורס מספר " + textBoxCourse.Text + " אינו קיים ", "שגיאה");
             else
             {
                 foreach (DataRow dr in dt.Rows)
@@ -143,7 +143,7 @@ namespace EasyTest_App
 
             da.Fill(dt);
             if (dt.Rows.Count == 0)
-                MessageBox.Show("מבחן מספר " + textBoxExam.Text + "אינו קיים ", "שגיאה");
+                MessageBox.Show(" מבחן מספר " + textBoxExam.Text + " אינו קיים ", "שגיאה");
             else
             {
                 foreach (DataRow dr in dt.Rows)
@@ -167,7 +167,7 @@ namespace EasyTest_App
 
             da.Fill(dt);
             if (dt.Rows.Count == 0)
-                MessageBox.Show("מחברת מספר " + textBoxBookID.Text + "אינה קיימת ", "שגיאה");
+                MessageBox.Show(" מחברת מספר " + textBoxBookID.Text + " אינה קיימת ", "שגיאה");
             else
             {
                 foreach (DataRow dr in dt.Rows)
