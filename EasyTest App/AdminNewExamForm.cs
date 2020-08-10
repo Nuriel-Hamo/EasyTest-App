@@ -461,7 +461,7 @@ namespace EasyTest_App
             if (year <= DateTime.Today.Year)
 
                 if (month <= DateTime.Today.Month)
-                    if (day <= DateTime.Today.Day)
+                    if (day < DateTime.Today.Day)
                     {
                         errorProviderExam.SetError(textBox_exam_date, "אנא בחר תאריך בעתיד");
                         con.Close();

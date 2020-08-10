@@ -155,7 +155,7 @@ namespace EasyTest_App
         private string getCourseName(string courseID)
         {
 
-            courseID = courseID.Substring(5).Trim(':');
+           // courseID = courseID.Substring(5).Trim(':');
                 foreach (DataRow dr in data.Rows)
                 {
                     if (dr["course_id"].ToString() == courseID.Trim())

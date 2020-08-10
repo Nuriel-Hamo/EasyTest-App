@@ -277,7 +277,7 @@
             this.panelSignature.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelSignature.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelSignature.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelSignature.Location = new System.Drawing.Point(48, 214);
+            this.panelSignature.Location = new System.Drawing.Point(48, 157);
             this.panelSignature.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelSignature.Name = "panelSignature";
             this.panelSignature.Size = new System.Drawing.Size(444, 166);

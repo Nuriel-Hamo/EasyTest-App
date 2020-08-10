@@ -53,7 +53,7 @@ namespace EasyTest_App
                 }
                 else
                 {
-
+                    proctor_table.Clear();
                     string Query = "SELECT * FROM proctor WHERE proctor_id = @UserID_textbox AND " +
                         "proctor_pass = @Pass_textbox";
                     MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;database=easytest");
